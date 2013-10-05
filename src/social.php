@@ -40,11 +40,11 @@
 			</header>
 			<div class="row">
 				<div class="lay-main">
-					<section class="section box row">
+					<!--<section class="section box row">
 						<h2 class="section-heading">Youtube</h2>
 						<div class="section-content">
 						</div>
-					</section>
+					</section>-->
 					<section class="section box row">
 						<h2 class="section-heading">Facebook</h2>
 						<div class="fb-wrap section-content">

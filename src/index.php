@@ -38,7 +38,7 @@
 							<h2 class="section-heading">Timetable</h2>
 							<div>
 								<table class="tmtbl" summary="The first colum gives the time, and the others each correspond to a day of the week.">
-									<caption class="tmtbl-caption"><span class="tmtbl-legend hidden-text">Legend: </span><span><span class="tmtbl-training tmtbl-notop"></span> Training</span> <span><span class="tmtbl-openmat tmtbl-notop"></span> Open mat</span></caption>
+									<caption class="tmtbl-caption"><span class="tmtbl-legend hidden-text">Legend: </span><span><span class="tmtbl-training tmtbl-top tmtbl-bot"></span> Training</span> <span><span class="tmtbl-openmat tmtbl-top tmtbl-bot"></span> Open mat</span></caption>
 									<thead>
 										<tr>
 											<th class="tmtbl-time" scope="col">Time</th>
@@ -52,12 +52,12 @@
 											<th class="tmtbl-time" scope="row">18:00-18:30</th>
 											<td></td>
 											<td></td>
-											<td><span class="tmtbl-training tmtbl-notop hidden-text">Training</span></td>
+											<td><span class="tmtbl-training tmtbl-top hidden-text">Training</span></td>
 										</tr>
 										<tr>
 											<th class="tmtbl-time" scope="row">18:30-19:00</th>
-											<td><span class="tmtbl-training tmtbl-notop hidden-text">Training</span></td>
-											<td><span class="tmtbl-training tmtbl-notop hidden-text">Training</span></td>
+											<td><span class="tmtbl-training tmtbl-top hidden-text">Training</span></td>
+											<td><span class="tmtbl-training tmtbl-top hidden-text">Training</span></td>
 											<td><span class="tmtbl-training hidden-text">Training</span></td>
 										</tr>
 										<tr class="tmtbl-odd">
@@ -68,21 +68,21 @@
 										</tr>
 										<tr>
 											<th class="tmtbl-time" scope="row">19:30-20:00</th>
-											<td><span class="tmtbl-training hidden-text">Training</span></td>
-											<td><span class="tmtbl-training hidden-text">Training</span></td>
+											<td><span class="tmtbl-training tmtbl-bot hidden-text">Training</span></td>
+											<td><span class="tmtbl-training tmtbl-bot hidden-text">Training</span></td>
 											<td><span class="tmtbl-openmat hidden-text">Open mat</span></td>
 										</tr>
 										<tr class="tmtbl-odd">
 											<th class="tmtbl-time" scope="row">20:00-20:30</th>
 											<td></td>
 											<td></td>
-											<td><span class="tmtbl-openmat hidden-text">Open mat</span></td>
+											<td><span class="tmtbl-openmat tmtbl-bot hidden-text">Open mat</span></td>
 										</tr>
 									</tbody>
 								</table>
 							</div>
 						</section>
-						<section class="section section-1of2 box">
+						<section class="section map-section section-1of2 box">
 							<h2 class="section-heading">Location</h2>
 							<div class="map-wrap inner backdrop">
 								<a class="map-link link-inv respimg-wrap" href="http://goo.gl/maps/tVKGc" target="_blank">

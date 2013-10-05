@@ -1,8 +1,30 @@
 @CHARSET "UTF-8";
-/* Modules used only on page contact.php */
+
+
+/* ==== Hero image ===== */
+
+/* Image is absolutely positioned */
+@media (min-width: 50em) {
+	
+	.contact-section {
+		position: relative;
+	}
+	
+	.contact-image {
+		position: absolute;
+		right: 2.5em;
+		bottom: .5em;
+		max-width: 50%;
+	}
+	
+}
 
 
 /* ===== Contact form ===== */
+
+.contact-section {
+	padding-bottom: 1em;
+}
 
 .form-label,
 .form-field {
@@ -26,7 +48,7 @@
 
 .form-submit {
 	position: relative;
-	font-size: 110%;
+	font-size: 100%;
 	text-transform: uppercase;
 	letter-spacing: .1em;
 	color: #fff;
@@ -46,23 +68,23 @@
 	}
 	
 	.form-label {
-		width: 96px;
-		width: 6rem;
+		width: 6em;
 		line-height: 2.5em;
 		text-align: right;
-		margin-right: 12px;
-		margin-right: .8rem;
+		margin-right: 1em;
 	}
 	
 	.form-field,
 	.form-submit {
-		width: 320px;
-		width: 20rem;
+		width: 24em;
 	}
 	
 	.form-submit {
-		margin-left: 108px;
-		margin-left: 6.8rem;
+		margin-left: 7em;
+	}
+	
+	.form-submit > span {
+		font-size: 110%;
 	}
 
 }
@@ -70,14 +92,12 @@
 @media (min-width: 60em) {
 	
 	.form-label {
-		width: 160px;
-		width: 10rem;
+		width: 9em;
 	}
 	
 	.form-submit {
 		padding: .7em 4em;
-		margin-left: 172px;
-		margin-left: 10.8rem;
+		margin-left: 10em;
 	}
 	
 }
