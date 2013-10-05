@@ -65,13 +65,12 @@
 	
 	.res-group {
 		float: left;
-		width: 44%;
+		width: 48%;
 		margin-bottom: 12px;
 	}
 	
 	.res-group--first {
-		margin-right: 6%;
-		border-right: 1px solid #ccc;
+		margin-right: 3%;
 	}
 	
 }
@@ -80,6 +79,10 @@
 	
 	.res-link {
 		font-size: 85%;
+	}
+	
+	.res-group {
+		width: 38%;
 	}
 	
 }
