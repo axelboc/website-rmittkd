@@ -1,0 +1,282 @@
+@CHARSET "UTF-8";
+/* Modules used only on page index.php */
+
+
+/* ===== Hero image and welcome section ===== */
+
+@media (max-width: 39.99em) {
+
+	.main-wrap {
+		margin-top: 35%;
+	}
+	
+	.main-hero {
+		top: 5.5em;
+		right: -2em;
+		max-width: 70%;
+	}
+	
+}
+
+@media (min-width: 30em) and (max-width: 49.99em) {
+	
+	.lay-main--welcome {
+		width: 100%;
+		margin-right: 0;
+	}
+	
+	.main-hero {
+		top: 5em;
+		right: -1em;
+		max-width: 70%;
+	}
+	
+}
+
+@media (min-width: 40em) and (max-width: 49.99em) {
+
+	.main-wrap {
+		margin-top: 10em;
+	}
+	
+	.main-hero {
+		top: 6em;
+		right: -11.5em;
+		max-width: 70%;
+	}
+	
+}
+
+@media (min-width: 50em) {
+	
+	.main-hero {
+		top: -2.6em;
+		right: -235px;
+		max-width: 90%;
+	}
+	
+}
+
+
+/* ===== Timetable ===== */
+
+.tmtbl {
+	empty-cells: show;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.tmtbl th,
+.tmtbl td {
+	width: 25%;
+	text-align: center;
+	padding: 0;
+}
+
+.tmtbl > thead th {
+	padding: 0 0 5px;
+}
+
+.tmtbl thead th:first-child,
+.tmtbl tbody th {
+	font-size: 85%;
+}
+
+.tmtbl-odd {
+	background-color: #eee;
+}
+
+.tmtbl-caption {
+	caption-side: bottom;
+	text-align: left;
+	padding-left: 20px;
+	margin: 12px 0 0;
+	font-size: 90%;
+}
+
+.tmtbl-legend {
+	display: inline-block;
+	width: 0;
+}
+
+.tmtbl-legend + span {
+	margin-right: 10px;
+}
+
+.tmtbl-training, .tmtbl-openmat {
+	display: inline-block;
+	vertical-align: -0.4em;
+	width: 17px;
+	height: 19px;
+	border-width: 1px 2px 0;
+	border-style: solid;
+}
+
+.tmtbl-notop {
+	border-top-width: 0;
+}
+
+.tmtbl-training {
+	background-color: #edcc2f;
+	border-color: #fff #edcc2f;
+}
+
+.tmtbl-openmat {
+	background-color: #633072;
+	border-color: #ddd #633072;
+}
+
+
+/* ===== Location ===== */
+
+.map-wrap {
+	position: relative;
+}
+
+.map-wrap:after {
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	height: 2em;
+}
+
+.map-link {
+	display: block;
+	height: 100%;
+}
+
+.map-link > img {
+	margin-left: -236px;
+}
+
+.map-caption {
+	left: 0;
+	bottom: .35em;
+	text-align: center;
+	width: 100%;
+}
+
+
+/* ===== Calendar ===== */
+
+.cal-wrapper {
+	padding: 0 1.5em;
+}
+
+.calendar,
+.cal-month {
+	position: relative;
+}
+
+.cal-months-wrapper {
+	overflow: hidden;
+}
+
+.cal-months {
+	width: 1200%;
+}
+
+.cal-month {
+	float: left;
+	width: 8.33%; /* 1/12 */
+	padding: 0 .125%;
+	outline: 0;
+}
+
+/* Backdrops */
+.cal-month:after {
+	top: 0;
+	right: .4em; /* matches right padding on cal-month */
+	width: 14em;
+}
+
+/* Backdrops' contents */
+.cal-caption {
+	right: .4em; /* matches right padding on cal-month */
+	top: 0;
+	width: 12.1em;
+	padding: .5em 1.4em .5em .5em;
+}
+
+.cal-caption > ul {
+	font-size: 85%;
+}
+
+.cal-caption li {
+	margin-bottom: 5px;
+}
+
+/* Month headings */
+.cal-heading {
+	font-weight: normal;
+	margin: .2em 0 .6em;
+}
+
+/* Responsive images */
+.cal-img {
+	margin-left: -230px;
+}
+
+/* Navigation arrows */
+.cal-arrow {
+	position: absolute;
+	top: 60px;
+	width: 25px;
+	height: 25px;
+	display: block;
+	z-index: 2;
+	background: transparent left top no-repeat url('../images/cal-arrows.png');
+}
+
+.cal-arrow:focus,
+.cal-arrow:hover,
+.arrow-disabled {
+	background-position: left bottom;
+	outline: 0;
+}
+
+.cal-arrow-prev {
+	left: -18px;
+}
+
+.cal-arrow-next {
+	right: -17px;
+	background-position: right top;
+}
+
+.cal-arrow-next:focus,
+.cal-arrow-next:hover,
+.cal-arrow-next.arrow-disabled {
+	background-position: right bottom;
+}
+
+
+/* Start of 2-column layout */
+@media (min-width: 40em) {
+	
+	.cal-months {
+		width: 600%;
+	}
+	
+}
+
+/* Switch to big, offset arrows */
+@media (min-width: 62em) {
+
+	.cal-arrow {
+		top: 47px;
+		width: 50px;
+		height: 50px;
+		background-image: url('../images/cal-arrows-big.png');
+	}
+	
+	.cal-arrow-prev {
+		left: -28px;
+	}
+	
+	.cal-arrow-next {
+		right: -27px;
+	}
+
+}
+

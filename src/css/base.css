@@ -1,0 +1,230 @@
+@CHARSET "UTF-8";
+/* Base styles and modules that can be used in many different contexts */
+
+
+
+/* ===== Sticky footer ===== */
+
+html,
+body,
+.body-wrap,
+.main {
+	height: 100%;
+}
+
+.body-wrap {
+	position: relative;
+	left: 0;
+	display: table;
+	width: 100%;
+}
+
+.header,
+.main,
+.footer {
+	display: table-row;
+}
+
+
+/* ===== Body ===== */
+
+body {
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 70%;
+	color: #333;
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.noscroll {
+	overflow-y: hidden;
+}
+
+@media (min-width: 50em) {
+	
+	.body-max {
+		position: relative;
+		max-width: 960px;
+		max-width: 60rem;
+		margin: 0 auto;
+	}
+	
+}
+
+@media (min-width: 60em) {
+	
+	body {
+		font-size: 80%;
+	}
+
+}
+
+
+/* ===== Clearfix ===== */
+
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+
+/* ===== Lists ===== */
+
+.list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+
+/* ===== Links ===== */
+
+a {
+	text-decoration: underline;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* Inverse underline behaviour */
+.link-inv,
+.links-inv a {
+	text-decoration: none;
+}
+
+.link-inv:hover,
+.link-inv:hover > span,
+.links-inv a:hover,
+.links-inv a:hover > span {
+	text-decoration: underline;
+}
+
+/* Links blending with the text (same colour) */
+.link-blend,
+.links-blend a {
+	color: #333;
+}
+
+
+/* ===== Images ===== */
+
+img {
+	display: block;
+}
+
+/* Responsive images */
+
+.respimg-wrap {
+	overflow: hidden;
+}
+
+/* Balanced cropping on both sides (the centre of the image never moves)
+ * The image must also have the following property applied to it: 'margin-left: -(width / 2)'
+ */
+.respimg-crop {
+	display: block;
+	position: relative;
+	left: 50%;
+}
+
+/* Fit container in width while keeping the right proportions */
+.respimg-fit {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Image floated left on mobile */
+@media (max-width: 29.99em) {
+	
+	.img-mob-left {
+		float: left;
+		width: 40%;
+		min-width: 100px;
+		margin: 0 1em .5em 0;
+	}
+	
+}
+
+/* Image floated left on tablet */
+@media (max-width: 49.99em) {
+	
+	.img-tab-left {
+		float: left;
+		width: 30%;
+		margin: 0 1em 0 0;
+	}
+	
+}
+
+
+/* ===== Hidden elements ===== */
+
+/* Hidden from screen readers */
+.hidden {
+	display: none;
+}
+
+/* Hidden from view, but not from screen readers
+ * Element must also have a width (and not be inline)
+ */
+.hidden-text {
+	text-indent: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+
+/* ===== Backdrop (container with grey, 90%-opaque backgroud) ===== */
+
+.backdrop {
+	position: relative;
+}
+
+/* The actual backdrop
+ * Each backdrop must also be positioned and sized appropriately
+ */
+.backdrop:after {
+	content: "";
+	display: block;
+	position: absolute;
+	background-color: #555;
+	opacity: .9;
+}
+
+/* Move the backdrop's content on top of the container */
+.backdrop-content {
+	position: absolute;
+	z-index: 1;
+	color: #fff;
+}
+
+
+/* ===== Carousel (calendar and instructors) ===== */
+
+.arrow-disabled {
+	opacity: .6;
+	cursor: default;
+}
+
+
+/* ===== DRY CSS for intentionally-duplicated property/value pairs ===== */
+
+.section-heading,
+.cal-heading {
+	font-size: 180%;
+}
+
+.section,
+.sidebar > .backdrop:after,
+.form-field,
+.form-submit {
+	border-radius: 3px;
+}
+
+
