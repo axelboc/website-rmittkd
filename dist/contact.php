@@ -14,8 +14,9 @@
 	<?php include 'includes/header.php'; ?>
 	<section class="main row" role="main">
 		<div class="main-wrap body-max">
-			<section class="section box">
+			<section class="contact-section section box">
 				<h1 class="section-heading">Contact</h1>
+				<img class="contact-image respimg-fit" src="images/adaptive/hero-contact.png" width="384" height="520" alt="">
 				<div class="section-content">
 					<form class="form row">
 						<p class="form-row row">
@@ -34,7 +35,7 @@
 							<label class="form-label" for="message">message</label>
 							<textarea id="message" class="form-field box" name="message" rows="6"></textarea>
 						</p>
-						<p class="form-row row"><input class="form-submit" type="submit" value="Submit"></p>
+						<p class="form-row row"><button class="form-submit box" type="submit"><span>Submit</span></button></p>
 					</form>
 				</div>
 			</section>

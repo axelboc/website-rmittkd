@@ -12,7 +12,7 @@
 			</ul>
 		</nav>
 		<div class="foot-fb">
-			<p class="foot-fb-text">Follow us</p>
+			<a class="foot-fb-link link-inv" href="https://www.facebook.com/rmittkd" target="_blank">Follow us</a>
 		</div>
 	</div>
 </footer>

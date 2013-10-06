@@ -48,7 +48,7 @@
 									<img class="instr-portrait" src="images/jason-lai.png" width="500" height="220" alt="Jason Lai">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Jason Lai</h3>
-										<p>Mr Jason Lai has been training for over 25 years, and has been a member of the club for 16. He achieved his <strong>6th degree Black Belt</strong> in December 2006, and received the <em>Outstanding Contribution</em> award from RMIT University in 2009. Mr Lai was also a coach for the Australian Team for the 2010 Junior and Veterans World Championships in Minsk, Belarus.</p>
+										<p>Mr Jason Lai has been training for over 25 years, and has been a member of the club for 16. He achieved his <strong>6th degree Black Belt</strong> in December 2006, and received the <em>Outstanding Contribution</em> award from RMIT University in 2009. Mr Lai was also a <strong>coach</strong> for the <strong>Australian Team</strong> for the 2010 Junior and Veterans <strong>World Championships</strong> in Minsk, Belarus.</p>
 									</div>
 								</section>
 								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
@@ -80,7 +80,7 @@
 							</section>
 							<section class="exec-member">
 								<img class="exec-pic" src="http://placehold.it/150x150" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Vice-President</span><br>Cath Cachia</p>
+								<p class="exec-caption"><span>Vice-President</span><br>Kidist Kifle</p>
 							</section>
 							<section class="exec-member">
 								<img class="exec-pic" src="http://placehold.it/150x150" width="150" height="150" alt="">
@@ -88,7 +88,7 @@
 							</section>
 							<section class="exec-member">
 								<img class="exec-pic" src="http://placehold.it/150x150" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Secretary</span><br>Kidist Kifle</p>
+								<p class="exec-caption"><span>Secretary</span><br>Yunh Ying Hi</p>
 							</section>
 						</div>
 					</section>
