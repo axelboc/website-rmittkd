@@ -1,6 +1,4 @@
 @CHARSET "UTF-8";
-/* Base styles and modules that can be used in many different contexts */
-
 
 
 /* ===== Sticky footer ===== */
@@ -28,6 +26,11 @@ body,
 
 /* ===== Body ===== */
 
+html,
+body {
+	overflow-x: hidden;
+}
+
 body {
 	font-family: Verdana, Arial, sans-serif;
 	font-size: 70%;
@@ -35,7 +38,6 @@ body {
 	background-color: #fff;
 	margin: 0;
 	padding: 0;
-	overflow-x: hidden;
 	overflow-y: scroll;
 }
 
