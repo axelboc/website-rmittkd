@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <merchandising>
 	<item>
-		<title>Badge</title>
-		<description>The club's badge to stick on your uniforms and bags.</description>
+		<title>The Badge</title>
+		<description>The club's badge - to stick on your uniform and bags.</description>
 		<image filename="badge.jpg" width="150" height="113" />
 		<link>https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=141</link>
 	</item>
 	<item>
-		<title>Bag</title>
-		<description>So popular, you better put your name on it to know which one is yours!</description>
+		<title>The Bag</title>
+		<description>An awesome bag with a great design. Perfect for bringing your gear to training and comps!</description>
 		<image filename="bag.jpg" width="150" height="100" />
 		<link>https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=140</link>
 	</item>
 	<item>
-		<title>T-shirt</title>
-		<description>The club T-shirt, a classic.</description>
+		<title>The T-shirt</title>
+		<description>The club T-shirt - an all-time classic.</description>
 		<image filename="tshirt.jpg" width="150" height="99" />
 		<link>https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=139</link>
 	</item>
 	<item>
 		<title>Sleevless T-shirt</title>
-		<description>A super-trendy sleevless T-shirt to show off your biceps.</description>
-		<image filename="tshirt-sleeveless" width="130" height="173" />
+		<description>A super-trendy sleevless T-shirt, which shows off your biceps.</description>
+		<image filename="tshirt-sleeveless.jpg" width="100" height="133" />
 		<link>https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=147</link>
 	</item>
 </merchandising>
