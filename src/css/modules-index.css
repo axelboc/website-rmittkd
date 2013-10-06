@@ -195,6 +195,7 @@
 	top: 0;
 	right: .4em; /* matches right padding on cal-month */
 	width: 14em;
+	height: 150px;
 }
 
 /* Backdrops' contents */
