@@ -1,10 +1,23 @@
 @CHARSET "UTF-8";
 
 
-/* ==== Hero image ===== */
+/* ==== Contact section and hero image ===== */
+
+.contact-section {
+	padding-bottom: 1em;
+}
+
+/* Image is hidden */
+@media (max-width: 34.99em) {
+	
+	.contact-image {
+		display: none;
+	}
+	
+}
 
 /* Image is absolutely positioned */
-@media (min-width: 50em) {
+@media (min-width: 35em) {
 	
 	.contact-section {
 		position: relative;
@@ -14,7 +27,8 @@
 		position: absolute;
 		right: 2.5em;
 		bottom: .5em;
-		max-width: 50%;
+		max-width: 55%;
+		z-index: 9;
 	}
 	
 }
@@ -22,8 +36,9 @@
 
 /* ===== Contact form ===== */
 
-.contact-section {
-	padding-bottom: 1em;
+.form {
+	position: relative;
+	z-index: 10
 }
 
 .form-label,
@@ -42,8 +57,9 @@
 
 .form-field {
 	border: 0;
-	background-color: #e3e2e7;
+	background-color: #f8f8f8;
 	padding: .6em;
+	opacity: .8;
 }
 
 .form-submit {

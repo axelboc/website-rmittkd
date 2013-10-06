@@ -75,9 +75,9 @@
 /* Shadows */
 
 .form-field {
-	-moz-box-shadow: inset 0 0 2px #999;
-	-webkit-box-shadow: inset 0 0 2px #999;
-	box-shadow: inset 0 0 2px #999;
+	-moz-box-shadow: inset 0 0 1px #333;
+	-webkit-box-shadow: inset 0 0 1px #333;
+	box-shadow: inset 0 0 1px #333;
 }
 
 

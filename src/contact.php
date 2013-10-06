@@ -16,7 +16,7 @@
 		<div class="main-wrap body-max">
 			<section class="contact-section section box">
 				<h1 class="section-heading">Contact</h1>
-				<img class="contact-image img-mob-left img-tab-left respimg-fit" src="images/adaptive/hero-contact.png" width="384" height="520" alt="">
+				<img class="contact-image respimg-fit" src="images/adaptive/hero-contact.png" width="384" height="520" alt="">
 				<div class="section-content">
 					<form class="form row">
 						<p class="form-row row">
