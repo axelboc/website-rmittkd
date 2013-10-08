@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Visit websites of associated federations and clubs, or follow us on Facebook and Youtube.">
-	<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Social | RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-social.css">

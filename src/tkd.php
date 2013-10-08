@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Learn about Taekwon-Do, its founder, and the International Taekwon-Do Federation.">
-	<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ITF Taekwon-Do | RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-tkd.css">
