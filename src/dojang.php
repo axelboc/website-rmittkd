@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Learn about our dojang, and meet our experienced instructors and executive committee.">

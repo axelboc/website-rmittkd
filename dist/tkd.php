@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Learn about Taekwon-Do, its founder, and the International Taekwon-Do Federation.">

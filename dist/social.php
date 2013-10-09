@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Visit websites of associated federations and clubs, or follow us on Facebook and Youtube.">

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Find out more about the membership and training fees for 2013.">
