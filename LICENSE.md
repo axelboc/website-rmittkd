@@ -1,12 +1,15 @@
-Copyright © 2013
-- software: Axel Bocciarelli
-- graphics and design: Chaitawat Poovaviranon
-- photographs: RMIT ITF Taekwon-Do club and/or Photographer
+# License &amp; Copyright
 
-The MIT License (for software, graphics and design)
+## Copyright © 2013
+
+- **Software**: Axel Bocciarelli
+- **Graphics and Design**: Chaitawat Poovaviranon
+- **Photographs**: RMIT ITF Taekwon-Do club and/or Photographer
+
+## MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files, but excluding photographs (the 
+this software and associated documentation files, but **excluding photographs** (the 
 "Photographs"), (the "Software"), to deal in the Software without restriction, 
 including without limitation the rights to use, copy, modify, merge, publish, 
 distribute, sub-license, and/or sell copies of the Software, and to permit persons 
@@ -23,7 +26,7 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 
-===== Exclusion =====
+### Exclusion
 
 The Photographs do not fall under the MIT License.
 Each is owned by (the "Owner") either the RMIT ITF Taekwon-Do club or the club member
