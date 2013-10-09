@@ -202,8 +202,7 @@ img {
 /* Hidden text from view, but not from screen readers
  * Element must have a width (and not be inline)
  */
-.hidden-text,
-img {
+.hidden-text {
 	text-indent: 100%;
 	white-space: nowrap;
 	overflow: hidden;

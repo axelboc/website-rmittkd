@@ -86,7 +86,7 @@
 							<h2 class="section-heading">Location</h2>
 							<div class="map-wrap inner backdrop">
 								<a class="map-link link-inv respimg-wrap" href="http://goo.gl/maps/tVKGc" target="_blank">
-									<img class="cal-img respimg-crop" src="images/map.png" width="473" height="149" alt="Map showing the club's location, near the South-West corner of Lygon St and Queensberry St.">
+									<img class="cal-img respimg-crop" src="images/map.png" width="473" height="149" alt="">
 									<span class="map-caption backdrop-content">RMIT Building 57, Level 4, 33 Lygon St</span>
 								</a>
 							</div>
