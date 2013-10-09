@@ -8,7 +8,6 @@
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-dojang.css">
 	<?php include 'includes/head_js.php'; ?>
-	<script src="js/instructors.js"></script>
 </head>
 <body>
 <div class="body-wrap">
@@ -36,24 +35,24 @@
 						<div class="instr-content section-content">
 							<div class="instr-profiles" aria-hidden="false" aria-hidden="true">
 								<section class="instr-profile hidden" tabindex="-1">
-									<img class="instr-belt" src="images/instructors/belt-8.png" width="40" height="220" alt="8th degree Black Belt">
-									<img class="instr-portrait" src="images/instructors/robert-lai.png" width="480" height="220" alt="Senior Master Robert Lai">
+									<img class="instr-belt" src="images/instructors/belt-8.png" width="40" height="220" alt="">
+									<img class="instr-portrait" src="images/instructors/robert-lai.png" width="480" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Robert Lai</h3>
-										<p>Senior Master Lai received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he had one of the largest number of clubs in Selangor with a total of over 1000 members. Senior Master Lai is a retired PE teacher and the president of <strong>All Australia ITF</strong>, the governing body for ITF Taekwon-Do in Australia.</p>
+										<p>Senior Master Lai (8th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he had one of the largest number of clubs in Selangor with a total of over 1000 members. Senior Master Lai is a retired PE teacher and the president of <strong>All Australia ITF</strong>, the governing body for ITF Taekwon-Do in Australia.</p>
 									</div>
 								</section>
 								<section class="instr-profile" tabindex="-1">
-									<img class="instr-belt" src="images/instructors/belt-6.png" width="40" height="220" alt="6th degree Black Belt">
-									<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="220" alt="Jason Lai">
+									<img class="instr-belt" src="images/instructors/belt-6.png" width="40" height="220" alt="">
+									<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Jason Lai</h3>
 										<p>Mr Jason Lai has been training for over 25 years, and has been a member of the club for 16. He achieved his <strong>6th degree Black Belt</strong> in December 2006, and received the <em>Outstanding Contribution</em> award from RMIT University in 2009. Mr Lai was also a <strong>coach</strong> for the <strong>Australian Team</strong> for the 2010 Junior and Veterans <strong>World Championships</strong> in Minsk, Belarus.</p>
 									</div>
 								</section>
 								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
-									<img class="instr-belt" src="images/instructors/belt-3.png" width="40" height="220" alt="3rd degree Black Belt">
-									<img class="instr-portrait" src="images/instructors/cass-white.png" width="500" height="220" alt="Cassandra White">
+									<img class="instr-belt" src="images/instructors/belt-3.png" width="40" height="220" alt="">
+									<img class="instr-portrait" src="images/instructors/cass-white.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Cassandra White</h3>
 										<p>Ms White has been training at RMIT University since <strong>2003</strong> and received her <strong>3rd degree Black Belt</strong> in December 2012. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 ITF Taekwon-Do <strong>World Championships</strong> in St Petersburg, Russia. </p>
@@ -99,6 +98,7 @@
 	</article>
 	<?php include 'includes/footer.php'; ?>
 	<?php include 'includes/bottom_js.php'; ?>
+	<script src="js/instructors.js"></script>
 </div>
 </body>
 </html>

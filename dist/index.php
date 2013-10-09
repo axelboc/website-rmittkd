@@ -8,7 +8,6 @@
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-index.css">
 	<?php include 'includes/head_js.php'; ?>
-	<script src="js/calendar.js"></script>
 </head>
 <body>
 <div class="body-wrap">
@@ -257,6 +256,7 @@
 	</article>
 	<?php include 'includes/footer.php'; ?>
 	<?php include 'includes/bottom_js.php'; ?>
+	<script src="js/calendar.js"></script>
 </div>
 </body>
 </html>
