@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-	<meta charset="utf-8">
 	<meta name="description" content="Questions, suggestions? Get in touch!">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact | RMIT ITF Taekwon-Do</title>

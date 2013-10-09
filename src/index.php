@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-	<meta charset="utf-8">
 	<meta name="description" content="Website of the ITF Taekwon-Do club of RMIT Univeristy, Melbourne.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>RMIT ITF Taekwon-Do</title>

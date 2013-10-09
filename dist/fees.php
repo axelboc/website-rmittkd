@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-	<meta charset="utf-8">
 	<meta name="description" content="Find out more about the membership and training fees for 2013.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Fees | RMIT ITF Taekwon-Do</title>
