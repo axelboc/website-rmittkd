@@ -14,7 +14,7 @@
     <?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="body-max">
-			<img class="main-hero hero lazy-loading" src="" data-src="images/hero/hero-dojang-suffix.png" width="530" height="411" alt="">
+			<img class="dojang-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-dojang-suffix.png" width="530" height="411" alt="">
 		</div>
 		<div class="main-wrap body-max">
 			<header class="section box row">
@@ -55,7 +55,7 @@
 									<img class="instr-portrait" src="images/instructors/cass-white.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Cassandra White</h3>
-										<p>Ms White has been training at RMIT University since <strong>2003</strong> and received her <strong>3rd degree Black Belt</strong> in December 2012. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 ITF Taekwon-Do <strong>World Championships</strong> in St Petersburg, Russia. </p>
+										<p>Ms White has been training at RMIT University since <strong>2003</strong> and received her <strong>3rd degree Black Belt</strong> in December 2012. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 ITF Taekwon-Do <strong>World Championships</strong> in St Petersburg, Russia.</p>
 									</div>
 								</section>
 							</div>
