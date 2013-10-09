@@ -106,6 +106,7 @@
 												<h3 class="cal-heading">January</h3>
 												<ul class="list-reset">
 													<li><strong>14</strong> Class starts</li>
+													<li><strong>17-19</strong> GM Phap Lu Seminar</li>
 												</ul>
 											</div>
 										</div>
@@ -130,7 +131,6 @@
 													<li><strong>3</strong> First-aid training</li>
 													<li><strong>5-7</strong> RMIT Club Days</li>
 													<li><strong>10</strong> Weetbix tryathlon</li>
-													<li><strong>29</strong> No class (Good Friday)</li>
 												</ul>
 											</div>
 										</div>
@@ -141,8 +141,8 @@
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">April</h3>
 												<ul class="list-reset">
-													<li><strong>1</strong> No class (Easter Monday)</li>
 													<li><strong>5</strong> Colour-belt grading</li>
+													<li><strong>12-14</strong> Training Camp</li>
 													<li><strong>20</strong> TAS Champs</li>
 												</ul>
 											</div>
@@ -166,8 +166,7 @@
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">June</h3>
 												<ul class="list-reset">
-													<li><strong>10</strong> No class (Queen's Birthday)</li>
-													<li><strong>15</strong> Footsal (<abbr title="to be confirmed">TBC</abbr>)</li>
+													<li><strong>15</strong> Indoor soccer</li>
 												</ul>
 											</div>
 										</div>
@@ -178,8 +177,8 @@
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">July</h3>
 												<ul class="list-reset">
-													<li><strong>7</strong> Black-belt Grading</li>
-													<li><strong>15-21</strong> Senior World Champs</li>
+													<li><strong>7</strong> Black-belt grading</li>
+													<li><strong>23-25</strong> RMIT orientation day + demo</li>
 												</ul>
 											</div>
 										</div>
@@ -191,7 +190,8 @@
 												<h3 class="cal-heading">August</h3>
 												<ul class="list-reset">
 													<li><strong>2</strong> Colour-belt grading</li>
-													<li><strong>17</strong> RMIT ITF Tournament</li>
+													<li><strong>3</strong> Bowling</li>
+													<li><strong>17</strong> RMIT ITF Championship</li>
 												</ul>
 											</div>
 										</div>
@@ -202,7 +202,7 @@
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">September</h3>
 												<ul class="list-reset">
-													<li><strong>14</strong> Laser tag (<abbr title="to be confirmed">TBC</abbr>)</li>
+													<li><strong>21</strong> VIC Champs</li>
 												</ul>
 											</div>
 										</div>
@@ -213,7 +213,8 @@
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">October</h3>
 												<ul class="list-reset">
-													<li><strong>19</strong> Club barbecue (<abbr title="to be confirmed">TBC</abbr>)</li>
+													<li><strong>5</strong> Annual General Meeting</li>
+													<li><strong>18</strong> Movie Night</li>
 												</ul>
 											</div>
 										</div>
@@ -224,9 +225,8 @@
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">November</h3>
 												<ul class="list-reset">
-													<li><strong>9</strong> Annual dinner (<abbr title="to be confirmed">TBC</abbr>)</li>
-													<li><strong>29</strong> <abbr title="All Australia International Taekwon-Do Federation">AAITF</abbr> <abbr title="Annual General Meeting">AGM</abbr></li>
-													<li><strong>30-1</strong> <abbr title="All Australia International Taekwon-Do Federation">AAITF</abbr> National</li>
+													<li><strong>16</strong> Annual dinner</li>
+													<li><strong>30-1</strong> Nationals in Waga Waga</li>
 												</ul>
 											</div>
 										</div>
@@ -237,7 +237,7 @@
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">December</h3>
 												<ul class="list-reset">
-													<li><strong>30-1</strong> <abbr title="All Australia International Taekwon-Do Federation">AAITF</abbr> National</li>
+													<li><strong>30-1</strong> Nationals in Waga Waga</li>
 													<li><strong>6</strong> Colour-belt grading</li>
 													<li><strong>15</strong> Black-belt Grading</li>
 												</ul>
