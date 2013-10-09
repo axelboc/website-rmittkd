@@ -3,6 +3,10 @@
 
 /* ==== Hero image and adjoining content ===== */
 
+.itf-image.lazy-loading {
+	height: 125.5%;
+}
+
 /* Image is absolutely positioned */
 @media (min-width: 50em) {
 	

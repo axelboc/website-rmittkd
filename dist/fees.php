@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Find out more about the membership and training fees for 2013.">
-	<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Fees | RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-fees.css">
@@ -45,7 +45,7 @@
 					<section class="section box">
 						<h1 class="section-heading">Training Fees</h1>
 						<div class="lessons section-content row">
-							<img class="lessons-cards-img" src="images/adaptive/training-cards.png" width="250" height="210" alt="Yellow, blue and red training cards">
+							<img class="lessons-cards-img" src="images/training-cards.png" width="250" height="210" alt="Yellow, blue and red training cards">
 							<div class="lessons-fee row">
 								<p class="lessons-each fee"><span class="fee-val">just $2</span> <span class="fee-period">per lesson</span></p>
 								<ul class="lessons-cards">

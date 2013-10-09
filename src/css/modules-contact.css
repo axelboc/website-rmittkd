@@ -8,7 +8,7 @@
 }
 
 /* Image is hidden */
-@media (max-width: 34.99em) {
+@media (max-width: 29.99em) {
 	
 	.contact-image {
 		display: none;
@@ -17,7 +17,7 @@
 }
 
 /* Image is absolutely positioned */
-@media (min-width: 35em) {
+@media (min-width: 30em) {
 	
 	.contact-section {
 		position: relative;
@@ -27,10 +27,43 @@
 		position: absolute;
 		right: 2.5em;
 		bottom: .5em;
-		max-width: 55%;
 		z-index: 9;
+		max-width: 100%;
 	}
 	
+}
+
+@media (max-width: 59.99em) {
+	
+	.contact-image {
+		width: 360px;
+	}
+
+}
+
+@media (max-width: 50em) {
+	
+	.contact-image {
+		width: 350px;
+	}
+
+}
+
+@media (max-width: 42em) {
+	
+	.contact-image {
+		width: 330px;
+	}
+
+}
+
+@media (max-width: 35em) {
+	
+	.contact-image {
+		width: 270px;
+		bottom: 7em;
+	}
+
 }
 
 

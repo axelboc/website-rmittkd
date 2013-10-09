@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Questions, suggestions? Get in touch!">
-	<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact | RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-contact.css">
@@ -16,7 +16,7 @@
 		<div class="main-wrap body-max">
 			<section class="contact-section section box">
 				<h1 class="section-heading">Contact</h1>
-				<img class="contact-image respimg-fit" src="images/adaptive/hero-contact.png" width="384" height="520" alt="">
+				<img class="contact-image lazy-loading" src="" data-src="images/hero/hero-contact-suffix.png" width="384" height="520" alt="">
 				<div class="section-content">
 					<form class="form row">
 						<p class="form-row row">

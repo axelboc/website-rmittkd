@@ -16,7 +16,7 @@
 		<div class="main-wrap body-max">
 			<header class="itf-section section box row">
 				<h1 class="section-heading"><abbr title="International Taekwon-Do Federation">ITF</abbr> Taekwon-Do</h1>
-				<img class="itf-image img-mob-left img-tab-left respimg-fit" src="images/adaptive/hero-tkd.png" width="400" height="502" alt="Portrait of General Choi Hong Hi, founder of Taekwon-Do.">
+				<img class="itf-image img-mob-left img-tab-left lazy-loading hidden-text" src="" data-src="images/hero/hero-tkd-suffix.png" width="400" height="502" alt="General Choi Hong Hi, founder of Taekwon-Do">
 				<div class="itf-content section-content">
 					<p>The founder of Taekwon-Do is <strong>Choi Hong Hi</strong> (1918-2002), a South Korean General and Ambassador.</p>
 					<p>Taekwon-Do is based on <strong>Tae-Kyon</strong>, a traditional Korean martial art that is over 1300 years old. General Choi developed the art whilst being a prisoner during World War II. He practiced it to keep up his morale and that of his fellow prisoners. On 16 August 1944, two days before he was due to be executed by his captors, General Choi and his friends were liberated by US forces.</p>
@@ -28,7 +28,7 @@
 				<div class="lay-main">
 					<section class="lai-section section box row">
 						<h2 class="lai-heading section-heading">Lai Taekwon-Do</h2>
-						<img class="lai-image img-mob-left img-tab-left respimg-fit" src="images/adaptive/sm-lai.png" width="270" height="350" alt="Senior Master Robert Lai, in a sparring stance">
+						<img class="lai-image img-mob-left img-tab-left lazy-loading hidden-text" src="" data-src="images/sm-lai-suffix.png" width="270" height="350" alt="Senior Master Robert Lai, in a sparring stance">
 						<div class="lai-content section-content">
 							<p>The RMIT ITF Taekwon-Do Club is affiliated to Lai Taekwon-Do, under the guidance of <strong>Senior Master Robert Lai</strong> (8th degree) and his son Jason Lai (6th degree).</p>
 							<p>Senior Master Lai was born in Malaysia. He started Taekwon-Do in 1964 <strong>at the age of 19</strong>, after watching a demonstration by General Choi and his squad. The training hall was a small Buddhist temple so numbers were limited, and Senior Master Lai was one of 30 students chosen to begin training. According to Senior Master Lai, Taekwon-Do was the <em>in</em> thing to do.</p>

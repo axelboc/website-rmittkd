@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="description" content="Website of the ITF Taekwon-Do club of RMIT Univeristy, Melbourne.">
-	<meta name="viewport" content="initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-index.css">
@@ -15,7 +15,7 @@
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="body-max">
-			<img class="main-hero respimg-fit" src="images/adaptive/hero-index.png" width="825" height="610" alt="">
+			<img class="main-hero lazy-loading hidden-text" src="" data-src="images/hero/hero-index-suffix.png" width="825" height="610" alt="">
 		</div>
 		<div class="main-wrap body-max">
 			<div class="row">

@@ -51,9 +51,9 @@
 @media (min-width: 50em) {
 	
 	.main-hero {
-		top: -2em;
+		top: 1.5em;
 		right: .6em;
-		max-width: 60%;
+		max-width: 53%;
 	}
 	
 	.dojang-content {
@@ -62,13 +62,22 @@
 	
 }
 
-@media (min-width: 57em) and (max-width: 59.99em) {
+@media (min-width: 57em) {
 	
 	.main-hero {
-		top: -4em;
+		top: 0;
 	}
 	
 }
+
+@media (min-width: 60em) {
+	
+	.main-hero {
+		max-width: 100%;
+	}
+	
+}
+
 
 
 /* ===== Instructors ===== */

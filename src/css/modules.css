@@ -164,6 +164,15 @@
 	margin: 1.5em 0 1.2em;
 }
 
+@media (max-width: 29.99em) {
+	
+	.sidebar .backdrop-content {
+		width: 15.76em;
+		margin: 0 auto;
+	}
+	
+}
+
 
 /* ===== Top navigation ===== */
 
