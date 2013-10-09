@@ -16,7 +16,7 @@
 		<div class="main-wrap body-max">
 			<header class="itf-section section box row">
 				<h1 class="section-heading"><abbr title="International Taekwon-Do Federation">ITF</abbr> Taekwon-Do</h1>
-				<img class="itf-image img-mob-left img-tab-left lazy-loading" src="" data-src="images/hero/hero-tkd-suffix.png" width="400" height="502" alt="">
+				<img class="itf-image hero img-mob-left img-tab-left lazy-loading" src="" data-src="images/hero/hero-tkd-suffix.png" width="400" height="502" alt="">
 				<div class="itf-content section-content">
 					<p>The founder of Taekwon-Do is <strong>Choi Hong Hi</strong> (1918-2002), a South Korean General and Ambassador.</p>
 					<p>Taekwon-Do is based on <strong>Tae-Kyon</strong>, a traditional Korean martial art that is over 1300 years old. General Choi developed the art whilst being a prisoner during World War II. He practiced it to keep up his morale and that of his fellow prisoners. On 16 August 1944, two days before he was due to be executed by his captors, General Choi and his friends were liberated by US forces.</p>

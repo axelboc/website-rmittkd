@@ -25,7 +25,7 @@ $(function () {
 	var inView;
 	var updateInView = function () {
 		// When reference element is floated, calendar has two columns; otherwise, it has one.
-		inView = ($respReference.css("float") === "left") ? 2 : 1;
+		inView = emWidth < 40 ? 1 : 2;
 
 		// If 2 months in view, ensure the carousel's position is not the last month
 		if (inView === 2 && (carouselPos === carouselLen - 1)) {

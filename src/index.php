@@ -14,7 +14,7 @@
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="body-max">
-			<img class="main-hero lazy-loading" src="" data-src="images/hero/hero-index-suffix.png" width="825" height="610" alt="">
+			<img class="index-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-index-suffix.png" width="825" height="610" alt="">
 		</div>
 		<div class="main-wrap body-max">
 			<div class="row">
@@ -37,7 +37,7 @@
 							<h2 class="section-heading">Timetable</h2>
 							<div>
 								<table class="tmtbl" summary="The first colum gives the time, and the others each correspond to a day of the week.">
-									<caption class="tmtbl-caption"><span class="tmtbl-legend hidden-text">Legend: </span><span><span class="tmtbl-training tmtbl-top tmtbl-bot"></span> Training</span> <span><span class="tmtbl-openmat tmtbl-top tmtbl-bot"></span> Open mat</span></caption>
+									<caption class="tmtbl-caption"><span class="tmtbl-legend hidden-text">Legend: </span><span><span class="tmtbl-legend-square tmtbl-training tmtbl-top tmtbl-bot"></span> Training</span> <span><span class="tmtbl-legend-square tmtbl-openmat tmtbl-top tmtbl-bot"></span> Open mat</span></caption>
 									<thead>
 										<tr>
 											<th class="tmtbl-time" scope="col">Time</th>

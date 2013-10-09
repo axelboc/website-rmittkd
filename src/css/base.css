@@ -32,7 +32,6 @@ body {
 }
 
 body {
-	font-family: Verdana, Arial, sans-serif;
 	font-size: 70%;
 	color: #333;
 	background-color: #fff;
@@ -72,10 +71,6 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-
-.row {
-	zoom: 1; /* IE7 */
 }
 
 .box {
@@ -128,6 +123,11 @@ a:hover {
 
 img {
 	display: block;
+}
+
+/* Position hero images below header */
+.hero {
+	z-index: 5;
 }
 
 /* Responsive images */

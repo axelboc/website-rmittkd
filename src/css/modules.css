@@ -5,11 +5,7 @@
 /* ===== Main container ===== */
 
 .main-wrap {
-	margin-top: 75px;
-}
-
-.main-hero {
-	position: absolute;
+	margin-top: 6.7em;
 }
 
 @media (min-width: 30em) {
@@ -23,7 +19,7 @@
 @media (min-width: 50em) {
 	
 	.main-wrap {
-		margin-top: 160px;
+		margin-top: 12.5em;
 	}
 	
 }
@@ -87,7 +83,6 @@
 	background-color: #eee;
 	background-image: -webkit-linear-gradient(top, #fff, #ddd);
 	background-image: linear-gradient(to bottom, #fff, #ddd);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff', endColorstr='#ddd', GradientType=0);
 	opacity: .9;
 }
 
@@ -128,6 +123,7 @@
 
 .sidebar {
 	font-size: 85%;
+	margin-bottom: 1em;
 }
 
 .sidebar a {
@@ -175,13 +171,6 @@
 
 
 /* ===== Top navigation ===== */
-
-/* Ensure navigation is always above hero image */
-.header {
-	position: relative;
-	z-index: 10;
-	opacity: .8;
-}
 
 .nav-list a {
 	position: relative;
@@ -302,11 +291,14 @@
 
 /* ===== Header and logo ===== */
 
+/* Ensure navigation is always above hero image */
 .header {
+	position: relative;
+	z-index: 50;
+	opacity: .8;
 	background-color: #f1f1f1;
 	background-image: -webkit-linear-gradient(top, #f1f1f1, #ddd);
 	background-image: linear-gradient(to bottom, #f1f1f1, #ddd);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#ddd', GradientType=0);
 }
 
 .logo {
@@ -339,7 +331,7 @@
 .footer-wrap {
 	position: relative;
 	line-height: 3.5em;
-	margin-top: 3em;
+	margin-top: 2em;
 	border-radius: 3px 3px 0 0;
 	font-size: 80%;
 	text-align: center;
@@ -347,7 +339,6 @@
 	background-color: #545456;
 	background-image: -webkit-linear-gradient(top, #545456, #3c3c3e);
 	background-image: linear-gradient(to bottom, #545456, #3c3c3e);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#545456', endColorstr='#3c3c3e', GradientType=0);
 }
 
 .foot-copy {

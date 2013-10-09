@@ -14,7 +14,7 @@
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="body-max">
-			<img class="main-hero lazy-loading" src="" data-src="images/hero/hero-index-suffix.png" width="825" height="610" alt="">
+			<img class="main-hero hero lazy-loading" src="" data-src="images/hero/hero-index-suffix.png" width="825" height="610" alt="">
 		</div>
 		<div class="main-wrap body-max">
 			<div class="row">

@@ -4,13 +4,18 @@
 
 /* ===== Hero image and welcome section ===== */
 
+.index-hero {
+	position: absolute;
+	z-index: -5;
+}
+
 @media (max-width: 39.99em) {
 
 	.main-wrap {
 		margin-top: 35%;
 	}
 	
-	.main-hero {
+	.index-hero {
 		top: 5.5em;
 		right: -2em;
 		max-width: 70%;
@@ -25,7 +30,7 @@
 		margin-right: 0;
 	}
 	
-	.main-hero {
+	.index-hero {
 		top: 5em;
 		right: -1em;
 		max-width: 70%;
@@ -39,7 +44,7 @@
 		margin-top: 10em;
 	}
 	
-	.main-hero {
+	.index-hero {
 		top: 6em;
 		right: -11.5em;
 		max-width: 70%;
@@ -49,7 +54,7 @@
 
 @media (min-width: 50em) {
 	
-	.main-hero {
+	.index-hero {
 		top: -2.6em;
 		right: -235px;
 		max-width: 90%;
@@ -68,9 +73,12 @@
 
 .tmtbl th,
 .tmtbl td {
-	width: 25%;
 	text-align: center;
 	padding: 0;
+}
+
+.tmtbl td {
+	width: 23%;
 }
 
 .tmtbl > thead th {
@@ -105,9 +113,16 @@
 
 .tmtbl-training,
 .tmtbl-openmat {
+	display: block;
+	width: 1.8em;
+	height: 100%;
+	min-height: 1.55em;
+	margin: 0 auto;
+}
+
+.tmtbl-legend-square {
 	display: inline-block;
 	vertical-align: -0.4em;
-	width: 1.8em;
 	height: 1.55em;
 }
 

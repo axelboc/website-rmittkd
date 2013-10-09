@@ -4,8 +4,8 @@
 
 /* ==== Hero image and adjoining content ===== */
 
-.main-hero {
-	z-index: 5;
+.dojang-hero {
+	position: absolute;
 }
 
 @media (max-width: 39.99em) {
@@ -14,7 +14,7 @@
 		margin-top: 35%;
 	}
 	
-	.main-hero {
+	.dojang-hero {
 		top: 7em;
 		right: .5em;
 		max-width: 60%;
@@ -36,7 +36,7 @@
 		margin-top: 10em;
 	}
 	
-	.main-hero {
+	.dojang-hero {
 		top: 7em;
 		right: .5em;
 		max-width: 50%;
@@ -50,7 +50,7 @@
 
 @media (min-width: 50em) {
 	
-	.main-hero {
+	.dojang-hero {
 		top: 1.5em;
 		right: .6em;
 		max-width: 53%;
@@ -64,7 +64,7 @@
 
 @media (min-width: 57em) {
 	
-	.main-hero {
+	.dojang-hero {
 		top: 0;
 	}
 	
@@ -72,7 +72,7 @@
 
 @media (min-width: 60em) {
 	
-	.main-hero {
+	.dojang-hero {
 		max-width: 100%;
 	}
 	

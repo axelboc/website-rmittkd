@@ -1,4 +1,7 @@
 
+// Global (accessed by calendar.js)
+var emWidth;
+
 $(function () {
 	
 	var $body = $("body");
@@ -15,21 +18,24 @@ $(function () {
 	}
 	
 	// Calculate current width of 'body' element in em
-	var emWidth = $body.width() / fontSize;
+	var computeEmWidth = function () {
+		emWidth = $body.width() / fontSize;
+	};
+	computeEmWidth();
+	$(window).resize(computeEmWidth);
+	
 	// Deduce image filename suffix
 	var suffix = emWidth < 50 ? "-" + (emWidth < 30 ? "mob" : "tab") : "";
 
 	// Load images
 	$bodyWrap.find("img.lazy-loading").each(function () {
 		$this = $(this);
-		$this.toggleClass("lazy-loading respimg-fit");
 		
 		// Set 'src' attribute (except for contact page image on mobile)
 		if (emWidth > 30 || !$this.hasClass("contact-image")) {
 			$this.attr("src", $this.attr("data-src").replace("-suffix", suffix));
 		}
 	});
-	
 	
 	/* ===== Off-canvas responsive navigation ===== */
 	

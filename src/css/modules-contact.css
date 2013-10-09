@@ -36,14 +36,6 @@
 @media (max-width: 59.99em) {
 	
 	.contact-image {
-		width: 360px;
-	}
-
-}
-
-@media (max-width: 50em) {
-	
-	.contact-image {
 		width: 350px;
 	}
 
@@ -109,7 +101,6 @@
 	background: #e7343c left top no-repeat url('../images/fist.png');
 	background-image: url('../images/fist.png'), -webkit-linear-gradient(top, #e7343c, #cb171f);
 	background-image: url('../images/fist.png'), linear-gradient(to bottom, #e7343c, #cb171f);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e7343c', endColorstr='#cb171f', GradientType=0);
 }
 
 .form-submit:hover {

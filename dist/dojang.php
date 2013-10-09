@@ -14,7 +14,7 @@
     <?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="body-max">
-			<img class="main-hero lazy-loading" src="" data-src="images/hero/hero-dojang-suffix.png" width="530" height="411" alt="">
+			<img class="main-hero hero lazy-loading" src="" data-src="images/hero/hero-dojang-suffix.png" width="530" height="411" alt="">
 		</div>
 		<div class="main-wrap body-max">
 			<header class="section box row">
