@@ -28,7 +28,8 @@ module.exports = function(grunt) {
 					"duplicate-background-images": false,
 					"box-sizing": false,
 					"box-model": false,
-					"outline-none": false
+					"outline-none": false,
+					"gradients": false
 				}
 			}
 		},
