@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-	<meta name="description" content="Website of the ITF Taekwon-Do club of RMIT Univeristy, Melbourne.">
+	<meta name="description" content="Come and meet really friendly people at the ITF Taekwon-Do club of RMIT University, Melbourne. Just drop by in gym cloths and enjoy 3 classes for free!">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>

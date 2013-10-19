@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-	<meta name="description" content="Learn about Taekwon-Do, its founder, and the International Taekwon-Do Federation.">
+	<meta name="description" content="Learn about this modern martial art that is Taekwon-Do, and about its founder, General Choi Hong Hi. Meet Senior Master Lai, the founder our club.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ITF Taekwon-Do | RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>

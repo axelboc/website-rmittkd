@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-	<meta name="description" content="Visit websites of associated federations and clubs, or follow us on Facebook and Youtube.">
+	<meta name="description" content="Want to be part of our growing community? Follow our Facebook page or visit the websites of our associated clubs and organisations.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Social | RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>

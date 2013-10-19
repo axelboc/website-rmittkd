@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-	<meta name="description" content="Learn about our dojang, and meet our experienced instructors and executive committee.">
+	<meta name="description" content="Learn about our club, and meet our experienced instructors and lively executive committee.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Our Dojang | RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>

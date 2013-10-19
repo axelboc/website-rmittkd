@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-	<meta name="description" content="Questions, suggestions? Get in touch!">
+	<meta name="description" content="Get in touch! Meet us in person at the club, or simply fill in the contact form and we'll get back to you.">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact | RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>

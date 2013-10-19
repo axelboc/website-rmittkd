@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-AU">
 <head>
-	<meta name="description" content="Find out more about the membership and training fees for 2013.">
+	<meta name="description" content="Find out about our club's amazingly cheap membership and training fees for 2013. Not convinced yet? Just come by to the club and enjoy 3 classes for free!">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Fees | RMIT ITF Taekwon-Do</title>
 	<?php include 'includes/head_css.php'; ?>
