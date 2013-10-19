@@ -202,10 +202,14 @@
 	
 	.nav-trigger {
 		display: block;
-		width: 4em;
-		height: 4em;
+		width: 45px;
+		height: 45px;
 		margin: 1em 1em 1em auto;
-		background-color: #000;
+		background: url(../images/nav-trigger.png) no-repeat left top;
+	}
+	
+	.nav-trigger:hover {
+		background-position: left bottom;
 	}
 	
 	.nav {
