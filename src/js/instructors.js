@@ -106,6 +106,9 @@ $(function () {
 			$arrowPrev.blur();
 			carouselPos--;
 			updateCarousel();
+			
+			// Send Analytics event
+			ga('send', 'event', 'arrow left', 'click', 'instructors slider');
 		}
 		
 		evt.preventDefault();
@@ -120,6 +123,9 @@ $(function () {
 			$arrowNext.blur();
 			carouselPos++;
 			updateCarousel();
+			
+			// Send Analytics event
+			ga('send', 'event', 'arrow right', 'click', 'instructors slider');
 		}
 		
 		evt.preventDefault();
@@ -134,6 +140,9 @@ $(function () {
 			$newDot.blur();
 			carouselPos = $dots.index($newDot);
 			updateCarousel();
+		
+			// Send Analytics event
+			ga('send', 'event', 'dot ' + carouselPos, 'click', 'instructors slider');
 		}
 		
 		evt.preventDefault();

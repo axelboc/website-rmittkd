@@ -118,6 +118,9 @@ $(function () {
 			carouselPos--;
 			$arrowPrev.blur();
 			updateCarousel(true);
+			
+			// Send Analytics event
+			ga('send', 'event', 'arrow left', 'click', 'calendar');
 		}
 		
 		evt.preventDefault();
@@ -131,6 +134,9 @@ $(function () {
 			carouselPos++;
 			$arrowNext.blur();
 			updateCarousel(true);
+			
+			// Send Analytics event
+			ga('send', 'event', 'arrow right', 'click', 'calendar');
 		}
 		
 		evt.preventDefault();

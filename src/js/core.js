@@ -7,6 +7,7 @@ $(function () {
 	var $body = $("body");
 	var $bodyWrap = $body.children(".body-wrap");
 	
+	
 	/* ===== Lazy-loading of images ===== */
 	
 	// Get default font-size
@@ -31,11 +32,23 @@ $(function () {
 	$bodyWrap.find("img.lazy-loading").each(function () {
 		$this = $(this);
 		
-		// Set 'src' attribute (except for contact page image on mobile)
+		// Skip contact page image on mobile
 		if (emWidth > 30 || !$this.hasClass("contact-image")) {
-			$this.attr("src", $this.attr("data-src").replace("-suffix", suffix));
+			// Start measuring load time for Analytics
+			var startTime = new Date().getTime();
+			
+			// Build and set 'src' attribute
+			var src = $this.attr("data-src").replace("-suffix", suffix);
+			$this.attr("src", src);
+			
+			// When image is loaded, send load time to Analytics
+			$this.load(function () {
+				var loadTime = (new Date().getTime()) - startTime;
+				ga('send', 'timing', src, 'Load Image', loadTime);
+			});
 		}
 	});
+	
 	
 	/* ===== Off-canvas responsive navigation ===== */
 	
@@ -58,6 +71,9 @@ $(function () {
 		$nav.addClass("nav-visible");
 		$nav.attr("aria-hidden", false);
 		
+		// Send Analytics event
+		ga('send', 'event', 'open', 'click', 'mobile nav');
+		
 		evt.preventDefault();
 		return false;
 	});
@@ -74,6 +90,9 @@ $(function () {
 		navVisible = false;
 		$body.removeClass("noscroll");
 		$nav.attr("aria-hidden", true);
+		
+		// Send Analytics event
+		ga('send', 'event', 'close', 'click', 'mobile nav');
 		
 		evt.preventDefault();
 		return false;
@@ -96,10 +115,16 @@ $(function () {
 			$nav.attr("aria-hidden", false);
 			$nav.removeClass("nav-visible");
 			
+			// Send Analytics event
+			ga('send', 'event', 'off', 'resize', 'mobile nav');
+			
 		} else if (!isOffCanvas && newPos === "absolute") {
 			// Switch to responsive nav
 			isOffCanvas = true;
 			$nav.attr("aria-hidden", true);
+			
+			// Send Analytics event
+			ga('send', 'event', 'on', 'resize', 'mobile nav');
 		}
 	});
 	
