@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-	<meta name="description" content="Find out about our club's amazingly cheap membership and training fees for 2013. Not convinced yet? Just come by to the club and enjoy 3 classes for free!">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Fees | RMIT ITF Taekwon-Do</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Find out about our club's amazingly cheap membership and training fees for 2013. Not convinced yet? Just come by to the club and enjoy 3 classes for free!">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Fees | RMIT ITF Taekwon-Do">
+	<meta property="og:image" content="http://rmittkd.com/images/og/hero-fees-og.jpg">
+	<meta property="og:url" content="http://rmittkd.com/fees">
+	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-fees.css">
 	<?php include 'includes/head_js.php'; ?>

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-	<meta name="description" content="Want to be part of our growing community? Follow our Facebook page or visit the websites of our associated clubs and organisations.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Social | RMIT ITF Taekwon-Do</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Want to be part of our growing community? Follow our Facebook page or visit the websites of our associated clubs and organisations.">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Social | RMIT ITF Taekwon-Do">
+	<meta property="og:image" content="http://rmittkd.com/images/og/hero-social-og.jpg">
+	<meta property="og:url" content="http://rmittkd.com/social">
+	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-social.css">
 	<?php include 'includes/head_js.php'; ?>

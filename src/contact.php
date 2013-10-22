@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-	<meta name="description" content="Get in touch! Meet us in person at the club, or simply fill in the contact form and we'll get back to you.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Contact | RMIT ITF Taekwon-Do</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Get in touch! Meet us in person at the club, or simply fill in the contact form and we'll get back to you.">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Contact | RMIT ITF Taekwon-Do">
+	<meta property="og:image" content="http://rmittkd.com/images/og/hero-contact-og.jpg">
+	<meta property="og:url" content="http://rmittkd.com/contact">
+	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-contact.css">
 	<?php include 'includes/head_js.php'; ?>

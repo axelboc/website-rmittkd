@@ -1,9 +1,13 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-	<meta name="description" content="Come and meet really friendly people at the ITF Taekwon-Do club of RMIT University, Melbourne. Just drop by in gym cloths and enjoy 3 classes for free!">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>RMIT ITF Taekwon-Do</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Come and meet a bunch of awesome people at the ITF Taekwon-Do club of RMIT University, Melbourne. Just drop by in gym cloths and enjoy 3 classes for free!">
+	<meta property="og:type" content="website">
+	<meta property="og:title" content="RMIT ITF Taekwon-Do">
+	<meta property="og:image" content="http://rmittkd.com/images/og/logo-rmit-itf.png">
+	<meta property="og:url" content="http://rmittkd.com/">
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-index.css">
 	<?php include 'includes/head_js.php'; ?>

@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-	<meta name="description" content="Learn about our club, and meet our experienced instructors and lively executive committee.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Our Dojang | RMIT ITF Taekwon-Do</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Learn about our club, and meet our experienced instructors and lively executive committee.">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="Our Dojang | RMIT ITF Taekwon-Do">
+	<meta property="og:image" content="http://rmittkd.com/images/og/hero-dojang-og.jpg">
+	<meta property="og:url" content="http://rmittkd.com/dojang">
+	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-dojang.css">
 	<?php include 'includes/head_js.php'; ?>

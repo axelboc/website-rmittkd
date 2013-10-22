@@ -1,9 +1,14 @@
 <!DOCTYPE html>
-<html lang="en-AU">
+<html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
-	<meta name="description" content="Learn about this modern martial art that is Taekwon-Do, and about its founder, General Choi Hong Hi. Meet Senior Master Lai, the founder our club.">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>ITF Taekwon-Do | RMIT ITF Taekwon-Do</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Learn about this modern martial art that is Taekwon-Do, and about its founder, General Choi Hong Hi. Meet Senior Master Lai, the founder our club.">
+	<meta property="og:type" content="article">
+	<meta property="og:title" content="ITF Taekwon-Do | RMIT ITF Taekwon-Do">
+	<meta property="og:image" content="http://rmittkd.com/images/og/hero-tkd-og.jpg">
+	<meta property="og:url" content="http://rmittkd.com/tkd">
+	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-tkd.css">
 	<?php include 'includes/head_js.php'; ?>
