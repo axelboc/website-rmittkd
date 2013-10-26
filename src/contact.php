@@ -22,24 +22,32 @@
 				<h1 class="section-heading">Contact</h1>
 				<img class="contact-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-contact-suffix.png" width="384" height="520" alt="">
 				<div class="section-content">
-					<form class="form row">
-						<p class="form-row row">
+					<form id="contact-form" class="form row">
+						<div class="form-row row">
 							<label class="form-label" for="name">name</label>
-							<input class="form-field box" id="name" name="name" type="text">
-						</p>
-						<p class="form-row row">
+							<div class="form-field-wrap">
+								<input class="form-field form-field--invalid box" id="name" name="name" type="text" aria-required="true" aria-invalid="true">
+								<div class="form-error form-error--blank">Enter your name</div>
+							</div>
+						</div>
+						<div class="form-row row">
 							<label class="form-label" for="email">email</label>
-							<input class="form-field box" id="email" name="email" type="text">
-						</p>
-						<p class="form-row row">
-							<label class="form-label" for="subject">subject</label>
-							<input class="form-field box" id="subject" name="subject" type="text">
-						</p>
-						<p class="form-row row">
+							<div class="form-field-wrap">
+								<input class="form-field box" id="email" name="email" type="email" aria-required="true">
+								<div class="form-error form-error--blank box">Enter your email address</div>
+								<div class="form-error form-error--invalid hidden box">Enter a valid email address</div>
+							</div>
+						</div>
+						<div class="form-row row">
 							<label class="form-label" for="message">message</label>
-							<textarea id="message" class="form-field box" name="message" rows="6"></textarea>
-						</p>
-						<p class="form-row row"><button class="form-submit box" type="submit"><span>Submit</span></button></p>
+							<div class="form-field-wrap">
+								<textarea id="message" class="form-field box" name="message" rows="6" aria-required="true"></textarea>
+								<div class="form-error form-error--blank box">Enter your message</div>
+							</div>
+						</div>
+						<div class="form-row row">
+							<button class="form-submit box" type="submit"><span>Submit</span></button>
+						</div>
 					</form>
 				</div>
 			</section>
