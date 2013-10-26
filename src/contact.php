@@ -26,23 +26,23 @@
 						<div class="form-row row">
 							<label class="form-label" for="name">name</label>
 							<div class="form-field-wrap">
-								<input class="form-field form-field--invalid box" id="name" name="name" type="text" aria-required="true" aria-invalid="true">
-								<div class="form-error form-error--blank">Enter your name</div>
+								<input class="form-field box" id="name" name="name" type="text" aria-required="true">
+								<div class="form-error form-error--blank hidden">Enter your name</div>
 							</div>
 						</div>
 						<div class="form-row row">
 							<label class="form-label" for="email">email</label>
 							<div class="form-field-wrap">
-								<input class="form-field box" id="email" name="email" type="email" aria-required="true">
-								<div class="form-error form-error--blank box">Enter your email address</div>
-								<div class="form-error form-error--invalid hidden box">Enter a valid email address</div>
+								<input class="form-field box" id="email" name="email" type="text" aria-required="true">
+								<div class="form-error form-error--blank hidden">Enter your email address</div>
+								<div class="form-error form-error--email hidden">Enter a valid email address</div>
 							</div>
 						</div>
 						<div class="form-row row">
 							<label class="form-label" for="message">message</label>
 							<div class="form-field-wrap">
 								<textarea id="message" class="form-field box" name="message" rows="6" aria-required="true"></textarea>
-								<div class="form-error form-error--blank box">Enter your message</div>
+								<div class="form-error form-error--blank hidden">Enter your message</div>
 							</div>
 						</div>
 						<div class="form-row row">
@@ -55,6 +55,7 @@
 	</section>
 	<?php include 'includes/footer.php'; ?>
 	<?php include 'includes/bottom_js.php'; ?>
+	<script src="js/contact.js"></script>
 </div>
 </body>
 </html>

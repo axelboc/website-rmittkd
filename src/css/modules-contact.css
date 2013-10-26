@@ -68,7 +68,7 @@
 }
 
 .form-row {
-	margin: 1em 0;
+	margin: 1.5em 0;
 }
 
 .form-label,
@@ -110,9 +110,9 @@
 	padding: .7em 0 .5em;
 	border-radius: 0 0 3px 3px;
 	background-color: rgb(240, 160, 160);
-	background-color: rgba(240, 160, 160, .8);
+	background-color: rgba(85, 85, 85, .9);
+	color: #fff;
 	text-align: center;
-	font-weight: bold;
 	font-size: 90%;
 }
 
@@ -176,10 +176,11 @@
 	.form-error {
 		top: 0;
 		float: left;
-		width: 19em;
+		width: 17.5em;
 		margin-left: 1.5em;
+		padding: .7em 0 .7em 1.5em;
 		border-radius: 3px;
-		font-size: 100%;
+		text-align: left;
 	}
 	
 	.form-error:before {
@@ -190,7 +191,7 @@
 		border-top: .6em solid transparent;
 		border-bottom: .6em solid transparent;
 		border-right: .5em solid rgb(240, 160, 160);
-		border-right: .5em solid rgba(240, 160, 160, .8);
+		border-right: .5em solid rgba(85, 85, 85, .9);
 	}
 	
 }
