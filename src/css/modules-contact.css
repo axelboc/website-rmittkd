@@ -67,24 +67,24 @@
 	font-size: 110%;
 }
 
-.form-server {
+.form-result {
 	margin: 1.5em 0 2em;
 	padding: .8em 1em;
 	border-radius: 3px;
 }
 
-.form-server--fail {
+.form-result--fail {
 	border: 1px solid #cb171f;
 	background-color: rgb(255, 246, 241);
 	background-color: rgba(255, 246, 241, .8);
 }
-.form-server--success {
+.form-result--success {
 	border: 1px solid #218d3d;
 	background-color: rgb(241, 255, 243);
 	background-color: rgba(241, 255, 243, .8);
 }
 
-.form-server-message {
+.form-result-message {
 	margin: 0;
 	font-size: 90%;
 }
@@ -110,16 +110,15 @@
 }
 
 .form-field {
-	border: 0;
+	border: 1px solid #ccc;
 	background-color: rgb(248, 248, 248);
 	background-color: rgba(248, 248, 248, .8);
 	padding: .6em;
-	-webkit-box-shadow: inset 0 0 1px #333;
-	   -moz-box-shadow: inset 0 0 1px #333;
-			box-shadow: inset 0 0 1px #333;
+	transition: all .4s ease;
 }
 
 .form-field--invalid {
+	border-color: transparent;
 	-webkit-box-shadow: inset 0 0 3px #f04851;
 	   -moz-box-shadow: inset 0 0 3px #f04851;
 			box-shadow: inset 0 0 3px #f04851;
@@ -131,7 +130,7 @@
 	z-index: -1;
 	padding: .7em 0 .5em;
 	border-radius: 0 0 3px 3px;
-	background-color: rgb(240, 160, 160);
+	background-color: rgb(85, 85, 85);
 	background-color: rgba(85, 85, 85, .9);
 	color: #fff;
 	text-align: center;
@@ -155,9 +154,20 @@
 	text-decoration: underline;
 }
 
+.form-submit--spinner:after {
+	content: "";
+	position: absolute;
+	right: 1em;
+	top: 0;
+	display: block;
+	width: 45px;
+	height: 100%;
+	background: url(../images/loader.gif) left center transparent no-repeat;
+}
+
 @media (min-width: 30em) {
 	
-	.form-server {
+	.form-result {
 		width: 31em;
 	}
 	
@@ -216,7 +226,7 @@
 		top: .6em;
 		border-top: .6em solid transparent;
 		border-bottom: .6em solid transparent;
-		border-right: .5em solid rgb(240, 160, 160);
+		border-right: .5em solid rgb(85, 85, 85);
 		border-right: .5em solid rgba(85, 85, 85, .9);
 	}
 	
@@ -228,11 +238,11 @@
 		font-size: 100%;
 	}
 	
-	.form-server {
+	.form-result {
 		width: 34em;
 	}
 	
-	.form-server--error > .form-server-message {
+	.form-result--error > .form-result-message {
 		font-size: 85%;
 	}
 	

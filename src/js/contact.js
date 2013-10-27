@@ -1,15 +1,16 @@
 $(function () {
 	
-	var GENERIC_ERROR = "Sorry. Something went wrong on our end. But <strong>please, don't despair!</strong> You can still send us your message and let us know of the issue on <a href=\"https://www.facebook.com/rmittkd\" class=\"link-blend\"><strong>Facebook</strong></a>.";
+	var GENERIC_ERROR = "Sorry. Something went wrong on our end.<br>But <strong>please, don't despair!</strong> You can still send us your message on <a href=\"https://www.facebook.com/rmittkd\" class=\"link-blend\">Facebook</a>, and let us know of the issue.";
 	
 	var $form = $(document.getElementById("contact-form"));
 	var $fields = $form.find(".form-field");
 	var $errors = $form.find(".form-error");
-	var $serverBox = $form.children(".form-server");
-	var $serverMessage = $serverBox.children(".form-server-message");
+	var $resultBox = $form.children(".form-result");
+	var $resultMessage = $resultBox.children(".form-result-message");
+	var $submitBtn = $form.find(".form-submit");
 	
 	
-	// Show error message and mark field as invalid
+	// Show client-side validation error and mark field as invalid
 	var showError = function ($error, $field) {
 		if ($error) {
 			$field.attr("aria-invalid", true).addClass("form-field--invalid");
@@ -57,18 +58,17 @@ $(function () {
 		return !$newError;
 	};
 	
-	
 	// Validate fields on blur
 	$fields.blur(function () {
 		validate($(this));
 	});
 	
 	
-	// Show server message
-	var showServerMessage = function (messageClass, message) {
-		$serverMessage.html(message);
-		$serverBox.removeClass("form-server--fail form-server--success");
-		$serverBox.addClass(messageClass).fadeIn().removeClass("hidden");
+	// Show form submission result
+	var showResult = function (messageClass, message) {
+		$resultMessage.html(message);
+		$resultBox.removeClass("form-result--fail form-result--success").addClass(messageClass);
+		$resultBox.fadeIn().removeClass("hidden").focus();
 	};
 	
 	// Re-validate all fields and submit form via Ajax
@@ -88,6 +88,9 @@ $(function () {
 			// Give focus to first invalid field
 			$firstInvalid.focus();
 		} else {
+			// Show spinner on submit button
+			$submitBtn.addClass("form-submit--spinner");
+			
 			// Submit form and perform server-side validation
 			$.ajax({
 				type: "POST",
@@ -96,14 +99,18 @@ $(function () {
 				dataType: "json",
 				success: function (result) {
 					console.log(result);
-					if (result["success"]) {
-						showServerMessage("form-server--success", result["message"]);
+					if (result.success) {
+						showResult("form-result--success", result.message);
 					} else {
-						showServerMessage("form-server--fail", result["message"].length > 0 ? result["message"] : GENERIC_ERROR);
+						showResult("form-result--fail", result.message.length > 0 ? result.message : GENERIC_ERROR);
 					}
 				},
 				error: function () {
-					showServerMessage("form-server--fail", GENERIC_ERROR);
+					showResult("form-result--fail", GENERIC_ERROR);
+				},
+				complete: function () {
+					// Hide spinner
+					$submitBtn.removeClass("form-submit--spinner");
 				}
 			});
 		}
