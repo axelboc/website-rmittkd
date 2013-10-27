@@ -22,7 +22,10 @@
 				<h1 class="section-heading">Contact</h1>
 				<img class="contact-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-contact-suffix.png" width="384" height="520" alt="">
 				<div class="section-content">
-					<form id="contact-form" class="form row">
+					<form id="contact-form" class="form row" action="js/process-form.php" method="post">
+						<div class="form-server hidden box">
+							<p class="form-server-message"></p>
+						</div>
 						<div class="form-row row">
 							<label class="form-label" for="name">name</label>
 							<div class="form-field-wrap">

@@ -67,8 +67,30 @@
 	font-size: 110%;
 }
 
+.form-server {
+	margin: 1.5em 0 2em;
+	padding: .8em 1em;
+	border-radius: 3px;
+}
+
+.form-server--fail {
+	border: 1px solid #cb171f;
+	background-color: rgb(255, 246, 241);
+	background-color: rgba(255, 246, 241, .8);
+}
+.form-server--success {
+	border: 1px solid #218d3d;
+	background-color: rgb(241, 255, 243);
+	background-color: rgba(241, 255, 243, .8);
+}
+
+.form-server-message {
+	margin: 0;
+	font-size: 90%;
+}
+
 .form-row {
-	margin: 1.5em 0;
+	margin: 1.3em 0;
 }
 
 .form-label,
@@ -134,7 +156,11 @@
 }
 
 @media (min-width: 30em) {
-
+	
+	.form-server {
+		width: 31em;
+	}
+	
 	.form-label,
 	.form-field-wrap {
 		float: left;
@@ -202,13 +228,21 @@
 		font-size: 100%;
 	}
 	
+	.form-server {
+		width: 34em;
+	}
+	
+	.form-server--error > .form-server-message {
+		font-size: 85%;
+	}
+	
 	.form-label {
 		width: 9em;
 	}
 	
 	.form-submit {
-		padding: .7em 4em;
 		margin-left: 10em;
+		padding: .7em 4em;
 	}
 	
 }

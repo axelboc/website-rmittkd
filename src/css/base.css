@@ -99,6 +99,10 @@ a:hover {
 	text-decoration: none;
 }
 
+a > span {
+	text-decoration: inherit;
+}
+
 /* Inverse underline behaviour */
 .link-inv,
 .links-inv a {
@@ -106,16 +110,14 @@ a:hover {
 }
 
 .link-inv:hover,
-.link-inv:hover > span,
-.links-inv a:hover,
-.links-inv a:hover > span {
+.links-inv a:hover {
 	text-decoration: underline;
 }
 
 /* Links blending with the text (same colour) */
 .link-blend,
 .links-blend a {
-	color: #333;
+	color: inherit;
 }
 
 
@@ -196,6 +198,7 @@ img {
 
 .backdrop {
 	position: relative;
+	color: #fff;
 }
 
 /* The actual backdrop
@@ -214,7 +217,6 @@ img {
 .backdrop-content {
 	position: absolute;
 	z-index: 1;
-	color: #fff;
 }
 
 
