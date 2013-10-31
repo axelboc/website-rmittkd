@@ -200,17 +200,31 @@
 /* Off-canvas responsive navigation */
 @media (max-width: 29.99em) {
 	
-	.nav-trigger {
+	.nav-trigger,
+	.nav-close {
 		display: block;
+		background: url(../images/nav-icons.png) no-repeat left top;
+	}
+	
+	.nav-trigger {
 		width: 45px;
 		height: 45px;
 		margin: 1em 1em 1em auto;
-		background: url(../images/nav-trigger.png) no-repeat left top;
 	}
 	
-	.nav-trigger:hover {
-		background-position: left bottom;
+	.nav-close {
+		position: absolute;
+		top: 1em;
+		right: 1em;
+		width: 34px;
+		height: 34px;
+		background-color: #000;
+		background-position: top right;
 	}
+	
+	.nav-trigger:hover { background-position: left bottom; }
+	.nav-close:hover { background-position: right bottom; }
+	
 	
 	.nav {
 		display: none;
@@ -235,16 +249,6 @@
 	
 	.nav-current:after {
 		left: 1.5em;
-	}
-	
-	.nav-close {
-		position: absolute;
-		top: 1em;
-		right: 1em;
-		display: block;
-		width: 3em;
-		height: 3em;
-		background-color: #000;
 	}
 	
 }
