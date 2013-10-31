@@ -17,6 +17,9 @@
 <div class="body-wrap">
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
+		<div class="body-max">
+			<img class="social-hero hero respimg-fit" src="images/hero/hero-social.png" width="331" height="303" alt="Map outline of Australia">
+		</div>
 		<div class="main-wrap body-max">
 			<header class="section box">
 				<h1 class="section-heading">Links</h1>

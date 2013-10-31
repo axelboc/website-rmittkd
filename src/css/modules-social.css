@@ -1,5 +1,44 @@
 @CHARSET "UTF-8";
-/* Modules used only on page links.php */
+/* Modules used only on page social.php */
+
+
+/* ==== Hero image ===== */
+
+.social-hero {
+	position: absolute;
+}
+
+.main-wrap {
+	margin-top: 35%;
+}
+
+.social-hero {
+	top: 7em;
+	right: 2em;
+	max-width: 50%;
+}
+
+@media (min-width: 30em) {
+	
+	.main-wrap {
+		margin-top: 10em;
+	}
+	
+	.social-hero {
+		max-width: 44%;
+	}
+	
+}
+
+@media (min-width: 50em) {
+	
+	.social-hero {
+		top: 3em;
+		right: 6em;
+	}
+	
+}
+
 
 
 /* ===== Resources (links with image and label) =====*/
