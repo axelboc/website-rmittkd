@@ -3,6 +3,10 @@
 
 /* ==== Contact section and hero image ===== */
 
+.main-wrap {
+	margin-top: 6.7em;
+}
+
 .contact-section {
 	padding-bottom: 1em;
 }
@@ -18,6 +22,10 @@
 
 /* Image is absolutely positioned */
 @media (min-width: 30em) {
+	
+	.main-wrap {
+		margin-top: 22%;
+	}
 	
 	.contact-section {
 		position: relative;

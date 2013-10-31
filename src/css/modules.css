@@ -5,13 +5,13 @@
 /* ===== Main container ===== */
 
 .main-wrap {
-	margin-top: 6.7em;
+	margin-top: 35%;
 }
 
 @media (min-width: 30em) {
 	
 	.main-wrap {
-		margin-top: 22%;
+		margin-top: 10em;
 	}
 	
 }

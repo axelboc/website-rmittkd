@@ -2,6 +2,51 @@
 /* Modules used only on page join.php */
 
 
+/* ==== Hero image ===== */
+
+.fees-hero {
+	position: absolute;
+}
+
+.fees-hero {
+	top: 7em;
+	right: 1em;
+	max-width: 50%;
+}
+
+@media (min-width: 30em) and (max-width: 34.99em) {
+	
+	.fees-hero {
+		max-width: 40%;
+	}
+	
+}
+
+@media (min-width: 35em) {
+	
+	.fees-hero {
+		max-width: 34%;
+	}
+	
+}
+
+@media (min-width: 45em) {
+	
+	.fees-hero {
+		max-width: 40%;
+	}
+	
+}
+
+@media (min-width: 50em) {
+	
+	.fees-hero {
+		top: 1em;
+	}
+	
+}
+
+
 /* ===== Fee (value + period) ===== */
 
 .fee {
@@ -26,6 +71,10 @@
 
 
 /* ===== Membership ===== */
+
+.membership {
+	padding-top: .5em;
+}
 
 .mbrship-opt-link {
 	display: block;
@@ -98,22 +147,15 @@
 	
 }
 
-@media (max-width: 44.99em) {
-
-	.membership {
-		padding-top: .5em;
-	}
-	
-}
-
 @media (min-width: 45em) {
 	
 	.membership {
 		position: relative;
+		padding-top: 1em;
 	}
 	
 	.mbrship-options {
-		margin-right: 14em;
+		margin-right: 17em;
 		padding: .8em 1em 1.2em;
 	}
 	
@@ -124,6 +166,14 @@
 		width: 15em;
 		font-size: 85%;
 		text-align: right;
+	}
+	
+}
+
+@media (min-width: 55em) {
+	
+	.mbrship-options {
+		margin-right: 19em;
 	}
 	
 }
@@ -147,7 +197,8 @@
 
 .lessons-cards {
 	float: left;
-	padding-left: 1.2em;
+	margin-top: 1.1em;
+	color: #555;
 }
 
 .lessons-3free {

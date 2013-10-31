@@ -8,21 +8,13 @@
 	position: absolute;
 }
 
-.main-wrap {
-	margin-top: 35%;
-}
-
 .social-hero {
 	top: 7em;
 	right: 2em;
 	max-width: 50%;
 }
 
-@media (min-width: 30em) {
-	
-	.main-wrap {
-		margin-top: 10em;
-	}
+@media (min-width: 30em) and (max-width: 49.99em) {
 	
 	.social-hero {
 		max-width: 44%;

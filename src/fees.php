@@ -17,6 +17,9 @@
 <div class="body-wrap">
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
+		<div class="body-max">
+			<img class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix.png" width="384" height="311" alt="">
+		</div>
 		<div class="main-wrap body-max">
 			<header class="section box">
 				<h1 class="section-heading">2013 Membership</h1>
@@ -52,7 +55,7 @@
 							<img class="lessons-cards-img" src="images/training-cards.png" width="250" height="210" alt="">
 							<div class="lessons-fee row">
 								<p class="lessons-each fee"><span class="fee-val">just $2</span> <span class="fee-period">per lesson</span></p>
-								<ul class="lessons-cards links-blend links-inv">
+								<ul class="lessons-cards list-reset links-blend links-inv">
 									<li><a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=146" title="Purchase it on RMIT Link (new window)" target="_blank">$60 Training Card = 30 + 2 lessons</a></li>
 									<li><a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=144" title="Purchase it on RMIT Link (new window)" target="_blank">$30 Training Card = 15 + 1 lessons</a></li>
 									<li><a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=142" title="Purchase it on RMIT Link (new window)" target="_blank">$10 Training Card = 5 lessons</a></li>

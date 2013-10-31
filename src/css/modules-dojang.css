@@ -9,10 +9,6 @@
 }
 
 @media (max-width: 39.99em) {
-
-	.main-wrap {
-		margin-top: 35%;
-	}
 	
 	.dojang-hero {
 		top: 7em;
@@ -31,10 +27,6 @@
 }
 
 @media (min-width: 30em) and (max-width: 49.99em) {
-	
-	.main-wrap {
-		margin-top: 10em;
-	}
 	
 	.dojang-hero {
 		top: 7em;

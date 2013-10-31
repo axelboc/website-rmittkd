@@ -3,12 +3,12 @@
 
 /* ==== Hero image and adjoining content ===== */
 
-@media (min-width: 30em) and (max-width: 49.99em) {
+@media (max-width: 29.99em) {
 	
 	.main-wrap {
-		margin-top: 11em;
+		margin-top: 6.7em;
 	}
-	
+
 }
 
 /* Image is absolutely positioned */
