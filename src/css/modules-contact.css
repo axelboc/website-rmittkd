@@ -41,6 +41,14 @@
 	
 }
 
+@media (min-width: 50em) {
+	
+	.main-wrap {
+		margin-top: 12.5em;
+	}
+	
+}
+
 @media (max-width: 59.99em) {
 	
 	.contact-image {
