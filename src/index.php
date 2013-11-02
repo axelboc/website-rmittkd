@@ -103,7 +103,7 @@
 									<div class="cal-months row">
 										<div class="cal-month cal-month-2013-1 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-seminar1.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">January</h3>
@@ -115,7 +115,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-2 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="http://placehold.it/408x150">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">February</h3>
@@ -126,7 +126,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-3 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-weetbix.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">March</h3>
@@ -139,7 +139,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-4 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-camp2.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">April</h3>
@@ -152,7 +152,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-5 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-imag10.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">May</h3>
@@ -164,7 +164,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-6 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-soccer.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">June</h3>
@@ -175,7 +175,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-7 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-clubday4.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">July</h3>
@@ -187,7 +187,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-8 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-champs3.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">August</h3>
@@ -200,7 +200,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-9 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-champs1.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">September</h3>
@@ -211,7 +211,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-10 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="http://placehold.it/408x150">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">October</h3>
@@ -223,7 +223,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-11 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-dinner.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">November</h3>
@@ -235,7 +235,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-12 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="461" height="150" alt="" src="http://placehold.it/461x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-grading4.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">December</h3>
