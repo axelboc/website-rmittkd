@@ -135,6 +135,8 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
+	opacity: .9;
+	filter: alpha(opacity=90); /* IE8- */
 }
 
 .sidebar .backdrop-content {
