@@ -1,6 +1,6 @@
 <?php
 
-define('EMAIL', 'itftaekwondo.club@rmit.edu.au');
+define('EMAIL', 'contact@rmittkd.com');
 define('TRY_AGAIN', 'Please try again. If the problem persists, please get in touch with us on Facebook.');
 
 function exitWithResult($sucess, $message) {
