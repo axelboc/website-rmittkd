@@ -365,6 +365,12 @@
 	color: inherit;
 }
 
+.foot-fb-icon {
+	position: relative;
+	top: 3px;
+	display: inline;
+}
+
 .foot-nav {
 	display: none;
 }
