@@ -68,16 +68,16 @@ if (strlen($message) === 0) {
 /* ===== Prepare and send email ===== */
 
 $to = 'RMIT ITF Taekwon-Do <' . EMAIL . '>';
-$from = $name . ' <' . $email . '>';
-$subject = 'Message from ' . $name;
-$body = 	'A new message was posted from the website:' . PHP_EOL . 
-			'Name: ' . $name . PHP_EOL .
-			'Email: ' . $email . PHP_EOL . 
-			'Message:\n' . $message;
+$from = 'Club website <' . EMAIL . '>';
+$subject = 'New message!';
+$body = 	"== Name ==\r\n$name\r\n\r\n" .
+			"== Email ==\r\n$email\r\n\r\n" .
+			"== Message ==\r\n$message";
 
 $headers = 'MIME-Version: 1.0' . PHP_EOL;
-$headers .= 'Content-type: text/html; charset=iso-8859-1' . PHP_EOL;
+$headers .= 'Content-Type: text/plain; charset=utf-8' . PHP_EOL;
 $headers .= 'From: ' . $from . PHP_EOL;
+$headers .= 'Reply-To: ' . $email;
 
 $result = @mail($to, $subject, $body, $headers);
 
