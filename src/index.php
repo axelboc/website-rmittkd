@@ -240,7 +240,7 @@
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">December</h3>
 												<ul class="list-reset">
-													<li><strong>30-1</strong> Nationals in Waga Waga</li>
+													<li><strong>30-1</strong> Nationals in Wagga Wagga</li>
 													<li><strong>6</strong> Colour-belt grading</li>
 													<li><strong>15</strong> Black-belt Grading</li>
 												</ul>
