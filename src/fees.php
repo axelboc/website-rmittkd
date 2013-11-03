@@ -18,7 +18,7 @@
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="body-max">
-			<img class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix.png" width="384" height="311" alt="">
+			<img id="fees-hero" class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix.png" width="384" height="311" alt="">
 		</div>
 		<div class="main-wrap body-max">
 			<header class="section box">
@@ -38,7 +38,7 @@
 							</a>
 						</li>
 						<li class="mbrship-opt">
-							<a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=364" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
+							<a id="fees-public" href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=364" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
 								<span class="mbrship-fee fee"><span class="fee-val">$100</span> <span class="fee-period">per year</span></span>
 								<span class="mbrship-group"><span>Public</span> non-RMIT</span>
 							</a>
@@ -71,6 +71,7 @@
 	</article>
 	<?php include 'includes/footer.php'; ?>
 	<?php include 'includes/bottom_js.php'; ?>
+	<script src="js/fees.js"></script>
 </div>
 </body>
 </html>
