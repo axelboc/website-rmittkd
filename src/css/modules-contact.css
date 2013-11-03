@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
 
-/* ==== Contact section and hero image ===== */
+/* ===== Contact section and hero image ===== */
 
 .main-wrap {
 	margin-top: 6.7em;
@@ -274,4 +274,26 @@
 	}
 	
 }
+
+
+/* ===== FAQ ===== */
+
+.faq-list {
+	margin: 1.5em 0 0;
+	padding: 0 12px;
+}
+
+.faq-q {
+	font-size: 110%;
+	font-weight: bold;
+	margin-bottom: .2em;
+}
+
+.faq-a {
+	margin: 0 0 1.5em;
+}
+
+
+
+
 
