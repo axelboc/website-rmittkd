@@ -6,6 +6,7 @@
 
 .fees-hero {
 	position: absolute;
+	pointer-events: none;
 }
 
 .fees-hero {
