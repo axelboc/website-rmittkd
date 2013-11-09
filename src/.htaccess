@@ -28,8 +28,8 @@ Options +FollowSymLinks -MultiViews
 RewriteEngine On
 RewriteBase /
 
-## don't touch js/process-form.php
-RewriteRule ^js/ - [L,NC]
+## don't touch includes/process-form.php
+RewriteRule ^includes/ - [L,NC]
 
 ## hide .php extension snippet
 
