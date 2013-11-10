@@ -38,7 +38,7 @@
 							</a>
 						</li>
 						<li class="mbrship-opt">
-							<a id="fees-public" href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=364" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
+							<a id="fees-public" href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
 								<span class="mbrship-fee fee"><span class="fee-val">$100</span> <span class="fee-period">per year</span></span>
 								<span class="mbrship-group"><span>Public</span> non-RMIT</span>
 							</a>
