@@ -78,7 +78,7 @@
 						<h2 class="section-heading">Executive Committee</h2>
 						<div class="section-content">
 							<section class="exec-member">
-								<img class="exec-pic" src="http://placehold.it/150x150" width="150" height="150" alt="">
+								<img class="exec-pic" src="images/execs/marc.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>President</span><br>Marc Chung</p>
 							</section>
 							<section class="exec-member">
