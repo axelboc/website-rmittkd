@@ -75,23 +75,23 @@
 						</div>
 					</section>
 					<section class="section box row">
-						<h2 class="section-heading">Exectuive Committee</h2>
+						<h2 class="section-heading">Executive Committee</h2>
 						<div class="section-content">
 							<section class="exec-member">
 								<img class="exec-pic" src="http://placehold.it/150x150" width="150" height="150" alt="">
 								<p class="exec-caption"><span>President</span><br>Marc Chung</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic" src="http://placehold.it/150x150" width="150" height="150" alt="">
+								<img class="exec-pic" src="images/execs/kidist.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Vice-President</span><br>Kidist Kifle</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic" src="http://placehold.it/150x150" width="150" height="150" alt="">
+								<img class="exec-pic" src="images/execs/shiv.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Treasurer</span><br>Shivarnee S.</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic" src="http://placehold.it/150x150" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Secretary</span><br>Yunh Ying Hi</p>
+								<img class="exec-pic" src="images/execs/yunh.jpg" width="150" height="150" alt="">
+								<p class="exec-caption"><span>Secretary</span><br>Yunh Ying T.</p>
 							</section>
 						</div>
 					</section>

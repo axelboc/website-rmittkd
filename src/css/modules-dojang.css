@@ -222,6 +222,7 @@
 	margin-bottom: 12px;
 	color: #fff;
 	font-size: 85%;
+	text-shadow: 1px 1px 1px #000;
 }
 
 .exec-caption > span {

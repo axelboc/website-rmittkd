@@ -56,7 +56,7 @@ if (!isset($_POST['message'])) {
 }
 
 // Retrieve value
-$message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
+$message = strip_tags($_POST['message']);
 
 // Check length
 if (strlen($message) === 0) {
