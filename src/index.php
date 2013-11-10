@@ -115,7 +115,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-2 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="http://placehold.it/408x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-placeholder.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">February</h3>
@@ -211,7 +211,7 @@
 										</div>
 										<div class="cal-month cal-month-2013-10 box backdrop" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="http://placehold.it/408x150">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-placeholder.jpg">
 											</div>
 											<div class="cal-caption backdrop-content">
 												<h3 class="cal-heading">October</h3>
