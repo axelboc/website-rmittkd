@@ -28,7 +28,7 @@ Options +FollowSymLinks -MultiViews
 RewriteEngine On
 RewriteBase /
 
-## don't touch includes/process-form.php
+## don't touch PHP files in 'includes' folder
 RewriteRule ^includes/ - [L,NC]
 
 ## hide .php extension snippet

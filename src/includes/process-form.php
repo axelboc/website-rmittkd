@@ -2,9 +2,9 @@
 
 define('TRY_AGAIN', 'Please try again. If the problem persists, please get in touch with us on Facebook.');
 
-function exitWithResult($sucess, $message) {
+function exitWithResult($status, $message = '') {
 	echo json_encode(array(
-		'success' => $sucess,
+		'status' => $status,
 		'message' => $message
 	));
 	exit;
@@ -15,7 +15,7 @@ function exitWithResult($sucess, $message) {
 
 // Check presence
 if (!isset($_POST['name'])) {
-	exitWithResult(false, 'Name not provided. ' . TRY_AGAIN);
+	exitWithResult('error', 'Name not provided. ' . TRY_AGAIN);
 }
 
 // Retrieve value
@@ -23,7 +23,7 @@ $name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
 
 // Check length
 if (strlen($name) === 0) {
-	exitWithResult(false, 'Please enter your name.');
+	exitWithResult('error', 'Please enter your name.');
 }
 
 
@@ -31,7 +31,7 @@ if (strlen($name) === 0) {
 
 // Check presence
 if (!isset($_POST['email'])) {
-	exitWithResult(false, 'Email address not provided. ' . TRY_AGAIN);
+	exitWithResult('error', 'Email address not provided. ' . TRY_AGAIN);
 }
 
 // Retrieve value
@@ -39,12 +39,12 @@ $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
 
 // Check length
 if (strlen($email) === 0) {
-	exitWithResult(false, 'Please enter your email address.');
+	exitWithResult('error', 'Please enter your email address.');
 }
 
 // Check validity
 if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-	exitWithResult(false, 'Please enter your email address.');
+	exitWithResult('error', 'Please enter your email address.');
 }
 
 
@@ -52,7 +52,7 @@ if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
 
 // Check presence
 if (!isset($_POST['message'])) {
-	exitWithResult(false, 'Message not provided. ' . TRY_AGAIN);
+	exitWithResult('error', 'Message not provided. ' . TRY_AGAIN);
 }
 
 // Retrieve value
@@ -60,7 +60,7 @@ $message = filter_var($_POST['message'], FILTER_SANITIZE_STRING);
 
 // Check length
 if (strlen($message) === 0) {
-	exitWithResult(false, 'Please enter your message.');
+	exitWithResult('error', 'Please enter your message.');
 }
 
 
@@ -68,37 +68,38 @@ if (strlen($message) === 0) {
 
 include('config.php');
 
-// PHPMailer
-require 'phpmailer/PHPMailerAutoload.php';
-$mail = new PHPMailer;
+$emailBody = "A new message was posted on the website.\r\n\r\n" .
+			 "=== Name ===\r\n$name\r\n\r\n" .
+			 "=== Email ===\r\n$email\r\n\r\n" .
+			 "=== Message ===\r\n$message";
 
-// SMTP configuration (via config.php)
-$mail->isSMTP();
-$mail->Host = SMTP_HOST;
-$mail->Port = 465;
-$mail->SMTPAuth = true;
-$mail->SMTPDebug = 1;
-$mail->SMTPSecure = 'ssl';
-$mail->Username = SMTP_USERNAME;
-$mail->Password = SMTP_PASSWORD;
+$data = array(
+	"key" => API_KEY,
+	"message" => array(
+		"text" => $emailBody,
+		"subject" => "New message",
+		"from_email" => CLUB_EMAIL,
+		"from_name" => "Website",
+		"to" => array(
+			array(
+				"email" => CLUB_EMAIL,
+				"name" => "RMIT ITF Taekwon-Do",
+				"type" => "to"
+			)
+		),
+		"headers" => array(
+			"Reply-To" => ($name . ' <' . $email . '>')
+		)
+	)
+);
 
-// Build email
-$mail->isHTML(false);
-$mail->setFrom(CLUB_EMAIL, 'Club website');
-//$mail->addAddress(CLUB_EMAIL, 'RMIT ITF Taekwon-Do');
-$mail->addAddress(TEST_EMAIL, 'Test');
-$mail->addReplyTo($email, $name);
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_POST, true);
+curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
 
-$mail->Subject = 'New message';
-$mail->AltBody = "== Name ==\r\n$name\r\n\r\n" .
-				 "== Email ==\r\n$email\r\n\r\n" .
-				 "== Message ==\r\n$message";
+curl_setopt($curl, CURLOPT_URL, "https://mandrillapp.com/api/1.0/messages/send.json");
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-if(!$mail->send()) {
-	exitWithResult(false, '');
-}
-
-// Success
-exitWithResult(true, '<strong>Thank you!</strong> Your message has been sent. We\'ll get in touch with you as soon as possible.');
+echo curl_exec($curl);
 
 ?>

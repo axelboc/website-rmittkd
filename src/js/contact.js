@@ -67,7 +67,7 @@ $(function () {
 	// Show form submission result
 	var showResult = function (messageClass, message) {
 		$resultMessage.html(message);
-		$resultBox.removeClass("form-result--fail form-result--success").addClass(messageClass);
+		$resultBox.removeClass("form-result--fail form-result--success").addClass("form-result--" + messageClass);
 		$resultBox.fadeIn().removeClass("hidden").focus();
 	};
 	
@@ -91,22 +91,21 @@ $(function () {
 			// Show spinner on submit button
 			$submitBtn.addClass("form-submit--spinner");
 			
-			// Submit form and perform server-side validation
+			// Perform server-side validation
 			$.ajax({
 				type: "POST",
 				url: $form.attr("action"),
 				data: $form.serialize(),
 				dataType: "json",
 				success: function (result) {
-					console.log(result);
-					if (result.success) {
-						showResult("form-result--success", result.message);
+					if (result instanceof Array && result[0].status === "sent") {
+						showResult("success", "<strong>Thank you!</strong> Your message has been sent. We'll get in touch with you as soon as possible.");
 					} else {
-						showResult("form-result--fail", result.message.length > 0 ? result.message : GENERIC_ERROR);
+						showResult("fail", result.message ? result.message : GENERIC_ERROR);
 					}
 				},
 				error: function () {
-					showResult("form-result--fail", GENERIC_ERROR);
+					showResult("fail", GENERIC_ERROR);
 				},
 				complete: function () {
 					// Hide spinner
