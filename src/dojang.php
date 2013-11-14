@@ -24,7 +24,6 @@
 			<header class="section box row">
 				<h1 class="section-heading">Our Dojang</h1>
 				<div class="dojang-content section-content">
-					<h2 class="section-heading-sub">RMIT ITF Club</h2>
 					<p>RMIT ITF Taekwon-Do was formed in <strong>1982</strong>. The club has outstanding reputation within the RMIT Sport Union and is known throughout other Victorian ITF clubs and communities.</p>
 					<div class="dojang-content-end">
 						<p>Two members have been in at an ITF <strong>world championship</strong>: Anton Ng (2005 - represented Hong Kong in Caloundra, QLD, Australia) and Cassandra White (2009 - represented Australia in St Petersburg, Russia).</p>
