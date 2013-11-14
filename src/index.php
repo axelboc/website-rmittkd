@@ -17,7 +17,7 @@
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="body-max">
-			<img class="index-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-index-suffix.png" width="825" height="610" alt="">
+			<img class="index-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-index-suffix.jpg" width="825" height="610" alt="">
 		</div>
 		<div class="main-wrap body-max">
 			<div class="row">
@@ -26,8 +26,8 @@
 						<header class="section section-1of2 box section--welcome">
 				        	<h1 class="section-heading">RMIT ITF Taekwon-Do</h1>
 				        	<div class="section-content">
-				        		<p>Our club members are a diverse group of students, alumni and members of the public. Beginners and experienced black belts can train together as classes are designed for <strong>all levels</strong> of fitness and experience. In training we use fundamental techniques, sparring, strength training and cardio fitness for the purpose of learning <strong>self-defence</strong>.</p>
-				        		<p>Training at <strong>RMIT ITF Taekwon-Do</strong> means that you will be part of an <strong>international</strong> organisation that recognises your rank and certificates so that you can train anywhere in the world.</p>
+				        		<p>Forget about the gym! Fitness, cardio, strength, self-defence... <strong>Taekwon-Do</strong> does it all! From complete beginner to seasoned martial artist, our club welcomes all levels of fitness and experience.</p>
+				        		<p>Enough to convince you? Have a look at the timetable below and join our next training session &ndash; you get <strong>3 classes for free!</strong> Otherwise, take a look around... We look forward to training with you!</p>
 				        	</div>
 						</header>
 					</div>
