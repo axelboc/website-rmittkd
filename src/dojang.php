@@ -24,11 +24,9 @@
 			<header class="section box row">
 				<h1 class="section-heading">Our Dojang</h1>
 				<div class="dojang-content section-content">
-					<p>RMIT ITF Taekwon-Do was formed in <strong>1982</strong>. The club has outstanding reputation within the RMIT Sport Union and is known throughout other Victorian ITF clubs and communities.</p>
-					<div class="dojang-content-end">
-						<p>Two members have been in at an ITF <strong>world championship</strong>: Anton Ng (2005 - represented Hong Kong in Caloundra, QLD, Australia) and Cassandra White (2009 - represented Australia in St Petersburg, Russia).</p>
-						<p>The club received RMIT's Vice Chancellor <strong>club of the year</strong> in 2003, 2004, 2005 and 2009.</p>
-					</div>
+					<p>We're a very diverse group of students, alumni and members of the public, ranging from beginners to experienced black belts. We have the chance to be trained by <strong>highly experienced instructors</strong>, whose dedication to Taekwon-Do is inspiring.</p>
+					<p>All members are given the opportunity to <strong>compete</strong> in multiple local and national events each year. Two members even had the privilege to compete at the ITF World Championship!</p>
+					<p>More than a martial art club, we're a strong, friendly and welcoming community! Our young and dynamic exec committee is really awesome, and organises many <strong>social events</strong> throughout the year, including barbecues, sporting events, and more.</p>
 				</div>
 			</header>
 			<div class="row">
@@ -42,7 +40,7 @@
 									<img class="instr-portrait" src="images/instructors/robert-lai.png" width="480" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Robert Lai</h3>
-										<p>Senior Master Lai (8th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he had one of the largest number of clubs in Selangor with a total of over 1000 members. Senior Master Lai is a retired PE teacher and the president of <strong>All Australia ITF</strong>, the governing body for ITF Taekwon-Do in Australia.</p>
+										<p>Senior Master Lai (8th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he established many clubs, totalising over 1000 members. Senior Master Lai is now a retired <abbr title="Physical Education">PE</abbr> teacher and the president of <strong>All Australia ITF</strong>, the governing body of <abbr title="International Taekwon-Do Federation">ITF</abbr> in Australia.</p>
 									</div>
 								</section>
 								<section class="instr-profile" tabindex="-1">
@@ -50,7 +48,7 @@
 									<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Jason Lai</h3>
-										<p>Mr Jason Lai has been training for over 25 years, and has been a member of the club for 16. He achieved his <strong>6th degree Black Belt</strong> in December 2006, and received the <em>Outstanding Contribution</em> award from RMIT University in 2009. Mr Lai was also a <strong>coach</strong> for the <strong>Australian Team</strong> for the 2010 Junior and Veterans <strong>World Championships</strong> in Minsk, Belarus.</p>
+										<p>Mr Jason Lai has been training for over 25 years, and has been a member of the club for 16. He achieved his <strong>6th degree Black Belt</strong> in December 2006, and received the <em>Outstanding Contribution</em> award from RMIT University in 2009. Mr Lai was also a <strong>coach</strong> for the <strong>Australian Team</strong> at the 2010 Junior and Veterans <strong>World Championships</strong> in Minsk, Belarus.</p>
 									</div>
 								</section>
 								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
@@ -58,7 +56,7 @@
 									<img class="instr-portrait" src="images/instructors/cass-white.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Cassandra White</h3>
-										<p>Ms White has been training at RMIT University since <strong>2003</strong> and received her <strong>3rd degree Black Belt</strong> in December 2012. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 ITF Taekwon-Do <strong>World Championships</strong> in St Petersburg, Russia.</p>
+										<p>Ms White has been training at RMIT University since <strong>2003</strong>, and received her <strong>3rd degree Black Belt</strong> in December 2012. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 <strong>ITF World Championships</strong> in St Petersburg, Russia.</p>
 									</div>
 								</section>
 							</div>
