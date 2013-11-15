@@ -24,9 +24,9 @@
 			<header class="section box row">
 				<h1 class="section-heading">Our Dojang</h1>
 				<div class="dojang-content section-content">
-					<p>We're a very diverse group of students, alumni and members of the public, ranging from beginners to experienced black belts. We have the chance to be trained by <strong>highly experienced instructors</strong>, whose dedication to Taekwon-Do is inspiring.</p>
-					<p>All members are given the opportunity to <strong>compete</strong> in multiple local and national events each year. Two members even had the privilege to compete at the ITF World Championship!</p>
-					<p>More than a martial art club, we're a strong, friendly and welcoming community! Our young and dynamic exec committee is really awesome, and organises many <strong>social events</strong> throughout the year, including barbecues, sporting events, and more.</p>
+					<p>We're a diverse group of students, alumni and members of the public, ranging from beginners to experienced black belts. We're lucky to be trained by <strong>accomplished instructors</strong>, whose dedication to Taekwon-Do is inspiring.</p>
+					<p>All members have the opportunity to <strong>compete</strong> in multiple local and national events each year. Two members even had the privilege to compete at the ITF World Championship!</p>
+					<p>More than a martial art club, we're a strong, friendly and welcoming community! Our young and dynamic committee is really awesome, and organises many <strong>social events</strong> throughout the year, including barbecues, sporting events, and more.</p>
 				</div>
 			</header>
 			<div class="row">
