@@ -7,7 +7,7 @@ html,
 body,
 .body-wrap,
 .main {
-	height: 100%;
+	min-height: 100%;
 }
 
 .body-wrap {
@@ -37,7 +37,7 @@ body {
 	background-color: #eee;
 	margin: 0;
 	padding: 0;
-	overflow-y: scroll;
+	overflow-y: hidden;
 }
 
 .noscroll {

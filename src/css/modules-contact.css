@@ -135,10 +135,10 @@
 }
 
 .form-field--invalid {
-	border-color: transparent;
-	-webkit-box-shadow: inset 0 0 3px #f04851;
-	   -moz-box-shadow: inset 0 0 3px #f04851;
-			box-shadow: inset 0 0 3px #f04851;
+	border-color: #f3a6ab;
+	-webkit-box-shadow: inset 0 0 2px #f04851;
+	   -moz-box-shadow: inset 0 0 2px #f04851;
+			box-shadow: inset 0 0 2px #f04851;
 }
 
 .form-error {

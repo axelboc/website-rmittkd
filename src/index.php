@@ -6,7 +6,8 @@
 	<meta name="description" content="Come and meet a bunch of awesome people at the ITF Taekwon-Do club of RMIT University, Melbourne. Just drop by in gym cloths and enjoy 3 classes for free!">
 	<meta property="og:type" content="website">
 	<meta property="og:title" content="RMIT ITF Taekwon-Do">
-	<meta property="og:image" content="http://rmittkd.com/images/og/logo-rmit-itf.png">
+	<meta property="og:description" content="Come and meet a bunch of awesome people at the ITF Taekwon-Do club of RMIT University, Melbourne. Just drop by in gym cloths and enjoy 3 classes for free!">
+	<meta property="og:image" content="http://rmittkd.com/images/og/logo-og.jpg">
 	<meta property="og:url" content="http://rmittkd.com/">
 	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-index.css">
@@ -23,7 +24,7 @@
 			<div class="row">
 				<div class="lay-main lay-main--welcome">
 					<div class="row">
-						<header class="section section-1of2 box section--welcome">
+						<header class="section section-1of2 box section--welcome row">
 				        	<h1 class="section-heading">RMIT ITF Taekwon-Do</h1>
 				        	<div class="section-content">
 				        		<p>Forget about the gym! Fitness, cardio, strength, self-defence... <strong>Taekwon-Do</strong> does it all! From complete beginner to seasoned martial artist, our club welcomes all levels of fitness and experience.</p>
@@ -36,7 +37,7 @@
 			<div class="row">
 				<div class="lay-main">
 					<div class="row">
-						<section id="cal-resp-ref" class="section section-1of2 section-first box">
+						<section class="tmtbl-section section section-1of2 section-first box">
 							<h2 class="section-heading">Timetable</h2>
 							<div>
 								<table class="tmtbl" summary="The first colum gives the time, and the others each correspond to a day of the week.">

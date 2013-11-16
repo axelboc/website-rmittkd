@@ -61,6 +61,11 @@
 
 /* ===== Timetable ===== */
 
+.tmtbl-section {
+	min-height: 194px;
+	min-height: 12.125rem;
+}
+
 .tmtbl {
 	empty-cells: show;
 	border-collapse: collapse;

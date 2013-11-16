@@ -4,7 +4,8 @@ var emWidth;
 
 $(function () {
 	
-	var $body = $("body");
+	var $html = $(document.documentElement);
+	var $body = $(document.body);
 	var $bodyWrap = $body.children(".body-wrap");
 	
 	
@@ -67,7 +68,7 @@ $(function () {
 		});
 		
 		navVisible = true;
-		$body.addClass("noscroll");
+		$html.addClass("noscroll");
 		$nav.addClass("nav-visible");
 		$nav.attr("aria-hidden", false);
 		
@@ -88,7 +89,7 @@ $(function () {
 		});
 		
 		navVisible = false;
-		$body.removeClass("noscroll");
+		$html.removeClass("noscroll");
 		$nav.attr("aria-hidden", true);
 		
 		// Send Analytics event
@@ -110,7 +111,7 @@ $(function () {
 			isOffCanvas = false;
 			navVisible = false;
 			
-			$body.removeClass("noscroll");
+			$html.removeClass("noscroll");
 			$bodyWrap.css("left", 0);
 			$nav.attr("aria-hidden", false);
 			$nav.removeClass("nav-visible");

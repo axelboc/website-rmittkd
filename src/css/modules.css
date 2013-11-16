@@ -77,10 +77,8 @@
 /* ===== Sections ===== */
 
 .section {
-	min-height: 196px;
-	min-height: 12.25rem;
 	margin-bottom: 1.4em;
-	background-color: #eee;
+	background-color: #f9f9f9;
 	background-image: -webkit-linear-gradient(top, #fff, #ddd);
 	background-image: linear-gradient(to bottom, #fff, #ddd);
 	opacity: .9;
@@ -306,7 +304,7 @@
 	position: relative;
 	z-index: 50;
 	opacity: .8;
-	background-color: #f1f1f1;
+	background-color: #dcdcdc;
 	background-image: -webkit-linear-gradient(top, #f1f1f1, #ddd);
 	background-image: linear-gradient(to bottom, #f1f1f1, #ddd);
 }
@@ -316,7 +314,7 @@
 	top: 5px;
 	left: 10px;
 	width: 125px;
-	height: auto;
+	height: 125px;
 }
 
 .logo-img {
@@ -331,6 +329,7 @@
 		top: 10px;
 		left: 5px;
 		width: 150px;
+		height: 150px;
 	}
 
 }

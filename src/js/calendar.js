@@ -7,9 +7,6 @@ $(function () {
 	var $arrowPrev = $cal.children(".cal-arrow-prev");
 	var $arrowNext = $cal.children(".cal-arrow-next");
 	
-	// Retrieve element used to determine whether calendar has 1 or 2 columns
-	var $respReference = $(document.getElementById("cal-resp-ref"));
-	
 	// Get current month element
 	var now = new Date();
 	var currentMonth = $months.filter(".cal-month-" + now.getFullYear() + "-" + (now.getMonth() + 1));

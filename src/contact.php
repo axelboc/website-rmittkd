@@ -6,6 +6,7 @@
 	<meta name="description" content="Get in touch! Meet us in person at the club, or simply fill in the contact form and we'll get back to you.">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Contact | RMIT ITF Taekwon-Do">
+	<meta property="og:description" content="Get in touch! Meet us in person at the club, or simply fill in the contact form and we'll get back to you.">
 	<meta property="og:image" content="http://rmittkd.com/images/og/hero-contact-og.jpg">
 	<meta property="og:url" content="http://rmittkd.com/contact">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">

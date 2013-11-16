@@ -6,6 +6,7 @@
 	<meta name="description" content="Want to be part of our growing community? Follow our Facebook page or visit the websites of our associated clubs and organisations.">
 	<meta property="og:type" content="article">
 	<meta property="og:title" content="Social | RMIT ITF Taekwon-Do">
+	<meta property="og:description" content="Want to be part of our growing community? Follow our Facebook page or visit the websites of our associated clubs and organisations.">
 	<meta property="og:image" content="http://rmittkd.com/images/og/hero-social-og.jpg">
 	<meta property="og:url" content="http://rmittkd.com/social">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
