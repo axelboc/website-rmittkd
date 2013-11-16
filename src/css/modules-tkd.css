@@ -11,7 +11,6 @@
 
 }
 
-/* Image is absolutely positioned */
 @media (min-width: 50em) {
 	
 	.itf-section {
@@ -23,6 +22,7 @@
 		position: absolute;
 		right: 0;
 		bottom: 0;
+		max-width: 340px;
 	}
 	
 	.itf-content {
@@ -31,20 +31,25 @@
 	
 }
 
-@media (min-width: 50em) and (max-width: 59.99em) {
-	
-	.itf-section {
-		margin-bottom: 6em;
-	}
+
+@media (min-width: 60em) {
 	
 	.itf-image {
-		max-width: 350px;
+		max-width: 100%;
 	}
 	
 }
 
 
 /* ===== SM Lai's image ===== */
+
+@media (max-width: 49.99em) {
+	
+	.lai-image {
+		position: relative;
+		left: .5em;
+	}
+}
 
 @media (min-width: 50em) {
 	
@@ -58,6 +63,7 @@
 		bottom: 0;
 		width: auto;
 		margin-bottom: 0;
+		max-width: 40%;
 	}
 	
 	.lai-heading {
@@ -70,6 +76,29 @@
 	
 }
 
+@media (min-width: 53em) {
+	
+	.lai-image {
+		max-width: 35%;
+		left: 1em;
+	}
+	
+}
 
+@media (min-width: 56em) {
 
+	.lai-image {
+		max-width: 33%;
+	}
+	
+}
+
+@media (min-width: 60em) {
+
+	.lai-image {
+		max-width: 100%;
+		left: .3em;
+	}
+
+}
 
