@@ -49,7 +49,7 @@
 									<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Jason Lai</h3>
-										<p>Mr Jason Lai has been training for over 25 years, and has been a member of the club for 16. He achieved his <strong>6th degree Black Belt</strong> in December 2006, and received the <em>Outstanding Contribution</em> award from RMIT University in 2009. Mr Lai was also a <strong>coach</strong> for the <strong>Australian Team</strong> at the 2010 Junior and Veterans <strong>World Championships</strong> in Minsk, Belarus.</p>
+										<p>Mr Jason Lai (6th degree) has been training for over 30 years. In 2013, he received the RMIT <em>Outstanding Service</em> Award for his <strong>20 years</strong> of service to the club. Mr Lai was also a <strong>coach</strong> for the Australian Team at the 2010 <strong>ITF World Championships</strong> in Minsk, Belarus.</p>
 									</div>
 								</section>
 								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
