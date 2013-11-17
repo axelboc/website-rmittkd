@@ -1,9 +1,11 @@
 RMIT ITF Taekwon-Do
 ===================
 
-This is the future website of the RMIT ITF Taekwon-Do club.
+Website of the RMIT ITF Taekwon-Do club.
 
-**http://test.rmittkd.com**
+**http://rmittkd.com**
+
+Official release: 16 November 2013
 
 
 Distribution
