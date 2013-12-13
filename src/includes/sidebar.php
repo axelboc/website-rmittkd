@@ -7,7 +7,7 @@ $item = $merchXML->item[rand(0, count($merchXML->item) - 1)];
 <aside class="sidebar lay-side" role="complementary">
 	<div class="backdrop">
 		<div class="backdrop-content">
-			<p><a href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" target="_blank"><img class="respimg-fit" src="images/rmit-link.png" width="150" height="35" alt="The club's page on RMIT Link"></a></p>
+			<p class="sidebar-rmit"><a href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" target="_blank"><img class="respimg-fit" src="images/rmit-link.png" width="150" height="35" alt="The club's page on RMIT Link"></a></p>
 			<h3><a class="link-inv" href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" target="_blank">Club Shop</a></h3>
 			<p><a href="<?php echo $item->link; ?>" target="_blank"><img class="merch-image respimg-fit" src="images/merchandising/<?php echo $item->image['filename']; ?>" width="<?php echo $item->image['width']; ?>" height="<?php echo $item->image['height']; ?>" alt=""></a></p>
 			<h4 class="merch-title"><a class="link-inv" href="<?php echo $item->link; ?>" target="_blank"><?php echo $item->title; ?></a></h4>

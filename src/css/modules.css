@@ -140,7 +140,11 @@
 .sidebar .backdrop-content {
 	position: relative;
 	overflow: hidden;
-	padding: 1em 2.5em;
+	padding: 1em 2.5em 1.5em;
+}
+
+.sidebar-rmit {
+	margin-bottom: 2.5em;
 }
 
 .merch-image {
