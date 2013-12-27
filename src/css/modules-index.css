@@ -159,6 +159,11 @@
 .map-link {
 	display: block;
 	height: 100%;
+	color: #fff;
+}
+
+.map-link:focus {
+	text-decoration: underline;
 }
 
 .map-link > img {
