@@ -66,6 +66,11 @@ if (strlen($message) === 0) {
 
 /* ===== Prepare and send email ===== */
 
+/**
+ * File includes/config.php must define two constants:
+ * - API_KEY, the Mandrill API key (https://mandrillapp.com/)
+ * - CLUB_EMAIL, the club's email address
+ */
 include('config.php');
 
 $emailBody = "A new message was posted on the website.\r\n\r\n" .
