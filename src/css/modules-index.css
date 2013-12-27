@@ -156,13 +156,6 @@
 	position: relative;
 }
 
-.map-wrap:after {
-	left: 0;
-	bottom: 0;
-	width: 100%;
-	height: 2em;
-}
-
 .map-link {
 	display: block;
 	height: 100%;
@@ -173,10 +166,12 @@
 }
 
 .map-caption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
 	left: 0;
-	bottom: .35em;
+	padding: .35em 0;
 	text-align: center;
-	width: 100%;
 }
 
 
@@ -206,18 +201,11 @@
 	outline: 0;
 }
 
-/* Backdrops */
-.cal-month:after {
-	top: 0;
-	right: .4em; /* matches right padding on cal-month */
-	width: 14em;
-	height: 150px;
-}
-
-/* Backdrops' contents */
 .cal-caption {
-	right: .4em; /* matches right padding on cal-month */
+	position: absolute;
 	top: 0;
+	right: .4em; /* matches right padding on cal-month */
+	bottom: 0;
 	width: 12.1em;
 	padding: .5em 1.4em .5em .5em;
 }

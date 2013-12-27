@@ -194,29 +194,12 @@ img {
 }
 
 
-/* ===== Backdrop (container with grey, 90%-opaque backgroud) ===== */
+/* ===== Backdrop (container with grey, semi-transparent backgroud) ===== */
 
 .backdrop {
-	position: relative;
+	background-color: rgb(85, 85, 85);
+	background-color: rgba(85, 85, 85, .85);
 	color: #fff;
-}
-
-/* The actual backdrop
- * Each backdrop must also be positioned and sized appropriately
- */
-.backdrop:after {
-	content: "";
-	display: block;
-	position: absolute;
-	background-color: #555;
-	opacity: .8;
-	filter: alpha(opacity=80); /* IE8- */
-}
-
-/* Move the backdrop's content on top of the container */
-.backdrop-content {
-	position: absolute;
-	z-index: 1;
 }
 
 
@@ -236,7 +219,7 @@ img {
 }
 
 .section,
-.sidebar > .backdrop:after,
+.sidebar,
 .form-field,
 .form-submit {
 	border-radius: 3px;

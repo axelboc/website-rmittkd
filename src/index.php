@@ -87,10 +87,10 @@
 						</section>
 						<section class="section map-section section-1of2 box">
 							<h2 class="section-heading">Location</h2>
-							<div class="map-wrap inner backdrop">
+							<div class="map-wrap inner">
 								<a class="map-link link-inv link-blend respimg-wrap" href="http://goo.gl/maps/tVKGc" target="_blank">
 									<img class="cal-img respimg-crop" src="images/map.png" width="473" height="149" alt="">
-									<span class="map-caption backdrop-content">RMIT Building 57, Level 4, 33 Lygon St</span>
+									<span class="map-caption backdrop">RMIT Building 57, Level 4, 33 Lygon St</span>
 								</a>
 							</div>
 						</section>
@@ -102,11 +102,11 @@
 								<a class="cal-arrow cal-arrow-prev hidden-text" href="#">Previous month</a>
 								<div class="cal-months-wrapper">
 									<div class="cal-months row">
-										<div class="cal-month cal-month-2013-1 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-1 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-seminar1.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">January</h3>
 												<ul class="list-reset">
 													<li><strong>14</strong> Class starts</li>
@@ -114,22 +114,22 @@
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-2 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-2 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-placeholder.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">February</h3>
 												<ul class="list-reset">
 													<li><strong>13</strong> Club forum</li>
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-3 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-3 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-weetbix.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">March</h3>
 												<ul class="list-reset">
 													<li><strong>3</strong> First-aid training</li>
@@ -138,11 +138,11 @@
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-4 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-4 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-camp2.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">April</h3>
 												<ul class="list-reset">
 													<li><strong>5</strong> Colour-belt grading</li>
@@ -151,11 +151,11 @@
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-5 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-5 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-imag10.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">May</h3>
 												<ul class="list-reset">
 													<li><strong>9-12</strong> International Martial Arts Games (IMAG)</li>
@@ -163,22 +163,22 @@
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-6 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-6 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-soccer.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">June</h3>
 												<ul class="list-reset">
 													<li><strong>15</strong> Indoor soccer</li>
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-7 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-7 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-clubday4.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">July</h3>
 												<ul class="list-reset">
 													<li><strong>7</strong> Black-belt grading</li>
@@ -186,11 +186,11 @@
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-8 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-8 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-champs3.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">August</h3>
 												<ul class="list-reset">
 													<li><strong>2</strong> Colour-belt grading</li>
@@ -199,22 +199,22 @@
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-9 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-9 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-champs1.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">September</h3>
 												<ul class="list-reset">
 													<li><strong>21</strong> VIC Champs</li>
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-10 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-10 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-placeholder.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">October</h3>
 												<ul class="list-reset">
 													<li><strong>5</strong> Annual General Meeting</li>
@@ -222,11 +222,11 @@
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-11 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-11 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-dinner.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">November</h3>
 												<ul class="list-reset">
 													<li><strong>16</strong> Annual dinner</li>
@@ -234,11 +234,11 @@
 												</ul>
 											</div>
 										</div>
-										<div class="cal-month cal-month-2013-12 box backdrop" tabindex="-1">
+										<div class="cal-month cal-month-2013-12 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-grading4.jpg">
 											</div>
-											<div class="cal-caption backdrop-content">
+											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">December</h3>
 												<ul class="list-reset">
 													<li><strong>30-1</strong> Nationals in Wagga Wagga</li>
