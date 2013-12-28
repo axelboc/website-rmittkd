@@ -4,6 +4,7 @@ var emWidth;
 
 $(function () {
 	
+	var $window = $(window);
 	var $html = $(document.documentElement);
 	var $body = $(document.body);
 	var $bodyWrap = $body.children(".body-wrap");
@@ -12,19 +13,26 @@ $(function () {
 	/* ===== Lazy-loading of images ===== */
 	
 	// Get default font-size
-	var fontSize = $("html").css("font-size");
-	try {
-		fontSize = parseInt(fontSize.substr(0, fontSize.length - 2), 10);
-	} catch (e) {
+	var fontSize = $html.css("font-size");
+	fontSize = parseInt(fontSize.substr(0, fontSize.length - 2), 10);
+	if (isNaN(fontSize)) {
 		fontSize = 16;
+	}
+	
+	// Determine way of getting viewport width
+	var widthElem = window;
+	var widthProp = "innerWidth";
+	if (!(widthProp in widthElem)) {
+		widthElem = document.documentElement;
+		widthProp = "clientWidth";
 	}
 	
 	// Calculate current width of 'body' element in em
 	var computeEmWidth = function () {
-		emWidth = $body.width() / fontSize;
+		emWidth = widthElem[widthProp] / fontSize;
 	};
 	computeEmWidth();
-	$(window).resize(computeEmWidth);
+	$window.resize(computeEmWidth);
 	
 	// Deduce image filename suffix
 	var suffix = emWidth < 50 ? "-" + (emWidth < 30 ? "mob" : "tab") : "";
@@ -103,7 +111,7 @@ $(function () {
 	// Manage change of navigation type when window is resized
 	var isOffCanvas = $nav.css("position") === "absolute";
 	
-	$(window).resize(function () {
+	$window.resize(function () {
 		var newPos = $nav.css("position");
 		
 		if (isOffCanvas && newPos !== "absolute") {
