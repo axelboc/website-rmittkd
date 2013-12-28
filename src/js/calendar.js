@@ -29,6 +29,9 @@ $(function () {
 		if (typeof el.style.transform !== "undefined") {
 			el.style.transform = "translate3d(1px, 1px, 1px)";
 			has3d = window.getComputedStyle(el).getPropertyValue("transform");
+		} else if (typeof el.style.webkitTransform !== "undefined") {
+			el.style.webkitTransform = "translate3d(1px, 1px, 1px)";
+			has3d = window.getComputedStyle(el).getPropertyValue("-webkit-transform");
 		}
 		
 		document.body.removeChild(el);
@@ -105,6 +108,7 @@ $(function () {
 		var newPos = -carouselPos * 100 / inView;
 		
 		if (has3d) {
+			$monthsCont.css("-webkit-transform", "translate3d(" + newPos * inView / carouselLen + "%, 0, 0)");
 			$monthsCont.css("transform", "translate3d(" + newPos * inView / carouselLen + "%, 0, 0)");
 		} else {
 			// Apply new position to left margin with or whithout animation

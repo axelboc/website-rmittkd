@@ -197,6 +197,7 @@
 
 .cal-months {
 	width: 1200%;
+	transition: -webkit-transform .6s ease-in-out;
 	transition: transform .6s ease-in-out;
 }
 
