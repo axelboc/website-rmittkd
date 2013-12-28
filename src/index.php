@@ -102,18 +102,6 @@
 								<a class="cal-arrow cal-arrow-prev hidden-text" href="#">Previous month</a>
 								<div class="cal-months-wrapper">
 									<div class="cal-months row">
-										<div class="cal-month cal-month-2013-1 box" tabindex="-1">
-											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-seminar1.jpg">
-											</div>
-											<div class="cal-caption backdrop">
-												<h3 class="cal-heading">January</h3>
-												<ul class="list-reset">
-													<li><strong>14</strong> Class starts</li>
-													<li><strong>17-19</strong> GM Phap Lu Seminar</li>
-												</ul>
-											</div>
-										</div>
 										<div class="cal-month cal-month-2013-2 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-placeholder.jpg">
@@ -244,6 +232,17 @@
 													<li><strong>30-1</strong> Nationals in Wagga Wagga</li>
 													<li><strong>6</strong> Colour-belt grading</li>
 													<li><strong>15</strong> Black-belt Grading</li>
+												</ul>
+											</div>
+										</div>
+										<div class="cal-month cal-month-2014-1 box" tabindex="-1">
+											<div class="respimg-wrap">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-placeholder.jpg">
+											</div>
+											<div class="cal-caption backdrop">
+												<h3 class="cal-heading">January</h3>
+												<ul class="list-reset">
+													<li><strong>20</strong> Class starts</li>
 												</ul>
 											</div>
 										</div>
