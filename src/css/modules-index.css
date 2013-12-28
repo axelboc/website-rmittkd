@@ -245,10 +245,7 @@
 	background: transparent left top no-repeat url('../images/cal-arrows.png');
 }
 
-.cal-arrow:focus,
-.cal-arrow:hover,
-.arrow-disabled {
-	background-position: left bottom;
+.cal-arrow:focus {
 	outline: 0;
 }
 
@@ -256,16 +253,20 @@
 	left: -18px;
 }
 
+.cal-arrow-prev:focus,
+.cal-arrow-prev:hover { background-position: left bottom; }
+.cal-arrow-prev:active { background-position: left top; }
+.cal-arrow-prev.arrow-disabled { background-position: left bottom; }
+
 .cal-arrow-next {
 	right: -17px;
 	background-position: right top;
 }
 
 .cal-arrow-next:focus,
-.cal-arrow-next:hover,
-.cal-arrow-next.arrow-disabled {
-	background-position: right bottom;
-}
+.cal-arrow-next:hover { background-position: right bottom; }
+.cal-arrow-next:active { background-position: right top; }
+.cal-arrow-next.arrow-disabled { background-position: right bottom; }
 
 
 /* Start of 2-column layout */
