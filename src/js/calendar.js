@@ -17,19 +17,40 @@ $(function () {
 
 	
 	/**
+	 * Test prefix-free 3d transform support.
+	 * From: http://stackoverflow.com/questions/5661671/detecting-transform-translate3d-support
+	 */
+	var has3d = (function () {
+		var has3d;
+		var el = document.createElement('div');
+		
+		document.body.insertBefore(el, null);
+		
+		if (typeof el.style["transform"] !== "undefined") {
+			el.style["transform"] = "translate3d(1px, 1px, 1px)";
+			has3d = window.getComputedStyle(el).getPropertyValue("transform");
+		}
+		
+		document.body.removeChild(el);
+		
+		return (typeof has3d !== "undefined" && has3d.length > 0 && has3d !== "none");
+	}());
+
+	
+	/**
 	 * Number of months visible to the user in the carousel.
 	 */
 	var inView;
 	var updateInView = function () {
-		// When reference element is floated, calendar has two columns; otherwise, it has one.
+		// When body width is less than 40em, calendar has one column; otherwise, it has two.
 		inView = emWidth < 40 ? 1 : 2;
-
+		console.log(emWidth);
 		// If 2 months in view, ensure the carousel's position is not the last month
 		if (inView === 2 && (carouselPos === carouselLen - 1)) {
 			carouselPos--;
 		}
 	};
-
+	
 
 	/**
 	 * Set the state (enabled or disabled) of an arrow.
@@ -78,23 +99,25 @@ $(function () {
 		$months.attr("aria-hidden", true);
 		$months.slice(carouselPos, carouselPos + inView).attr("aria-hidden", false);
 
-		// Calculate new left margin:
-		// - when 1 month is in view, it is a multiple of 100
-		// - when 2 months are in view, it is a multiple of 50
-		var newMargin = -carouselPos * 100 / inView;
+		// Calculate new position:
+		// - when 1 month is in view, it is a multiple of 100%
+		// - when 2 months are in view, it is a multiple of 50%
+		var newPos = -carouselPos * 100 / inView;
 		
-		// Apply new margin with or whithout animation
-		if (animate) {
-			// Stop current animation
-			$monthsCont.stop();
-			
-			$monthsCont.animate({
-				marginLeft: newMargin + "%"
-			}, 600, function () {
-				$months.get(carouselPos).focus();
-			});
+		if (has3d) {
+			$monthsCont.css("transform", "translate3d(" + newPos * inView / carouselLen + "%, 0, 0)");
 		} else {
-			$monthsCont.css("margin-left", newMargin + "%");
+			// Apply new position to left margin with or whithout animation
+			if (animate) {
+				$monthsCont.stop();
+				$monthsCont.animate({
+					"margin-left": newPos + "%"
+				}, 600, function () {
+					$months.get(carouselPos).focus();
+				});
+			} else {
+				$monthsCont.css("margin-left", newPos + "%");
+			}
 		}
 	};
 	
