@@ -26,8 +26,8 @@ $(function () {
 		
 		document.body.insertBefore(el, null);
 		
-		if (typeof el.style["transform"] !== "undefined") {
-			el.style["transform"] = "translate3d(1px, 1px, 1px)";
+		if (typeof el.style.transform !== "undefined") {
+			el.style.transform = "translate3d(1px, 1px, 1px)";
 			has3d = window.getComputedStyle(el).getPropertyValue("transform");
 		}
 		
@@ -44,7 +44,7 @@ $(function () {
 	var updateInView = function () {
 		// When body width is less than 40em, calendar has one column; otherwise, it has two.
 		inView = emWidth < 40 ? 1 : 2;
-		console.log(emWidth);
+		
 		// If 2 months in view, ensure the carousel's position is not the last month
 		if (inView === 2 && (carouselPos === carouselLen - 1)) {
 			carouselPos--;
