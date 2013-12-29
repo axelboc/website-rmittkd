@@ -23,15 +23,18 @@ $(function () {
 	var has3d = (function () {
 		var has3d;
 		var el = document.createElement('div');
+		var transforms = {
+			webkitTransform: "-webkit-transform",
+			transform: "transform"
+		};
 		
 		document.body.insertBefore(el, null);
 		
-		if (typeof el.style.transform !== "undefined") {
-			el.style.transform = "translate3d(1px, 1px, 1px)";
-			has3d = window.getComputedStyle(el).getPropertyValue("transform");
-		} else if (typeof el.style.webkitTransform !== "undefined") {
-			el.style.webkitTransform = "translate3d(1px, 1px, 1px)";
-			has3d = window.getComputedStyle(el).getPropertyValue("-webkit-transform");
+		for (var t in transforms) {
+			if (typeof el.style[t] !== "undefined") {
+				el.style[t] = "translate3d(1px, 1px, 1px)";
+				has3d = window.getComputedStyle(el).getPropertyValue(transforms[t]);
+			}
 		}
 		
 		document.body.removeChild(el);
