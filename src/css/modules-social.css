@@ -2,35 +2,83 @@
 /* Modules used only on page social.php */
 
 
-/* ==== Hero image ===== */
+/* No hero image; reduce top margin */
+@media (max-width: 29.99em) {
+	
+	.main-wrap {
+		margin-top: 6.7em;
+	}
 
-.social-hero {
+}
+
+
+/* ===== Youtube channel ===== */
+
+.yt-wrap {
+	max-width: 42em;
+	padding-bottom: .6em;
+}
+
+.yt-subscribe {
+	min-height: 51px;
+	margin-bottom: .5em;
+}
+
+.video {
+	position: relative;
+	height: 0;
+	padding-bottom: 56.25%;
+}
+
+.video--first {
+	margin-bottom: .6em;
+}
+
+.video > iframe {
 	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
 }
 
-.social-hero {
-	top: 7em;
-	right: 2em;
-	max-width: 50%;
-}
+/* Position 'subscribe' button in the top right-hand corner of the section */
+@media (min-width: 25em) {
 
-@media (min-width: 30em) and (max-width: 49.99em) {
+	.yt-section {
+		position: relative;
+	}
 	
-	.social-hero {
-		max-width: 44%;
+	.yt-wrap {
+		padding-top: 18px;
+	}
+	
+	.yt-subscribe {
+		position: absolute;
+		top: .7em;
+		right: 2em;
 	}
 	
 }
 
-@media (min-width: 50em) {
+/* Display the 2 videos side by side */
+@media (min-width: 45em) {
 	
-	.social-hero {
-		top: 3.5em;
-		right: 7em;
+	.yt-wrap {
+		max-width: none;
+	}
+	
+	.video {
+		float: left;
+		width: 49.5%;
+		padding-bottom: 27.84%;
+	}
+	
+	.video--first {
+		margin-right: 1%;
 	}
 	
 }
-
 
 
 /* ===== Resources (links with image and label) =====*/
@@ -39,18 +87,22 @@
 	margin: 1.5em 0 .8em;
 }
 
-.res-group:last-child {
-	margin-bottom: 12px;
+/* Match height of Facebook iframe */
+@media (min-width: 40em) {
+	.links-wrap { min-height: 382px; }
 }
+@media (min-width: 60em) {
+	.links-wrap { min-height: 378px; }
+}
+
+
+/* Federations */
 
 .resource {
+	float: left;
+	width: 50%;
 	margin-top: 12px;
-	max-width: 15em;
-}
-
-.resource--min {
-	clear: left;
-	margin-top: .5em;
+	padding: 0 10px;
 }
 
 .res-link {
@@ -60,12 +112,25 @@
 }
 
 .res-link > img {
+	max-width: 100%;
+	height: auto;
 	margin: 0 auto 3px auto;
+}
+
+
+/* Associated clubs */
+
+.res-group {
+	margin-bottom: 12px;
+}
+
+.resource--min {
+	margin-top: .5em;
+	font-size: 85%;
 }
 
 .res-link--min {
 	display: table-row;
-	font-size: 90%;
 }
 
 .res-link--min > img,
@@ -79,58 +144,43 @@
 }
 
 
-@media (min-width: 20em) {
+/* When clubs are listed in a single column, reduce the size of their badges */
+@media (min-width: 30em) and (max-width: 56em) {
 	
-	.resource {
-		float: left;
-		padding: 0 10px;
-	}
-
-	.res-link--min {
-		font-size: 100%;
+	.res-link--min > img {
+		width: 20px;
+		height: 20px;
 	}
 	
 }
 
-@media (min-width: 30em) {
+/* List clubs on 2 columns whenever possible */
+@media (max-width: 29.99em), (min-width: 32em) and (max-width: 39.99em), (min-width: 56em) {
 	
-	.res-group {
+	.resource--min {
 		float: left;
 		width: 48%;
-		margin-bottom: 12px;
+		margin-right: 1%;
 	}
 	
-	.res-group--first {
-		margin-right: 3%;
-	}
-	
-}
-
-@media (min-width: 60em) {
-	
-	.res-link {
-		font-size: 85%;
-	}
-	
-	.res-group {
-		width: 38%;
+	.resource--min:nth-child(2n + 1) {
+		clear: left;
 	}
 	
 }
-
 
 
 /* ===== Facebook Like Box =====*/
 
 .fb-wrap {
 	overflow: hidden;
-	padding-right: 0;
+	padding: 0;
 }
 
 .fb-box {
-	width: 100%;
-	height: 395px;
 	display: block;
+	width: 100%;
+	height: 404px;
 	overflow:hidden;
 	border:none;
 	/* Hide footer link 'Facebook social plugin' */
@@ -138,7 +188,5 @@
 	top: 2em;
 	margin-top: -2em;
 }
-
-
 
 
