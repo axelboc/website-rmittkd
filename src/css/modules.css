@@ -174,7 +174,7 @@
 .nav-list a:focus,
 .nav-list a:hover,
 .nav-current {
-	background: transparent right center no-repeat url('../images/nav-smash2.png');
+	background: transparent right center no-repeat url('../images/nav-smash.png');
 }
 
 /* Red underline under current item */
