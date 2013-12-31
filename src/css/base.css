@@ -25,7 +25,7 @@ body,
 }
 
 
-/* ===== Body ===== */
+/* ===== html & body ===== */
 
 html,
 body {
@@ -33,12 +33,12 @@ body {
 }
 
 body {
-	font-size: 70%;
-	color: #333;
-	background-color: #eee;
+	overflow-y: hidden;
 	margin: 0;
 	padding: 0;
-	overflow-y: hidden;
+	background-color: #eee;
+	color: #333;
+	font-size: 70%;
 }
 
 .noscroll {
@@ -78,6 +78,13 @@ body {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+
+/* ===== Line height ===== */
+
+.lh {
+	line-height: 1.4em;
 }
 
 
@@ -204,7 +211,7 @@ img {
 }
 
 
-/* ===== Carousel (calendar and instructors) ===== */
+/* ===== Disabled carousel arrows (calendar and instructors) ===== */
 
 .arrow-disabled {
 	opacity: .6;

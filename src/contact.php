@@ -61,19 +61,19 @@
 						<h2 class="faq-heading section-heading">Frequently Asked Questions</h2>
 						<dl class="faq-list section-content row">
 							<dt class="faq-q">I'm a complete beginner. Is it okay?</dt>
-								<dd class="faq-a">It sure is! We welcome any level of fitness and skills &ndash; no judgment, no pressure.</dd>
+								<dd class="faq-a lh">It sure is! We welcome any level of fitness and skills &ndash; no judgment, no pressure.</dd>
 							<dt class="faq-q">What exactly do you do at training?</dt>
-								<dd class="faq-a">We always start with a good warm-up and finish with stretching. The rest is usually a mix of fitness and strength training, and practice of techniques, patterns, sparring drills and self-defence.</dd>
+								<dd class="faq-a lh">We always start with a good warm-up and finish with stretching. The rest is usually a mix of fitness and strength training, and practice of techniques, patterns, sparring drills and self-defence.</dd>
 							<dt class="faq-q">What should I bring to training?</dt>
-								<dd class="faq-a">For your first classes, just come in gym clothes and bring a water bottle. That's all you need to get started!</dd>
+								<dd class="faq-a lh">For your first classes, just come in gym clothes and bring a water bottle. That's all you need to get started!</dd>
 							<dt class="faq-q">Don't I need a uniform?</dt>
-								<dd class="faq-a">You will eventually, but there is no rush. Just discuss it with us at training once you become a member. By the way, the Taekwon-Do uniform is called a <em>dobok</em>.</dd>
+								<dd class="faq-a lh">You will eventually, but there is no rush. Just discuss it with us at training once you become a member. By the way, the Taekwon-Do uniform is called a <em>dobok</em>.</dd>
 							<dt class="faq-q">I've done martial arts before. Can I bring my own uniform and gear?</dt>
-								<dd class="faq-a">Sorry, but only ITF Taekwon-Do uniforms are allowed in class. Gloves and boots are provided by the club.</dd>
+								<dd class="faq-a lh">Sorry, but only ITF Taekwon-Do uniforms are allowed in class. Gloves and boots are provided by the club.</dd>
 							<dt class="faq-q">What time do classes start?</dt>
-								<dd class="faq-a">Class times are displayed on the <a href="/" class="link-blend">homepage</a>. However, if it is your first class, please come in 15 minutes beforehand to introduce yourself and fill out some paperwork (contact details, next of kin, etc.)</dd>
+								<dd class="faq-a lh">Class times are displayed on the <a href="/" class="link-blend">homepage</a>. However, if it is your first class, please come in 15 minutes beforehand to introduce yourself and fill out some paperwork (contact details, next of kin, etc.)</dd>
 							<dt class="faq-q">What happens if I get injured during class?</dt>
-								<dd class="faq-a">All members (inc. non-RMIT) are covered by RMIT's insurance. You are also covered during your first 3 free classes.</dd>
+								<dd class="faq-a lh">All members (inc. non-RMIT) are covered by RMIT's insurance. You are also covered during your first 3 free classes.</dd>
 						</dl>
 					</section>
 		    	</div>

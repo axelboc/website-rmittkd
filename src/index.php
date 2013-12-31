@@ -26,7 +26,7 @@
 					<div class="row">
 						<header class="section section-1of2 box section--welcome row">
 				        	<h1 class="section-heading">RMIT ITF Taekwon-Do</h1>
-				        	<div class="section-content">
+				        	<div class="section-content lh">
 				        		<p>Forget about the gym! Fitness, cardio, strength, self-defence... <strong>Taekwon-Do</strong> does it all! From complete beginner to seasoned martial artist, our club welcomes all levels of fitness and experience.</p>
 				        		<p>Enough to convince you? Have a look at the timetable below and join our next training session &ndash; you get <strong>3 classes for free!</strong> Otherwise, take a look around... We look forward to training with you!</p>
 				        	</div>
