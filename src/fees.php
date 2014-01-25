@@ -23,24 +23,18 @@
 		</div>
 		<div class="main-wrap body-max">
 			<header class="section box">
-				<h1 class="section-heading">2013 Membership</h1>
+				<h1 class="section-heading">2014 Membership</h1>
 				<div class="membership section-content row">
 					<ul class="mbrship-options list-reset row links-blend">
 						<li class="mbrship-opt">
-							<a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=363" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
-								<span class="mbrship-fee fee"><span class="fee-val">$50</span> <span class="fee-period">per year</span></span>
-								<span class="mbrship-group"><span>RMIT</span> students</span>
+							<a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=597" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
+								<span class="mbrship-fee fee"><span class="fee-val">$60</span> <span class="fee-period">per year</span></span>
+								<span class="mbrship-group"><span>RMIT</span> student</span>
 							</a>
 						</li>
 						<li class="mbrship-opt">
-							<a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=364" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
-								<span class="mbrship-fee fee"><span class="fee-val">$75</span> <span class="fee-period">per year</span></span>
-								<span class="mbrship-group"><span>RMIT</span> staff &amp; alumni</span>
-							</a>
-						</li>
-						<li class="mbrship-opt">
-							<a id="fees-public" href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
-								<span class="mbrship-fee fee"><span class="fee-val">$100</span> <span class="fee-period">per year</span></span>
+							<a id="fees-public" href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=598" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
+								<span class="mbrship-fee fee"><span class="fee-val">$110</span> <span class="fee-period">per year</span></span>
 								<span class="mbrship-group"><span>Public</span> non-RMIT</span>
 							</a>
 						</li>
@@ -55,14 +49,11 @@
 						<div class="lessons section-content row">
 							<img class="lessons-cards-img" src="images/training-cards.png" width="250" height="210" alt="">
 							<div class="lessons-fee row">
-								<p class="lessons-each fee"><span class="fee-val">just $2</span> <span class="fee-period">per class</span></p>
-								<ul class="lessons-cards list-reset links-blend links-inv">
-									<li><a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=146" title="Purchase it on RMIT Link (new window)" target="_blank">$60 Training Card = 30 + 2 classes</a></li>
-									<li><a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=144" title="Purchase it on RMIT Link (new window)" target="_blank">$30 Training Card = 15 + 1 classes</a></li>
-									<li><a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=142" title="Purchase it on RMIT Link (new window)" target="_blank">$10 Training Card = 5 classes</a></li>
-								</ul>
+								<p class="lessons-each fee"><span class="fee-val">just $3</span> <span class="fee-period">per class</span></p>
+								<p class="lessons-month fee"><span class="fee-val">or $25</span> <span class="fee-period">per month</span></p>
 							</div>
 							<p class="lessons-3free"><span class="lessons-free">Free</span> <span class="lessons-3">first 3 classes</span></p>
+				            <p class="lessons-note">To purchase a training card or pay your monthly training fee, <a href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" class="link-blend" target="_blank">visit RMIT Link</a></p>
 						</div>
 					</section>
 				</div>
