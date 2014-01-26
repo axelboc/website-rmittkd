@@ -226,7 +226,7 @@
 										</div>
 										<div class="cal-month cal-month-2014-1 box" tabindex="-1">
 											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-placeholder.jpg">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-barbecue.jpg">
 											</div>
 											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">January</h3>
