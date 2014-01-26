@@ -1,6 +1,17 @@
 {
   "name": "website-rmit-tkd",
   "version": "1.0.0",
+  "author": "Axel Bocciarelli",
+  "description": "Website of the RMIT ITF Taekwon-Do club",
+  "contributors": [ 
+    {
+      "name": "Chaitawat Poovaviranon"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/axelboc/website-rmit-tkd"
+  },
   "devDependencies": {
     "grunt": "~0.4.1",
     "grunt-contrib-clean": "~0.5.0",
