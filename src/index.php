@@ -102,17 +102,6 @@
 								<a class="cal-arrow cal-arrow-prev hidden-text" href="#">Previous month</a>
 								<div class="cal-months-wrapper">
 									<div class="cal-months row">
-										<div class="cal-month cal-month-2013-2 box" tabindex="-1">
-											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-placeholder.jpg">
-											</div>
-											<div class="cal-caption backdrop">
-												<h3 class="cal-heading">February</h3>
-												<ul class="list-reset">
-													<li><strong>13</strong> Club forum</li>
-												</ul>
-											</div>
-										</div>
 										<div class="cal-month cal-month-2013-3 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-weetbix.jpg">
@@ -242,7 +231,19 @@
 											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">January</h3>
 												<ul class="list-reset">
-													<li><strong>20</strong> Class starts</li>
+													<li><strong>20</strong> Classes start</li>
+													<li><strong>26</strong> Club barbecue</li>
+													<li><strong>27</strong> No class</li>
+												</ul>
+											</div>
+										</div>
+										<div class="cal-month cal-month-2014-2 box" tabindex="-1">
+											<div class="respimg-wrap">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-clubday4.jpg">
+											</div>
+											<div class="cal-caption backdrop">
+												<h3 class="cal-heading">February</h3>
+												<ul class="list-reset">
 												</ul>
 											</div>
 										</div>
