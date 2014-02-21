@@ -102,19 +102,6 @@
 								<a class="cal-arrow cal-arrow-prev hidden-text" href="#">Previous month</a>
 								<div class="cal-months-wrapper">
 									<div class="cal-months row">
-										<div class="cal-month cal-month-2013-3 box" tabindex="-1">
-											<div class="respimg-wrap">
-												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-weetbix.jpg">
-											</div>
-											<div class="cal-caption backdrop">
-												<h3 class="cal-heading">March</h3>
-												<ul class="list-reset">
-													<li><strong>3</strong> First-aid training</li>
-													<li><strong>5-7</strong> RMIT Club Days</li>
-													<li><strong>10</strong> Weetbix tryathlon</li>
-												</ul>
-											</div>
-										</div>
 										<div class="cal-month cal-month-2013-4 box" tabindex="-1">
 											<div class="respimg-wrap">
 												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-camp2.jpg">
@@ -244,6 +231,22 @@
 											<div class="cal-caption backdrop">
 												<h3 class="cal-heading">February</h3>
 												<ul class="list-reset">
+													<li><strong>RMIT Clubs Days:</strong></li>
+													<li><strong>25</strong> Brunswick</li>
+													<li><strong>26</strong> Bundoora</li>
+													<li><strong>27</strong> City (demo)</li>
+												</ul>
+											</div>
+										</div>
+										<div class="cal-month cal-month-2014-3 box" tabindex="-1">
+											<div class="respimg-wrap">
+												<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/cal-clubday1.jpg">
+											</div>
+											<div class="cal-caption backdrop">
+												<h3 class="cal-heading">March</h3>
+												<ul class="list-reset">
+													<li><strong>5</strong> RMIT Activity Day</li>
+													<li><strong>6</strong> RMIT Clubs Day</li>
 												</ul>
 											</div>
 										</div>
