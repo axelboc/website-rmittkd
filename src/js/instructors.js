@@ -108,7 +108,7 @@ $(function () {
 			updateCarousel();
 			
 			// Send Analytics event
-			ga('send', 'event', 'arrow left', 'click', 'instructors slider');
+			//ga('send', 'event', 'arrow left', 'click', 'instructors slider');
 		}
 		
 		evt.preventDefault();
@@ -125,7 +125,7 @@ $(function () {
 			updateCarousel();
 			
 			// Send Analytics event
-			ga('send', 'event', 'arrow right', 'click', 'instructors slider');
+			//ga('send', 'event', 'arrow right', 'click', 'instructors slider');
 		}
 		
 		evt.preventDefault();
@@ -142,7 +142,7 @@ $(function () {
 			updateCarousel();
 		
 			// Send Analytics event
-			ga('send', 'event', 'dot ' + carouselPos, 'click', 'instructors slider');
+			//ga('send', 'event', 'dot ' + carouselPos, 'click', 'instructors slider');
 		}
 		
 		evt.preventDefault();

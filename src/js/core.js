@@ -81,7 +81,7 @@ $(function () {
 		$nav.attr("aria-hidden", false);
 		
 		// Send Analytics event
-		ga('send', 'event', 'open', 'click', 'mobile nav');
+		//ga('send', 'event', 'open', 'click', 'mobile nav');
 		
 		evt.preventDefault();
 		return false;
@@ -101,7 +101,7 @@ $(function () {
 		$nav.attr("aria-hidden", true);
 		
 		// Send Analytics event
-		ga('send', 'event', 'close', 'click', 'mobile nav');
+		//ga('send', 'event', 'close', 'click', 'mobile nav');
 		
 		evt.preventDefault();
 		return false;
@@ -125,7 +125,7 @@ $(function () {
 			$nav.removeClass("nav-visible");
 			
 			// Send Analytics event
-			ga('send', 'event', 'off', 'resize', 'mobile nav');
+			//ga('send', 'event', 'off', 'resize', 'mobile nav');
 			
 		} else if (!isOffCanvas && newPos === "absolute") {
 			// Switch to responsive nav
@@ -133,7 +133,7 @@ $(function () {
 			$nav.attr("aria-hidden", true);
 			
 			// Send Analytics event
-			ga('send', 'event', 'on', 'resize', 'mobile nav');
+			//ga('send', 'event', 'on', 'resize', 'mobile nav');
 		}
 	});
 	

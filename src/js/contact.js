@@ -69,6 +69,9 @@ $(function () {
 		$resultMessage.html(message);
 		$resultBox.removeClass("form-result--fail form-result--success").addClass("form-result--" + messageClass);
 		$resultBox.fadeIn().removeClass("hidden").focus();
+		
+		// Send Analytics event
+		ga('send', 'event', 'contact form', 'submit', messageClass);
 	};
 	
 	// Re-validate all fields and submit form via Ajax
@@ -96,21 +99,21 @@ $(function () {
 				type: "POST",
 				url: $form.attr("action"),
 				data: $form.serialize(),
-				dataType: "json",
-				success: function (result) {
-					if (result instanceof Array && result[0].status === "sent") {
-						showResult("success", "<strong>Thank you!</strong> Your message has been sent. We'll get in touch with you as soon as possible.");
-					} else {
-						showResult("fail", result.message ? result.message : GENERIC_ERROR);
-					}
-				},
-				error: function () {
-					showResult("fail", GENERIC_ERROR);
-				},
-				complete: function () {
-					// Hide spinner
-					$submitBtn.removeClass("form-submit--spinner");
+				dataType: "json"
+			})
+			.done(function (result) {
+				if (result instanceof Array && result[0].status === "sent") {
+					showResult("success", "<strong>Thank you!</strong> Your message has been sent. We'll get in touch with you as soon as possible.");
+				} else {
+					showResult("fail", result.message ? result.message : GENERIC_ERROR);
 				}
+			})
+			.fail(function () {
+				showResult("fail", GENERIC_ERROR);
+			})
+			.always(function () {
+				// Hide spinner
+				$submitBtn.removeClass("form-submit--spinner");
 			});
 		}
 	});
