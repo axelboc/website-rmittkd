@@ -12,7 +12,7 @@
 			</ul>
 		</nav>
 		<div class="foot-fb">
-			<a class="foot-fb-link link-inv" href="https://www.facebook.com/rmittkd" target="_blank">Follow us <img class="foot-fb-icon" src="images/foot-fb.png" width="16" height="16" alt=""></a>
+			<a class="foot-fb-link link-inv" href="https://www.facebook.com/rmittkd" target="_blank">Follow us <img class="foot-fb-icon" src="data:image/png;base64,<?php echo base64_encode(file_get_contents("images/foot-fb.png")) ?>" width="16" height="16" alt="on Facebook"></a>
 		</div>
 	</div>
 </footer>
