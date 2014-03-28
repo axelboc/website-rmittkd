@@ -5,7 +5,11 @@ php_value zlib.output_compression_level 7
 # Cache
 <IfModule mod_expires.c>
 	ExpiresActive On 
-	ExpiresDefault "access plus 1 month"
+	ExpiresDefault A0
+	<filesMatch "\.(xml|ico|js|css|gif|jpg|jpeg|png|svg)$">
+		ExpiresDefault "access plus 1 month"
+		Header append Cache-Control "public"
+	</filesMatch>
 </IfModule>
 
 # Headers
