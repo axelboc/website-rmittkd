@@ -2,6 +2,7 @@
 ## Grunt
 #################
 
+dist/
 node_modules/
 resources/
 src/includes/config.php
