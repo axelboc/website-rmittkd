@@ -46,7 +46,7 @@ foreach ($months as $m) {
 	<div class="cal-month cal-month--<?php echo $class; ?> box" tabindex="-1" aria-hidden="<?php echo(($class === 'before' || $class === 'after') ? 'true' : 'false'); ?>">
 		<div class="cal-month-inner">
 			<div class="respimg-wrap">
-				<img class="cal-img respimg-crop" width="408" height="150" alt="" src="images/calendar/<?php echo $img; ?>.jpg">
+				<img class="cal-img respimg-crop lazy-loading" src="" data-src="images/calendar/<?php echo $img; ?>.jpg" width="408" height="150" alt="">
 			</div>
 			<div class="cal-caption backdrop">
 				<h3 class="cal-heading"><?php echo $monthStr; ?></h3>
