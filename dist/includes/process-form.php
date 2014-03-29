@@ -79,8 +79,10 @@ if (strlen($message) === 0) {
  */
 if (file_exists('config.php')) {
 	include('config.php');
+} else {
+	define('API_KEY', getenv('API_KEY'));
+	define('CLUB_EMAIL', getenv('CLUB_EMAIL'));
 }
-echo CLUB_EMAIL;
 
 $emailBody = "A new message was posted on the website.\r\n\r\n" .
 			 "=== Name ===\r\n$name\r\n\r\n" .
