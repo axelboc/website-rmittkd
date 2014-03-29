@@ -48,7 +48,7 @@ $(function () {
 			
 			// Build and set 'src' attribute
 			var src = $this.attr("data-src").replace("-suffix", suffix);
-			$this.attr("src", src);
+			$this.attr("src", src + "?test");
 			
 			// When image is loaded, send load time to Analytics
 			/*$this.load(function () {
