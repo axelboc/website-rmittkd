@@ -39,7 +39,8 @@ foreach ($months as $m) {
 	$img = isset($m['img']) ? $m['img'] : 'placeholder';
 	
 	// Convert month index to string (e.g. 1 -> 'January', 2 -> 'February', etc.)
-	$monthStr = date('F', mktime(0, 0, 0, intval(explode('-', $monthId)[1]), 1));
+	$expMonthId = explode('-', $monthId);
+	$monthStr = date('F', mktime(0, 0, 0, intval($expMonthId[1]), 1));
 	
 	?>
 	<div class="cal-month cal-month--<?php echo $class; ?> box" tabindex="-1" aria-hidden="<?php echo(($class === 'before' || $class === 'after') ? 'true' : 'false'); ?>">
