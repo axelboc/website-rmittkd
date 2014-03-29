@@ -44,17 +44,17 @@ $(function () {
 		// Skip contact page image on mobile
 		if (emWidth > 30 || !$this.hasClass("contact-image")) {
 			// Start measuring load time for Analytics
-			var startTime = new Date().getTime();
+			//var startTime = new Date().getTime();
 			
 			// Build and set 'src' attribute
 			var src = $this.attr("data-src").replace("-suffix", suffix);
 			$this.attr("src", src);
 			
 			// When image is loaded, send load time to Analytics
-			$this.load(function () {
+			/*$this.load(function () {
 				var loadTime = (new Date().getTime()) - startTime;
 				ga('send', 'timing', src, 'Load Image', loadTime);
-			});
+			});*/
 		}
 	});
 	
