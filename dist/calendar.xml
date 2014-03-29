@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+- Months must be provided in chronological order.
+- Always provide one extra month before the current month.
+- Month ID is of the form: year (4 digits) + dash + month number (1 or 2 digits, no leading zero). 
+- If img attribute is not specified, value 'placeholder' is used by default.
+- Note that to keep code simple, mobile users are not allowed to navigate to the first month; only to the second.
+-->
+<calendar>
+	<month id="2013-12" img="grading4">
+		<event date="30-1">Nationals in Wagga</event>
+		<event date="6">Colour-belt grading</event>
+		<event date="15">Black-belt grading</event>
+	</month>
+	<month id="2014-1" img="barbecue">
+		<event date="20">Classes start</event>
+		<event date="26">Club barbecue</event>
+		<event date="27">No class</event>
+	</month>
+	<month id="2014-2" img="clubday4">
+		<heading>RMIT Club Days</heading>
+		<event date="25">Brunswick</event>
+		<event date="26">Bundoora</event>
+		<event date="27">City (demo)</event>
+	</month>
+	<month id="2014-3" img="clubday1">
+		<event date="5">RMIT Activity Day</event>
+		<event date="6">RMIT Clubs Day</event>
+	</month>
+	<month id="2014-4" img="camp2">
+		<event date="5">Club barbecue</event>
+		<event date="25-27">Training camp</event>
+	</month>
+</calendar>
