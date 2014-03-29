@@ -14,7 +14,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: 'src/',
-					src: ['**', '.htaccess', '!**/Thumbs.db'],
+					src: ['**', '.htaccess', '!**/Thumbs.db', '!includes/config.php'],
 					dest: 'dist'
 				}]
 			}

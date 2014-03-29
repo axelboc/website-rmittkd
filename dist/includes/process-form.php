@@ -71,13 +71,13 @@ if (strlen($message) === 0) {
  * - API_KEY, the Mandrill API key (https://mandrillapp.com/)
  * - CLUB_EMAIL, the club's email address
  *
- * config.php is only used in development.
- * It is not version-controlled and does not exist in the production environment (Heroku).
+ * config.php must be used only in development.
+ * It must not be version-controlled and must not exist in the production environment (Heroku).
  * 
- * On Heroku, config variables must be set:
+ * In production, config variables must be set:
  * https://devcenter.heroku.com/articles/config-vars
  */
-if (file_exists('config.php') {
+if (file_exists('config.php')) {
 	include('config.php');
 }
 
