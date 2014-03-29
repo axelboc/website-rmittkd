@@ -70,8 +70,16 @@ if (strlen($message) === 0) {
  * File includes/config.php must define two constants:
  * - API_KEY, the Mandrill API key (https://mandrillapp.com/)
  * - CLUB_EMAIL, the club's email address
+ *
+ * config.php is only used in development.
+ * It is not version-controlled and does not exist in the production environment (Heroku).
+ * 
+ * On Heroku, config variables must be set:
+ * https://devcenter.heroku.com/articles/config-vars
  */
-include('config.php');
+if (file_exists('config.php') {
+	include('config.php');
+}
 
 $emailBody = "A new message was posted on the website.\r\n\r\n" .
 			 "=== Name ===\r\n$name\r\n\r\n" .
