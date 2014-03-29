@@ -80,6 +80,7 @@ if (strlen($message) === 0) {
 if (file_exists('config.php')) {
 	include('config.php');
 }
+echo CLUB_EMAIL;
 
 $emailBody = "A new message was posted on the website.\r\n\r\n" .
 			 "=== Name ===\r\n$name\r\n\r\n" .
