@@ -47,7 +47,7 @@
 					<section class="section box">
 						<h1 class="section-heading">Training Fees</h1>
 						<div class="lessons section-content row">
-							<img class="lessons-cards-img" src="images/training-cards.png" width="250" height="210" alt="">
+							<img class="lessons-cards-img lazy-loading" src="" data-src="images/training-cards.png" width="250" height="210" alt="">
 							<div class="lessons-fee row">
 								<p class="lessons-each fee"><span class="fee-val">just $3</span> <span class="fee-period">per class</span></p>
 								<p class="lessons-month fee"><span class="fee-val">or $25</span> <span class="fee-period">per month</span></p>

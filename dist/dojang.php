@@ -37,8 +37,8 @@
 						<div class="instr-content section-content">
 							<div class="instr-profiles" aria-hidden="false" aria-hidden="true">
 								<section class="instr-profile hidden" tabindex="-1">
-									<img class="instr-belt" src="images/instructors/belt-8.png" width="40" height="220" alt="">
-									<img class="instr-portrait" src="images/instructors/robert-lai.png" width="480" height="220" alt="">
+									<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-8.png" width="40" height="220" alt="">
+									<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/robert-lai.png" width="480" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Robert Lai</h3>
 										<p class="lh">Senior Master Lai (8th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he established many clubs, totalising over 1000 members. Senior Master Lai is now a retired <abbr title="Physical Education">PE</abbr> teacher and the president of <strong>All Australia ITF</strong>, the governing body of <abbr title="International Taekwon-Do Federation">ITF</abbr> in Australia.</p>
@@ -53,8 +53,8 @@
 									</div>
 								</section>
 								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
-									<img class="instr-belt" src="images/instructors/belt-3.png" width="40" height="220" alt="">
-									<img class="instr-portrait" src="images/instructors/cass-white.png" width="500" height="220" alt="">
+									<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-3.png" width="40" height="220" alt="">
+									<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/cass-white.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Cassandra White</h3>
 										<p class="lh">Ms White has been training at RMIT University since <strong>2003</strong>, and received her <strong>3rd degree Black Belt</strong> in December 2012. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 <strong>ITF World Championships</strong> in St Petersburg, Russia.</p>
@@ -76,19 +76,19 @@
 						<h2 class="section-heading">Executive Committee</h2>
 						<div class="section-content">
 							<section class="exec-member">
-								<img class="exec-pic" src="images/execs/marc.jpg" width="150" height="150" alt="">
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/marc.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>President</span><br>Marc Chung</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic" src="images/execs/kidist.jpg" width="150" height="150" alt="">
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/kidist.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Vice-President</span><br>Kidist Kifle</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic" src="images/execs/shiv.jpg" width="150" height="150" alt="">
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/shiv.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Treasurer</span><br>Shivarnee S.</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic" src="images/execs/yunh.jpg" width="150" height="150" alt="">
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/yunh.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Secretary</span><br>Yunh Ying T.</p>
 							</section>
 						</div>
