@@ -37,6 +37,8 @@ $(function () {
 		$cal.addClass("no3d");
 	}
 
+	// Update arrows rights away
+	updateArrows($months.filter(".cal-month--current").index());
 
 	/**
 	 * Set the state (enabled or disabled) of an arrow.
