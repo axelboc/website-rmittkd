@@ -99,11 +99,11 @@
 						<h2 class="section-heading">Calendar</h2>
 						<div class="section-content cal-wrapper">
 							<div id="calendar" class="calendar">
-								<a class="cal-arrow cal-arrow--prev arrow-disabled hidden-text" href="#">Previous month</a>
+								<a class="cal-arrow cal-arrow--prev hidden-text" href="#">Previous month</a>
 								<div class="cal-months row">
 									<?php include 'includes/calendar.php'; ?>
 								</div>
-								<a class="cal-arrow cal-arrow--next arrow-disabled hidden-text" href="#">Following month</a>
+								<a class="cal-arrow cal-arrow--next hidden-text" href="#">Following month</a>
 							</div>
 						</div>
 					</section>
