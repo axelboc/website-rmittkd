@@ -79,21 +79,32 @@ $(function () {
 	 * Update the position of the carousel by re-arranging classes in between the 'cal-month' elements.
 	 * @param {Boolean} toLeft True to move to the left; false to move to the right.
 	 */
+	var timeout;
 	function moveCarousel(toLeft) {
 		// Find the index of the current month
 		var index = $months.filter(".cal-month--current").index();
+		var $current;
 		
 		if (toLeft) {
 			$months.eq(index - 2).toggleClass("cal-month--before cal-month--previous").attr("aria-hidden", false);
-			$months.eq(index - 1).toggleClass("cal-month--previous cal-month--current");
+			$current = $months.eq(index - 1).toggleClass("cal-month--previous cal-month--current");
 			$months.eq(index).toggleClass("cal-month--current cal-month--after").attr("aria-hidden", true);
 			index--;
 		} else {
-			$months.eq(index + 1).toggleClass("cal-month--after cal-month--current").attr("aria-hidden", false);
+			$current = $months.eq(index + 1).toggleClass("cal-month--after cal-month--current").attr("aria-hidden", false);
 			$months.eq(index).toggleClass("cal-month--current cal-month--previous");
 			$months.eq(index - 1).toggleClass("cal-month--previous cal-month--before").attr("aria-hidden", true);
 			index++;
 		}
+		
+		if (timeout) {
+			clearTimeout(timeout);
+		}
+		
+		// Wait for the duration of the transition and set focus on new current month
+		timeout = setTimeout(function () {
+			$current.focus();
+		}, 400);
 		
 		updateArrows(index);
 	}
@@ -103,7 +114,6 @@ $(function () {
 	// Handle click on previous arrow
 	$arrowPrev.click(function (evt) {
 		evt.preventDefault();
-		$arrowPrev.blur();
 		
 		if (!$arrowPrev.hasClass("arrow-disabled")) {
 			// Move carousel to the left
@@ -117,7 +127,6 @@ $(function () {
 	// Handle click on next arrow
 	$arrowNext.click(function (evt) {
 		evt.preventDefault();
-		$arrowNext.blur();
 		
 		if (!$arrowNext.hasClass("arrow-disabled")) {
 			// Move carousel to the left
