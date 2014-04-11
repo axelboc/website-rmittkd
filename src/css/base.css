@@ -120,8 +120,9 @@ a:hover {
 	text-decoration: none;
 }
 
-a:focus {
-    outline: thin dotted;
+a:focus,
+button:focus {
+    outline: 1px dashed #000;
 }
 
 a > span {
@@ -161,6 +162,10 @@ img {
 
 .respimg-wrap {
 	overflow: hidden;
+}
+
+.respimg-link {
+	display: block;
 }
 
 /* Balanced cropping on both sides (the centre of the image never moves)
@@ -249,5 +254,4 @@ img {
 .form-submit {
 	border-radius: 3px;
 }
-
 

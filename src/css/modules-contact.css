@@ -168,8 +168,7 @@
 	background-image: url('../images/fist.png'), linear-gradient(to bottom, #e7343c, #cb171f);
 }
 
-.form-submit:hover,
-.form-submit:focus {
+.form-submit:hover {
 	text-decoration: underline;
 }
 

@@ -129,8 +129,12 @@
 	color: #fff;
 }
 
+.sidebar a:focus {
+	outline-color: #fff;
+}
+
 .sidebar-rmit {
-	margin-bottom: 2.5em;
+	margin: 1em 0 2.5em;
 }
 
 .merch-image {
@@ -351,6 +355,10 @@
 	display: block;
 	font-size: 170%;
 	color: inherit;
+}
+
+.foot-fb-link:focus {
+	text-decoration: underline;
 }
 
 .foot-fb-icon {

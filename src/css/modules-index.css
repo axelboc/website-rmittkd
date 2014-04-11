@@ -163,7 +163,11 @@
 }
 
 .map-link:focus {
-	text-decoration: underline;
+	outline: 0;
+}
+
+.map-link:focus > .map-caption > span {
+	outline: 1px dashed #fff;
 }
 
 .map-link > img {
@@ -259,15 +263,10 @@
 	background: transparent left top no-repeat url('../images/cal-arrows.png');
 }
 
-.cal-arrow:focus {
-	outline: 0;
-}
-
 .cal-arrow--prev {
 	left: -18px;
 }
 
-.cal-arrow--prev:focus,
 .cal-arrow--prev:hover { background-position: left bottom; }
 .cal-arrow--prev:active { background-position: left top; }
 .cal-arrow--prev.arrow-disabled { background-position: left bottom; }
@@ -277,7 +276,6 @@
 	background-position: right top;
 }
 
-.cal-arrow--next:focus,
 .cal-arrow--next:hover { background-position: right bottom; }
 .cal-arrow--next:active { background-position: right top; }
 .cal-arrow--next.arrow-disabled { background-position: right bottom; }

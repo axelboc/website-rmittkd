@@ -35,8 +35,8 @@
 					<section id="instructors" class="instructors section box">
 						<h2 class="instr-heading section-heading">Instructors</h2>
 						<div class="instr-content section-content">
-							<div class="instr-profiles" aria-hidden="false" aria-hidden="true">
-								<section class="instr-profile hidden" tabindex="-1">
+							<div class="instr-profiles">
+								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
 									<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-8.png" width="40" height="220" alt="">
 									<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/robert-lai.png" width="480" height="220" alt="">
 									<div class="instr-caption">
@@ -44,7 +44,7 @@
 										<p class="lh">Senior Master Lai (8th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he established many clubs, totalising over 1000 members. Senior Master Lai is now a retired <abbr title="Physical Education">PE</abbr> teacher and the president of <strong>All Australia ITF</strong>, the governing body of <abbr title="International Taekwon-Do Federation">ITF</abbr> in Australia.</p>
 									</div>
 								</section>
-								<section class="instr-profile" tabindex="-1">
+								<section class="instr-profile" tabindex="-1" aria-hidden="false">
 									<img class="instr-belt" src="images/instructors/belt-6.png" width="40" height="220" alt="">
 									<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="220" alt="">
 									<div class="instr-caption">

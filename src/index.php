@@ -90,7 +90,7 @@
 							<div class="map-wrap inner">
 								<a class="map-link link-inv respimg-wrap" href="http://goo.gl/maps/tVKGc" target="_blank">
 									<img class="cal-img respimg-crop" src="images/map.png" width="473" height="149" alt="">
-									<span class="map-caption backdrop">RMIT Building 57, Level 4, 33 Lygon St</span>
+									<span class="map-caption backdrop"><span>RMIT Building 57, Level 4, 33 Lygon St</span></span>
 								</a>
 							</div>
 						</section>

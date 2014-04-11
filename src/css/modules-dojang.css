@@ -147,11 +147,6 @@
 	background: transparent center bottom no-repeat url('../images/instr-graphics.png');
 }
 
-.instr-arrow:focus,
-.instr-dot:focus {
-	outline: 0;
-}
-
 .instr-arrow-prev {
 	background-position: left bottom;
 }
