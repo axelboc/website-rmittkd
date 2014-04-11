@@ -357,10 +357,6 @@
 	color: inherit;
 }
 
-.foot-fb-link:focus {
-	text-decoration: underline;
-}
-
 .foot-fb-icon {
 	position: relative;
 	top: 2px;
