@@ -29,25 +29,6 @@ Distribution
 This command will lint JS files, copy all source files to the **dist** folder, then minify all JS and CSS files within that folder.
 
 
-Deployment
-----------
-
-The site is hosted on [Heroku](https://www.heroku.com/‎). Deploying to Heroku requires a bit of [set up](https://devcenter.heroku.com/articles/quickstart)...
-
-1. Install the [Heroku Toolbelt](https://toolbelt.heroku.com/).
-2. Login to Heroku via the command line:
-   `heroku login`
-3. Provide your SSH key or create a new one when prompted.
-4. Add a Git remote called **heroku** to your local repository:
-   `heroku git:remote -a website-rmit-tkd`
-
-Once this is done, the following steps let you deploy the **dist** folder to Heroku.
-
-1. Commit any changes made to the code.
-2. Push the **dist** subtree to the **heroku** remote:
-   `git subtree push --prefix dist heroku master`
-
-
 Known issues
 ------------
 
