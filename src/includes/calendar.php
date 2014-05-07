@@ -24,7 +24,7 @@ $defaultClass = 'before';
 
 // Loop through the months
 foreach ($months as $m) {
-	$monthId = $m['id']->__toString();
+	$monthId = (string)$m['id'];
 	
 	// Compute initial class of month element
 	if ($monthId === $currentMonthId) {
