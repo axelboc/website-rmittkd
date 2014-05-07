@@ -55,5 +55,5 @@ Known issues
 
 - Lack of focus indicator when tabbing through Youtube channel widget on social page.
 - Keyboard trap caused by Youtube player on social page in Firefox.
-- Unable to tab through Youtube player on social page in Chrome.
+- Unable to tab inside Youtube player on social page in Chrome.
 - Potential keyboard trap due to infite scroll functionnality of Facebook iframe on social page.
