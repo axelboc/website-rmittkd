@@ -98,8 +98,8 @@
 			</div>
 		</div>
 	</article>
-	<?php include 'includes/footer.php'; ?>
 </div>
+<?php include 'includes/footer.php'; ?>
 <?php include 'includes/footer_js.php'; ?>
 <script src="js/instructors.js"></script>
 </body>

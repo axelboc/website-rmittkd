@@ -76,7 +76,6 @@ $(function () {
 		});
 		
 		navVisible = true;
-		$html.addClass("noscroll");
 		$nav.addClass("nav-visible");
 		$nav.attr("aria-hidden", false);
 		
@@ -97,7 +96,6 @@ $(function () {
 		});
 		
 		navVisible = false;
-		$html.removeClass("noscroll");
 		$nav.attr("aria-hidden", true);
 		
 		// Send Analytics event
@@ -119,7 +117,6 @@ $(function () {
 			isOffCanvas = false;
 			navVisible = false;
 			
-			$html.removeClass("noscroll");
 			$bodyWrap.css("left", 0);
 			$nav.attr("aria-hidden", false);
 			$nav.removeClass("nav-visible");
@@ -140,6 +137,7 @@ $(function () {
 
 	// Keep focus inside navigation when it is visible
 	$(document).on("focusin", function (evt) {
+		console.log(evt.target);
 		if (navVisible && evt.target !== nav && !$.contains(nav, evt.target)) {
 			$nav.focus();
 			// Prevent scrolling due to focus events

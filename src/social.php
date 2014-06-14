@@ -70,8 +70,8 @@
 	   		</div>
    		</div>
 	</article>
-	<?php include 'includes/footer.php'; ?>
 </div>
+<?php include 'includes/footer.php'; ?>
 <?php include 'includes/footer_js.php'; ?>
 <script src="https://apis.google.com/js/platform.js"></script>
 </body>

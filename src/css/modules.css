@@ -166,6 +166,10 @@
 
 /* ===== Top navigation ===== */
 
+.nav {
+	outline: 0;
+}
+
 .nav-list a {
 	position: relative;
 	display: block;
