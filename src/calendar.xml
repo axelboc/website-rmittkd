@@ -33,11 +33,12 @@
 	</month>
 	<month id="2014-5">
 	</month>
-	<month id="2014-6" img="champs5">
+	<month id="2014-6" img="seminar1">
 		<event date="1">Black-belt grading</event>
-		<event date="7">Victorian Champs</event>
+		<event date="18">Online Garage Sale</event>
 	</month>
-	<month id="2014-7">
+	<month id="2014-7" img="champs5">
+		<event date="26">Victorian champs</event>
 	</month>
 	<month id="2014-8" img="grading1">
 		<event date="15">Colour-belt grading</event>
