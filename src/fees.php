@@ -62,8 +62,8 @@
 		</div>
 	</article>
 	<?php include 'includes/footer.php'; ?>
-	<?php include 'includes/footer_js.php'; ?>
-	<script src="js/fees.js"></script>
 </div>
+<?php include 'includes/footer_js.php'; ?>
+<script src="js/fees.js"></script>
 </body>
 </html>

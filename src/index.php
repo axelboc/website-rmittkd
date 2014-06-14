@@ -40,7 +40,7 @@
 						<section class="tmtbl-section section section-1of2 section-first box">
 							<h2 class="section-heading">Timetable</h2>
 							<div>
-								<table class="tmtbl" summary="The first colum gives the time, and the others each correspond to a day of the week.">
+								<table class="tmtbl">
 									<caption class="tmtbl-caption"><span class="tmtbl-legend hidden-text">Legend: </span><span><span class="tmtbl-legend-square tmtbl-training tmtbl-top tmtbl-bot"></span> Training</span> <span><span class="tmtbl-legend-square tmtbl-openmat tmtbl-top tmtbl-bot"></span> Open mat</span></caption>
 									<thead>
 										<tr>
@@ -113,8 +113,8 @@
 		</div>
 	</article>
 	<?php include 'includes/footer.php'; ?>
-	<?php include 'includes/footer_js.php'; ?>
-	<script src="js/calendar.js"></script>
 </div>
+<?php include 'includes/footer_js.php'; ?>
+<script src="js/calendar.js"></script>
 </body>
 </html>
