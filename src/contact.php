@@ -71,9 +71,11 @@
 							<dt class="faq-q">I've done martial arts before. Can I bring my own uniform and gear?</dt>
 								<dd class="faq-a lh">Sorry, but only ITF Taekwon-Do uniforms are allowed in class. Gloves and boots are provided by the club.</dd>
 							<dt class="faq-q">What time do classes start?</dt>
-								<dd class="faq-a lh">Class times are displayed on the <a href="/" class="link-blend">homepage</a>. However, if it is your first class, please come in 15 minutes beforehand to introduce yourself and fill out some paperwork (contact details, next of kin, etc.)</dd>
+								<dd class="faq-a lh">Class times are displayed on the <a class="link-blend" href="/">homepage</a>. However, if it is your first class, please come in 15 minutes beforehand to introduce yourself and fill out some paperwork (contact details, next of kin, etc.)</dd>
 							<dt class="faq-q">What happens if I get injured during class?</dt>
 								<dd class="faq-a lh">All members (inc. non-RMIT) are covered by RMIT's insurance. You are also covered during your first 3 free classes.</dd>
+							<dt class="faq-q">How do I purchase the membership?</dt>
+								<dd class="faq-a lh">You can purchase your membership online, on <a class="link-blend" href="http://rmitlink.rmit.edu.au/" target="_blank">RMIT Link</a>. Before you start, make sure you first create an account and join the club from the club's page. The process is a bit complex, so we've put together a <a class="link-blend" href="docs/RMIT%20Link%20sign-up.pdf" target="_blank">step-by-step tutorial (PDF, 363 kB)</a>.</dd>
 						</dl>
 					</section>
 		    	</div>

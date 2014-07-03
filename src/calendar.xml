@@ -38,10 +38,13 @@
 		<event date="18">Online Garage Sale</event>
 	</month>
 	<month id="2014-7" img="champs5">
-		<event date="26">Victorian champs</event>
+		<event date="9">V.E. Welcome Day</event>
+		<event date="22">Mid-year Orientation (demo)</event>
+		<event date="26">Victorian Champs</event>
 	</month>
 	<month id="2014-8" img="grading1">
 		<event date="15">Colour-belt grading</event>
+		<event date="19">A'Beckett Square Launch</event>
 	</month>
 	<month id="2014-9">
 		<event date="7">Bunnings sausage sizzle</event>
