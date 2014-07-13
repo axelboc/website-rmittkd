@@ -27,13 +27,13 @@
 				<div class="membership section-content row">
 					<ul class="mbrship-options list-reset row links-blend">
 						<li class="mbrship-opt">
-							<a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=597" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
+							<a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=3882" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
 								<span class="mbrship-fee fee"><span class="fee-val">$60</span> <span class="fee-period">per year</span></span>
 								<span class="mbrship-group"><span>RMIT</span> student</span>
 							</a>
 						</li>
 						<li class="mbrship-opt">
-							<a id="fees-public" href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=2712" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
+							<a id="fees-public" href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=3883" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
 								<span class="mbrship-fee fee"><span class="fee-val">$110</span> <span class="fee-period">per year</span></span>
 								<span class="mbrship-group"><span>Public</span> non-RMIT</span>
 							</a>
