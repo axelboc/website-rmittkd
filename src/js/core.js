@@ -137,7 +137,6 @@ $(function () {
 
 	// Keep focus inside navigation when it is visible
 	$(document).on("focusin", function (evt) {
-		console.log(evt.target);
 		if (navVisible && evt.target !== nav && !$.contains(nav, evt.target)) {
 			$nav.focus();
 			// Prevent scrolling due to focus events

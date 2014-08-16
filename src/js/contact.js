@@ -102,10 +102,15 @@ $(function () {
 				dataType: "json"
 			})
 			.done(function (result) {
-				if (result instanceof Array && result[0].status === "sent") {
-					showResult("success", "<strong>Thank you!</strong> Your message has been sent. We'll get in touch with you as soon as possible.");
+				if (result instanceof Array) {
+					var res = result[0];
+					if (res.status === "sent") {
+						showResult("success", "<strong>Thank you!</strong> Your message has been sent. We'll get in touch with you as soon as possible.");
+					} else {
+						showResult("fail", res.message ? res.message : GENERIC_ERROR);
+					}
 				} else {
-					showResult("fail", result.message ? result.message : GENERIC_ERROR);
+					showResult("fail", GENERIC_ERROR);
 				}
 			})
 			.fail(function () {

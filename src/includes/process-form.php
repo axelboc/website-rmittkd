@@ -3,10 +3,10 @@
 define('TRY_AGAIN', 'Please try again. If the problem persists, please get in touch with us on Facebook.');
 
 function exitWithResult($status, $message = '') {
-	echo json_encode(array(
+	echo json_encode(array(array(
 		'status' => $status,
 		'message' => $message
-	));
+	)));
 	exit;
 }
 
@@ -61,6 +61,12 @@ $message = strip_tags($_POST['message']);
 // Check length
 if (strlen($message) === 0) {
 	exitWithResult('error', 'Please enter your message.');
+}
+
+// Spam trap: URL field must be left empty
+if (isset($_POST['url']) && $_POST['url'] !== '') {
+	// Make it look like the message was successfully sent
+	exitWithResult('sent');
 }
 
 
