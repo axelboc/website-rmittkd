@@ -43,8 +43,8 @@
 							<section class="box">
 								<h2 class="section-heading-sub">International &amp; National Federations</h2>
 								<ul class="list-reset links-inv links-blend row">
-									<li class="resource box"><a class="res-link" href="http://www.itftkd.org/" target="_blank"><img src="images/social/logo-itf.png" width="100" height="100" alt=""> International Taekwon-Do Federation</a></li>
-									<li class="resource box"><a class="res-link" href="http://www.aaitf.org.au/" target="_blank"><img src="images/social/logo-aaitf.png" width="100" height="100" alt=""> All Australia ITF<br>(AAITF)</a></li>
+									<li class="resource box"><a class="res-link" href="http://www.chitf.org/" target="_blank"><img src="images/social/logo-chitf.png" width="100" height="100" alt="">Chan Hun International Taekwon-Do Federation</a></li>
+									<li class="resource box"><a class="res-link" href="https://www.facebook.com/chitfaustralia" target="_blank"><img src="images/social/logo-chitf-australia.png" width="125" height="100" alt="">CHITF Australia</a></li>
 								</ul>
 							</section>
 							<section class="box">
