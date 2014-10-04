@@ -40,22 +40,25 @@
 	<month id="2014-7" img="champs5">
 		<event date="9">V.E. Welcome Day</event>
 		<event date="22">Mid-year Orientation (demo)</event>
-		<event date="26">Victorian Champs</event>
+		<event date="26">Victorian champ</event>
 	</month>
 	<month id="2014-8" img="grading1">
 		<event date="15">Colour-belt grading</event>
 		<event date="19">A'Beckett Square Launch</event>
-		<event date="31">RMIT Champs</event>
+		<event date="31">RMIT champ</event>
 	</month>
-	<month id="2014-9">
+	<month id="2014-9" img="sizzle1">
 		<event date="7">Bunnings sausage sizzle</event>
 	</month>
 	<month id="2014-10">
+		<event date="TBC">Rock climbing</event>
 	</month>
-	<month id="2014-11">
+	<month id="2014-11" img="champs7">
+		<event date="23">TK-1 champ</event>
+		<event date="29-30">National champ</event>
 	</month>
-	<month id="2014-12" img="champs3">
-		<event date="6">Australian Champs</event>
+	<month id="2014-12" img="champs8">
+		<event date="6-7">Asia-Pacific champ</event>
 		<event date="12">Colour-belt grading</event>
 	</month>
 </calendar>
