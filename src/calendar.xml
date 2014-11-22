@@ -54,6 +54,7 @@
 		<event date="TBC">Rock climbing</event>
 	</month>
 	<month id="2014-11" img="champs7">
+		<event date="15">Annual dinner</event>
 		<event date="23">TK-1 champ</event>
 		<event date="29-30">National champ</event>
 	</month>

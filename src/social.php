@@ -27,10 +27,10 @@
 							<div class="g-ytsubscribe" data-channelid="UCC6zmnN4NLQyvlFLfdr18Dw" data-layout="full" data-count="hidden"></div>
 						</div>
 						<div class="video video--first">
-							<iframe src="//www.youtube-nocookie.com/embed/YtSfWZdC_mE?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+							<iframe src="//www.youtube-nocookie.com/embed/ewGt5hz_1VA?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
 						</div>
 						<div class="video">
-							<iframe src="//www.youtube-nocookie.com/embed/H-lffvJshJo?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+							<iframe src="//www.youtube-nocookie.com/embed/YtSfWZdC_mE?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
 						</div>
 					</div>
 				</section>
