@@ -53,7 +53,7 @@
 									<li class="resource--min"><a class="res-link--min" href="http://www.laitkd.com.au/" target="_blank"><img src="images/social/logo-lai.png" width="40" height="40" alt="" /> <span>St Albans Lai Taekwon-Do (<abbr title="Victoria">VIC</abbr>)</span></a></li>
 									<li class="resource--min"><a class="res-link--min" href="http://www.facebook.com/pages/Melton-Lai-Taekwon-Do-ITF/119160461466076" target="_blank"><img src="images/social/logo-lai.png" width="40" height="40" alt=""> <span>Melton Lai Taekwon-Do (<abbr title="Victoria">VIC</abbr>)</span></a></li>
 									<li class="resource--min"><a class="res-link--min" href="http://www.facebook.com/Laitkdtl" target="_blank"><img src="images/social/logo-lai.png" width="40" height="40" alt=""> <span>Taylors Lakes Lai Taekwon-Do (<abbr title="Victoria">VIC</abbr>)</span></a></li>
-									<li class="resource--min"><a class="res-link--min" href="http://www.budosites.com/gmaa/" target="_blank"><img src="images/social/logo-gmaa.png" width="40" height="40" alt=""> <span>Goulburn Martial Arts Academy (<abbr title="New South Wales">NSW</abbr>)</span></a></li>
+									<li class="resource--min"><a class="res-link--min" href="http://goulburnmartialartacademy.squarespace.com/" target="_blank"><img src="images/social/logo-gmaa.png" width="40" height="40" alt=""> <span>Goulburn Martial Arts Academy (<abbr title="New South Wales">NSW</abbr>)</span></a></li>
 									<li class="resource--min"><a class="res-link--min" href="http://www.tkdsomerset.com/" target="_blank"><img src="images/social/logo-somerset.png" width="40" height="40" alt=""> <span>Somerset Lai Taekwon-Do (<abbr title="Tasmania">TAS</abbr>)</span></a></li>
 								</ul>
 							</section>
