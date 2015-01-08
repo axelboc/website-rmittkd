@@ -45,11 +45,11 @@
 									</div>
 								</section>
 								<section class="instr-profile" tabindex="-1" aria-hidden="false">
-									<img class="instr-belt" src="images/instructors/belt-6.png" width="40" height="220" alt="">
+									<img class="instr-belt" src="images/instructors/belt-7.png" width="40" height="220" alt="">
 									<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Jason Lai</h3>
-										<p class="lh">Mr Jason Lai (6th degree) has been training for over 30 years. In 2013, he received the RMIT <em>Outstanding Service</em> Award for his <strong>20 years</strong> of service to the club. Mr Lai was also a <strong>coach</strong> for the Australian Team at the 2010 <strong>ITF World Championships</strong> in Minsk, Belarus.</p>
+										<p class="lh">Master Lai (7th degree) has been training for over 30 years. In 2013, he received the RMIT <em>Outstanding Service</em> Award for his <strong>20 years</strong> of service to the club. Mr Lai was also a <strong>coach</strong> for the Australian Team at the 2010 <strong>ITF World Championships</strong> in Minsk, Belarus.</p>
 									</div>
 								</section>
 								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
