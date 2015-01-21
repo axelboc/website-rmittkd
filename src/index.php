@@ -88,9 +88,9 @@
 						<section class="section map-section section-1of2 box">
 							<h2 class="section-heading">Location</h2>
 							<div class="map-wrap inner">
-								<a class="map-link link-inv respimg-wrap" href="http://goo.gl/maps/tVKGc" target="_blank">
-									<img class="cal-img respimg-crop" src="images/map.png" width="473" height="149" alt="">
-									<span class="map-caption backdrop"><span>RMIT Building 57, Level 4, 33 Lygon St</span></span>
+								<a class="map-link link-inv respimg-wrap" href="https://goo.gl/maps/RYwxl" target="_blank">
+									<img class="cal-img respimg-crop" src="images/map.png?20150121" width="473" height="149" alt="">
+									<span class="map-caption backdrop"><span>RMIT Building 8, Univeristy Function Room 08.02.08</span></span>
 								</a>
 							</div>
 						</section>
