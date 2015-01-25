@@ -14,9 +14,9 @@
 	</month>
 	<month id="2015-1" img="barbecue">
 		<event date="19">Classes start</event>
-		<event date="TBC">Club barbecue</event>
 	</month>
-	<month id="2015-2">
+	<month id="2015-2" img="clubday4">
+		<event date="TBC">Club barbecue</event>
 	</month>
 	<month id="2015-3">
 	</month>

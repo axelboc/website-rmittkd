@@ -118,8 +118,11 @@
 }
 
 .mbrship-note {
-	margin-bottom: .8em;
 	max-width: 25em;
+}
+
+.mbrship-note > p:last-child {
+	margin-bottom: .8em;
 }
 
 @media (min-width: 25em) {
@@ -206,19 +209,19 @@
 	overflow: hidden;
 }
 
-.lessons-free {
-	float: left;
-	text-transform: uppercase;
-	font-size: 200%;
-	margin-right: .2em;
-}
-
 .lessons-3 {
+	float: left;
 	display: block;
-	overflow: hidden;
 	width: 4em;
 	position: relative;
-	top: -.2em;
+	top: -.2em; 
+	text-align: right;
+}
+
+.lessons-free {
+	text-transform: uppercase;
+	font-size: 200%;
+	margin-left: .2em;
 }
 
 @media (min-width: 43.5em) {
