@@ -80,16 +80,16 @@
 								<p class="exec-caption"><span>President</span><br>Marc Chung</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/kidist.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Vice-President</span><br>Kidist Kifle</p>
-							</section>
-							<section class="exec-member">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/shiv.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Treasurer</span><br>Shivarnee S.</p>
+								<p class="exec-caption"><span>Vice-President</span><br>Shivarnee</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/yunh.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Secretary</span><br>Yunh Ying T.</p>
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/victor.jpg" width="150" height="150" alt="">
+								<p class="exec-caption"><span>Treasurer</span><br>Victor</p>
+							</section>
+							<section class="exec-member">
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/vlad.jpg" width="150" height="150" alt="">
+								<p class="exec-caption"><span>Secretary</span><br>Vlad</p>
 							</section>
 						</div>
 					</section>
