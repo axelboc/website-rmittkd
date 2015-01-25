@@ -19,7 +19,7 @@
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="body-max">
-			<img id="fees-hero" class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix--rmit.png" width="384" height="311" alt="">
+			<img id="fees-hero" class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix--tkd.png" width="384" height="311" alt="">
 		</div>
 		<div class="main-wrap body-max">
 			<header class="section box">
