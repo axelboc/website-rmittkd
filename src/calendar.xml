@@ -16,11 +16,16 @@
 		<event date="19">Classes start</event>
 	</month>
 	<month id="2015-2" img="clubday4">
-		<event date="TBC">Club barbecue</event>
+		<event date="20">Committee meeting</event>
+		<event date="24-25">Orientation Day - Brunswick, Bundoora</event>
 	</month>
-	<month id="2015-3">
+	<month id="2015-3" img="clubday5">
+		<event date="5">Orientation Day - City</event>
+		<event date="18, 25">Beginner classes (6:30-7:30)</event>
 	</month>
-	<month id="2015-4">
+	<month id="2015-4" img="grading1">
+		<event date="1, 8, 15">Beginner classes (6:30-7:30)</event>
+		<event date="11">Black-belt grading</event>
 	</month>
 	<month id="2015-5">
 	</month>
