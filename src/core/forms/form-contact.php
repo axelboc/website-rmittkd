@@ -80,7 +80,7 @@ if (isset($_POST['url']) && $_POST['url'] !== '') {
  * config.php must be used only in development.
  * It must not be version-controlled and must not exist in the production environment (Heroku).
  * 
- * In production, config variables must be set:
+ * If hosting website on Heroku in production, config variables must be set:
  * https://devcenter.heroku.com/articles/config-vars
  */
 if (file_exists('config.php')) {

@@ -1,6 +1,6 @@
 <?php 
 // Read calendar.xml
-$calXML = simplexml_load_file("calendar.xml");
+$calXML = simplexml_load_file("data/calendar.xml");
 $months = $calXML->month;
 
 // Compute ID of current month (e.g. '2014-3')

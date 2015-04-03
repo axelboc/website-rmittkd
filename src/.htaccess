@@ -31,8 +31,10 @@ AddOutputFilterByType DEFLATE application/javascript
 	Options +FollowSymLinks
 	RewriteEngine On
 
-	## don't touch PHP files in 'includes' folder
+	## don't touch PHP files in these folders:
+	RewriteRule ^core/ - [L,NC]
 	RewriteRule ^includes/ - [L,NC]
+	RewriteRule ^admin/includes/ - [L,NC]
 
 	## hide .php extension snippet
 

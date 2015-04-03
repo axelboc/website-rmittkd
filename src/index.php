@@ -9,9 +9,9 @@
 	<meta property="og:description" content="Come and meet a bunch of awesome people at the ITF Taekwon-Do club of RMIT University, Melbourne. Just drop by in gym cloths and enjoy 3 classes for free!">
 	<meta property="og:image" content="http://rmittkd.com/images/og/logo-og.png">
 	<meta property="og:url" content="http://rmittkd.com/">
-	<?php include 'includes/header_css.php'; ?>
+	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-index.css">
-	<?php include 'includes/header_js.php'; ?>
+	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
 <div class="body-wrap">
@@ -114,7 +114,7 @@
 	</article>
 </div>
 <?php include 'includes/footer.php'; ?>
-<?php include 'includes/footer_js.php'; ?>
+<?php include 'includes/foot_js.php'; ?>
 <script src="js/calendar.js"></script>
 </body>
 </html>
