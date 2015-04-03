@@ -1,34 +1,16 @@
 <?php
 
-class Videos extends Singleton {
+class Videos extends Feature {
 	
+	private static $urlRegex = '/^.+youtube\.com\/watch\?v=(.+)(&.*)?$/';
 	private static $iframeUrlFormat = '//www.youtube-nocookie.com/embed/{{id}}?rel=0&amp;wmode=transparent';
-	
-	private $ids;
-	private $urls;
-	
-	/**
-	 * Instanciate clas and parse XML data store.
-	 */
-	public function __construct() {
-		// Load file
-		$xmlVideos = loadXMLFile('videos');
-
-		$this->ids = array();
-		$this->urls = array();
-		
-		foreach ($xmlVideos->video as $xmlVideo) {
-			$this->ids[] = $xmlVideo['id'];
-			$this->urls[] = $xmlVideo['url'];
-		}
-	}
 
 	/**
 	 * Print the URL of a YouTube video.
 	 * @param {Interger} $index - the index of the video in the XML data store
 	 */
 	public static function url($index) {
-		echo self::getInstance()->urls[$index];
+		echo self::getInstance()->xml->video[$index];
 	}
 	
 	/**
@@ -36,8 +18,27 @@ class Videos extends Singleton {
 	 * @param {Interger} $index - the index of the video in the XML data store
 	 */
 	public static function iframeUrl($index) {
-		$id = self::getInstance()->ids[$index];
+		$id = self::getInstance()->xml->video[$index]['id'];
 		echo str_replace('{{id}}', $id, self::$iframeUrlFormat);
+	}
+	
+	/**
+	 * Set the URLs of the videos and persist the changes to the store.
+	 * @param {Array} $urls
+	 */
+	public static function setUrls($urls) {
+		$videos = self::getInstance()->xml->video;
+		
+		foreach ($urls as $index => $url) {
+			// Look for the ID of the video in the URL
+			$matches = array();
+			preg_match(self::$urlRegex, $url, $matches);
+			
+			$videos[$index] = $url;
+			$videos[$index]['id'] = $matches[1];
+		}
+		
+		self::getInstance()->persist();
 	}
 	
 }

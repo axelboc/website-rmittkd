@@ -24,15 +24,6 @@ function __autoload($class_name) {
 }
 
 
-/**
- * Load the XML file with given name.
- * @param {String} $name - the name of the file without the XML extension
- * @return {SimpleXMLElement}
- */
-function loadXMLFile($name) {
-	return simplexml_load_file(PATH_DATA . $name . '.xml');
-}
-
 /*function exitWithResult($status, $message = '') {
 	echo json_encode(array(array(
 		'status' => $status,
