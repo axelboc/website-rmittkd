@@ -10,9 +10,9 @@
 	<meta property="og:image" content="http://rmittkd.com/images/og/hero-contact-og.jpg">
 	<meta property="og:url" content="http://rmittkd.com/contact">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
-	<?php include 'includes/header_css.php'; ?>
+	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-contact.css">
-	<?php include 'includes/header_js.php'; ?>
+	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
 <div class="body-wrap">
@@ -23,7 +23,7 @@
 				<h1 class="section-heading">Contact</h1>
 				<img class="contact-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-contact-suffix.png" width="384" height="520" alt="">
 				<div class="section-content">
-					<form id="contact-form" class="form row" action="includes/process-form.php" method="post">
+					<form id="contact-form" class="form row" action="/core/forms/form-contact.php" method="post">
 						<div class="form-result hidden box" tabindex="-1">
 							<p class="form-result-message"></p>
 						</div>
@@ -86,7 +86,7 @@
 	</section>
 </div>
 <?php include 'includes/footer.php'; ?>
-<?php include 'includes/footer_js.php'; ?>
+<?php include 'includes/foot_js.php'; ?>
 <script src="js/contact.js"></script>
 </body>
 </html>

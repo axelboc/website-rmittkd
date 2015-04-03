@@ -10,9 +10,9 @@
 	<meta property="og:image" content="http://rmittkd.com/images/og/hero-fees-og.jpg">
 	<meta property="og:url" content="http://rmittkd.com/fees">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
-	<?php include 'includes/header_css.php'; ?>
+	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-fees.css?20150125">
-	<?php include 'includes/header_js.php'; ?>
+	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
 <div class="body-wrap">
@@ -69,7 +69,7 @@
 	</article>
 </div>
 <?php include 'includes/footer.php'; ?>
-<?php include 'includes/footer_js.php'; ?>
+<?php include 'includes/foot_js.php'; ?>
 <script src="js/fees.js"></script>
 </body>
 </html>

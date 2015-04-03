@@ -1,3 +1,4 @@
+<?php require_once 'core/core.php'; ?>
 <!DOCTYPE html>
 <html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
@@ -10,9 +11,9 @@
 	<meta property="og:image" content="http://rmittkd.com/images/og/logo-og.png">
 	<meta property="og:url" content="http://rmittkd.com/social">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
-	<?php include 'includes/header_css.php'; ?>
+	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-social.css">
-	<?php include 'includes/header_js.php'; ?>
+	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
 <div class="body-wrap">
@@ -21,16 +22,16 @@
 		<div class="main-wrap body-max">
 			<div class="row">
 				<section class="yt-section section box row">
-					<h2 class="section-heading">Youtube</h2>
+					<h2 class="section-heading">YouTube</h2>
 					<div class="yt-wrap section-content row">
 						<div class="yt-subscribe">
 							<div class="g-ytsubscribe" data-channelid="UCC6zmnN4NLQyvlFLfdr18Dw" data-layout="full" data-count="hidden"></div>
 						</div>
 						<div class="video video--first">
-							<iframe src="//www.youtube-nocookie.com/embed/ewGt5hz_1VA?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+							<iframe src="<?php Videos::iframeUrl(0); ?>" frameborder="0" allowfullscreen></iframe>
 						</div>
 						<div class="video">
-							<iframe src="//www.youtube-nocookie.com/embed/YtSfWZdC_mE?rel=0&amp;wmode=transparent" frameborder="0" allowfullscreen></iframe>
+							<iframe src="<?php Videos::iframeUrl(1); ?>" frameborder="0" allowfullscreen></iframe>
 						</div>
 					</div>
 				</section>
@@ -72,7 +73,7 @@
 	</article>
 </div>
 <?php include 'includes/footer.php'; ?>
-<?php include 'includes/footer_js.php'; ?>
+<?php include 'includes/foot_js.php'; ?>
 <script src="https://apis.google.com/js/platform.js"></script>
 </body>
 </html>
