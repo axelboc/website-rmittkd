@@ -24,13 +24,4 @@ function __autoload($class_name) {
 }
 
 
-/*function exitWithResult($status, $message = '') {
-	echo json_encode(array(array(
-		'status' => $status,
-		'message' => $message
-	)));
-	exit;
-}*/
-
-
 ?>

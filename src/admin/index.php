@@ -12,32 +12,16 @@
 	<?php include '../includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="main-wrap body-max">
-			<!--<section class="section box">
-				<h1 class="section-heading">Administration</h1>
-				<div class="section-content lh"></div>
-			</section>
-			<section class="section box">
-				<h2 class="section-heading">Calendar</h2>
-				<div class="section-content lh"></div>
-			</section>
-			<section class="section box">
-				<h2 class="section-heading">Merchandising</h2>
-				<div class="section-content lh"></div>
-			</section>
-			<section class="section box">
-				<h2 class="section-heading">Executive committee</h2>
-				<div class="section-content lh"></div>
-			</section>-->
-			<section class="section box">
-				<h2 class="section-heading">Videos</h2>
-				<div class="section-content lh">
-					<?php include 'includes/videos.php'; ?>
-				</div>
-			</section>
-			<!--<section class="section box">
-				<h2 class="section-heading">Membership fees</h2>
-				<div class="section-content lh"></div>
-			</section>-->
+			<?php
+				// Authentication
+				session_start();
+				if (empty($_SESSION['authenticated'])) {
+					include 'includes/login.php';
+				} else {
+					include 'includes/admin.php';
+					include 'includes/videos.php';
+				}
+			?>
 		</div>
 	</article>
 </div>
