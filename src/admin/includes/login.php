@@ -1,7 +1,7 @@
 <section class="section box">
 	<h2 class="section-heading">Administration</h2>
 	<div class="section-content lh">
-		<p>Please provide the administrator password to access this section.</p>
+		<p>A password is required to access the administration console of the website.</p>
 		<form class="form row" action="/core/forms/form-login.php" method="post">
 			<div class="form-result hidden box" tabindex="-1">
 				<p class="form-result-message"></p>

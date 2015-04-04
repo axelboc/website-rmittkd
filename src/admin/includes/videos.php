@@ -9,14 +9,14 @@
 			<div class="form-row row">
 				<label class="form-label" for="video-1">video #1</label>
 				<div class="form-field-wrap">
-					<input id="video-1" name="video-1" class="form-field box" type="url" value="<?php Videos::url(0); ?>" size="55">
+					<input id="video-1" name="video-1" class="form-field box" type="url" value="<?php Videos::url(0); ?>" size="55" required>
 					<div class="form-error form-error--blank hidden">Enter a valid URL</div>
 				</div>
 			</div>
 			<div class="form-row row">
 				<label class="form-label" for="video-2">video #2</label>
 				<div class="form-field-wrap">
-					<input id="video-2" name="video-2" class="form-field box" type="url" value="<?php Videos::url(1); ?>" size="55">
+					<input id="video-2" name="video-2" class="form-field box" type="url" value="<?php Videos::url(1); ?>" size="55" required>
 					<div class="form-error form-error--blank hidden">Enter a valid URL</div>
 				</div>
 			</div>
