@@ -8,6 +8,13 @@
 // Require core API
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/core.php';
 
+// Check user is logged in
+session_start();
+if (empty($_SESSION['authenticated'])) {
+	header('Location: /admin/');
+	exit();
+}
+
 // Get feature
 $feature = $_GET['feature'];
 
@@ -23,9 +30,10 @@ switch ($feature) {
 	default:
 }
 
-// TODO exit with JSON result
-// TODO: handle errors
-// TODO: redirect to admin page?
+// TODO: server-side error handling
+// TODO: no Ajax behaviour => redirect to admin page?
 // TODO: call this from Ajax
+// TODO: exit with JSON result
+// TODO: client-side error handling
 
 ?>

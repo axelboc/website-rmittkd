@@ -77,7 +77,7 @@
 
 .section {
 	margin-bottom: 1.4em;
-	background: rgb(249, 249, 249);
+	background: #f9f9f9;
 	background: transparent -webkit-linear-gradient(top, rgba(255, 255, 255, .85), rgba(221,221,221, .85));
 	background: transparent linear-gradient(to bottom, rgba(255, 255, 255, .85), rgba(221,221,221, .85));
 }
@@ -121,6 +121,7 @@
 	font-size: 85%;
 	margin-bottom: 1em;
 	padding: 1em 2.5em 1.5em;
+	background-color: #555;
 	background-color: rgba(85, 85, 85, .9);
 }
 
@@ -300,7 +301,7 @@
 .header {
 	position: relative;
 	z-index: 50;
-	background: rgb(220, 220, 220);
+	background: #dcdcdc;
 	background: transparent -webkit-linear-gradient(top, rgba(241, 241, 241, .85), rgba(221,221,221, .85));
 	background: transparent linear-gradient(to bottom, rgba(241, 241, 241, .85), rgba(221,221,221, .85));
 }
@@ -437,12 +438,12 @@
 
 .form-result--fail {
 	border: 1px solid #cb171f;
-	background-color: rgb(255, 246, 241);
+	background-color: #fff6f1;
 	background-color: rgba(255, 246, 241, .8);
 }
 .form-result--success {
 	border: 1px solid #218d3d;
-	background-color: rgb(241, 255, 243);
+	background-color: #f1fff3;
 	background-color: rgba(241, 255, 243, .8);
 }
 
@@ -469,19 +470,20 @@
 	clip: rect(1px, 1px, 1px, 1px);
 }
 
-.form-field-wrap,
 .form-field,
-.form-error,
 .form-submit {
 	width: 100%;
 }
 
 .form-field {
 	border: 1px solid #ccc;
-	background-color: rgb(248, 248, 248);
+	background-color: #f8f8f8;
 	background-color: rgba(248, 248, 248, .8);
 	padding: .6em;
-	transition: all .4s ease;
+	transition: border-color .4s ease,
+				-webkit-box-shadow .4s ease,
+				   -moz-box-shadow .4s ease,
+						box-shadow .4s ease;
 }
 
 .form-field--invalid {
@@ -497,7 +499,7 @@
 	z-index: -1;
 	padding: .7em 0 .5em;
 	border-radius: 0 0 3px 3px;
-	background-color: rgb(85, 85, 85);
+	background-color: #555;
 	background-color: rgba(85, 85, 85, .9);
 	color: #fff;
 	text-align: center;
@@ -534,29 +536,35 @@
 
 @media (min-width: 30em) {
 	
-	.form-result {
-		width: 31em;
+	.form {
+		max-width: 31em;
+	}
+	
+	.form--wider {
+		max-width: 45em;
 	}
 	
 	.form-label,
 	.form-field-wrap {
 		float: left;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 	}
 	
 	.form-label {
-		width: 6em;
+		width: 22%;
 		line-height: 2.5em;
 		text-align: right;
-		margin-right: 1em;
+		padding-right: 1em;
 	}
 	
-	.form-field-wrap,
-	.form-submit {
-		width: 24em;
+	.form-field-wrap {
+		width: 78%;
 	}
 	
-	.form-submit {
-		margin-left: 7em;
+	.form-row--submit {
+		padding-left: 22%;
 	}
 	
 	.form-submit > span {
@@ -567,20 +575,31 @@
 
 @media (min-width: 50em) {
 	
-	.form-field-wrap {
-		width: 45em;
+	.form {
+		max-width: 50em;
 	}
 	
-	.form-field {
+	.form--wider {
+		max-width: 65em;
+	}
+	
+	.form-label { width: 15%; }
+	.form-row--submit { padding-left: 15%; }
+	.form-field-wrap { width: 85%; }
+	.form-field, .form-submit { width: 58%; }
+	.form-error { width: 38%; }
+	
+	.form-field,
+	.form-error{
 		float: left;
-		width: 24em;
+		-webkit-box-sizing: border-box;
+		-moz-box-sizing: border-box;
+		box-sizing: border-box;
 	}
 	
 	.form-error {
-		top: 0;
-		float: left;
-		width: 17.5em;
-		margin-left: 1.5em;
+		top: 1px;
+		margin-left: 4%;
 		padding: .7em 0 .7em 1.5em;
 		border-radius: 3px;
 		text-align: left;
@@ -590,10 +609,10 @@
 		content: "";
 		position: absolute;
 		left: -.8em;
-		top: .6em;
+		top: .7em;
 		border-top: .6em solid transparent;
 		border-bottom: .6em solid transparent;
-		border-right: .5em solid rgb(85, 85, 85);
+		border-right: .5em solid #555;
 		border-right: .5em solid rgba(85, 85, 85, .9);
 	}
 	
@@ -602,23 +621,29 @@
 @media (min-width: 60em) {
 	
 	.form {
+		max-width: 52.5em;
 		font-size: 100%;
 	}
 	
-	.form-result {
-		width: 34em;
+	.form--wider {
+		max-width: none;
 	}
+	
+	.form-label { width: 19%; }
+	.form-row--submit { padding-left: 19%; }
+	.form-field-wrap { width: 81%; }
+	.form-field, .form-submit { width: 56%; }
+	.form-error { width: 40%; }
+	
+	.form--wider .form-label { width: 16%; }
+	.form--wider .form-row--submit { padding-left: 16%; }
+	.form--wider .form-field-wrap { width: 84%; }
 	
 	.form-result--error > .form-result-message {
 		font-size: 85%;
 	}
 	
-	.form-label {
-		width: 9em;
-	}
-	
 	.form-submit {
-		margin-left: 10em;
 		padding: .7em 4em;
 	}
 	
