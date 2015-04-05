@@ -24,20 +24,20 @@ class Videos extends Feature {
 	
 	/**
 	 * Set the URLs of the videos and persist the changes to the store.
-	 * @param {Array} $data
+	 * @param {FormSubmission} $submission
 	 */
-	public static function update($data, &$errors) {
+	public static function update($submission) {
 		$videos = self::getInstance()->xml->video;
 		$i = 0;
 		
-		foreach ($data as $field => $url) {
+		foreach ($submission->getData() as $field => $url) {
 			// Look for the ID of the video in the URL
 			$matches = array();
 			preg_match(self::$urlRegex, $url, $matches);
 			
 			// Ensure that the URL is well formed
 			if (count($matches) < 2) {
-				$errors[] = [$field, 'malformed'];
+				$submission->addError($field, 'youtube-url', 'malformed');
 				return;
 			}
 			

@@ -7,16 +7,24 @@
 // Require core API
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/core.php';
 
-$error = null;
-if (!isset($_POST['pwd']) or $_POST['pwd'] === '') {
-	$error = 'not-provided';
-} else if ($_POST['pwd'] !== ADMIN_PWD) {
-	$error = 'invalid';
-} else {
-	session_start();
-	$_SESSION['authenticated'] = true;
+// Initialise new form submission (authentication and feature not required)
+$submission = new FormSubmission('/admin/');
+
+// Validate password field
+$submission->validateParam('pwd', 'password', true, false);
+
+// Manual validation
+if (!$submission->hasErrors()) {
+	if ($submission->getData()['pwd'] !== ADMIN_PWD) {
+		$submission->addError('pwd', 'password', 'invalid');
+	}
 }
 
-header('Location: /admin/' . ($error ? '?' . $error : ''));
+if (!$submission->hasErrors()) {
+	$_SESSION['authenticated'] = true;
+	$submission->exitWithResult(true);
+} else {
+	$submission->exitWithResult(false);
+}
 
 ?>
