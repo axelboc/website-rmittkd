@@ -429,10 +429,18 @@
 	font-size: 110%;
 }
 
+.form-result-wrap {
+	margin: 1.5em 0;
+}
+	
+.section-admin--global .form-result-wrap { padding-left: 0; }
+.section-admin--global .form-result { width: 100%; }
+
 .form-result {
-	margin: 1.5em 0 2em;
-	padding: .8em 1em;
+	margin: 0;
+	padding: .6em;
 	border-radius: 3px;
+	font-size: 90%;
 	outline: 0;
 }
 
@@ -441,15 +449,11 @@
 	background-color: #fff6f1;
 	background-color: rgba(255, 246, 241, .8);
 }
+
 .form-result--success {
 	border: 1px solid #218d3d;
 	background-color: #f1fff3;
 	background-color: rgba(241, 255, 243, .8);
-}
-
-.form-result-message {
-	margin: 0;
-	font-size: 90%;
 }
 
 .form-row {
@@ -559,6 +563,10 @@
 		padding-right: 1em;
 	}
 	
+	.form-result-wrap {
+		padding-left: 22%;
+	}
+	
 	.form-field-wrap {
 		width: 78%;
 	}
@@ -584,9 +592,9 @@
 	}
 	
 	.form-label { width: 15%; }
-	.form-row--submit { padding-left: 15%; }
+	.form-result-wrap, .form-row--submit { padding-left: 15%; }
 	.form-field-wrap { width: 85%; }
-	.form-field, .form-submit { width: 58%; }
+	.form-field, .form-result, .form-submit { width: 58%; }
 	.form-error { width: 38%; }
 	
 	.form-field,
@@ -630,13 +638,13 @@
 	}
 	
 	.form-label { width: 19%; }
-	.form-row--submit { padding-left: 19%; }
+	.form-result-wrap, .form-row--submit { padding-left: 19%; }
 	.form-field-wrap { width: 81%; }
-	.form-field, .form-submit { width: 56%; }
+	.form-field, .form-result, .form-submit { width: 56%; }
 	.form-error { width: 40%; }
 	
 	.form--wider .form-label { width: 16%; }
-	.form--wider .form-row--submit { padding-left: 16%; }
+	.form--wider .form-result-wrap, .form--wider .form-row--submit { padding-left: 16%; }
 	.form--wider .form-field-wrap { width: 84%; }
 	
 	.form-result--error > .form-result-message {

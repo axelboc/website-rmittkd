@@ -13,15 +13,12 @@ session_start();
 
 // Ensure that the user is logged in
 if (empty($_SESSION['authenticated'])) {
-	error_log('[form-admin] unauthorised access');
-	header('Location: /admin/');
-	exit();
+	exitWithResult('global', false, 'Unauthorised access.', '[form-admin] unauthorised access');
 }
 
 // Get feature
 if (!isset($_GET['feature'])) {
-	$errors[] = 'Unexpected error.';
-	error_log('[form-admin] `feature` parameter not provided');
+	exitWithResult('global', false, 'Unexpected error.', '[form-admin] `feature` parameter not provided');
 } else {
 	$feature = $_GET['feature'];
 
@@ -42,20 +39,42 @@ if (!isset($_GET['feature'])) {
 			break;
 
 		default:
-			$errors[] = 'Unexpected error.';
-			error_log('[form-admin] unsuported value for `feature` parameter: ' . $feature);
+			exitWithResult($feature, false, 'Unexpected error.', 
+						   '[form-admin] unsuported value for `feature` parameter: ' . $feature);
+	}
+	
+	// Exit with result
+	if (empty($errors)) {
+		exitWithResult($feature, true, 'Changes saved.');
+	} else {
+		$_SESSION['errors'] = $errors;
+		exitWithResult($feature, false, 'Changes not saved.');
 	}
 }
 
-// Store errors in session and redirect
-$_SESSION['errors'] = $errors;
-header('Location: /admin/');
 
+/**
+ * Exit with result.
+ * @param {String} $feature
+ * @param {Boolean} $success
+ * @param {String} $message
+ * @param {String} $log - optional log message
+ */
+function exitWithResult($feature, $success, $message, $log = null) {
+	$_SESSION['feature'] = $feature;
+	$_SESSION['result'] = [
+		type => $success ? 'success' : 'fail',
+		message => $message
+	];
+	
+	if ($log !== null) {
+		error_log($log);
+	}
+	
+	header('Location: /admin/#' . $feature);
+	exit();
+}
 
 // TODO: display server-side errors on admin page
-
-// TODO: call this from Ajax
-// TODO: exit with JSON result
-// TODO: client-side error handling
 
 ?>

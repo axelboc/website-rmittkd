@@ -3,9 +3,7 @@
 	<div class="section-content lh">
 		<p>A password is required to access the administration console of the website.</p>
 		<form class="form row" action="/core/forms/form-login.php" method="post">
-			<div class="form-result hidden box" tabindex="-1">
-				<p class="form-result-message"></p>
-			</div>
+			<?php include 'includes/result.php'; ?>
 			<div class="form-row row">
 				<label class="form-label" for="pwd">password</label>
 				<div class="form-field-wrap">
