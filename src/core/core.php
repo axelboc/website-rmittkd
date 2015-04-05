@@ -10,7 +10,7 @@
  */
 
 
-// Absolute path to root
+// Absolute paths
 define('PATH_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/');
 define('PATH_CORE', PATH_ROOT . 'core/');
 define('PATH_DATA', PATH_ROOT . 'data/');
@@ -22,72 +22,49 @@ require_once PATH_CORE . 'config.php';
 ini_set('log_errors', 1);
 ini_set('error_log', PATH_ROOT . 'data/error.log');
 
-// Auto-load feature classes
-function __autoload($class_name) {
-    require_once PATH_CORE . 'classes/' . $class_name . '.php';
+// Start session
+session_start();
+
+
+/**
+ * Auto-load classes.
+ * @param {String} $className
+ */
+function __autoload($className) {
+    require_once PATH_CORE . 'classes/' . $className . '.php';
 }
 
 
 /**
- * Sanitise and validate a POST parameter.
- * @param {Array} &$data - the array in which to store the parameter's value after processing
- * @param {Array} &$errors
- * @param {String} $param - the name of the parameter
- * @param {String} $type - the parameter's type, used for sanitisation and validation
- * @param {Boolean} $isRequired - whether the parameter's value cannot be empty
- * @param {Boolean} $validate - whether to validate the parameter's value
+ * Print the result of a form submission.
+ * @param {String} $feature - the feature for which to print the results
  */
-function validatePOSTParam(&$data, &$errors, $param, $type = 'text', $isRequired = true, $validate = true) {
-	// Ensure that the parameter is set
-	if (!isset($_POST[$param])) {
-		$errors[] = 'Unexpected error.';
-		error_log('[core] POST parameter not set: ' . $param);
+function printResult($feature = null) {
+	// If no result or message to display, return;
+	if (!isset($_SESSION['result'])) {
 		return;
 	}
-
-	// Determine sanitisation filter based on type
-	switch ($type) {
-		case 'url':
-			$filter = FILTER_SANITIZE_URL;
-			break;
-		default:
-			$errors[] = 'Unexpected error.';
-			error_log('[core] unkown POST parameter type: ' . $type);
-			return;
-	}
-
-	// Sanitise
-	$value = filter_var($_POST[$param], $filter);
-
-	// If required parameter, ensure that a value is provided
-	if ($isRequired) {
-		if ($value === '') {
-			$errors[] = [$param, 'not-provided'];
-			return;
-		}
-	}
-
-	// If requested, validate the value according to the parameter's type
-	if ($validate) {
-		switch ($type) {
-			case 'url':
-				$filter = FILTER_VALIDATE_URL;
-				break;
-			default:
-				$errors[] = 'Unexpected error.';
-				error_log('[core] unkown POST parameter type: ' . $type);
-				return;
-		}
-
-		// Validate
-		if (filter_var($value, $filter) === false) {
-			$errors[] = [$param, 'invalid'];
-			return;
-		}
-	}
 	
-	$data[$param] = $value;
+	// If given feature matches session feature, print feature
+	$globalMatch = $feature === null && !isset($_SESSION['feature']);
+	$localMatch = $feature !== null && isset($_SESSION['feature']) && $feature === $_SESSION['feature'];
+	
+	if ($globalMatch || $localMatch) {
+		echo '<div class="form-result-wrap" tabindex="-1">' . PHP_EOL .
+			 '	<p class="form-result form-result--' . $_SESSION['result']['type'] . ' box">' .
+			 		$_SESSION['result']['message'] . '</p>' . PHP_EOL .
+			 '</div>';
+		
+		unset($_SESSION['feature']); 
+		unset($_SESSION['result']); 
+	}	
 }
 
+function printError($field) {
+	if (isset($_SESSION['errors']) && isset($_SESSION['errors'][$field])) {
+		echo '<div class="form-error">' . $_SESSION['errors'][$field] . '</div>';
+		unset($_SESSION['errors'][$field]);
+	}
+}
 
 ?>

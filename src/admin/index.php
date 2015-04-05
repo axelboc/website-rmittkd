@@ -13,8 +13,6 @@
 	<article class="main row" role="main">
 		<div class="main-wrap body-max">
 			<?php
-				// Authentication
-				session_start();
 				if (empty($_SESSION['authenticated'])) {
 					include 'includes/login.php';
 				} else {
@@ -22,9 +20,6 @@
 						foreach ($_SESSION['errors'] as $error) {
 							echo '<p>' . print_r($error) . '</p>';
 						}
-						
-						// Reset errors
-						$_SESSION['errors'] = array();
 					}
 					include 'includes/admin.php';
 					include 'includes/videos.php';
