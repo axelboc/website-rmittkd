@@ -10,9 +10,9 @@
 	<meta property="og:image" content="http://rmittkd.com/images/og/hero-tkd-og.jpg">
 	<meta property="og:url" content="http://rmittkd.com/tkd">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
-	<?php include 'includes/header_css.php'; ?>
+	<?php include 'includes/head_css.php'; ?>
 	<link rel="stylesheet" href="css/modules-tkd.css">
-	<?php include 'includes/header_js.php'; ?>
+	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
 <div class="body-wrap">
@@ -47,6 +47,6 @@
 	</article>
 </div>
 <?php include 'includes/footer.php'; ?>
-<?php include 'includes/footer_js.php'; ?>
+<?php include 'includes/foot_js.php'; ?>
 </body>
 </html>
