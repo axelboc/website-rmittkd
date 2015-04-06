@@ -4,8 +4,9 @@
 
 node_modules/
 resources/
-*/includes/config.php
 dist/
+**/config.php
+*.log
 
 
 #################
@@ -52,4 +53,3 @@ $RECYCLE.BIN/
 
 # Mac crap
 .DS_Store
-*.log
