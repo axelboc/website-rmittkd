@@ -207,7 +207,6 @@
 	transform: translate3d(0, 0, 0);
 	width: 100%;
 	padding: 0 .75%;
-	outline: 0;
 	-webkit-transition: left .4s ease-in-out;
 	transition: transform .4s ease-in-out, left .4s ease-in-out;
 }
