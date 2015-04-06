@@ -1,3 +1,4 @@
+<?php require_once 'core/core.php'; ?>
 <!DOCTYPE html>
 <html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
@@ -19,25 +20,28 @@
 	<?php include 'includes/header.php'; ?>
 	<section class="main row" role="main">
 		<div class="main-wrap body-max">
-			<section class="contact-section section box">
+			<section id="contact" class="contact-section section box">
 				<h1 class="section-heading">Contact</h1>
 				<img class="contact-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-contact-suffix.png" width="384" height="520" alt="">
 				<div class="section-content">
-					<form id="contact-form" class="form row" action="/core/forms/form-contact.php" method="post">
-						<div class="form-result hidden box" tabindex="-1">
-							<p class="form-result-message"></p>
+					<form id="contact-form" novalidate class="form row" action="/core/forms/form-contact.php" method="post">
+						<?php printResult(); ?>
+						<div class="form-result-wrap hidden lh" tabindex="-1">
+							<p class="form-result box"></p>
 						</div>
 						<div class="form-row row">
 							<label class="form-label" for="name">name</label>
 							<div class="form-field-wrap">
-								<input class="form-field box" id="name" name="name" type="text" aria-required="true">
+								<input class="form-field box" id="name" name="name" type="text" value="<?php printData('name'); ?>" aria-required="true">
+								<?php printError('name'); ?>
 								<div class="form-error form-error--blank hidden">Enter your name</div>
 							</div>
 						</div>
 						<div class="form-row row">
 							<label class="form-label" for="email">email</label>
 							<div class="form-field-wrap">
-								<input class="form-field box" id="email" name="email" type="text" aria-required="true">
+								<input class="form-field box" id="email" name="email" type="text" value="<?php printData('email'); ?>" aria-required="true">
+								<?php printError('email'); ?>
 								<div class="form-error form-error--blank hidden">Enter your email address</div>
 								<div class="form-error form-error--email hidden">Enter a valid email address</div>
 							</div>
@@ -45,7 +49,8 @@
 						<div class="form-row row">
 							<label class="form-label" for="message">message</label>
 							<div class="form-field-wrap">
-								<textarea id="message" class="form-field box" name="message" rows="6" aria-required="true"></textarea>
+								<textarea id="message" class="form-field box" name="message" rows="6" aria-required="true"><?php printData('message'); ?></textarea>
+								<?php printError('message'); ?>
 								<div class="form-error form-error--blank hidden">Enter your message</div>
 							</div>
 						</div>
@@ -87,6 +92,6 @@
 </div>
 <?php include 'includes/footer.php'; ?>
 <?php include 'includes/foot_js.php'; ?>
-<script src="js/contact.js"></script>
+<script src="js/contact.js?20150406"></script>
 </body>
 </html>

@@ -37,7 +37,7 @@ class Videos extends Feature {
 			
 			// Ensure that the URL is well formed
 			if (count($matches) < 2) {
-				$submission->addError($field, 'youtube-url', 'malformed');
+				$submission->addError($field, 'Enter a valid YouTube URL');
 				return;
 			}
 			

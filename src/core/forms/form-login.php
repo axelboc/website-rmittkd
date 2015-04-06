@@ -10,21 +10,24 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/core/core.php';
 // Initialise new form submission (authentication and feature not required)
 $submission = new FormSubmission('/admin/');
 
-// Validate password field
-$submission->validateParam('pwd', 'password', true, false);
+// Prepare password field for validation
+$fields = [
+	'pwd' => FormSubmission::$DEFAULTS['password']
+];
 
-// Manual validation
-if (!$submission->hasErrors()) {
-	if ($submission->getData()['pwd'] !== ADMIN_PWD) {
-		$submission->addError('pwd', 'password', 'invalid');
+// Perform validation
+if ($submission->validate($fields)) {
+	if ($submission->getData()['pwd'] === ADMIN_PWD) {
+		// Successful authentication
+		$_SESSION['authenticated'] = true;
+		$submission->exitWithResult(true);
+	} else {
+		// Wrong password
+		$submission->addError('pwd', 'Wrong password');
 	}
 }
 
-if (!$submission->hasErrors()) {
-	$_SESSION['authenticated'] = true;
-	$submission->exitWithResult(true);
-} else {
-	$submission->exitWithResult(false);
-}
+// Unsuccessful authentication
+$submission->exitWithResult(false, 'Log in unsuccessful');
 
 ?>

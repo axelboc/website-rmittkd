@@ -11,23 +11,25 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/core/core.php';
 // Initialise new form submission (authentication and feature required)
 $submission = new FormSubmission('/admin/', true, true);
 
-// Process form submission based on feature
+// Validate fields based on feature and process submission
 switch ($submission->getFeature()) {
 	case 'videos':
-		$submission->validateParam('video-1', 'url');
-		$submission->validateParam('video-2', 'url');
+		$fields = [
+			'video-1' => FormSubmission::$DEFAULTS['url'],
+			'video-2' => FormSubmission::$DEFAULTS['url']
+		];
 
-		if (!$submission->hasErrors()) {
+		if ($submission->validate($fields)) {
 			Videos::update($submission);
 		}
 		break;
 
 	default:
-		// Clear feature and exit
+		// Clear feature (don't want to redirect to /admin/#inexistent-feature) and exit
 		$feature = $submission->getFeature();
 		$submission->setFeature(null);
-		$submission->exitWithResult(false, 'Unexpected error', '[form-admin] unsuported value for `feature` parameter: '
-									. $feature);
+		$submission->exitWithResult(false, 'Unexpected error', 
+									'[form-admin] unsuported value for `feature` parameter: ' . $feature);
 }
 
 // Exit with result

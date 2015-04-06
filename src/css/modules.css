@@ -166,10 +166,6 @@
 
 /* ===== Top navigation ===== */
 
-.nav {
-	outline: 0;
-}
-
 .nav-list a {
 	position: relative;
 	display: block;
@@ -441,7 +437,6 @@
 	padding: .6em;
 	border-radius: 3px;
 	font-size: 90%;
-	outline: 0;
 }
 
 .form-result--fail {

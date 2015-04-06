@@ -1,12 +1,12 @@
 $(function () {
 	
-	var GENERIC_ERROR = "Sorry. Something went wrong on our end.<br>But <strong>please, don't despair!</strong> You can still send us your message on <a href=\"https://www.facebook.com/rmittkd\" class=\"link-blend\">Facebook</a>, and let us know of the issue.";
+	var GENERIC_ERROR = "Sorry, something went wrong. Try again later, or get in touch with us on <a href=\"https://www.facebook.com/rmittkd\" class=\"link-blend\">Facebook</a>.";
 	
 	var $form = $(document.getElementById("contact-form"));
 	var $fields = $form.find(".form-field");
 	var $errors = $form.find(".form-error");
-	var $resultBox = $form.children(".form-result");
-	var $resultMessage = $resultBox.children(".form-result-message");
+	var $resultBox = $form.find(".form-result-wrap");
+	var $resultMessage = $resultBox.find(".form-result");
 	var $submitBtn = $form.find(".form-submit");
 	
 	
@@ -67,7 +67,7 @@ $(function () {
 	// Show form submission result
 	var showResult = function (messageClass, message) {
 		$resultMessage.html(message);
-		$resultBox.removeClass("form-result--fail form-result--success").addClass("form-result--" + messageClass);
+		$resultMessage.removeClass("form-result--fail form-result--success").addClass("form-result--" + messageClass);
 		$resultBox.fadeIn().removeClass("hidden").focus();
 		
 		// Send Analytics event
@@ -97,21 +97,12 @@ $(function () {
 			// Perform server-side validation
 			$.ajax({
 				type: "POST",
-				url: $form.attr("action"),
+				url: $form.attr("action") + '?ajax',
 				data: $form.serialize(),
 				dataType: "json"
 			})
 			.done(function (result) {
-				if (result instanceof Array) {
-					var res = result[0];
-					if (res.status === "sent") {
-						showResult("success", "<strong>Thank you!</strong> Your message has been sent. We'll get in touch with you as soon as possible.");
-					} else {
-						showResult("fail", res.message ? res.message : GENERIC_ERROR);
-					}
-				} else {
-					showResult("fail", GENERIC_ERROR);
-				}
+				showResult(result.type, result.message);
 			})
 			.fail(function () {
 				showResult("fail", GENERIC_ERROR);
