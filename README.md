@@ -10,17 +10,16 @@ Official release: 16 November 2013.
 The site is **responsive** and **accessible** (WCAG 2.0 level AA).
 
 
-
 Performance
 -----------
 
-[GTmetrix](http://gtmetrix.com/) report of 11 April 2014, when the site was hosted on Heroku and managed via Cloudfare:
+[GTmetrix](http://gtmetrix.com/) report of 06 April 2015:
 
 - Page Speed grade: **A** (98%)
 - YSlow grade: **A** (93%)
-- Page load time: **1.47s**
-
-For various reasons, the site was rolled back to 000webhost. Since then, performance has dropped slightly due to the web host's forced ads.
+- Page load time: **0.95s**
+- Total page size: **322 kB**
+- Total number of requests: **21**
 
 
 Distribution
