@@ -2,21 +2,19 @@
 
 class FormSubmission {
 	
-	private static $ERROR_MESSAGES = [
+	public static $DEFAULTS = [
 		'url' => [
-			'not-provided' => 'Enter a URL',
-			'invalid' => 'Enter a valid URL'
+			'sanitise' => 'url',
+			'require' => 'Enter a URL',
+			'validate' => 'Enter a valid URL'
 		],
 		'password' => [
-			'not-provided' => 'Enter a password',
-			'invalid' => 'Wrong password'
-		],
-		'youtube-url' => [
-			'malformed' => 'Enter a valid YouTube URL'
+			'require' => 'Enter a password',
 		]
 	];
 	
 	private $redirectUrl;
+	private $isAjax = false;
 	private $feature;
 	private $data = array();
 	private $errors = array();
@@ -30,6 +28,11 @@ class FormSubmission {
 	 */
 	public function __construct($redirectUrl, $authenticationRequired = false, $featureRequired = false) {
 		$this->redirectUrl = $redirectUrl;
+		
+		// Check whether this is an Ajax request
+		if (isset($_GET['ajax'])) {
+			$this->isAjax = true;
+		}
 		
 		// Authentication check
 		if ($authenticationRequired) {
@@ -50,61 +53,67 @@ class FormSubmission {
 	
 	
 	/**
-	 * Sanitise and validate a POST parameter.
-	 * @param {String} $param - the name of the parameter
-	 * @param {String} $type - the parameter's type, used for sanitisation and validation
-	 * @param {Boolean} $isRequired - whether the parameter's value cannot be empty
-	 * @param {Boolean} $validate - whether to validate the parameter's value
+	 * Sanitise and validate the form's fields.
+	 * @param {Array} $fields - the fields and their corresponding error messages
+	 * return {Boolean} - whether the validation process has not uncovered any error
 	 */
-	public function validateParam($param, $type = 'text', $isRequired = true, $validate = true) {
-		// Ensure that the parameter is set
-		if (!isset($_POST[$param])) {
-			$this->exitWithResult(false, 'Unexpected error', '[core] POST parameter not set: ' . $param);
-		}
-
-		// Determine sanitisation filter based on type
-		switch ($type) {
-			case 'url':
-				$filter = FILTER_SANITIZE_URL;
-				break;
-			case 'password':
-				$filter = FILTER_DEFAULT;
-				break;
-			default:
-				$this->exitWithResult(false, 'Unexpected error', 
-							   '[core] sanitisation not supported for POST parameter type: ' . $type);
-		}
-
-		// Sanitise
-		$value = filter_var($_POST[$param], $filter);
-
-		// If required parameter, ensure that a value is provided
-		if ($isRequired) {
-			if ($value === '') {
-				$this->addError($param, $type, 'not-provided');
-				return;
-			}
-		}
-
-		// If requested, validate the value according to the parameter's type
-		if ($validate) {
-			switch ($type) {
-				case 'url':
-					$filter = FILTER_VALIDATE_URL;
-					break;
-				default:
-					$this->exitWithResult(false, 'Unexpected error', 
-								   '[core] validation not supported for POST parameter type: ' . $type);
+	public function validate($fields) {
+		// Loop through the fields
+		foreach ($fields as $field => $actions) {
+			// Ensure that the parameter is set
+			if (!isset($_POST[$field])) {
+				$this->exitWithResult(false, 'Unexpected error', '[FormSubmission] POST parameter not set: ' . $field);
 			}
 
-			// Validate
-			if (filter_var($value, $filter) === false) {
-				$this->addError($param, $type, 'invalid');
-				return;
+			// Sanitisation
+			if (isset($actions['sanitise'])) {
+				// Determine sanitisation filter
+				switch ($actions['sanitise']) {
+					case 'email':
+						$sanitisationFilter = FILTER_SANITIZE_EMAIL;
+						$validationFilter = FILTER_VALIDATE_EMAIL;
+						break;
+					case 'url':
+						$sanitisationFilter = FILTER_SANITIZE_URL;
+						$validationFilter = FILTER_VALIDATE_URL;
+						break;
+					default:
+						$this->exitWithResult(false, 'Unexpected error', 
+											  '[FormSubmission] sanitisation not supported for: ' . $actions['sanitise']);
+				}
+
+				// Sanitise
+				$value = filter_var($_POST[$field], $sanitisationFilter);
+			} else {
+				// Do not sanitise, but still strip tags
+				$value = strip_tags($_POST[$field]);
+			}
+			
+			// Store the value
+			$this->data[$field] = $value;
+			
+			// If the field is required, ensure that a value has been provided
+			if (isset($actions['require'])) {
+				if ($value === '') {
+					$this->addError($field, $actions['require']);
+					continue;
+				}
+			}
+
+			// Validation
+			if (isset($actions['validate'])) {
+				if (!isset($validationFilter)) {
+					$this->exitWithResult(false, 'Unexpected error', '[FormSubmission] validation filter not set');
+				}
+
+				if (filter_var($value, $validationFilter) === false) {
+					$this->addError($field, $actions['validate']);
+					continue;
+				}
 			}
 		}
-
-		$this->data[$param] = $value;
+		
+		return !$this->hasErrors();
 	}
 
 	/**
@@ -114,23 +123,37 @@ class FormSubmission {
 	 * @param {String} $log - optional log message
 	 */
 	public function exitWithResult($success, $message = null, $log = null) {
-		$_SESSION['feature'] = $this->feature;
-		$_SESSION['errors'] = $this->errors;
-		
-		// If message provided, store the result in the session array
-		if ($message !== null) { 
-			$_SESSION['result'] = [
-				'type' => $success ? 'success' : 'fail',
-				'message' => $message
-			];
-		}
+		// Prepare result array
+		$result = [
+			'type' => $success ? 'success' : 'fail',
+			'message' => $message
+		];
 
+		// Log
 		if ($log !== null) {
 			error_log($log);
 		}
+		
+		// If Ajax request, return a JSON response (do not redirect)
+		if ($this->isAjax) {
+			echo json_encode($result);
+			
+		// Otherwise, store result and additional data in session
+		} else {
+			$_SESSION['feature'] = $this->feature;
+			$_SESSION['data'] = $this->data;
+			$_SESSION['errors'] = $this->errors;
 
-		header('Location: ' . $this->redirectUrl . ($this->feature !== null ? '#' . $this->feature : ''));
-		exit();
+			// If message provided, store the result in the session array
+			if ($message !== null) { 
+				$_SESSION['result'] = $result;
+			}
+			
+			// Redirect
+			header('Location: ' . $this->redirectUrl . ($this->feature !== null ? '#' . $this->feature : ''));
+		}
+		
+		exit;
 	}
 	
 	/**
@@ -176,16 +199,10 @@ class FormSubmission {
 	/**
 	 * Add an error.
 	 * @param {String} $field - the field responsible for the error
-	 * @param {String} $type - the type of the field
-	 * @param {String} $errorType - the type of the error
+	 * @param {String} $message - the error message
 	 */
-	public function addError($field, $type, $errorType) {
-		if (isset(self::$ERROR_MESSAGES[$type]) && isset(self::$ERROR_MESSAGES[$type][$errorType])) {
-			$this->errors[$field] = self::$ERROR_MESSAGES[$type][$errorType];
-		} else {
-			$this->exitWithResult(false, 'Unexpected error', '[form-admin] error message unavailable for field type: ' 
-								  . $type . ', and error type: ' . $errorType);
-		}
+	public function addError($field, $message) {
+		$this->errors[$field] = $message;
 	}
 	
 }

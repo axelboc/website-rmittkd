@@ -61,7 +61,7 @@ body {
 }
 
 
-/* =====  ===== */
+/* ===== Typography ===== */
 
 h1 {
     font-size: 2em;
@@ -135,6 +135,10 @@ a > span {
 .link-blend,
 .links-blend a {
 	color: inherit;
+}
+
+[tabindex="-1"]:focus {
+	outline: 0;
 }
 
 

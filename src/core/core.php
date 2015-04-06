@@ -50,7 +50,7 @@ function printResult($feature = null) {
 	$localMatch = $feature !== null && isset($_SESSION['feature']) && $feature === $_SESSION['feature'];
 	
 	if ($globalMatch || $localMatch) {
-		echo '<div class="form-result-wrap" tabindex="-1">' . PHP_EOL .
+		echo '<div class="form-result-wrap lh" tabindex="-1">' . PHP_EOL .
 			 '	<p class="form-result form-result--' . $_SESSION['result']['type'] . ' box">' .
 			 		$_SESSION['result']['message'] . '</p>' . PHP_EOL .
 			 '</div>';
@@ -64,6 +64,13 @@ function printError($field) {
 	if (isset($_SESSION['errors']) && isset($_SESSION['errors'][$field])) {
 		echo '<div class="form-error">' . $_SESSION['errors'][$field] . '</div>';
 		unset($_SESSION['errors'][$field]);
+	}
+}
+
+function printData($field) {
+	if (isset($_SESSION['data']) && isset($_SESSION['data'][$field])) {
+		echo $_SESSION['data'][$field];
+		unset($_SESSION['data'][$field]);
 	}
 }
 

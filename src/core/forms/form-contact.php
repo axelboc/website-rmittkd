@@ -1,127 +1,104 @@
 <?php
 
-define('TRY_AGAIN', 'Please try again. If the problem persists, please get in touch with us on Facebook.');
+/*
+ * Contact form action.
+ */
 
-function exitWithResult($status, $message = '') {
-	echo json_encode(array(array(
-		'status' => $status,
-		'message' => $message
-	)));
-	exit;
-}
+// Require core API
+require_once $_SERVER['DOCUMENT_ROOT'] . '/core/core.php';
 
-
-/* ===== Name validation ===== */
-
-// Check presence
-if (!isset($_POST['name'])) {
-	exitWithResult('error', 'Name not provided. ' . TRY_AGAIN);
-}
-
-// Retrieve value
-$name = filter_var($_POST['name'], FILTER_SANITIZE_STRING);
-
-// Check length
-if (strlen($name) === 0) {
-	exitWithResult('error', 'Please enter your name.');
-}
+// Define success message
+define('CONTACT_SUCCESS', "<strong>Thank you!</strong> Your message has been sent. We'll get in touch with you as soon as possible.");
+define('CONTACT_FAILURE', "Sorry, something went wrong. Try again later, or get in touch with us on <a href=\"https://www.facebook.com/rmittkd\" class=\"link-blend\">Facebook</a>.");
 
 
-/* ===== Email validation ===== */
-
-// Check presence
-if (!isset($_POST['email'])) {
-	exitWithResult('error', 'Email address not provided. ' . TRY_AGAIN);
-}
-
-// Retrieve value
-$email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL);
-
-// Check length
-if (strlen($email) === 0) {
-	exitWithResult('error', 'Please enter your email address.');
-}
-
-// Check validity
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-	exitWithResult('error', 'Please enter your email address.');
-}
-
-
-/* ===== Message validation ===== */
-
-// Check presence
-if (!isset($_POST['message'])) {
-	exitWithResult('error', 'Message not provided. ' . TRY_AGAIN);
-}
-
-// Retrieve value
-$message = strip_tags($_POST['message']);
-
-// Check length
-if (strlen($message) === 0) {
-	exitWithResult('error', 'Please enter your message.');
-}
+// Initialise new form submission (authentication and feature not required)
+$submission = new FormSubmission('/contact#contact');
 
 // Spam trap: URL field must be left empty
 if (isset($_POST['url']) && $_POST['url'] !== '') {
 	// Make it look like the message was successfully sent
-	exitWithResult('sent');
+	$submission->exitWithResult(true, CONTACT_SUCCESS);
 }
 
+// Prepare fields for validation
+$fields = [
+	'name' => [
+		'require' => 'Enter your name.'
+	],
+	'email' => [
+		'sanitise' => 'email',
+		'require' => 'Enter your email address.',
+		'validate' => 'Enter a valid email address.'
+	],
+	'message' => [
+		'require' => 'Enter your message.'
+	]
+];
 
-/* ===== Prepare and send email ===== */
-
-/**
- * File includes/config.php must define two constants:
- * - API_KEY, the Mandrill API key (https://mandrillapp.com/)
- * - CLUB_EMAIL, the club's email address
- *
- * config.php must be used only in development.
- * It must not be version-controlled and must not exist in the production environment (Heroku).
- * 
- * If hosting website on Heroku in production, config variables must be set:
- * https://devcenter.heroku.com/articles/config-vars
- */
-if (file_exists('config.php')) {
-	include('config.php');
-} else {
-	define('API_KEY', getenv('API_KEY'));
-	define('CLUB_EMAIL', getenv('CLUB_EMAIL'));
+// Perform validation
+if (!$submission->validate($fields)) {
+	// Unsuccessful submission
+	$submission->exitWithResult(false, "Sorry, something's not quite right.");
 }
 
-$emailBody = "A new message was posted on the website.\r\n\r\n" .
-			 "=== Name ===\r\n$name\r\n\r\n" .
-			 "=== Email ===\r\n$email\r\n\r\n" .
-			 "=== Message ===\r\n$message";
+// Prepare email body
+$data = $submission->getData();
+$emailBody = '<p>A new message has been posted on the Taekwon Do club\'s website.</p>' .
+			 '<p><strong>Name:</strong> ' . $data['name'] . '</p>' .
+			 '<p><strong>Email:</strong> ' . $data['email'] . '</p>' .
+			 '<p><strong>Message:</strong></p>' .
+			 '<p>' . $data['message'] . '</p>';
 
-$data = array(
-	"key" => API_KEY,
-	"message" => array(
-		"text" => $emailBody,
-		"subject" => "New message",
-		"from_email" => CLUB_EMAIL,
-		"from_name" => "Website",
-		"to" => array(
-			array(
-				"email" => CLUB_EMAIL,
-				"name" => "RMIT ITF Taekwon-Do",
-				"type" => "to"
-			)
-		),
-		"headers" => array(
-			"Reply-To" => ($name . ' <' . $email . '>')
-		)
-	)
-);
+// Prepare Mandrill API call
+$emailConfig = [
+	'key' => API_KEY,
+	'message' => [
+		'html' => $emailBody,
+		'subject' => 'New message on TKD website',
+		'from_email' => CLUB_EMAIL,
+		'from_name' => 'Website',
+		'to' => [
+			[
+				'email' => CLUB_EMAIL,
+				'name' => 'RMIT ITF Taekwon-Do',
+				'type' => 'to'
+			],
+			[
+				'email' => BCC_EMAIL,
+				'type' => 'bcc'
+			]
+		],
+		'headers' => [
+			'Reply-To' => ($data['name'] . ' <' . $data['email'] . '>')
+		]
+	]
+];
 
+// Prepare to send email via Mandrill
 $curl = curl_init();
 curl_setopt($curl, CURLOPT_POST, true);
-curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($data));
+curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($emailConfig));
 
-curl_setopt($curl, CURLOPT_URL, "https://mandrillapp.com/api/1.0/messages/send.json");
+curl_setopt($curl, CURLOPT_URL, 'https://mandrillapp.com/api/1.0/messages/send.json');
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-echo curl_exec($curl);
+// Send email
+$raw = curl_exec($curl);
+
+// Check for cURL error
+if (!$raw) {
+	$submission->exitWithResult(false, CONTACT_FAILURE, '[form-contact] cURL error: ' . curl_error($curl));
+} else {
+	// Decode result
+	$response = json_decode($raw);
+	
+	// Check Mandrill's response and exit accordingly
+	if (is_array($response) && count($response) > 0 && $response[0]->status === 'sent') {
+		$submission->exitWithResult(true, CONTACT_SUCCESS);
+	} else {
+		$submission->exitWithResult(false, CONTACT_FAILURE, '[form-contact] Madrill error: ' . $raw);
+	}
+}
 
 ?>
