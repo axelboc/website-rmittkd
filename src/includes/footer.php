@@ -1,6 +1,6 @@
 <footer class="footer">
 	<div class="footer-wrap body-max row">
-		<p class="foot-copy" role="contentinfo">&copy; 2013 RMIT ITF Taekwon-Do</p>
+		<p class="foot-copy" role="contentinfo">&copy; 2015 RMIT ITF Taekwon-Do</p>
 		<nav class="foot-nav box" role="navigation">
 			<ul class="foot-nav-list list-reset links-inv">
 				<li><a href="/">Home</a></li>
