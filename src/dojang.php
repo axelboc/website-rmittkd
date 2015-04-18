@@ -11,7 +11,7 @@
 	<meta property="og:url" content="http://rmittkd.com/dojang">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-dojang.css">
+	<link rel="stylesheet" href="css/modules-dojang.css?20150418">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
