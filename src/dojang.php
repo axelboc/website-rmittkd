@@ -36,28 +36,37 @@
 						<h2 class="instr-heading section-heading">Instructors</h2>
 						<div class="instr-content section-content">
 							<div class="instr-profiles">
-								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
-									<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-9.png" width="40" height="220" alt="">
-									<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/robert-lai.png" width="480" height="220" alt="">
+								<section class="instr-profile row hidden" tabindex="-1" aria-hidden="true">
+									<div class="instr-images">
+										<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-9.png" width="40" height="254" alt="">
+										<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/robert-lai.png" width="255" height="254" alt="">
+									</div>
 									<div class="instr-caption">
+										<h2 class="instr-heading-sub section-heading">Instructors</h2>
 										<h3 class="section-heading-sub">Robert Lai</h3>
 										<p class="lh">Grand Master Lai (9th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he established many clubs, totalising over 1000 members. Grand Master Lai is now a retired <abbr title="Physical Education">PE</abbr> teacher and the president of <strong><a class="link-blend" href="https://www.facebook.com/chitfaustralia" target="_blank"><abbr title="Chan Hun International Taekwon-Do Federation">CHITF</abbr> Australia</a></strong>.</p>
 									</div>
 								</section>
-								<section class="instr-profile" tabindex="-1" aria-hidden="false">
-									<img class="instr-belt" src="images/instructors/belt-7.png" width="40" height="220" alt="">
-									<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="220" alt="">
+								<section class="instr-profile row" tabindex="-1" aria-hidden="false">
+									<div class="instr-images">
+										<img class="instr-belt" src="images/instructors/belt-7.png" width="40" height="254" alt="">
+										<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="254" alt="">
+									</div>
 									<div class="instr-caption">
+										<h2 class="instr-heading-sub section-heading">Instructors</h2>
 										<h3 class="section-heading-sub">Jason Lai</h3>
 										<p class="lh">Master Lai (7th degree) has been training for over 30 years. In 2013, he received the RMIT <em>Outstanding Service</em> Award for his <strong>20 years</strong> of service to the club. Master Lai was also a <strong>coach</strong> for the Australian Team at the 2010 <strong>ITF World Championships</strong> in Minsk, Belarus.</p>
 									</div>
 								</section>
-								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
-									<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-4.png" width="40" height="220" alt="">
-									<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/cass-white.png" width="500" height="220" alt="">
+								<section class="instr-profile row hidden" tabindex="-1" aria-hidden="true">
+									<div class="instr-images">
+										<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-4.png" width="40" height="254" alt="">
+										<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/cassandra-white.png" width="319" height="254" alt="">
+									</div>
 									<div class="instr-caption">
+										<h2 class="instr-heading-sub section-heading">Instructors</h2>
 										<h3 class="section-heading-sub">Cassandra White</h3>
-										<p class="lh">Ms White has been training at RMIT University since <strong>2003</strong>, and received her <strong>4th degree Black Belt</strong> in April 2015. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 <strong>ITF World Championships</strong> in St Petersburg, Russia.</p>
+										<p class="lh">Ms. White has been training at RMIT University since <strong>2003</strong>, and received her <strong>4th degree Black Belt</strong> in April 2015. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 <strong>ITF World Championships</strong> in St Petersburg, Russia.</p>
 									</div>
 								</section>
 							</div>

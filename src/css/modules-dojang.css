@@ -94,7 +94,7 @@
 /* ===== Instructors ===== */
 
 .instructors {
-	overflow: hidden;
+	overflow: hidden; /* apply border radius to belt images */
 }
 
 .instr-content {
@@ -105,9 +105,15 @@
 	width: 100%;
 }
 
+.instr-images {
+	position: relative;
+	height: 246px;
+	overflow: hidden;
+	margin-left: -12px; /* compensate for section padding to bring belt images against left edge */
+}
+
 .instr-belt {
 	position: relative;
-	left: -12px;
 	z-index: 10;
 }
 
@@ -119,6 +125,12 @@
 
 .instr-caption {
 	margin-top: 1em; 
+}
+
+.instr-heading-sub {
+	display: none; /* Hide sub-headings (show main heading only) */
+	border-left: none;
+	padding-left: 0;
 }
 
 .instr-controls-wrap {
@@ -175,36 +187,38 @@
 }
 
 @media (min-width: 45em) {
+
+	/* Hide main heading and show sub-headings */
+	.instr-heading { display: none; }
+	.instr-heading-sub { display: block; }
 	
-	.instr-belt {
-		position: absolute;
-		left: 0;
-		bottom: 0;
+	.instr-images,
+	.instr-caption {
+		float: left;
 	}
 	
-	.instr-portrait {
-		right: 50%;
-		top: auto;
-		bottom: 0;
+	.instr-images {
+		width: 52%;
 	}
 
 	.instr-caption {
-		margin-top: 0;
 		width: 48%;
-		margin-left: auto;
-		min-height: 16.5em;
+		margin-top: 0;
+		padding-bottom: 2.7em; /* leave space for slideshow controls */
 	}
 	
 	.instr-controls-wrap {
+		position: absolute;
+		right: 0;
+		bottom: 0;
 		width: 48%;
-		margin-left: auto;
 	}
 }
 
 @media (min-width: 60em) {
 	
-	.instr-caption {
-		min-height: 14.5em;
+	.instr-images {
+		height: 254px;
 	}
 	
 }
