@@ -49,15 +49,15 @@
 									<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Jason Lai</h3>
-										<p class="lh">Master Lai (7th degree) has been training for over 30 years. In 2013, he received the RMIT <em>Outstanding Service</em> Award for his <strong>20 years</strong> of service to the club. Mr Lai was also a <strong>coach</strong> for the Australian Team at the 2010 <strong>ITF World Championships</strong> in Minsk, Belarus.</p>
+										<p class="lh">Master Lai (7th degree) has been training for over 30 years. In 2013, he received the RMIT <em>Outstanding Service</em> Award for his <strong>20 years</strong> of service to the club. Master Lai was also a <strong>coach</strong> for the Australian Team at the 2010 <strong>ITF World Championships</strong> in Minsk, Belarus.</p>
 									</div>
 								</section>
 								<section class="instr-profile hidden" tabindex="-1" aria-hidden="true">
-									<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-3.png" width="40" height="220" alt="">
+									<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-4.png" width="40" height="220" alt="">
 									<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/cass-white.png" width="500" height="220" alt="">
 									<div class="instr-caption">
 										<h3 class="section-heading-sub">Cassandra White</h3>
-										<p class="lh">Ms White has been training at RMIT University since <strong>2003</strong>, and received her <strong>3rd degree Black Belt</strong> in December 2012. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 <strong>ITF World Championships</strong> in St Petersburg, Russia.</p>
+										<p class="lh">Ms White has been training at RMIT University since <strong>2003</strong>, and received her <strong>4th degree Black Belt</strong> in April 2015. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 <strong>ITF World Championships</strong> in St Petersburg, Russia.</p>
 									</div>
 								</section>
 							</div>
