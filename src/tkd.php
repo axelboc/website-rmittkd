@@ -11,7 +11,7 @@
 	<meta property="og:url" content="http://rmittkd.com/tkd">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-tkd.css">
+	<link rel="stylesheet" href="css/modules-tkd.css?20150418">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
@@ -21,7 +21,7 @@
 		<div class="main-wrap body-max">
 			<header class="itf-section section box row">
 				<h1 class="section-heading"><abbr title="International Taekwon-Do Federation">ITF</abbr> Taekwon-Do</h1>
-				<img class="itf-image hero img-mob-left img-tab-left respimg-fit lazy-loading" src="" data-src="images/hero/hero-tkd-suffix.png" width="400" height="502" alt="">
+				<img class="itf-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-tkd-suffix.png" width="400" height="502" alt="">
 				<div class="itf-content section-content lh">
 					<p>Taekwon-Do is a version of unarmed combat designed for the purpose of <strong>self-defence</strong>. It was founded in the 1950s by <strong>Choi Hong Hi</strong> (1918-2002), a South Korean General and Ambassador. Our club is part of the Chan Hun International Taekwon-Do Federation (<strong><a class="link-blend" href="http://www.chitf.org/" target="_blank">CHITF</a></strong>), which was founded by Grand Master Phap Lu.</p>
 					<p>Taekwon-Do martial artists employ both <strong>hand</strong> and <strong>foot techniques</strong>. Supported by modern scientific evidence, these techniques combine the notions of reaction force, concentration, balance, breath control and speed in order to achieve maximum power.</p>
@@ -33,7 +33,7 @@
 				<div class="lay-main">
 					<section class="lai-section section box row">
 						<h2 class="lai-heading section-heading">Lai Taekwon-Do</h2>
-						<img class="lai-image img-mob-left img-tab-left respimg-fit lazy-loading" src="" data-src="images/sm-lai-suffix.png" width="270" height="350" alt="">
+						<img class="lai-image respimg-fit lazy-loading" src="" data-src="images/sm-lai-suffix.png" width="270" height="350" alt="">
 						<div class="lai-content section-content lh">
 							<p>The RMIT ITF Taekwon-Do Club is affiliated to <a class="link-blend" href="http://www.laitkd.com.au/" target="_blank">Lai Taekwon-Do</a>, under the guidance of <strong>Grand Master Robert Lai</strong> (9th degree) and his son Jason Lai (6th degree).</p>
 							<p>Grand Master Lai was born in Malaysia. He started Taekwon-Do in 1964 <strong>at the age of 19</strong>, after watching a demonstration by General Choi and his squad. The training hall was a small Buddhist temple so numbers were limited, and Grand Master Lai was one of 30 students chosen to begin training.</p>

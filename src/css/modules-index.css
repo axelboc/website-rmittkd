@@ -22,7 +22,7 @@
 	
 }
 
-@media (min-width: 30em) and (max-width: 49.99em) {
+@media (min-width: 32em) and (max-width: 49.99em) {
 	
 	.lay-main--welcome {
 		width: 100%;
@@ -85,9 +85,9 @@
 	padding: 0 0 5px;
 }
 
-.tmtbl thead th:first-child,
 .tmtbl tbody th {
 	font-size: 85%;
+	padding: 0 5px;
 }
 
 .tmtbl-odd {
@@ -178,7 +178,7 @@
 	right: 0;
 	bottom: 0;
 	left: 0;
-	padding: .35em 0;
+	padding: .35em .5em;
 	text-align: center;
 }
 

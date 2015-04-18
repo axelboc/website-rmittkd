@@ -11,7 +11,7 @@
 	<meta property="og:url" content="http://rmittkd.com/dojang">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-dojang.css?20150418">
+	<link rel="stylesheet" href="css/modules-dojang.css?201504180">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
@@ -66,7 +66,7 @@
 									<div class="instr-caption">
 										<h2 class="instr-heading-sub section-heading">Instructors</h2>
 										<h3 class="section-heading-sub">Cassandra White</h3>
-										<p class="lh">Ms. White has been training at RMIT University since <strong>2003</strong>, and received her <strong>4th degree Black Belt</strong> in April 2015. She has received numerous awards in recognition of her contribution to the club, and <strong>represented Australia</strong> at the 2009 <strong>ITF World Championships</strong> in St Petersburg, Russia.</p>
+										<p class="lh">Ms. White has been training at RMIT University since <strong>2003</strong>, and received her <strong>4th degree Black Belt</strong> in April 2015. She has received numerous awards for her contribution to the club, and <strong>represented Australia</strong> at the 2009 <strong>ITF World Championships</strong> in St Petersburg, Russia.</p>
 									</div>
 								</section>
 							</div>
@@ -84,19 +84,19 @@
 					<section class="section box row">
 						<h2 class="section-heading">Executive Committee</h2>
 						<div class="section-content">
-							<section class="exec-member">
+							<section class="exec-member box">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/marc.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>President</span><br>Marc Chung</p>
 							</section>
-							<section class="exec-member">
+							<section class="exec-member box">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/shiv.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Vice-President</span><br>Shivarnee</p>
 							</section>
-							<section class="exec-member">
+							<section class="exec-member box">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/victor.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Treasurer</span><br>Victor</p>
 							</section>
-							<section class="exec-member">
+							<section class="exec-member box">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/vlad.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Secretary</span><br>Vlad</p>
 							</section>

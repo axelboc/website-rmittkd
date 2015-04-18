@@ -12,7 +12,7 @@
 }
 
 /* Image is hidden */
-@media (max-width: 29.99em) {
+@media (max-width: 31.99em) {
 	
 	.contact-image {
 		display: none;
@@ -21,7 +21,7 @@
 }
 
 /* Image is absolutely positioned */
-@media (min-width: 30em) {
+@media (min-width: 32em) {
 	
 	.main-wrap {
 		margin-top: 22%;

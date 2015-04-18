@@ -11,7 +11,7 @@
 	<meta property="og:url" content="http://rmittkd.com/fees">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-fees.css?20150125">
+	<link rel="stylesheet" href="css/modules-fees.css?20150418">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>

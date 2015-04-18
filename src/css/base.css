@@ -28,7 +28,7 @@ body {
 .body-wrap {
 	position: relative;
 	left: 0;
-	font-size: 70%;
+	font-size: 80%;
 }
 
 .footer {
@@ -37,7 +37,7 @@ body {
 	bottom: 0;
 	width: 100%;
 	height: 2.81em;
-	font-size: 70%;
+	font-size: 80%;
 }
 
 @media (min-width: 50em) {
@@ -49,15 +49,6 @@ body {
 		margin: 0 auto;
 	}
 	
-}
-
-@media (min-width: 60em) {
-	
-	.body-wrap,
-	.footer {
-		font-size: 80%;
-	}
-
 }
 
 
@@ -176,29 +167,6 @@ img {
 .respimg-fit {
 	max-width: 100%;
 	height: auto;
-}
-
-/* Image floated left on mobile */
-@media (max-width: 29.99em) {
-	
-	.img-mob-left {
-		float: left;
-		width: 40%;
-		min-width: 100px;
-		margin: 0 1em .5em 0;
-	}
-	
-}
-
-/* Image floated left on tablet */
-@media (max-width: 49.99em) {
-	
-	.img-tab-left {
-		float: left;
-		width: 30%;
-		margin: 0 1em 0 0;
-	}
-	
 }
 
 

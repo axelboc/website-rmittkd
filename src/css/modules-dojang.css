@@ -10,7 +10,7 @@
 	max-width: 57%;
 }
 
-@media (min-width: 30em) {
+@media (min-width: 32em) {
 		
 	.dojang-hero {
 		top: 7.5em;
@@ -27,7 +27,7 @@
 @media (min-width: 39em) {
 	
 	.dojang-p2 {
-		padding-right: 35%;
+		padding-right: 30%;
 	}
 	
 }
@@ -38,16 +38,16 @@
 		padding-right: 50%;
 	}
 	
-	.dojang-p2 {
-		padding-right: 45%;
-	}
-	
 }
 
 @media (min-width: 47em) {
 	
+	.dojang-p2 {
+		padding-right: 40%;
+	}
+	
 	.dojang-p3 {
-		padding-right: 35%;
+		padding-right: 15%;
 	}
 	
 }
@@ -87,6 +87,10 @@
 		margin-right: 14%;
 	}
 	
+	.dojang-p3 {
+		padding-right: 35%;
+	}
+	
 }
 
 
@@ -107,7 +111,7 @@
 
 .instr-images {
 	position: relative;
-	height: 246px;
+	height: 254px;
 	overflow: hidden;
 	margin-left: -12px; /* compensate for section padding to bring belt images against left edge */
 }
@@ -186,7 +190,7 @@
 	background-position: center top;
 }
 
-@media (min-width: 45em) {
+@media (min-width: 47em) {
 
 	/* Hide main heading and show sub-headings */
 	.instr-heading { display: none; }
@@ -205,6 +209,7 @@
 		width: 48%;
 		margin-top: 0;
 		padding-bottom: 2.7em; /* leave space for slideshow controls */
+		font-size: 90%;
 	}
 	
 	.instr-controls-wrap {
@@ -215,10 +220,10 @@
 	}
 }
 
-@media (min-width: 60em) {
-	
-	.instr-images {
-		height: 254px;
+@media (min-width: 57em) {
+
+	.instr-caption {
+		font-size: 100%;
 	}
 	
 }
@@ -227,12 +232,17 @@
 /* ===== Executive Committee ===== */
 
 .exec-member {
-	text-align: center;
 	position: relative;
+	float: left;
+	width: 50%;
 	margin-top: 8px;
+	text-align: center;
+	padding: 0 4px;
 }
 
 .exec-pic {
+	max-width: 100%;
+	height: auto;
 	margin: 0 auto;
 	border-radius: 75px;
 }
@@ -255,17 +265,7 @@
 }
 
 
-@media (min-width: 22em) and (max-width: 30em), (min-width: 33em) {
-	
-	.exec-member {
-		width: 50%;
-		float: left;
-	}
-	
-}
-
-
-@media (min-width: 51em) {
+@media (min-width: 49em) {
 	
 	.exec-member {
 		width: 25%;

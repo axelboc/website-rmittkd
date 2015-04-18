@@ -10,7 +10,7 @@
 	<meta property="og:image" content="http://rmittkd.com/images/og/logo-og.png">
 	<meta property="og:url" content="http://rmittkd.com/">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-index.css">
+	<link rel="stylesheet" href="css/modules-index.css?20150418">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
