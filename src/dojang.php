@@ -27,7 +27,7 @@
 				<div class="dojang-content section-content lh">
 					<p class="dojang-p1">We're a diverse group of students, alumni and members of the public, ranging from beginners to experienced black belts. We're lucky to be trained by <strong>accomplished instructors</strong>, whose dedication to Taekwon-Do is inspiring.</p>
 					<p class="dojang-p2">All members have the opportunity to <strong>compete</strong> in multiple local and national events each year. Two members even had the privilege to compete at the ITF World Championship!</p>
-					<p class="dojang-p3">More than a martial art club, we're a strong, friendly and welcoming community! Our young and dynamic committee is really awesome, and organises many <strong>social events</strong> throughout the year, including barbecues, sporting events, and more.</p>
+					<p class="dojang-p3">More than a martial art club, we're a strong, friendly and welcoming community! Our young and dynamic committee is really awesome, and organises many <strong>social events</strong> around Melbourne throughout the year, including barbecues, sporting events, and more.</p>
 				</div>
 			</header>
 			<div class="row">

@@ -89,7 +89,7 @@
 							<h2 class="section-heading">Location</h2>
 							<div class="map-wrap inner">
 								<a class="map-link link-inv respimg-wrap" href="https://goo.gl/maps/RYwxl" target="_blank">
-									<img class="cal-img respimg-crop" src="images/map.png?20150121" width="473" height="149" alt="">
+									<img class="cal-img respimg-crop" src="images/map.png?20150121" width="473" height="149" alt="Map of 360 Swanston St, Melbourne, Australia">
 									<span class="map-caption backdrop"><span>RMIT Building 8, Univeristy Function Room 08.02.08</span></span>
 								</a>
 							</div>
