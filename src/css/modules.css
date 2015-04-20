@@ -197,27 +197,22 @@
 	.nav-close {
 		display: block;
 		background: url(../images/nav-icons.png) no-repeat left top;
+		margin: 1em 1em 1em auto;
 	}
 	
 	.nav-trigger {
 		width: 45px;
 		height: 45px;
-		margin: 1em 1em 1em auto;
 	}
 	
 	.nav-close {
-		position: absolute;
-		top: 1em;
-		right: 1em;
 		width: 34px;
 		height: 34px;
-		background-color: #000;
 		background-position: top right;
 	}
 	
 	.nav-trigger:hover { background-position: left bottom; }
 	.nav-close:hover { background-position: right bottom; }
-	
 	
 	.nav {
 		display: none;
@@ -229,11 +224,6 @@
 	
 	.nav-visible {
 		display: block;
-	}
-	
-	.nav-list {
-		position: relative;
-		top: 4.5em;
 	}
 	
 	.nav-list a {
