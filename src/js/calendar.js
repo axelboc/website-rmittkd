@@ -1,6 +1,7 @@
 
 $(function () {
 	
+	var $document = $(document);
 	var $cal = $(document.getElementById("calendar"));
 	var $monthsCont = $cal.children(".cal-months");
 	var $months = $monthsCont.children(".cal-month");
@@ -74,7 +75,6 @@ $(function () {
 		}
 	}
 	
-	
 	/**
 	 * Update the position of the carousel by re-arranging classes in between the 'cal-month' elements.
 	 * @param {Boolean} toLeft True to move to the left; false to move to the right.
@@ -109,33 +109,49 @@ $(function () {
 		updateArrows(index);
 	}
 	
-	
-
-	// Handle click on previous arrow
-	$arrowPrev.click(function (evt) {
+	/**
+	 * Handle an event that aims at moving the carousel to the previous month.
+	 * @param {Event} evt
+	 */
+	function previousMonth(evt) {
 		evt.preventDefault();
-		
 		if (!$arrowPrev.hasClass("arrow-disabled")) {
 			// Move carousel to the left
 			moveCarousel(true);
-			
-			// Send Analytics event
-			//ga('send', 'event', 'arrow left', 'click', 'calendar');
 		}
-	});
-
-	// Handle click on next arrow
-	$arrowNext.click(function (evt) {
+	}
+	
+	/**
+	 * Handle an event that aims at moving the carousel to the next month.
+	 * @param {Event} evt
+	 */
+	function nextMonth(evt) {
 		evt.preventDefault();
-		
 		if (!$arrowNext.hasClass("arrow-disabled")) {
 			// Move carousel to the left
 			moveCarousel(false);
-			
-			// Send Analytics event
-			//ga('send', 'event', 'arrow left', 'click', 'calendar');
 		}
-	});
+	}
+	
+	/**
+	 * Returns a keyboard event handler that calls a given function when a specific key is pressed.
+	 * @param {Function} func
+	 * @param {Interger} keyCode
+	 * @return {Function}
+	 */
+	function onKeyDown(func, keyCode) {
+		return function (evt) {
+			if (evt.which === keyCode) {
+				func(evt);
+			}
+		};
+	}
+
+	// Register event listeners
+	$arrowPrev.click(previousMonth);
+	$arrowNext.click(nextMonth);
+	$document.keydown(onKeyDown(previousMonth, 37));
+	$document.keydown(onKeyDown(nextMonth, 39));
 	
 });
 

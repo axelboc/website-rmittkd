@@ -110,6 +110,6 @@
 </div>
 <?php include 'includes/footer.php'; ?>
 <?php include 'includes/foot_js.php'; ?>
-<script src="js/instructors.js"></script>
+<script src="js/instructors.js?20150421"></script>
 </body>
 </html>

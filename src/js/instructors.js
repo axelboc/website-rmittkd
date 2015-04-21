@@ -1,6 +1,7 @@
 
 $(function () {
 
+	var $document = $(document);
 	var $instr = $(document.getElementById("instructors"));
 	var $profiles = $instr.find(".instr-profile");
 	var $arrowPrev = $instr.find(".instr-arrow-prev");
@@ -97,56 +98,70 @@ $(function () {
 		});
 	};
 	
-
-	// Handle click on previous arrow
-	$arrowPrev.click(function (evt) {
-		// Prevent going before the first month
+	
+	/**
+	 * Handle an event that aims at moving the carousel to the previous instructor.
+	 * @param {Event} evt
+	 */
+	function previousInstr(evt) {
+		evt.preventDefault();
+		
+		// Prevent going before the first instructor
 		if (!updating && carouselPos > 0) {
 			updating = true;
 			$arrowPrev.blur();
 			carouselPos--;
 			updateCarousel();
-			
-			// Send Analytics event
-			//ga('send', 'event', 'arrow left', 'click', 'instructors slider');
 		}
-		
+	}
+	
+	/**
+	 * Handle an event that aims at moving the carousel to the next instructor.
+	 * @param {Event} evt
+	 */
+	function nextInstr(evt) {
 		evt.preventDefault();
-		return false;
-	});
-
-	// Handle click on next arrow
-	$arrowNext.click(function (evt) {
-		// Prevent going past the last month
+		
+		// Prevent going past the last instructor
 		if (!updating && carouselPos < carouselLen - 1) {
 			updating = true;
 			$arrowNext.blur();
 			carouselPos++;
 			updateCarousel();
-			
-			// Send Analytics event
-			//ga('send', 'event', 'arrow right', 'click', 'instructors slider');
 		}
-		
-		evt.preventDefault();
-		return false;
-	});
+	}
+	
+	/**
+	 * Returns a keyboard event handler that calls a given function when a specific key is pressed.
+	 * @param {Function} func
+	 * @param {Interger} keyCode
+	 * @return {Function}
+	 */
+	function onKeyDown(func, keyCode) {
+		return function (evt) {
+			if (evt.which === keyCode) {
+				func(evt);
+			}
+		};
+	}
+
+	// Register event listeners
+	$arrowPrev.click(previousInstr);
+	$arrowNext.click(nextInstr);
+	$document.keydown(onKeyDown(previousInstr, 37));
+	$document.keydown(onKeyDown(nextInstr, 39));
 	
 	// Handle click on dots
 	$dots.click(function (evt) {
+		evt.preventDefault();
+		
 		if (!updating) {
 			updating = true;
 			$newDot = $(evt.target);
 			$newDot.blur();
 			carouselPos = $dots.index($newDot);
 			updateCarousel();
-		
-			// Send Analytics event
-			//ga('send', 'event', 'dot ' + carouselPos, 'click', 'instructors slider');
 		}
-		
-		evt.preventDefault();
-		return false;
 	});
 	
 });
