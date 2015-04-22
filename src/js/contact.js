@@ -70,8 +70,15 @@ $(function () {
 		$resultMessage.removeClass("form-result--fail form-result--success").addClass("form-result--" + messageClass);
 		$resultBox.fadeIn().removeClass("hidden").focus();
 		
-		// Send Analytics event
-		ga('send', 'event', 'contact form', 'submit', messageClass);
+		// Send Analytics event or exception
+		if (messageClass === 'success') {
+			ga('send', 'event', 'contact form', 'submit', 'success');
+		} else {
+			ga('send', 'exception', {
+				exDescription: 'Form submission error: ' + message,
+				exFatal: false
+			});
+		}
 	};
 	
 	// Re-validate all fields and submit form via Ajax

@@ -5,6 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<?php include 'includes/head_css.php'; ?>
 	<?php include 'includes/head_js.php'; ?>
+	<script>
+		// Send exception to Google Analytics
+		ga('send', 'exception', {
+			'exDescription': '404',
+			'exFatal': true
+		});
+	</script>
 </head>
 <body>
 <div class="body-wrap">

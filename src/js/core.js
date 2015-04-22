@@ -2,6 +2,33 @@
 // Global (accessed by calendar.js)
 var emWidth;
 
+
+/* ===== Exception tracking ===== */
+
+$(function () {
+	
+	// Track JS errors
+	window.addEventListener('error', function(evt) {
+		ga('send', 'exception', {
+			'exDescription': 'JS error in ' + evt.filename + ', line #' + evt.lineno + ': ' + evt.message,
+			'exFatal': true
+		});
+	});
+
+	// Track Ajax errors
+	$(document).ajaxError(function(evt, request, settings, error) {
+		console.log('test');
+		ga('send', 'exception', {
+			'exDescription': 'Ajax error for ' + settings.url + ': ' + evt.result,
+			'exFatal': true
+		});
+	});
+	
+});
+
+
+/* ===== Core initialisation and features ===== */
+
 $(function () {
 	
 	var $window = $(window);
@@ -10,7 +37,7 @@ $(function () {
 	var $bodyWrap = $('.body-wrap');
 	var $iframes = $('iframe');
 	
-	
+
 	/* ===== Lazy-loading of images ===== */
 	
 	// Get default font-size
