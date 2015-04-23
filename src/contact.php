@@ -92,6 +92,6 @@
 </div>
 <?php include 'includes/footer.php'; ?>
 <?php include 'includes/foot_js.php'; ?>
-<script src="js/contact.js?20150406"></script>
+<script src="js/contact.js?20150422"></script>
 </body>
 </html>

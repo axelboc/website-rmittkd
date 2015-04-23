@@ -5,8 +5,9 @@
 node_modules/
 resources/
 dist/
-**/config.php
-**/*.log
+src/core/config.php
+src/data/error.log
+src/data/videos.xml
 
 
 #################
