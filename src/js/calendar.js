@@ -9,36 +9,8 @@ $(function () {
 	var $arrowNext = $cal.children(".cal-arrow--next");
 	var carouselLen = $months.length;
 	
-	
-	/**
-	 * Test 3D transform support.
-	 * From: http://stackoverflow.com/questions/5661671/detecting-transform-translate3d-support
-	 */
-	var has3d = (function () {
-		var has3d;
-		var el = document.createElement('div');
-		var transforms = {
-			transform: "transform"
-		};
-		
-		document.body.insertBefore(el, null);
-		
-		if (typeof el.style.transform !== "undefined") {
-			el.style.transform = "translate3d(1px, 1px, 1px)";
-			has3d = window.getComputedStyle(el).getPropertyValue("transform");
-		}
-		
-		document.body.removeChild(el);
-		
-		return (typeof has3d !== "undefined" && has3d.length > 0 && has3d !== "none");
-	}());
-	
-	// Add 'no3d' class to calendar if 3D transforms are not supported
-	if (!has3d) {
-		$cal.addClass("no3d");
-	}
 
-	// Update arrows rights away
+	// Update arrows right away
 	updateArrows($months.filter(".cal-month--current").index());
 
 	/**

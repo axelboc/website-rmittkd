@@ -155,4 +155,32 @@ $(function () {
 		}
 	});
 	
+	
+	/* ===== 3D-transform feature detection ===== */
+	
+	// From: http://stackoverflow.com/questions/5661671/detecting-transform-translate3d-support
+	var has3d = (function () {
+		var has3d;
+		var el = document.createElement('div');
+		var transforms = {
+			transform: "transform"
+		};
+		
+		document.body.insertBefore(el, null);
+		
+		if (typeof el.style.transform !== "undefined") {
+			el.style.transform = "translate3d(1px, 1px, 1px)";
+			has3d = window.getComputedStyle(el).getPropertyValue("transform");
+		}
+		
+		document.body.removeChild(el);
+		
+		return (typeof has3d !== "undefined" && has3d.length > 0 && has3d !== "none");
+	}());
+	
+	// Add class to html element if not supported
+	if (!has3d) {
+		$html.addClass("no3d");
+	}
+	
 });
