@@ -33,7 +33,7 @@ $(function () {
 	
 	var $window = $(window);
 	var $html = $('html');
-	var $htmlBody = $html.add('body');
+	var $body = $('body');
 	var $bodyWrap = $('.body-wrap');
 	var $iframes = $('iframe');
 	
@@ -56,9 +56,11 @@ $(function () {
 	}
 	
 	// Calculate current width of 'body' element in em
-	var computeEmWidth = function () {
+	function computeEmWidth() {
 		emWidth = widthElem[widthProp] / fontSize;
 	};
+	
+	// Compute now and when window is resized
 	computeEmWidth();
 	$window.resize(computeEmWidth);
 	
@@ -74,84 +76,6 @@ $(function () {
 			// Build and set 'src' attribute
 			var src = $this.attr("data-src").replace("-suffix", suffix);
 			$this.attr("src", src);
-		}
-	});
-	
-	
-	/* ===== Off-canvas responsive navigation ===== */
-	
-	var nav = document.getElementById("nav");
-	var $nav = $(nav);
-	var $navTrigger = $(document.getElementById("nav-trigger"));
-	
-	var navVisible = false;
-	
-	// Open navigation
-	$navTrigger.click(function (evt) {
-		evt.preventDefault();
-
-		$iframes.attr('tabindex', -1);
-		
-		$bodyWrap.animate({
-			left: "14em"
-		}, function() {
-			$nav.focus();
-		});
-		
-		navVisible = true;
-		$nav.addClass("nav-visible");
-		$nav.attr("aria-hidden", false);
-	});
-
-	// Close navigation
-	$nav.children(".nav-close").click(function (evt) {
-		evt.preventDefault();
-
-		$iframes.attr('tabindex', 0);
-		
-		$bodyWrap.animate({
-			left: 0
-		}, function() {
-			$nav.removeClass("nav-visible");
-			$navTrigger.focus();
-		});
-		
-		navVisible = false;
-		$nav.attr("aria-hidden", true);
-	});
-	
-	
-	// Manage change of navigation type when window is resized
-	var isOffCanvas = $nav.css("position") === "absolute";
-	
-	$window.resize(function () {
-		var newPos = $nav.css("position");
-		
-		if (isOffCanvas && newPos !== "absolute") {
-			// Switch to normal nav
-			isOffCanvas = false;
-			navVisible = false;
-			
-			$bodyWrap.css("left", 0);
-			$nav.attr("aria-hidden", false);
-			$nav.removeClass("nav-visible");
-			
-		} else if (!isOffCanvas && newPos === "absolute") {
-			// Switch to responsive nav
-			isOffCanvas = true;
-			$nav.attr("aria-hidden", true);
-		}
-	});
-	
-
-	// Keep focus inside navigation when it is visible
-	$(document).on("focusin", function (evt) {
-		if (navVisible && evt.target !== nav && !$.contains(nav, evt.target)) {
-			// Return focus to navigation
-			$nav.focus();
-			
-			// Prevent scrolling due to focus events
-			$htmlBody.scrollTop(0).scrollLeft(0);
 		}
 	});
 	
@@ -182,5 +106,80 @@ $(function () {
 	if (!has3d) {
 		$html.addClass("no3d");
 	}
+	
+	
+	/* ===== Off-canvas responsive navigation ===== */
+	
+	var nav = document.getElementById("nav");
+	var $nav = $(nav);
+	var $navTrigger = $(document.getElementById("nav-trigger"));
+	
+	var navVisible = false;
+	
+	function openNav() {
+		if (!navVisible) {
+			$bodyWrap.addClass("body-wrap_nav");
+			$nav.addClass('nav_visible');
+			$iframes.attr('tabindex', -1);
+			
+			if (has3d) {
+				$bodyWrap.one('transitionend', navOpened);
+			} else {
+				navOpened();
+			}
+			
+		}
+	}
+	
+	function navOpened() {
+		$nav.attr("aria-hidden", false);
+		$nav.focus();
+		navVisible = true;
+	}
+	
+	function closeNav() {
+		if (navVisible) {
+			$bodyWrap.removeClass("body-wrap_nav");
+			$iframes.attr('tabindex', 0);
+			
+			if (has3d) {
+				$bodyWrap.one('transitionend', navClosed);
+			} else {
+				navClosed();
+			}
+		}
+	}
+	
+	function navClosed() {
+		$nav.removeClass('nav_visible').attr("aria-hidden", true);
+		$body.focus();
+		navVisible = false;
+	}
+	
+	// Nav button
+	$navTrigger.click(function (evt) {
+		evt.preventDefault();
+		openNav();
+	});
+	
+	// Close button
+	$nav.children(".nav-close").click(function (evt) {
+		evt.preventDefault();
+		closeNav();
+	});
+	
+	// Close off-canvas navigation when window is resized
+	$window.resize(closeNav);
+
+	// Keep focus inside navigation when it is visible
+	$(document).on("focusin", function (evt) {
+		if (navVisible && evt.target !== nav && !$.contains(nav, evt.target)) {
+			// Return focus to navigation
+			$nav.focus();
+			
+			// Prevent scrolling due to focus events
+			$html.add($body).scrollTop(0).scrollLeft(0);
+		}
+	});
 	
 });

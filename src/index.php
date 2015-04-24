@@ -115,6 +115,6 @@
 </div>
 <?php include 'includes/footer.php'; ?>
 <?php include 'includes/foot_js.php'; ?>
-<script src="js/calendar.js?20150421"></script>
+<script src="js/calendar.js?20150424"></script>
 </body>
 </html>

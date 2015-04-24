@@ -221,14 +221,14 @@
 	.nav-close:hover { background-position: right bottom; }
 	
 	.nav {
-		display: none;
 		position: absolute;
 		top: 0;
 		left: -14em;
+		display: none;
 		width: 14em;
 	}
 	
-	.nav-visible {
+	.nav_visible {
 		display: block;
 	}
 	

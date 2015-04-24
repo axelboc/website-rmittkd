@@ -27,9 +27,17 @@ body {
 
 .body-wrap {
 	position: relative;
-	left: 0;
+	transform: translate3d(0, 0, 0);
+	transition: transform .4s ease-in-out;
 	font-size: 80%;
 }
+
+.body-wrap_nav {
+	transform: translate3d(14em, 0, 0);
+}
+
+.no3d .body-wrap { left: 0; }
+.no3d .body-wrap_nav { left: 14em; }
 
 .footer {
 	position: absolute;
