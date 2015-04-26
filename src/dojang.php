@@ -11,7 +11,7 @@
 	<meta property="og:url" content="http://rmittkd.com/dojang">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-dojang.css?201504180">
+	<link rel="stylesheet" href="css/modules-dojang.css">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
@@ -38,8 +38,8 @@
 							<div class="instr-profiles">
 								<section class="instr-profile row hidden" tabindex="-1" aria-hidden="true">
 									<div class="instr-images">
-										<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-9.png?20150418" width="40" height="254" alt="">
-										<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/robert-lai.png?20150418" width="255" height="254" alt="">
+										<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-9.png" width="40" height="254" alt="">
+										<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/robert-lai.png" width="255" height="254" alt="">
 									</div>
 									<div class="instr-caption">
 										<h2 class="instr-heading-sub section-heading">Instructors</h2>
@@ -49,8 +49,8 @@
 								</section>
 								<section class="instr-profile row" tabindex="-1" aria-hidden="false">
 									<div class="instr-images">
-										<img class="instr-belt" src="images/instructors/belt-7.png?20150418" width="40" height="254" alt="">
-										<img class="instr-portrait" src="images/instructors/jason-lai.png?20150418" width="500" height="254" alt="">
+										<img class="instr-belt" src="images/instructors/belt-7.png" width="40" height="254" alt="">
+										<img class="instr-portrait" src="images/instructors/jason-lai.png" width="500" height="254" alt="">
 									</div>
 									<div class="instr-caption">
 										<h2 class="instr-heading-sub section-heading">Instructors</h2>
@@ -60,8 +60,8 @@
 								</section>
 								<section class="instr-profile row hidden" tabindex="-1" aria-hidden="true">
 									<div class="instr-images">
-										<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-4.png?20150418" width="40" height="254" alt="">
-										<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/cassandra-white.png?20150418" width="319" height="254" alt="">
+										<img class="instr-belt lazy-loading" src="" data-src="images/instructors/belt-4.png" width="40" height="254" alt="">
+										<img class="instr-portrait lazy-loading" src="" data-src="images/instructors/cassandra-white.png" width="319" height="254" alt="">
 									</div>
 									<div class="instr-caption">
 										<h2 class="instr-heading-sub section-heading">Instructors</h2>
@@ -110,6 +110,6 @@
 </div>
 <?php include 'includes/footer.php'; ?>
 <?php include 'includes/foot_js.php'; ?>
-<script src="js/instructors.js?20150421"></script>
+<script src="js/instructors.js"></script>
 </body>
 </html>

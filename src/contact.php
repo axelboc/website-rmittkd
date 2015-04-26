@@ -12,7 +12,7 @@
 	<meta property="og:url" content="http://rmittkd.com/contact">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-contact.css?20150418">
+	<link rel="stylesheet" href="css/modules-contact.css">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
@@ -92,6 +92,6 @@
 </div>
 <?php include 'includes/footer.php'; ?>
 <?php include 'includes/foot_js.php'; ?>
-<script src="js/contact.js?20150422"></script>
+<script src="js/contact.js"></script>
 </body>
 </html>

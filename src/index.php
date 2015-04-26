@@ -10,7 +10,7 @@
 	<meta property="og:image" content="http://rmittkd.com/images/og/logo-og.png">
 	<meta property="og:url" content="http://rmittkd.com/">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-index.css?20150418">
+	<link rel="stylesheet" href="css/modules-index.css">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
@@ -89,7 +89,7 @@
 							<h2 class="section-heading">Location</h2>
 							<div class="map-wrap inner">
 								<a class="map-link link-inv respimg-wrap" href="https://goo.gl/maps/RYwxl" target="_blank">
-									<img class="cal-img respimg-crop" src="images/map.png?20150121" width="473" height="149" alt="Map of 360 Swanston St, Melbourne, Australia">
+									<img class="cal-img respimg-crop" src="images/map.png" width="473" height="149" alt="Map of 360 Swanston St, Melbourne, Australia">
 									<span class="map-caption backdrop"><span>RMIT Building 8, Univeristy Function Room 08.02.08</span></span>
 								</a>
 							</div>
@@ -115,6 +115,6 @@
 </div>
 <?php include 'includes/footer.php'; ?>
 <?php include 'includes/foot_js.php'; ?>
-<script src="js/calendar.js?20150424"></script>
+<script src="js/calendar.js"></script>
 </body>
 </html>

@@ -11,7 +11,7 @@
 	<meta property="og:url" content="http://rmittkd.com/tkd">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-tkd.css?20150418">
+	<link rel="stylesheet" href="css/modules-tkd.css">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
@@ -33,7 +33,7 @@
 				<div class="lay-main">
 					<section class="lai-section section row">
 						<h2 class="lai-heading section-heading">Lai Taekwon-Do</h2>
-						<img class="lai-image respimg-fit lazy-loading" src="" data-src="images/sm-lai-suffix.png" width="270" height="350" alt="">
+						<img class="lai-image respimg-fit lazy-loading" src="" data-src="images/hero/sm-lai-suffix.png" width="270" height="350" alt="">
 						<div class="lai-content section-content lh">
 							<p>The RMIT ITF Taekwon-Do Club is affiliated to <a class="link-blend" href="http://www.laitkd.com.au/" target="_blank">Lai Taekwon-Do</a>, under the guidance of <strong>Grand Master Robert Lai</strong> (9th degree) and his son Jason Lai (6th degree).</p>
 							<p>Grand Master Lai was born in Malaysia. He started Taekwon-Do in 1964 <strong>at the age of 19</strong>, after watching a demonstration by General Choi and his squad. The training hall was a small Buddhist temple so numbers were limited, and Grand Master Lai was one of 30 students chosen to begin training.</p>
