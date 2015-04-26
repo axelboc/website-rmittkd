@@ -4,19 +4,23 @@
 /* ===== Main container ===== */
 
 .main-wrap {
-	margin-top: 35%;
+	margin-top: 6.7em;
 }
 
-.main-wrap--tkd,
-.main-wrap--social,
-.main-wrap--contact {
-	margin-top: 6.7em;
+.main-wrap--index,
+.main-wrap--dojang,
+.main-wrap--fees {
+	margin-top: 35%;
 }
 
 @media (min-width: 32em) {
 	
-	.main-wrap:not(.main-wrap--index) {
+	.main-wrap {
 		margin-top: 10em;
+	}
+	
+	.main-wrap--index {
+		margin-top: 35%;
 	}
 	
 	.main-wrap--contact {
@@ -382,42 +386,46 @@
 	display: none;
 }
 
-@media (min-width: 27em) {
+@media (min-width: 25em) {
 	
-	.foot-copy {
+	.foot-copy,
+	.foot-fb {
 		float: left;
+		width: 50%;
+	}
+	
+}
+
+@media (min-width: 35em) {
+	
+	.foot-copy,
+	.foot-fb {
 		width: 40%;
 	}
 	
 	.foot-fb {
-		position: absolute;
-		right: 0;
-		top: 0;
-		width: 40%;
+		margin-left: 20%;
 	}
 	
 }
 
 @media (min-width: 55em) {
 	
-	.foot-copy {
-		border-right: 1px solid #999;
-	}
-	
-	.foot-fb {
-		border-left: 1px solid #999;
-	}
-	
 	.foot-copy,
 	.foot-fb {
 		width: 24%;
 	}
-
+	
+	.foot-fb {
+		margin-left: 0;
+	}
+	
 	.foot-nav {
-		display: block;
 		float: left;
-		width: 75.5%;
-		padding-right: 24%;
+		display: block;
+		width: 52%;
+		border: 1px solid #999;
+		border-width: 0 1px;
 	}
 	
 	.foot-nav-list > li {

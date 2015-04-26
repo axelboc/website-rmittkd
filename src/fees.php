@@ -21,7 +21,7 @@
 		<div class="body-max">
 			<img id="fees-hero" class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix--tkd.png" width="384" height="311" alt="">
 		</div>
-		<div class="main-wrap body-max">
+		<div class="main-wrap main-wrap--fees body-max">
 			<header class="section">
 				<h1 class="section-heading">2015 Full Membership</h1>
 				<div class="membership section-content row">

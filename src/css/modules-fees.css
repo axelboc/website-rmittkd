@@ -67,7 +67,7 @@
 
 .mbrship-opt-link {
 	display: block;
-	width: 14em;
+	width: 15em;
 	margin: 0 auto;
 	padding: .7em .5em 1.2em;
 	background-color: #e3e3e3;
@@ -118,7 +118,7 @@
 	}
 	
 	.mbrship-opt-link {
-		min-height: 13em;
+		min-height: 15em;
 	}
 	
 }
@@ -147,7 +147,7 @@
 	}
 	
 	.mbrship-options {
-        max-width: 65%;
+        max-width: 68%;
 		padding: .8em 1em 1.2em;
 	}
 	
@@ -173,7 +173,7 @@
 @media (min-width: 50em) {
 	
 	.mbrship-options {
-        max-width: 55%;
+        max-width: 58%;
 	}
 	
 }

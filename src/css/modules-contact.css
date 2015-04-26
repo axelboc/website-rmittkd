@@ -39,6 +39,14 @@
 
 }
 
+@media (min-width: 60em) {
+	
+	.contact-image {
+		width: auto;
+	}
+	
+}
+
 
 /* ===== FAQ ===== */
 

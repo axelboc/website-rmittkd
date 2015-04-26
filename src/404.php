@@ -17,7 +17,7 @@
 <div class="body-wrap">
 	<?php include 'includes/header.php'; ?>
 	<section class="main row" role="main">
-		<div class="main-wrap body-max">
+		<div class="main-wrap main-wrap--404 body-max">
 			<div class="row">
 				<div class="lay-main">
 					<section class="section row">

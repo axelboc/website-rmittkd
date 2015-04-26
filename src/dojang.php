@@ -21,7 +21,7 @@
 		<div class="body-max">
 			<img class="dojang-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-dojang-suffix.png" width="530" height="411" alt="">
 		</div>
-		<div class="main-wrap body-max">
+		<div class="main-wrap main-wrap--dojang body-max">
 			<header class="section row">
 				<h1 class="section-heading">Our Dojang</h1>
 				<div class="dojang-content section-content lh">
