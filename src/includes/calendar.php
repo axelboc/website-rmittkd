@@ -43,7 +43,7 @@ foreach ($months as $m) {
 	$monthStr = date('F', mktime(0, 0, 0, intval($expMonthId[1]), 1));
 	
 	?>
-	<div class="cal-month cal-month--<?php echo $class; ?> box" tabindex="-1" aria-hidden="<?php echo(($class === 'before' || $class === 'after') ? 'true' : 'false'); ?>">
+	<div class="cal-month cal-month--<?php echo $class; ?>" tabindex="-1" aria-hidden="<?php echo(($class === 'before' || $class === 'after') ? 'true' : 'false'); ?>">
 		<div class="cal-month-inner">
 			<div class="respimg-wrap">
 				<img class="cal-img respimg-crop lazy-loading" src="" data-src="images/calendar/<?php echo $img; ?>.jpg" width="408" height="150" alt="">

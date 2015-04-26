@@ -21,7 +21,7 @@
 	<article class="main row" role="main">
 		<div class="main-wrap main-wrap--social body-max">
 			<div class="row">
-				<section class="yt-section section box row">
+				<section class="yt-section section row">
 					<h2 class="section-heading">YouTube</h2>
 					<div class="yt-wrap section-content row">
 						<div class="yt-subscribe">
@@ -38,14 +38,14 @@
 			</div>
 			<div class="row">
 				<div class="lay-main">
-					<section class="section section-1of2 section-first box">
+					<section class="section section-1of2 section-first">
 						<h1 class="section-heading">Links</h1>
 						<div class="links-wrap section-content row">
 							<section class="box">
 								<h2 class="section-heading-sub">International &amp; National Federations</h2>
 								<ul class="list-reset links-inv links-blend row">
-									<li class="resource box"><a class="res-link" href="http://www.chitf.org/" target="_blank"><img src="images/social/logo-chitf.png" width="100" height="100" alt="">Chan Hun International Taekwon-Do Federation</a></li>
-									<li class="resource box"><a class="res-link" href="https://www.facebook.com/chitfaustralia" target="_blank"><img src="images/social/logo-chitf-australia.png" width="125" height="100" alt="">CHITF Australia</a></li>
+									<li class="resource"><a class="res-link" href="http://www.chitf.org/" target="_blank"><img src="images/social/logo-chitf.png" width="100" height="100" alt="">Chan Hun International Taekwon-Do Federation</a></li>
+									<li class="resource"><a class="res-link" href="https://www.facebook.com/chitfaustralia" target="_blank"><img src="images/social/logo-chitf-australia.png" width="125" height="100" alt="">CHITF Australia</a></li>
 								</ul>
 							</section>
 							<section class="box">
@@ -61,7 +61,7 @@
 							</section>
 						</div>
 					</section>
-					<section class="section section-1of2 box">
+					<section class="section section-1of2">
 						<h2 class="section-heading">Facebook</h2>
 						<div class="fb-wrap section-content">
 							<iframe class="fb-box" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Frmittkd&amp;width=292&amp;height=404&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=true&amp;show_border=false"></iframe>

@@ -1,7 +1,7 @@
 <footer class="footer">
 	<div class="footer-wrap body-max row">
 		<p class="foot-copy" role="contentinfo">&copy; 2015 RMIT ITF Taekwon-Do</p>
-		<nav class="foot-nav box" role="navigation">
+		<nav class="foot-nav" role="navigation">
 			<ul class="foot-nav-list list-reset links-inv">
 				<li><a href="/">Home</a></li>
 				<li><a href="/tkd.php">Taekwon-Do</a></li>

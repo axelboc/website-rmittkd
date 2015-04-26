@@ -1,4 +1,4 @@
-<section id="global" class="section section-admin--global box row">
+<section id="global" class="section section-admin--global row">
 	<h2 class="section-heading">Administration</h2>
 	<div class="section-content lh">
 		<?php printResult(); ?>

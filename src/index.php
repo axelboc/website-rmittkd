@@ -24,7 +24,7 @@
 			<div class="row">
 				<div class="lay-main lay-main--welcome">
 					<div class="row">
-						<header class="section section-1of2 box section--welcome row">
+						<header class="section section-1of2 section--welcome row">
 				        	<h1 class="section-heading">RMIT ITF Taekwon-Do</h1>
 				        	<div class="section-content lh">
 				        		<p>Forget about the gym! Fitness, cardio, strength, self-defence... <strong>Taekwon-Do</strong> does it all! From complete beginner to seasoned martial artist, our club welcomes all levels of fitness and experience.</p>
@@ -37,7 +37,7 @@
 			<div class="row">
 				<div class="lay-main">
 					<div class="row">
-						<section class="tmtbl-section section section-1of2 section-first box">
+						<section class="tmtbl-section section section-1of2 section-first">
 							<h2 class="section-heading">Timetable</h2>
 							<div>
 								<table class="tmtbl">
@@ -85,7 +85,7 @@
 								</table>
 							</div>
 						</section>
-						<section class="section map-section section-1of2 box">
+						<section class="section map-section section-1of2">
 							<h2 class="section-heading">Location</h2>
 							<div class="map-wrap inner">
 								<a class="map-link link-inv respimg-wrap" href="https://goo.gl/maps/RYwxl" target="_blank">
@@ -95,7 +95,7 @@
 							</div>
 						</section>
 					</div>
-					<section class="section cal-section box">
+					<section class="section cal-section">
 						<h2 class="section-heading">Calendar</h2>
 						<div class="section-content cal-wrapper">
 							<div id="calendar" class="calendar">

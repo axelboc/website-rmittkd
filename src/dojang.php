@@ -22,7 +22,7 @@
 			<img class="dojang-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-dojang-suffix.png" width="530" height="411" alt="">
 		</div>
 		<div class="main-wrap body-max">
-			<header class="section box row">
+			<header class="section row">
 				<h1 class="section-heading">Our Dojang</h1>
 				<div class="dojang-content section-content lh">
 					<p class="dojang-p1">We're a diverse group of students, alumni and members of the public, ranging from beginners to experienced black belts. We're lucky to be trained by <strong>accomplished instructors</strong>, whose dedication to Taekwon-Do is inspiring.</p>
@@ -32,7 +32,7 @@
 			</header>
 			<div class="row">
 				<div class="lay-main">
-					<section id="instructors" class="instructors section box">
+					<section id="instructors" class="instructors section">
 						<h2 class="instr-heading section-heading">Instructors</h2>
 						<div class="instr-content section-content">
 							<div class="instr-profiles">
@@ -70,7 +70,7 @@
 									</div>
 								</section>
 							</div>
-							<div class="instr-controls-wrap box">
+							<div class="instr-controls-wrap">
 								<ol class="instr-controls list-reset row">
 									<li><a class="instr-arrow instr-arrow-prev hidden-text" href="#" tabindex="-1" aria-disabled="false">Previous instructor</a></li>
 									<li><a class="instr-dot hidden-text" href="#" aria-selected="false">First instructor</a></li>
@@ -81,22 +81,22 @@
 							</div>
 						</div>
 					</section>
-					<section class="section box row">
+					<section class="section row">
 						<h2 class="section-heading">Executive Committee</h2>
 						<div class="section-content">
-							<section class="exec-member box">
+							<section class="exec-member">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/marc.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>President</span><br>Marc Chung</p>
 							</section>
-							<section class="exec-member box">
+							<section class="exec-member">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/shiv.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Vice-President</span><br>Shivarnee</p>
 							</section>
-							<section class="exec-member box">
+							<section class="exec-member">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/victor.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Treasurer</span><br>Victor</p>
 							</section>
-							<section class="exec-member box">
+							<section class="exec-member">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/vlad.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Secretary</span><br>Vlad</p>
 							</section>

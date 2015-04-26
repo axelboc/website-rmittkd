@@ -19,7 +19,7 @@
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="main-wrap main-wrap--tkd body-max">
-			<header class="itf-section section box row">
+			<header class="itf-section section row">
 				<h1 class="section-heading"><abbr title="International Taekwon-Do Federation">ITF</abbr> Taekwon-Do</h1>
 				<img class="itf-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-tkd-suffix.png" width="400" height="502" alt="">
 				<div class="itf-content section-content lh">
@@ -31,7 +31,7 @@
 			</header>
 			<div class="row">
 				<div class="lay-main">
-					<section class="lai-section section box row">
+					<section class="lai-section section row">
 						<h2 class="lai-heading section-heading">Lai Taekwon-Do</h2>
 						<img class="lai-image respimg-fit lazy-loading" src="" data-src="images/sm-lai-suffix.png" width="270" height="350" alt="">
 						<div class="lai-content section-content lh">

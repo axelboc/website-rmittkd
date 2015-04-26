@@ -20,7 +20,7 @@
 		<div class="main-wrap body-max">
 			<div class="row">
 				<div class="lay-main">
-					<section class="section box row">
+					<section class="section row">
 						<h1 class="section-heading">Page Not Found</h1>
 						<div class="section-content lh">
 							<p><em>Ouch!</em> The board didn't break. In normal circumstances, we'd recommend perseverance&mdash;one of the tenets of Taekwon-Do... But in this case, don't bother: this URL just doesn't lead anywhere!</p>

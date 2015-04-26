@@ -51,7 +51,7 @@ function printResult($feature = null) {
 	
 	if ($globalMatch || $localMatch) {
 		echo '<div class="form-result-wrap lh" tabindex="-1">' . PHP_EOL .
-			 '	<p class="form-result form-result--' . $_SESSION['result']['type'] . ' box">' .
+			 '	<p class="form-result form-result--' . $_SESSION['result']['type'] . '">' .
 			 		$_SESSION['result']['message'] . '</p>' . PHP_EOL .
 			 '</div>';
 		

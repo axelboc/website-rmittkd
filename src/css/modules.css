@@ -560,9 +560,6 @@
 	.form-label,
 	.form-field-wrap {
 		float: left;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
 	}
 	
 	.form-label {
@@ -605,9 +602,6 @@
 	.form-field,
 	.form-error{
 		float: left;
-		-webkit-box-sizing: border-box;
-		-moz-box-sizing: border-box;
-		box-sizing: border-box;
 	}
 	
 	.form-error {

@@ -22,7 +22,7 @@
 			<img id="fees-hero" class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix--tkd.png" width="384" height="311" alt="">
 		</div>
 		<div class="main-wrap body-max">
-			<header class="section box">
+			<header class="section">
 				<h1 class="section-heading">2015 Full Membership</h1>
 				<div class="membership section-content row">
 					<ul class="mbrship-options list-reset row links-blend">
@@ -47,7 +47,7 @@
 			</header>
 			<div class="row">
 				<div class="lay-main">
-					<section class="section box">
+					<section class="section">
 						<h1 class="section-heading">Casual Membership</h1>
 						<div class="section-content lh">
 				        	<p>Not planning on coming to training very often? Get a <strong>casual membership</strong> (RMIT student: $60 - public/non-RMIT: $110) and pay for your classes <strong>as you go</strong>!</p>
