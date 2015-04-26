@@ -22,7 +22,7 @@
 		<div class="main-wrap main-wrap--contact body-max">
 			<section id="contact" class="contact-section section">
 				<h1 class="section-heading">Contact</h1>
-				<img class="contact-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-contact-suffix.png" width="384" height="520" alt="">
+				<img class="contact-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-contact-suffix.png" data-hidden-until="32" width="384" height="520" alt="">
 				<div class="section-content">
 					<form id="contact-form" novalidate class="form row" action="/core/forms/form-contact.php" method="post">
 						<?php printResult(); ?>

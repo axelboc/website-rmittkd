@@ -29,7 +29,7 @@ $(function () {
 
 /* ===== Debounced resize event handler ===== */
 
-$.fn.debResize = function (delay, handler) {
+$.fn.debResize = function (handler) {
 	return this.resize((function () {
 		var timeout;
 		
@@ -44,7 +44,7 @@ $.fn.debResize = function (delay, handler) {
 			timeout = setTimeout(function delayed() {
 				handler.apply(that, args);
 				timeout = null;
-			}, delay);
+			}, 200);
 		};
 	}()));
 };
@@ -92,17 +92,21 @@ $(function () {
 		if (suffix !== prevSuffix) {
 			$lazyImages.each(function () {
 				$this = $(this);
-
-				// Build and set 'src' attribute
-				var src = $this.attr("data-src").replace("-suffix", suffix);
-				$this.attr("src", src);
+				
+				// Do not load if image is hidden at this width
+				var hiddenUntil = $this.attr("data-hidden-until");
+				if (!hiddenUntil || parseInt(hiddenUntil, 10) < emWidth) {
+					// Compute and set 'src' attribute
+					var src = $this.attr("data-src").replace("-suffix", suffix);
+					$this.attr("src", src);
+				}
 			});
 		}
 	}
 	
 	// Lazy-load images now and when window is resized
 	lazyLoad();
-	$window.debResize(200, lazyLoad);
+	$window.debResize(lazyLoad);
 	
 	
 	/* ===== 3D-transform feature detection ===== */
@@ -178,7 +182,7 @@ $(function () {
 	$nav.find(".nav-close").click(closeNav);
 	
 	// Close off-canvas navigation when window is resized
-	$window.debResize(200, closeNav);
+	$window.debResize(closeNav);
 
 	// Keep focus inside navigation when it is visible
 	$(document).on("focusin", function (evt) {
