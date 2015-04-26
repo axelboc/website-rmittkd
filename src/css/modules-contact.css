@@ -3,29 +3,16 @@
 
 /* ===== Contact section and hero image ===== */
 
-.main-wrap {
-	margin-top: 6.7em;
-}
-
 .contact-section {
 	padding-bottom: 1em;
 }
 
-/* Image is hidden */
-@media (max-width: 31.99em) {
-	
-	.contact-image {
-		display: none;
-	}
-	
+.contact-image {
+	display: none;
 }
 
 /* Image is absolutely positioned */
 @media (min-width: 32em) {
-	
-	.main-wrap {
-		margin-top: 22%;
-	}
 	
 	.contact-section {
 		position: relative;
@@ -34,42 +21,20 @@
 	.contact-image {
 		position: absolute;
 		right: 2.5em;
-		bottom: .5em;
+		top: -7em;
 		z-index: 9;
-		max-width: 100%;
+		display: block;
+		width: 50%;
 	}
 	
 }
 
-@media (min-width: 50em) {
-	
-	.main-wrap {
-		margin-top: 12.5em;
-	}
-	
-}
-
-@media (max-width: 59.99em) {
+@media (min-width: 42em) {
 	
 	.contact-image {
+		top: auto;
+		bottom: .5em;
 		width: 350px;
-	}
-
-}
-
-@media (max-width: 42em) {
-	
-	.contact-image {
-		width: 330px;
-	}
-
-}
-
-@media (max-width: 35em) {
-	
-	.contact-image {
-		width: 270px;
-		bottom: 7em;
 	}
 
 }
@@ -91,8 +56,4 @@
 .faq-a {
 	margin: 0 0 1.5em;
 }
-
-
-
-
 

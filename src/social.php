@@ -19,7 +19,7 @@
 <div class="body-wrap">
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
-		<div class="main-wrap body-max">
+		<div class="main-wrap main-wrap--social body-max">
 			<div class="row">
 				<section class="yt-section section box row">
 					<h2 class="section-heading">YouTube</h2>

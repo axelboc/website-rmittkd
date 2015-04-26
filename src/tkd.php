@@ -18,7 +18,7 @@
 <div class="body-wrap">
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
-		<div class="main-wrap body-max">
+		<div class="main-wrap main-wrap--tkd body-max">
 			<header class="itf-section section box row">
 				<h1 class="section-heading"><abbr title="International Taekwon-Do Federation">ITF</abbr> Taekwon-Do</h1>
 				<img class="itf-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-tkd-suffix.png" width="400" height="502" alt="">

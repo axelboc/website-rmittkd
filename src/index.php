@@ -20,7 +20,7 @@
 		<div class="body-max">
 			<img class="index-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-index-suffix.jpg" width="825" height="610" alt="">
 		</div>
-		<div class="main-wrap body-max">
+		<div class="main-wrap main-wrap--index body-max">
 			<div class="row">
 				<div class="lay-main lay-main--welcome">
 					<div class="row">

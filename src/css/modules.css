@@ -7,9 +7,27 @@
 	margin-top: 35%;
 }
 
+.main-wrap--tkd,
+.main-wrap--social,
+.main-wrap--contact {
+	margin-top: 6.7em;
+}
+
 @media (min-width: 32em) {
 	
-	.main-wrap {
+	.main-wrap:not(.main-wrap--index) {
+		margin-top: 10em;
+	}
+	
+	.main-wrap--contact {
+		margin-top: 22%;
+	}
+	
+}
+
+@media (min-width: 40em) {
+
+	.main-wrap--index {
 		margin-top: 10em;
 	}
 	

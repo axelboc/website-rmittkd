@@ -1,4 +1,4 @@
-/* Modules used only on page tkd.php */
+/* Modules used only on tkd.php */
 
 
 .itf-image,
@@ -21,14 +21,6 @@
 
 
 /* ==== Hero image and adjoining content ===== */
-
-@media (max-width: 31.99em) {
-	
-	.main-wrap {
-		margin-top: 6.7em;
-	}
-
-}
 
 @media (min-width: 50em) {
 	
