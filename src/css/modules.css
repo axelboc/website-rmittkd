@@ -202,8 +202,11 @@
 	.nav-trigger,
 	.nav-close {
 		display: block;
-		background: url(../images/nav-icons.png) no-repeat left top;
 		margin: 1em 1em 1em auto;
+		padding: 0;
+		background: url(../images/nav-icons.png) no-repeat left top;
+		border: 0;
+		cursor: pointer;
 	}
 	
 	.nav-trigger {
@@ -228,7 +231,7 @@
 		width: 14em;
 	}
 	
-	.nav_visible {
+	.nav[aria-hidden="false"] {
 		display: block;
 	}
 	

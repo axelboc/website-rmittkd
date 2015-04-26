@@ -189,7 +189,7 @@ img {
  * Element must have a width (and not be inline)
  */
 .hidden-text {
-	text-indent: 100%;
+	text-indent: 110%;
 	white-space: nowrap;
 	overflow: hidden;
 }

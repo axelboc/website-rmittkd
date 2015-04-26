@@ -5,9 +5,9 @@
 <header class="header row" role="banner">
 	<div class="body-max">
 		<a class="logo" href="/"><img class="logo-img" src="/images/logo-rmit-itf.png" width="150" height="150" alt="RMIT ITF Taekwon-Do"></a>
-		<a id="nav-trigger" class="nav-trigger hidden-text" href="#">Navigation</a>
+		<button id="nav-trigger" class="nav-trigger hidden-text">Menu</button>
 		<nav id="nav" class="nav row" tabindex="-1" role="navigation" aria-hidden="false">
-			<a class="nav-close hidden-text" href="#">Close navigation</a>
+			<button class="nav-close hidden-text">Close menu</button>
 			<ul class="nav-list list-reset links-inv">
 				<li><a<?php if ($self === '/index.php') echo $curr; ?> href="/">Home</a></li>
 				<li><a<?php if ($self === '/tkd.php') echo $curr; ?> href="/tkd.php">Taekwon-Do</a></li>

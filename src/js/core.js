@@ -58,7 +58,7 @@ $(function () {
 	// Calculate current width of 'body' element in em
 	function computeEmWidth() {
 		emWidth = widthElem[widthProp] / fontSize;
-	};
+	}
 	
 	// Compute now and when window is resized
 	computeEmWidth();
@@ -108,33 +108,23 @@ $(function () {
 	}
 	
 	
-	/* ===== Off-canvas responsive navigation ===== */
-	
-	var nav = document.getElementById("nav");
-	var $nav = $(nav);
-	var $navTrigger = $(document.getElementById("nav-trigger"));
+	/* ===== Off-canvas mobile navigation ===== */
 	
 	var navVisible = false;
+	var nav = document.getElementById("nav");
+	var $nav = $(nav);
 	
 	function openNav() {
 		if (!navVisible) {
+			$nav.attr("aria-hidden", false);
 			$bodyWrap.addClass("body-wrap_nav");
-			$nav.addClass('nav_visible');
 			$iframes.attr('tabindex', -1);
 			
-			if (has3d) {
-				$bodyWrap.one('transitionend', navOpened);
-			} else {
-				navOpened();
-			}
-			
+			navToggled(function navOpened() {
+				navVisible = true;
+				$nav.focus();
+			});
 		}
-	}
-	
-	function navOpened() {
-		$nav.attr("aria-hidden", false);
-		$nav.focus();
-		navVisible = true;
 	}
 	
 	function closeNav() {
@@ -142,31 +132,25 @@ $(function () {
 			$bodyWrap.removeClass("body-wrap_nav");
 			$iframes.attr('tabindex', 0);
 			
-			if (has3d) {
-				$bodyWrap.one('transitionend', navClosed);
-			} else {
-				navClosed();
-			}
+			navToggled(function navClosed() {
+				navVisible = false;
+				$body.attr("tabindex", -1).focus();
+				$nav.attr("aria-hidden", true);
+			});
 		}
 	}
 	
-	function navClosed() {
-		$nav.removeClass('nav_visible').attr("aria-hidden", true);
-		$body.focus();
-		navVisible = false;
+	function navToggled(cb) {
+		if (has3d) {
+			$bodyWrap.one('transitionend', cb);
+		} else {
+			cb();
+		}
 	}
 	
-	// Nav button
-	$navTrigger.click(function (evt) {
-		evt.preventDefault();
-		openNav();
-	});
-	
-	// Close button
-	$nav.children(".nav-close").click(function (evt) {
-		evt.preventDefault();
-		closeNav();
-	});
+	// Open/close buttons
+	$(document.getElementById("nav-trigger")).click(openNav);
+	$nav.find(".nav-close").click(closeNav);
 	
 	// Close off-canvas navigation when window is resized
 	$window.resize(closeNav);
