@@ -27,6 +27,29 @@ $(function () {
 });
 
 
+/* ===== Debounced resize event handler ===== */
+
+$.fn.debResize = function (delay, handler) {
+	return this.resize((function () {
+		var timeout;
+		
+		return function debounced() {
+			var that = this;
+			var args = arguments;
+			
+			if (timeout) {
+				clearTimeout(timeout);
+			}
+			
+			timeout = setTimeout(function delayed() {
+				handler.apply(that, args);
+				timeout = null;
+			}, delay);
+		};
+	}()));
+};
+
+
 /* ===== Core initialisation and features ===== */
 
 $(function () {
@@ -47,7 +70,7 @@ $(function () {
 		fontSize = 16;
 	}
 	
-	// Determine way of getting viewport width
+	// Determine best way of getting viewport width
 	var widthElem = window;
 	var widthProp = "innerWidth";
 	if (!(widthProp in widthElem)) {
@@ -55,29 +78,31 @@ $(function () {
 		widthProp = "clientWidth";
 	}
 	
-	// Calculate current width of 'body' element in em
-	function computeEmWidth() {
+	var prevSuffix;
+	var $lazyImages = $bodyWrap.find("img.lazy-loading");
+	
+	function lazyLoad() {
+		// Compute width of 'body' element in em
 		emWidth = widthElem[widthProp] / fontSize;
+
+		// Deduce image filename suffix
+		var suffix = emWidth < 50 ? "-" + (emWidth < 30 ? "mob" : "tab") : "";
+		
+		// If suffix has changed, (re)load images
+		if (suffix !== prevSuffix) {
+			$lazyImages.each(function () {
+				$this = $(this);
+
+				// Build and set 'src' attribute
+				var src = $this.attr("data-src").replace("-suffix", suffix);
+				$this.attr("src", src);
+			});
+		}
 	}
 	
-	// Compute now and when window is resized
-	computeEmWidth();
-	$window.resize(computeEmWidth);
-	
-	// Deduce image filename suffix
-	var suffix = emWidth < 50 ? "-" + (emWidth < 30 ? "mob" : "tab") : "";
-
-	// Load images
-	$bodyWrap.find("img.lazy-loading").each(function () {
-		$this = $(this);
-		
-		// Skip contact page image on mobile
-		if (emWidth > 30 || !$this.hasClass("contact-image")) {
-			// Build and set 'src' attribute
-			var src = $this.attr("data-src").replace("-suffix", suffix);
-			$this.attr("src", src);
-		}
-	});
+	// Lazy-load images now and when window is resized
+	lazyLoad();
+	$window.debResize(200, lazyLoad);
 	
 	
 	/* ===== 3D-transform feature detection ===== */
@@ -153,7 +178,7 @@ $(function () {
 	$nav.find(".nav-close").click(closeNav);
 	
 	// Close off-canvas navigation when window is resized
-	$window.resize(closeNav);
+	$window.debResize(200, closeNav);
 
 	// Keep focus inside navigation when it is visible
 	$(document).on("focusin", function (evt) {
