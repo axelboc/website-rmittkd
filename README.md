@@ -13,13 +13,11 @@ The site is **responsive** and **accessible** (WCAG 2.0 level AA).
 Performance
 -----------
 
-[GTmetrix](http://gtmetrix.com/) report of 06 April 2015:
+[GTmetrix](http://gtmetrix.com/) report of 27 April 2015:
 
 - Page Speed grade: **A** (98%)
-- YSlow grade: **A** (93%)
-- Page load time: **0.95s**
-- Total page size: **322 kB**
-- Total number of requests: **21**
+- YSlow grade: **A** (94%)
+- Page load time: **0.76s**
 
 
 Distribution

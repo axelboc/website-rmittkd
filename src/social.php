@@ -12,7 +12,6 @@
 	<meta property="og:url" content="http://rmittkd.com/social">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-social.css">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>

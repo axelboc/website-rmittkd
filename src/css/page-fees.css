@@ -5,19 +5,27 @@
 
 .fees-hero {
 	position: absolute;
-	pointer-events: none;
-	top: 7em;
+	top: -6.3em;
 	right: 1em;
-	max-width: 45%;
+	max-width: 120px;
 }
 
 .fees-hero--hovered {
 	cursor: pointer;
 }
 
+@media (min-width: 25em) {
+	
+	.fees-hero {
+		max-width: 35%;
+	}
+	
+}
+	
 @media (min-width: 32em) {
 	
 	.fees-hero {
+		top: -9em;
 		max-width: 40%;
 	}
 	
@@ -26,7 +34,7 @@
 @media (min-width: 50em) {
 	
 	.fees-hero {
-		top: 1em;
+		top: -11.5em;
 	}
 	
 }
@@ -58,6 +66,8 @@
 /* ===== Membership ===== */
 
 .membership {
+	position: relative;
+	z-index: 10;
 	padding-top: .5em;
 }
 
@@ -142,7 +152,6 @@
 @media (min-width: 40em) {
 	
 	.membership {
-		position: relative;
 		padding-top: 1em;
 	}
 	
@@ -155,7 +164,7 @@
 		position: absolute;
 		right: 2em;
 		bottom: 2em;
-		width: 16em;
+		width: 15.5em;
 		font-size: 85%;
 		text-align: right;
 	}

@@ -8,8 +8,7 @@
 }
 
 .main-wrap--index,
-.main-wrap--dojang,
-.main-wrap--fees {
+.main-wrap--dojang {
 	margin-top: 35%;
 }
 
@@ -98,6 +97,7 @@
 /* ===== Sections ===== */
 
 .section {
+	position: relative;
 	margin-bottom: 1.4em;
 	background: #f9f9f9;
 	background: transparent -webkit-linear-gradient(top, rgba(255, 255, 255, .85), rgba(221,221,221, .85));

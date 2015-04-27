@@ -11,19 +11,16 @@
 	<meta property="og:url" content="http://rmittkd.com/fees">
 	<meta property="og:site_name" content="RMIT ITF Taekwon-Do">
 	<?php include 'includes/head_css.php'; ?>
-	<link rel="stylesheet" href="css/modules-fees.css">
 	<?php include 'includes/head_js.php'; ?>
 </head>
 <body>
 <div class="body-wrap">
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
-		<div class="body-max">
-			<img id="fees-hero" class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix--tkd.png" width="384" height="311" alt="">
-		</div>
 		<div class="main-wrap main-wrap--fees body-max">
 			<header class="section">
 				<h1 class="section-heading">2015 Full Membership</h1>
+				<img id="fees-hero" class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix--tkd.png" width="384" height="311" alt="">
 				<div class="membership section-content row">
 					<ul class="mbrship-options list-reset row links-blend">
 						<li class="mbrship-opt">
@@ -70,6 +67,5 @@
 </div>
 <?php include 'includes/footer.php'; ?>
 <?php include 'includes/foot_js.php'; ?>
-<script src="js/fees.js"></script>
 </body>
 </html>

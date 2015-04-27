@@ -6,7 +6,8 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		
 		clean: {
-			src: ['dist']
+			pre: ['dist'],
+			post: ['dist/css/*.css', '!dist/css/*.min.css', 'dist/css/lib', 'dist/js/*.js', '!dist/js/*.min.js']
 		},
 		
 		copy: {
@@ -14,32 +15,7 @@ module.exports = function(grunt) {
 				files: [{
 					expand: true,
 					cwd: 'src/',
-					src: ['**', '.htaccess', '!**/Thumbs.db', '!data/error.log', '!data/videos.xml'],
-					dest: 'dist'
-				}]
-			}
-		},
-		
-		csslint: {
-			// Lint CSS files
-			lint: {
-				src: ['src/css/*.css'],
-				options: {
-					"duplicate-background-images": false,
-					"box-sizing": false,
-					"box-model": false,
-					"outline-none": false,
-					"gradients": false
-				}
-			}
-		},
-		
-		cssmin: {
-			dist: {
-				files: [{
-					expand: true,
-					cwd: 'dist/',
-					src: ['css/**/*.css'],
+					src: ['**', '.htaccess', '!**/Thumbs.db', '!data/error.log'],
 					dest: 'dist'
 				}]
 			}
@@ -50,31 +26,20 @@ module.exports = function(grunt) {
 			files: ['Gruntfile.js', 'src/js/*.js']
 		},
 		
-		uglify: {
-			dist: {
-				files: [{
-					expand: true,
-					cwd: 'dist/',
-					src: ['js/*.js'],
-					dest: 'dist'
-				}]
-			}
+		useref: {
+			html: ['dist/includes/head_css.php', 'dist/includes/foot_js.php'],
+			temp: 'dist'
 		}
 		
 	});
 	
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
-	grunt.loadNpmTasks('grunt-contrib-csslint');
-	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
-	grunt.loadNpmTasks('grunt-contrib-uglify');
-	
-	// Run 'grunt' to lint JS and CSS
-	grunt.registerTask('default', ['jshint', 'csslint']);
+	grunt.loadNpmTasks('grunt-useref');
 	
 	// Run 'grunt dist' to distribute the website
-	grunt.registerTask('dist', ['jshint', 'clean', 'copy', 'uglify', 'cssmin']);
+	grunt.registerTask('default', ['jshint', 'clean:pre', 'copy', 'useref', 'concat', 'uglify', 'cssmin']);
 
 };
 

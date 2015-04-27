@@ -1,8 +1,12 @@
 
 $(function () {
 
-	var $document = $(document);
 	var $instr = $(document.getElementById("instructors"));
+	if ($instr.length === 0) {
+		return;
+	}
+	
+	var $document = $(document);
 	var $profiles = $instr.find(".instr-profile");
 	var $arrowPrev = $instr.find(".instr-arrow-prev");
 	var $arrowNext = $instr.find(".instr-arrow-next");
@@ -165,4 +169,3 @@ $(function () {
 	});
 	
 });
-

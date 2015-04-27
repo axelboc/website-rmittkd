@@ -1,8 +1,12 @@
 
 $(function () {
 	
-	var $document = $(document);
 	var $cal = $(document.getElementById("calendar"));
+	if ($cal.length === 0) {
+		return;
+	}
+	
+	var $document = $(document);
 	var $monthsCont = $cal.children(".cal-months");
 	var $months = $monthsCont.children(".cal-month");
 	var $arrowPrev = $cal.children(".cal-arrow--prev");
@@ -126,4 +130,3 @@ $(function () {
 	$document.keydown(onKeyDown(nextMonth, 39));
 	
 });
-

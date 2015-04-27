@@ -1,8 +1,13 @@
+
 $(function () {
 	
 	var GENERIC_ERROR = "Sorry, something went wrong. Try again later, or get in touch with us on <a href=\"https://www.facebook.com/rmittkd\" class=\"link-blend\">Facebook</a>.";
 	
 	var $form = $(document.getElementById("contact-form"));
+	if ($form.length === 0) {
+		return;
+	}
+	
 	var $fields = $form.find(".form-field");
 	var $errors = $form.find(".form-error");
 	var $resultBox = $form.find(".form-result-wrap");

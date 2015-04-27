@@ -4,8 +4,8 @@
 <head>
 	<title>Administration | RMIT ITF Taekwon-Do</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<?php include 'includes/head_css.php'; ?>
-	<?php include 'includes/head_js.php'; ?>
+	<?php include '../includes/head_css.php'; ?>
+	<?php include '../includes/head_js.php'; ?>
 </head>
 <body>
 <div class="body-wrap">
