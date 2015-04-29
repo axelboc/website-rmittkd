@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-useref');
 	
 	// Run 'grunt dist' to distribute the website
-	grunt.registerTask('default', ['jshint', 'clean:pre', 'copy', 'useref', 'concat', 'uglify', 'cssmin']);
+	grunt.registerTask('default', ['jshint', 'clean:pre', 'copy', 'useref', 'concat', 'uglify', 'cssmin', 'clean:post']);
 
 };
 

@@ -5,17 +5,19 @@
 
 .dojang-hero {
 	position: absolute;
-	top: 6.5em;
-	right: .5em;
-	max-width: 57%;
+	top: -6em;
+	right: 1em;
+	width: 45%;
+	min-width: 140px;
+	max-width: 160px;
 }
 
 @media (min-width: 32em) {
 		
 	.dojang-hero {
-		top: 7.5em;
-		right: .5em;
-		max-width: 50%;
+		top: -8.5em;
+		width: 50%;
+		max-width: none;
 	}
 	
 	.dojang-p1 {
@@ -47,7 +49,7 @@
 	}
 	
 	.dojang-p3 {
-		padding-right: 15%;
+		padding-right: 20%;
 	}
 	
 }
@@ -55,22 +57,15 @@
 @media (min-width: 50em) {
 	
 	.dojang-hero {
-		top: 2em;
-		right: .6em;
-		max-width: 50%;
+		top: -11em;
 	}
 	
 	.dojang-content {
 		margin-right: 5%;
 	}
 	
-}
-
-@media (min-width: 54em) {
-	
-	.dojang-hero {
-		top: 1em;
-		max-width: 49%;
+	.dojang-p3 {
+		padding-right: 25%;
 	}
 	
 }
@@ -78,9 +73,7 @@
 @media (min-width: 60em) {
 	
 	.dojang-hero {
-		top: 1.6em;
-		right: 1.7em;
-		max-width: 100%;
+		width: auto;
 	}
 	
 	.dojang-content {

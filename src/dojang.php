@@ -17,12 +17,10 @@
 <div class="body-wrap">
     <?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
-		<div class="body-max">
-			<img class="dojang-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-dojang-suffix.png" width="530" height="411" alt="">
-		</div>
-		<div class="main-wrap main-wrap--dojang body-max">
+		<div class="main-wrap body-max">
 			<header class="section row">
 				<h1 class="section-heading">Our Dojang</h1>
+				<img class="dojang-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-dojang-suffix.png" width="530" height="411" alt="">
 				<div class="dojang-content section-content lh">
 					<p class="dojang-p1">We're a diverse group of students, alumni and members of the public, ranging from beginners to experienced black belts. We're lucky to be trained by <strong>accomplished instructors</strong>, whose dedication to Taekwon-Do is inspiring.</p>
 					<p class="dojang-p2">All members have the opportunity to <strong>compete</strong> in multiple local and national events each year. Two members even had the privilege to compete at the ITF World Championship!</p>

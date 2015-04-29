@@ -17,7 +17,7 @@
 <div class="body-wrap">
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
-		<div class="main-wrap main-wrap--fees body-max">
+		<div class="main-wrap body-max">
 			<header class="section">
 				<h1 class="section-heading">2015 Full Membership</h1>
 				<img id="fees-hero" class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix--tkd.png" width="384" height="311" alt="">

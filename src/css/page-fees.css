@@ -10,10 +10,6 @@
 	max-width: 120px;
 }
 
-.fees-hero--hovered {
-	cursor: pointer;
-}
-
 @media (min-width: 25em) {
 	
 	.fees-hero {

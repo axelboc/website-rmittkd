@@ -7,8 +7,7 @@
 	margin-top: 6.7em;
 }
 
-.main-wrap--index,
-.main-wrap--dojang {
+.main-wrap--index {
 	margin-top: 35%;
 }
 
@@ -20,10 +19,6 @@
 	
 	.main-wrap--index {
 		margin-top: 35%;
-	}
-	
-	.main-wrap--contact {
-		margin-top: 22%;
 	}
 	
 }

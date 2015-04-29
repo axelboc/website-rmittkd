@@ -11,7 +11,7 @@
 <div class="body-wrap">
 	<?php include '../includes/header.php'; ?>
 	<article class="main row" role="main">
-		<div class="main-wrap main-wrap--admin body-max">
+		<div class="main-wrap body-max">
 			<?php
 				if (empty($_SESSION['authenticated'])) {
 					include 'includes/login.php';
