@@ -64,7 +64,7 @@
 				<div class="lay-main">
 					<section class="faq section">
 						<h2 class="faq-heading section-heading">Frequently Asked Questions</h2>
-						<dl class="faq-list section-content row">
+						<dl class="faq-list section-content row links-blend">
 							<dt class="faq-q">I'm a complete beginner. Is it okay?</dt>
 								<dd class="faq-a lh">It sure is! We welcome any level of fitness and skills &ndash; no judgment, no pressure.</dd>
 							<dt class="faq-q">What exactly do you do at training?</dt>
@@ -76,11 +76,13 @@
 							<dt class="faq-q">I've done martial arts before. Can I bring my own uniform and gear?</dt>
 								<dd class="faq-a lh">Sorry, but only ITF and CHITF Taekwon-Do uniforms are allowed in class. Gloves and boots are provided by the club.</dd>
 							<dt class="faq-q">What time do classes start?</dt>
-								<dd class="faq-a lh">Class times are displayed on the <a class="link-blend" href="/">homepage</a>. However, if it is your first class, please come in 15 minutes beforehand to introduce yourself and fill out some paperwork (contact details, next of kin, etc.)</dd>
+								<dd class="faq-a lh">Class times are displayed on the <a href="/">homepage</a>. However, if it is your first class, please come in 15 minutes beforehand to introduce yourself and fill out some paperwork (contact details, next of kin, etc.)</dd>
 							<dt class="faq-q">What happens if I get injured during class?</dt>
 								<dd class="faq-a lh">All members (inc. non-RMIT) are covered by RMIT's insurance. You are also covered during your first three free classes.</dd>
 							<dt class="faq-q">How do I purchase the membership?</dt>
-								<dd class="faq-a lh">You can purchase your membership online, on <a class="link-blend" href="http://rmitlink.rmit.edu.au/" target="_blank">RMIT Link</a>. Before you start, make sure you first create an account and join the club from the club's page. The process is a bit complex, so we've put together a <a class="link-blend" href="docs/RMIT%20Link%20sign-up.pdf" target="_blank">step-by-step tutorial (PDF, 363 kB)</a>.</dd>
+								<dd class="faq-a lh">You can purchase your membership online, on <a href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" target="_blank">RMIT Link</a>. Before you start, make sure you first create an account and join the club from the club's page. The process is a bit complex, so we've put together a <a href="/docs/RMIT%20Link%20sign-up.pdf" target="_blank">step-by-step tutorial (PDF, 363 kB)</a>.</dd>
+							<dt class="faq-q">What do I need to do to grade?</dt>
+								<dd class="faq-a lh">First, it's important that you check with the instructors that you are ready&mdash;they will base their recommendation on your attendance, attitude and skills. Second, go to RMIT Link and purchase the <a href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" target="_blank">grading fees</a>. Third, download, print and fill in the <a href="/docs/Grading%20form.pdf">grading form (PDF, 43 kB)</a> and bring it with you to the grading. If you miss any of these steps, you will not be able to grade. Finally, to make the best impression, make sure you come in early on the day of the grading with a clean, ironed uniform.</dd>
 						</dl>
 					</section>
 		    	</div>
