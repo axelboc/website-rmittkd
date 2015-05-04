@@ -36,29 +36,6 @@
 }
 
 
-/* ===== Fee (value + period) ===== */
-
-.fee {
-	position: relative;
-	display: inline-block;
-	padding-bottom: .5em;
-	margin: 0 0 .8em;
-	color: #777;
-}
-
-.fee-val {
-	font-size: 350%;
-	letter-spacing: -.06em;
-}
-
-.fee-period {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	font-size: 80%;
-}
-
-
 /* ===== Membership ===== */
 
 .membership {
@@ -81,7 +58,8 @@
 	box-shadow: 0 0 3px #aaa;
 	text-align: center;
 	text-decoration: none;
-	transition: all .15s ease;
+	transition: background-color .15s ease,
+				box-shadow .15s ease;
 }
 
 .mbrship-opt-link:hover,
@@ -89,11 +67,27 @@
 	background-color: #f5f5f5;
 	box-shadow: 0 0 6px #aaa;
 	transition-duration: .3s;
-	cursor: pointer !important;
 }
 
 .mbrship-fee {
+	position: relative;
+	display: inline-block;
+	padding-bottom: .5em;
+	margin: 0 0 .8em;
+	color: #777;
 	font-size: 130%;
+}
+
+.mbrship-val {
+	font-size: 350%;
+	letter-spacing: -.06em;
+}
+
+.mbrship-period {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	font-size: 80%;
 }
 
 .mbrship-group {
@@ -108,11 +102,11 @@
 }
 
 .mbrship-note {
-	max-width: 25em;
+	margin: 1.5em 0;
 }
 
-.mbrship-note > p:last-child {
-	margin-bottom: .8em;
+.mbrship-note > p {
+	margin: .5em 0;
 }
 
 @media (min-width: 24em) {
@@ -120,6 +114,7 @@
 	.mbrship-opt {
 		float: left;
 		width: 50%;
+		padding: 0;
 		font-size: 80%;
 	}
 	
@@ -137,7 +132,15 @@
 	
 }
 
-@media (min-width: 32em) {
+@media (min-width: 28em) {
+    
+	.mbrship-opt {
+		font-size: 95%;
+    }
+    
+}
+
+@media (min-width: 34em) {
     
     .mbrship-options {
         max-width: 80%;
@@ -145,7 +148,7 @@
     
 }
 
-@media (min-width: 40em) {
+@media (min-width: 41em) {
 	
 	.membership {
 		padding-top: 1em;
@@ -153,161 +156,35 @@
 	
 	.mbrship-options {
         max-width: 68%;
-		padding: .8em 1em 1.2em;
+		padding: .5em 1em .8em;
+	}
+	
+}
+
+@media (min-width: 48em) {
+	
+	.mbrship-options {
+        max-width: 60%;
+	}
+	
+}
+
+@media (min-width: 52em) {
+	
+	.membership {
+		padding-bottom: 1em;
+	}
+	
+	.mbrship-options {
+        max-width: 53%;
 	}
 	
 	.mbrship-note {
 		position: absolute;
 		right: 2em;
-		bottom: 2em;
-		width: 15.5em;
-		font-size: 85%;
+		bottom: 0;
+		font-size: 110%;
 		text-align: right;
 	}
 	
 }
-
-@media (min-width: 43em) {
-	
-	.mbrship-opt {
-		font-size: 100%;
-	}
-	
-}
-
-@media (min-width: 50em) {
-	
-	.mbrship-options {
-        max-width: 58%;
-	}
-	
-}
-
-
-/* ===== Lessons ===== */
-
-.lessons {
-	font-size: 90%;
-}
-
-.lessons-fee {
-	margin: 1em 0 2em;
-}
-
-.lessons-each,
-.lessons-month {
-    display: inline-block;
-	font-size: 95%;
-}
-
-.lessons-each {
-    margin-right: 1em;
-}
-
-.lessons-each > .fee-period,
-.lessons-month > .fee-period {
-	bottom: -.8em;
-    font-size: 110%;
-}
-
-.lessons-3free {
-	font-size: 200%;
-	border-top: 2px solid #777;
-	margin: .5em 0;
-	padding: 1em 0 0;
-	color: #777;
-	overflow: hidden;
-}
-
-.lessons-3 {
-	float: left;
-	display: block;
-	width: 4em;
-	position: relative;
-	top: -.2em; 
-	text-align: right;
-}
-
-.lessons-free {
-	text-transform: uppercase;
-	font-size: 200%;
-	margin-left: .2em;
-}
-
-.lessons-note {
-	max-width: 25em;
-}
-
-@media (min-width: 43.5em) {
-	
-	.lessons {
-		position: relative;
-		padding-left: 270px;
-		min-height: 210px;
-	}
-	
-	.lessons-cards-img {
-		float: left;
-		position: absolute;
-		bottom: 0;
-		left: 12px;
-		margin-right: 1.5em;
-	}
-
-}
-
-@media (min-width: 43.5em) and (max-width: 46.99em) {
-    
-    .lessons-each,
-    .lessons-month {
-        font-size: 85%;
-    }
-     
-}
-
-@media (min-width: 50em) {
-    
-	.lessons-month {
-        margin-left: 2em;
-    }
-    
-}
-
-@media (min-width: 55em) {
-
-    .lessons-note {
-        position: absolute;
-		right: 2em;
-		bottom: 2.8em;
-        max-width: 15em;
-        text-align: right;
-		font-size: 95%;
-    }
-    
-}
-
-
-@media (min-width: 60em) {
-
-    .lessons-fee {
-        margin-bottom: 1em;
-    }
-	
-	.lessons-each,
-	.lessons-month {
-		font-size: 120%;
-	}
-
-    .lessons-each > .fee-period,
-    .lessons-month > .fee-period {
-	    bottom: -.3em;
-        font-size: 100%;
-    }
-	
-    .lessons-note {
-		bottom: 2em;
-    }
-    
-}
-
-
