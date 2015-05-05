@@ -1,13 +1,9 @@
 RMIT ITF Taekwon-Do
 ===================
 
-Website of the RMIT ITF Taekwon-Do club.
+Website of the RMIT ITF Taekwon-Do club. Official release: 16 November 2013. The site is **responsive** and **accessible** (WCAG 2.0 level AA).
 
 **http://rmittkd.com**
-
-Official release: 16 November 2013.
-
-The site is **responsive** and **accessible** (WCAG 2.0 level AA).
 
 
 Performance
@@ -23,15 +19,11 @@ Performance
 Distribution
 ------------
 
-[Grunt](http://gruntjs.com/) is used for distribution. Clone the repository on your local machine, install the project's dependencies with `npm install`, then run `grunt dist`.
-
-This command will lint JS files, copy all source files to the **dist** folder, then minify all JS and CSS files within that folder.
+[Grunt](http://gruntjs.com/) is used for distribution. Fork and clone the repository on your machine, install the dependencies with `npm install`, then run `grunt` to distribute.
 
 
-Known issues
-------------
-
-###Accessibility###
+Known accessibility issues
+--------------------------
 
 - Lack of focus indicator when tabbing through Youtube channel widget on social page.
 - Keyboard trap caused by Youtube player on social page in Firefox.
