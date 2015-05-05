@@ -63,10 +63,6 @@ $emailConfig = [
 				'email' => CLUB_EMAIL,
 				'name' => 'RMIT ITF Taekwon-Do',
 				'type' => 'to'
-			],
-			[
-				'email' => BCC_EMAIL,
-				'type' => 'bcc'
 			]
 		],
 		'headers' => [
@@ -74,6 +70,14 @@ $emailConfig = [
 		]
 	]
 ];
+
+// If BCC email provided, add it to the configuration
+if (strlen(BCC_EMAIL) > 0) {
+	$emailConfig['message']['to'][] = [
+		'email' => BCC_EMAIL,
+		'type' => 'bcc'
+	];
+}
 
 // Prepare to send email via Mandrill
 $curl = curl_init();
