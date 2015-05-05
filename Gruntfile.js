@@ -80,7 +80,7 @@ module.exports = function(grunt) {
 					expand: true,
 					cwd: 'src/',
 					src: [
-						'**', '.htaccess', '!**/Thumbs.db', '!data/error.log',
+						'**', '.htaccess', '!**/Thumbs.db', '!data/error.log', '!core/config-sample.php',
 						'!css/**', '!js/**'
 					],
 					dest: 'dist'
