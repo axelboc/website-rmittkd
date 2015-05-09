@@ -1,5 +1,6 @@
 
 $(function () {
+	"use strict";
 
 	var $instr = $(document.getElementById("instructors"));
 	if ($instr.length === 0) {

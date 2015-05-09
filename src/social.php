@@ -18,7 +18,7 @@
 <div class="body-wrap">
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
-		<div class="main-wrap body-max">
+		<div class="main-wrap main-wrap--social body-max">
 			<div class="row">
 				<section class="yt-section section row">
 					<h2 class="section-heading">YouTube</h2>
@@ -36,8 +36,8 @@
 				</section>
 			</div>
 			<div class="row">
-				<div class="lay-main">
-					<section class="section section-1of2 section-first">
+				<div class="lay-main lay-main row">
+					<section class="links-section section section-1of2 section-first">
 						<h1 class="section-heading">Links</h1>
 						<div class="links-wrap section-content row">
 							<section class="box">
@@ -60,10 +60,21 @@
 							</section>
 						</div>
 					</section>
-					<section class="section section-1of2">
-						<h2 class="section-heading">Facebook</h2>
-						<div class="fb-wrap section-content">
-							<iframe class="fb-box" src="//www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2Frmittkd&amp;width=292&amp;height=404&amp;colorscheme=light&amp;show_faces=false&amp;header=false&amp;stream=true&amp;show_border=false"></iframe>
+					<section class="fb-section section section-1of2">
+						<div id="fb-root"></div>
+						<div class="fb-loading hidden">
+							<h2 class="section-heading">Facebook</h2>
+							<img class="fb-spinner" src="images/spinner.png" alt="Loading..." width="100" height="100">
+						</div>
+						<div class="fb-page" data-href="https://www.facebook.com/rmittkd" data-width="375" data-height="427" data-hide-cover="false" data-show-facepile="false" data-show-posts="true">
+							<div class="fb-xfbml-parse-ignore">
+								<div class="fb-fallback">
+									<h2 class="section-heading">Facebook</h2>
+									<div class="section-content">
+										<p class="fb-fallback-txt hidden"><a class="link-blend" href="https://www.facebook.com/rmittkd">RMIT ITF Taekwon-Do</a></p>
+									</div>
+								</div>
+							</div>
 						</div>
 					</section>
 				</div>

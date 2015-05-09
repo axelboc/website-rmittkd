@@ -75,6 +75,20 @@
 	
 }
 
+/* Hide sidebar on social page between 40em and 50em, because of Facebook feed's min width of 280px */
+@media (min-width: 40em) and (max-width: 49.99em) {
+	
+	.main-wrap--social .lay-main {
+		margin-right: 0;
+		width: 100%;
+	}
+	
+	.main-wrap--social .lay-side {
+		display: none;
+	}
+	
+}
+
 /* Reduce proportinal size of sidebar */
 @media (min-width: 50em) {
 

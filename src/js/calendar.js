@@ -1,5 +1,6 @@
 
 $(function () {
+	"use strict";
 	
 	var $cal = $(document.getElementById("calendar"));
 	if ($cal.length === 0) {

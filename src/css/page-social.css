@@ -161,21 +161,36 @@
 
 /* ===== Facebook Like Box =====*/
 
-.fb-wrap {
-	overflow: hidden;
-	padding: 0;
-}
-
-.fb-box {
-	display: block;
-	width: 100%;
-	height: 404px;
-	overflow:hidden;
-	border:none;
-	/* Hide footer link 'Facebook social plugin' */
+.fb-section {
 	position: relative;
-	top: 2em;
-	margin-top: -2em;
+	overflow: hidden;
+	min-height: 427px;
 }
 
+.fb-loading {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
 
+.fb-spinner {
+	margin: 3em auto;
+}
+
+.fb-page {
+	display: block!important;
+}
+
+.fb-page > span,
+.fb-page iframe {
+	position: static!important;
+	display: block!important;
+	width: 100%!important;
+	height: auto!important;
+	overflow: visible!important;
+}
+
+.fb-page iframe {
+	height: 427px!important;
+}

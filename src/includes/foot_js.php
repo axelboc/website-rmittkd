@@ -2,4 +2,5 @@
 <script src="/js/core.js"></script>
 <script src="/js/calendar.js"></script>
 <script src="/js/instructors.js"></script>
+<script src="/js/facebook.js"></script>
 <script src="/js/contact.js"></script>

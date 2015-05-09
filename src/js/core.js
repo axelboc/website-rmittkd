@@ -6,6 +6,7 @@ var emWidth;
 /* ===== Exception tracking ===== */
 
 $(function () {
+	"use strict";
 	
 	// Track JS errors
 	window.addEventListener('error', function(evt) {
@@ -30,6 +31,8 @@ $(function () {
 /* ===== Debounced resize event handler ===== */
 
 $.fn.debResize = function (handler) {
+	"use strict";
+	
 	return this.resize((function () {
 		var timeout;
 		
@@ -53,6 +56,7 @@ $.fn.debResize = function (handler) {
 /* ===== Core initialisation and features ===== */
 
 $(function () {
+	"use strict";
 	
 	var $window = $(window);
 	var $html = $('html');
@@ -91,7 +95,7 @@ $(function () {
 		// If suffix has changed, (re)load images
 		if (suffix !== prevSuffix) {
 			$lazyImages.each(function () {
-				$this = $(this);
+				var $this = $(this);
 				
 				// Do not load if image is hidden at this width
 				var hiddenUntil = $this.attr("data-hidden-until");
