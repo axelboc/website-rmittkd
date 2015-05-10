@@ -2,6 +2,8 @@
 $(function () {
 	'use strict';
 	
+	/* ===== Facebook feed ===== */
+	
 	// Stop if `.fb-root` element not found (not social page)
 	if ($(document.getElementById('fb-root')).length === 0) {
 		return;
@@ -20,10 +22,14 @@ $(function () {
 	
 	// Hide fallback and show loading spinner
 	$('.fb-fallback').addClass('hidden');
+	$fbLoading.removeClass('hidden');
 	
-	// Load SDK
-	$.ajaxSetup({ cache: true });
-	$.getScript('//connect.facebook.net/en_US/sdk.js', function() {
+	// Load Facebook SDK
+	$.ajax({
+		url: '//connect.facebook.net/en_US/sdk.js',
+		dataType: "script",
+		cache: true
+	}).done(function() {
 		// Initialise SDK
 		FB.init({
 			xfbml: false,
