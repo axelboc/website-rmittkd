@@ -3,7 +3,7 @@
 class Videos extends Feature {
 	
 	private static $urlRegex = '/^.+youtube\.com\/watch\?v=(.+)(&.*)?$/';
-	private static $iframeUrlFormat = '//www.youtube.com/embed/{{id}}?rel=0&amp;wmode=transparent';
+	private static $iframeUrlFormat = 'https://www.youtube.com/embed/{{id}}?rel=0&amp;wmode=transparent';
 
 	/**
 	 * Print the URL of a YouTube video.
