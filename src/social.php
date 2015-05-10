@@ -19,21 +19,13 @@
 	<?php include 'includes/header.php'; ?>
 	<article class="main row" role="main">
 		<div class="main-wrap main-wrap--social body-max">
-			<div class="row">
-				<section class="yt-section section row">
-					<h2 class="section-heading">YouTube</h2>
-					<div class="yt-wrap section-content row">
-						<div class="yt-subscribe">
-							<div class="g-ytsubscribe" data-channelid="UCC6zmnN4NLQyvlFLfdr18Dw" data-layout="full" data-count="hidden"></div>
-						</div>
-						<div class="video video--first">
-							<iframe src="<?php Videos::iframeUrl(0); ?>" frameborder="0" allowfullscreen></iframe>
-						</div>
-						<div class="video">
-							<iframe src="<?php Videos::iframeUrl(1); ?>" frameborder="0" allowfullscreen></iframe>
-						</div>
-					</div>
-				</section>
+			<div class="yt-wrap row">
+				<div class="video video--first">
+					<iframe src="<?php Videos::iframeUrl(0); ?>" frameborder="0" allowfullscreen></iframe>
+				</div>
+				<div class="video">
+					<iframe src="<?php Videos::iframeUrl(1); ?>" frameborder="0" allowfullscreen></iframe>
+				</div>
 			</div>
 			<div class="row">
 				<div class="lay-main lay-main row">
@@ -85,6 +77,5 @@
 </div>
 <?php include 'includes/footer.php'; ?>
 <?php include 'includes/foot_js.php'; ?>
-<script src="https://apis.google.com/js/platform.js"></script>
 </body>
 </html>
