@@ -15,9 +15,3 @@ Performance
 Distribution
 ------------
 [Grunt](http://gruntjs.com/) is used for distribution. Fork and clone the repository on your machine, install the dependencies with `npm install`, then run `grunt` to distribute.
-
-Known accessibility issues
---------------------------
-- Lack of focus indicator when tabbing through Youtube channel widget on social page.
-- Keyboard trap caused by Youtube player on social page in Firefox.
-- Unable to tab inside Youtube player on social page in Chrome.
