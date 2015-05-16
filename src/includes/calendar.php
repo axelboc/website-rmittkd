@@ -19,21 +19,9 @@ if ($currentMonth > 1) {
 $prevMonthId = $currentYear . '-' . $currentMonth;
 
 
-// Until we reach the current month, the months should come chronologicaly before the current month
-$defaultClass = 'before';
-
 // Loop through the months
 foreach ($months as $m) {
 	$monthId = (string)$m['id'];
-	
-	// Compute initial class of month element
-	if ($monthId === $currentMonthId) {
-		$class = 'current';
-		// The months that follow should come chronologicaly after the current month
-		$defaultClass = 'after';
-	} else {
-		$class = $monthId === $prevMonthId ? 'previous' : $defaultClass;
-	}
 	
 	// Get filename of image
 	$img = isset($m['img']) ? $m['img'] : 'placeholder';
@@ -43,7 +31,7 @@ foreach ($months as $m) {
 	$monthStr = date('F', mktime(0, 0, 0, intval($expMonthId[1]), 1));
 	
 	?>
-	<div class="cal-month cal-month--<?php echo $class; ?>" tabindex="-1" aria-hidden="<?php echo(($class === 'before' || $class === 'after') ? 'true' : 'false'); ?>">
+	<div class="cal-month car-slide" aria-hidden="<?php echo ($monthId === $currentMonthId ? 'false' : 'true'); ?>">
 		<div class="cal-month-inner">
 			<div class="respimg-wrap">
 				<img class="cal-img respimg-crop lazy-loading" src="" data-src="images/calendar/<?php echo $img; ?>.jpg" width="408" height="150" alt="">

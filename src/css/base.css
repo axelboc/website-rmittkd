@@ -178,9 +178,13 @@ img {
 }
 
 
-/* ===== Hidden elements ===== */
+/* ===== Hidden and disabled elements ===== */
 
-/* Hidden from screen readers */
+:disabled {
+	opacity: .5;
+}
+
+/* Hidden from screen readers (`[hidden]` already covered by normalize.css) */
 .hidden {
 	display: none;
 }

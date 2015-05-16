@@ -96,14 +96,14 @@
 					</div>
 					<section class="section cal-section">
 						<h2 class="section-heading">Calendar</h2>
-						<div class="section-content cal-wrapper">
-							<div id="calendar" class="calendar">
-								<a class="cal-arrow cal-arrow--prev hidden-text" href="#">Previous month</a>
-								<div class="cal-months row">
+						<div id="calendar" class="calendar">
+							<button class="cal-arrow cal-arrow--prev car-prev hidden-text">Previous month</button>
+							<div class="cal-inner">
+								<div class="cal-months car-container row" data-position="1" data-max-position="4">
 									<?php include 'includes/calendar.php'; ?>
 								</div>
-								<a class="cal-arrow cal-arrow--next hidden-text" href="#">Following month</a>
 							</div>
+							<button class="cal-arrow cal-arrow--next car-next hidden-text">Next month</button>
 						</div>
 					</section>
 				</div>

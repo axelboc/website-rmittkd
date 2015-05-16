@@ -94,19 +94,34 @@
 	overflow: hidden; /* apply border radius to belt images */
 }
 
-.instr-content {
+.instr-profiles {
 	position: relative;
+	width: 300%;
+	transform: translate3d(0, 0, 0);
+	transition: transform .7s ease;
 }
 
+.instr-profiles[data-position="1"] { transform: translate3d(-33.33%, 0, 0); }
+.instr-profiles[data-position="2"] { transform: translate3d(-66.66%, 0, 0); }
+
+.no3d .instr-profiles { left: 0; }
+.no3d .instr-profiles[data-position="1"] { left: -100%; }
+.no3d .instr-profiles[data-position="2"] { left: -200%; }
+
 .instr-profile {
-	width: 100%;
+	float: left;
+	width: 33.33%;
+	padding-right: 12px;
+}
+
+.instr-profile[aria-hidden="true"] {
+	visibility: hidden;
 }
 
 .instr-images {
 	position: relative;
 	height: 254px;
 	overflow: hidden;
-	margin-left: -12px; /* compensate for section padding to bring belt images against left edge */
 }
 
 .instr-belt {
@@ -130,56 +145,28 @@
 	padding-left: 0;
 }
 
-.instr-controls-wrap {
-	padding-bottom: 10px;
-}
-
 .instr-controls {
-	width: 125px;
-	margin: 0 auto;
-}
-
-.instr-controls > li {
-	float: left;
+	padding-bottom: 10px;
+	text-align: center;
 }
 
 .instr-arrow,
 .instr-dot {
-	display: block;
+	display: inline-block;
 	width: 25px;
 	height: 25px;
-	background: transparent center bottom no-repeat url('../images/instr-graphics.png');
+	padding: 0;
+	background: url('../images/instr-graphics.png') no-repeat center bottom transparent;
+	border: none;
 }
 
-.instr-arrow-prev {
-	background-position: left bottom;
-}
-
-.instr-arrow-next {
-	background-position: right bottom;
-}
-
-.instr-arrow-prev:hover,
-.instr-arrow-prev:focus {
-	background-position: left top;
-}
-
-.instr-arrow-next:hover,
-.instr-arrow-next:focus {
-	background-position: right top;
-}
-
-.instr-arrow-prev.arrow-disabled {
-	background-position: left bottom;
-}
-
-.instr-arrow-next.arrow-disabled {
-	background-position: right bottom;
-}
+.instr-arrow--prev { background-position: left bottom; }
+.instr-arrow--next { background-position: right bottom; }
+.instr-arrow--prev:not(:disabled):hover { background-position: left top; }
+.instr-arrow--next:not(:disabled):hover { background-position: right top; }
 
 .instr-dot:hover,
-.instr-dot:focus,
-.instr-dot-selected {
+.instr-dot[aria-selected="true"] {
 	background-position: center top;
 }
 
@@ -205,7 +192,7 @@
 		font-size: 90%;
 	}
 	
-	.instr-controls-wrap {
+	.instr-controls {
 		position: absolute;
 		right: 0;
 		bottom: 0;

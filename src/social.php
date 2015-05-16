@@ -52,7 +52,7 @@
 							</section>
 						</div>
 					</section>
-					<section class="fb-section section section-1of2">
+					<section id="facebook-feed" class="fb-section section section-1of2">
 						<div id="fb-root"></div>
 						<div class="fb-loading hidden">
 							<h2 class="section-heading">Facebook</h2>

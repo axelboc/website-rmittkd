@@ -8,32 +8,22 @@
 - Headings (<heading> tag) may be used inside month tags, in between events.
 -->
 <calendar>
-	<month id="2015-1" img="barbecue">
-		<event date="19">Classes start</event>
-	</month>
-	<month id="2015-2" img="clubday4">
-		<event date="20">Committee meeting</event>
-		<event date="24-25">Orientation Day - Brunswick, Bundoora</event>
-	</month>
-	<month id="2015-3" img="clubday5">
-		<event date="5">Orientation Day - City</event>
-		<event date="18, 25">Beginner classes (6:30-7:30)</event>
-		<event date="30">First 60 Days event</event>
-	</month>
 	<month id="2015-4" img="grading1">
 		<event date="1, 8, 15">Beginner classes (6:30-7:30)</event>
 		<event date="10">Colour-belt grading</event>
 		<event date="11">Black-belt grading</event>
 	</month>
-	<month id="2015-5" img="camp2">
-		<event date="3">Cinema</event>
-		<event date="TBC">Training camp</event>
+	<month id="2015-5" img="imag10">
+		<event date="3">Movie night</event>
 	</month>
-	<month id="2015-6" img="imag10">
+	<month id="2015-6" img="camp2">
+		<event date="TBC">Training camp</event>
 	</month>
 	<month id="2015-7" img="fun2">
 	</month>
 	<month id="2015-8" img="champs5">
-		<event date="23">RMIT Champs</event>
+		<event date="30">RMIT Champs</event>
+	</month>
+	<month id="2015-9">
 	</month>
 </calendar>
