@@ -203,14 +203,6 @@ img {
 }
 
 
-/* ===== Disabled carousel arrows (calendar and instructors) ===== */
-
-.arrow-disabled {
-	opacity: .6;
-	cursor: default;
-}
-
-
 /* ===== DRY CSS for intentionally-duplicated property/value pairs ===== */
 
 .section-heading,
