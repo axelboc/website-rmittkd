@@ -17,8 +17,14 @@ $submission = new FormSubmission('/contact#contact');
 
 // Spam trap: URL field must be left empty
 if (isset($_POST['url']) && $_POST['url'] !== '') {
+	// Prepare log message
+	$log = '[form-contact] spam caught';
+	if (isset($_POST['message']) {
+		 $log .= ' - message="' .  strip_tags($_POST['message']) . '"';
+	}
+	
 	// Make it look like the message was successfully sent
-	$submission->exitWithResult(true, CONTACT_SUCCESS);
+	$submission->exitWithResult(true, CONTACT_SUCCESS, $log);
 }
 
 // Prepare fields for validation
