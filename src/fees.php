@@ -22,7 +22,7 @@
 				<h1 class="section-heading">Membership Fees</h1>
 				<img id="fees-hero" class="fees-hero hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-fees-suffix--tkd.png" width="384" height="311" alt="">
 				<div class="membership section-content row">
-					<ul class="mbrship-options list-reset row links-blend">
+					<ul class="mbrship-options list-reset row">
 						<li class="mbrship-opt">
 							<a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=6148" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
 								<span class="mbrship-fee"><span class="mbrship-val">$330</span> <span class="mbrship-period">per year</span></span>
@@ -38,8 +38,8 @@
 					</ul>
 					<div class="mbrship-note">
 						<p><strong>First 3 classes free!</strong></p>
-						<p>Training fees included. <a class="link-blend" href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" target="_blank">Half-year options</a> available.</p>
-						<p><a href="https://rmitlink.rmit.edu.au/Common/Register.aspx?R=1" class="link-blend" target="_blank">Register to RMIT Link</a> to purchase your membership.</p>
+						<p>Training fees included. <a href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" target="_blank">Half-year options</a> available.</p>
+						<p><a href="https://rmitlink.rmit.edu.au/Common/Register.aspx?R=1" target="_blank">Register to RMIT Link</a> to purchase your membership.</p>
 					</div>
 				</div>
 			</header>

@@ -64,7 +64,7 @@
 				<div class="lay-main">
 					<section class="faq section">
 						<h2 class="faq-heading section-heading">Frequently Asked Questions</h2>
-						<dl class="faq-list section-content row links-blend">
+						<dl class="faq-list section-content row">
 							<dt class="faq-q">I'm a complete beginner. Is it okay?</dt>
 								<dd class="faq-a lh">It sure is! We welcome any level of fitness and skills &ndash; no judgment, no pressure.</dd>
 							<dt class="faq-q">What exactly do you do at training?</dt>

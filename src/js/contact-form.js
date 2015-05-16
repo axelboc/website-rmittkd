@@ -5,7 +5,7 @@
 (function ($) {
 	'use strict';
 	
-	var GENERIC_ERROR = 'Sorry, something went wrong. Try again later, or get in touch with us on <a href="https://www.facebook.com/rmittkd" class="link-blend">Facebook</a>.';
+	var GENERIC_ERROR = 'Sorry, something went wrong. Try again later, or get in touch with us on <a href="https://www.facebook.com/rmittkd">Facebook</a>.';
 	
 	/**
 	 * Contact form.

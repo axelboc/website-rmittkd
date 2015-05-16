@@ -103,6 +103,7 @@ h1 {
 /* ===== Links ===== */
 
 a {
+	color: inherit;
 	text-decoration: underline;
 }
 
@@ -128,12 +129,6 @@ a > span {
 .link-inv:hover,
 .links-inv a:hover {
 	text-decoration: underline;
-}
-
-/* Links blending with the text (same colour) */
-.link-blend,
-.links-blend a {
-	color: inherit;
 }
 
 [tabindex="-1"]:focus {

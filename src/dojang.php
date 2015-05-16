@@ -40,7 +40,7 @@
 								<div class="instr-caption">
 									<h2 class="instr-heading-sub section-heading">Instructors</h2>
 									<h3 class="section-heading-sub">Robert Lai</h3>
-									<p class="lh">Grand Master Lai (9th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he established many clubs, totalising over 1000 members. Grand Master Lai is now a retired <abbr title="Physical Education">PE</abbr> teacher and the president of <strong><a class="link-blend" href="https://www.facebook.com/chitfaustralia" target="_blank"><abbr title="Chan Hun International Taekwon-Do Federation">CHITF</abbr> Australia</a></strong>.</p>
+									<p class="lh">Grand Master Lai (9th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he established many clubs, totalising over 1000 members. Grand Master Lai is now a retired <abbr title="Physical Education">PE</abbr> teacher and the president of <strong><a href="https://www.facebook.com/chitfaustralia" target="_blank"><abbr title="Chan Hun International Taekwon-Do Federation">CHITF</abbr> Australia</a></strong>.</p>
 								</div>
 							</section>
 							<section class="instr-profile car-slide row">

@@ -9,7 +9,7 @@ require_once $_SERVER['DOCUMENT_ROOT'] . '/core/core.php';
 
 // Define success message
 define('CONTACT_SUCCESS', "<strong>Thank you!</strong> Your message has been sent. We'll get in touch with you as soon as possible.");
-define('CONTACT_FAILURE', "Sorry, something went wrong. Try again later, or get in touch with us on <a href=\"https://www.facebook.com/rmittkd\" class=\"link-blend\">Facebook</a>.");
+define('CONTACT_FAILURE', 'Sorry, something went wrong. Try again later, or get in touch with us on <a href="https://www.facebook.com/rmittkd">Facebook</a>.');
 
 
 // Initialise new form submission (authentication and feature not required)
