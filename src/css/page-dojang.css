@@ -95,10 +95,7 @@
 }
 
 .instr-profiles {
-	position: relative;
 	width: 300%;
-	transform: translate3d(0, 0, 0);
-	transition: transform .7s ease;
 }
 
 .instr-profiles[data-position="1"] { transform: translate3d(-33.33%, 0, 0); }
@@ -109,13 +106,8 @@
 .no3d .instr-profiles[data-position="2"] { left: -200%; }
 
 .instr-profile {
-	float: left;
 	width: 33.33%;
 	padding-right: 12px;
-}
-
-.instr-profile[aria-hidden="true"] {
-	visibility: hidden;
 }
 
 .instr-images {

@@ -450,7 +450,7 @@
 }
 
 
-/* ===== Contact form ===== */
+/* ===== Form ===== */
 
 .form {
 	position: relative;
@@ -667,3 +667,21 @@
 	}
 	
 }
+
+
+/* ===== Carousel ===== */
+
+.car-container {
+	position: relative;
+	transform: translate3d(0, 0, 0);
+	transition: transform .7s ease;
+}
+
+.car-slide {
+	float: left;
+}
+
+.car-slide[aria-hidden="true"] {
+	visibility: hidden;
+}
+
