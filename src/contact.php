@@ -25,7 +25,7 @@
 				<div class="section-content">
 					<form id="contact-form" novalidate class="form row" action="/core/forms/form-contact.php" method="post">
 						<?php printResult(); ?>
-						<div class="form-result-wrap hidden lh" tabindex="-1">
+						<div class="form-result-wrap lh" tabindex="-1" hidden>
 							<p class="form-result"></p>
 						</div>
 						<div class="form-row row">
@@ -33,7 +33,7 @@
 							<div class="form-field-wrap">
 								<input class="form-field" id="name" name="name" type="text" value="<?php printData('name'); ?>" aria-required="true">
 								<?php printError('name'); ?>
-								<div class="form-error form-error--blank hidden">Enter your name</div>
+								<div class="form-error form-error--blank" hidden>Enter your name</div>
 							</div>
 						</div>
 						<div class="form-row row">
@@ -41,8 +41,8 @@
 							<div class="form-field-wrap">
 								<input class="form-field" id="email" name="email" type="text" value="<?php printData('email'); ?>" aria-required="true">
 								<?php printError('email'); ?>
-								<div class="form-error form-error--blank hidden">Enter your email address</div>
-								<div class="form-error form-error--email hidden">Enter a valid email address</div>
+								<div class="form-error form-error--blank" hidden>Enter your email address</div>
+								<div class="form-error form-error--email" hidden>Enter a valid email address</div>
 							</div>
 						</div>
 						<div class="form-row row">
@@ -50,7 +50,7 @@
 							<div class="form-field-wrap">
 								<textarea id="message" class="form-field" name="message" rows="6" aria-required="true"><?php printData('message'); ?></textarea>
 								<?php printError('message'); ?>
-								<div class="form-error form-error--blank hidden">Enter your message</div>
+								<div class="form-error form-error--blank" hidden>Enter your message</div>
 							</div>
 						</div>
 						<label class="form-label--special" for="url">Leave this field empty: <input id="url" type="text" name="url" /></label>

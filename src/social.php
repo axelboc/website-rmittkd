@@ -54,7 +54,7 @@
 					</section>
 					<section id="facebook-feed" class="fb-section section section-1of2">
 						<div id="fb-root"></div>
-						<div class="fb-loading hidden">
+						<div class="fb-loading" hidden>
 							<h2 class="section-heading">Facebook</h2>
 							<img class="fb-spinner" src="images/spinner.png" alt="Loading..." width="100" height="100">
 						</div>
@@ -63,7 +63,7 @@
 								<div class="fb-fallback">
 									<h2 class="section-heading">Facebook</h2>
 									<div class="section-content">
-										<p class="fb-fallback-txt hidden"><a class="link-blend" href="https://www.facebook.com/rmittkd">RMIT ITF Taekwon-Do</a></p>
+										<p class="fb-fallback-txt"><a class="link-blend" href="https://www.facebook.com/rmittkd">RMIT ITF Taekwon-Do</a></p>
 									</div>
 								</div>
 							</div>

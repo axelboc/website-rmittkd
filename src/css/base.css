@@ -184,11 +184,6 @@ img {
 	opacity: .5;
 }
 
-/* Hidden from screen readers (`[hidden]` already covered by normalize.css) */
-.hidden {
-	display: none;
-}
-
 /* Hidden text from view, but not from screen readers
  * Element must have a width (and not be inline)
  */

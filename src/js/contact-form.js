@@ -5,7 +5,7 @@
 (function ($) {
 	'use strict';
 	
-	var GENERIC_ERROR = "Sorry, something went wrong. Try again later, or get in touch with us on <a href=\"https://www.facebook.com/rmittkd\" class=\"link-blend\">Facebook</a>.";
+	var GENERIC_ERROR = 'Sorry, something went wrong. Try again later, or get in touch with us on <a href="https://www.facebook.com/rmittkd" class="link-blend">Facebook</a>.';
 	
 	/**
 	 * Contact form.
@@ -13,10 +13,10 @@
 	 */
 	function ContactForm(root) {
 		this.$root = $(root);
-		this.$fields = this.$root.find(".form-field");
-		this.$resultWrap = this.$root.find(".form-result-wrap");
-		this.$result = this.$resultWrap.find(".form-result");
-		this.$submitBtn = this.$root.find(".form-submit");
+		this.$fields = this.$root.find('.form-field');
+		this.$resultWrap = this.$root.find('.form-result-wrap');
+		this.$result = this.$resultWrap.find('.form-result');
+		this.$submitBtn = this.$root.find('.form-submit');
 		
 		// Validate fields on blur
 		this.$fields.blur((function (evt) {
@@ -42,20 +42,20 @@
 		}
 		
 		// Form is valid; show spinner on submit button
-		this.$submitBtn.addClass("form-submit--spinner");
+		this.$submitBtn.addClass('form-submit--spinner');
 
 		// Submit form and perform server-side validation
 		$.ajax({
-			type: "POST",
-			url: this.$root.attr("action") + '?ajax',
+			type: 'POST',
+			url: this.$root.attr('action') + '?ajax',
 			data: this.$root.serialize(),
-			dataType: "json"
+			dataType: 'json'
 		})
 		.done(this.showResult.bind(this, true))
 		.fail(this.showResult.bind(this, false))
 		.always((function () {
 			// Hide spinner
-			this.$submitBtn.removeClass("form-submit--spinner");
+			this.$submitBtn.removeClass('form-submit--spinner');
 		}).bind(this));
 	};
 	
@@ -68,35 +68,35 @@
 	 */
 	ContactForm.prototype.validate = function validate(index, field) {
 		var $field = $(field);
-		var $errors = $field.nextAll(".form-error");
-		var $prevError = $errors.filter(":visible");
+		var $errors = $field.nextAll('.form-error');
+		var $prevError = $errors.filter(':visible');
 		var $newError;
 		var isInvalid = false;
 		
 		// All fields are required => check if blank
 		if ($field.val().length === 0) {
-			$newError = $errors.filter(".form-error--blank");
+			$newError = $errors.filter('.form-error--blank');
 		}
-		else if ($field[0].id === "email") {
+		else if ($field[0].id === 'email') {
 			// Validate email field
 			if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test($field.val())) {
-				$newError = $errors.filter(".form-error--email");
+				$newError = $errors.filter('.form-error--email');
 			}
 		}
 		
 		if (!$newError) {
 			// If no new error, remove invalidity mark-up from field 
-			$field.removeAttr("aria-invalid").removeClass("form-field--invalid");
+			$field.removeAttr('aria-invalid').removeClass('form-field--invalid');
 		}
 		
 		if ($prevError.length > 0) {
 			// Always remove ARIA alert role from previous error 
-			$prevError.removeAttr("role");
+			$prevError.removeAttr('role');
 			
 			// If no new error, or new error is not the same as previous error, hide previous error
 			if (!$newError || $newError[0] !== $prevError[0]) {
 				// Once previous error is hidden, show new error if any
-				$prevError.fadeOut(200, this.showError.bind(this, $newError, $field)).addClass("hidden");
+				$prevError.fadeOut(200, this.showError.bind(this, $newError, $field)).attr('hidden', 'hidden');
 			}
 		} else {
 			this.showError($newError, $field);
@@ -113,8 +113,8 @@
 	 */
 	ContactForm.prototype.showError = function showError($error, $field) {
 		if ($error) {
-			$field.attr("aria-invalid", true).addClass("form-field--invalid");
-			$error.attr("role", "alert").fadeIn().removeClass("hidden");
+			$field.attr('aria-invalid', true).addClass('form-field--invalid');
+			$error.attr('role', 'alert').fadeIn().removeAttr('hidden');
 		}
 	};
 	
@@ -129,11 +129,11 @@
 		
 		// Update result element content and class name
 		this.$result.html(message);
-		this.$result.removeClass("form-result--success form-result--fail");
-		this.$result.addClass("form-result--" + type);
+		this.$result.removeClass('form-result--success form-result--fail');
+		this.$result.addClass('form-result--' + type);
 		
 		// Show result wrapper and give focus
-		this.$resultWrap.fadeIn().removeClass("hidden").focus();
+		this.$resultWrap.fadeIn().removeAttr('hidden').focus();
 		
 		// Send Analytics event or exception
 		if (isSuccess) {

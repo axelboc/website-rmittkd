@@ -21,8 +21,8 @@
 		this.queueLoading = false;
 		
 		// Hide fallback and show loading spinner
-		this.$root.find('.fb-fallback').addClass('hidden');
-		this.$loading.removeClass('hidden');
+		this.$root.find('.fb-fallback').attr('hidden', 'hidden');
+		this.$loading.removeAttr('hidden');
 		
 		// Load Facebook SDK
 		$.ajax({
@@ -63,7 +63,7 @@
 		this.loading = true;
 		
 		// Show spinner and reset iframe height
-		this.$loading.removeClass('hidden');
+		this.$loading.removeAttr('hidden');
 		if (this.$iframe) {
 			this.$iframe.attr('style', 'height: auto!important;');
 		}
@@ -94,7 +94,7 @@
 		this.$iframe = this.$page.find('iframe');
 
 		// Hide spinner
-		this.$loading.addClass('hidden');
+		this.$loading.attr('hidden', 'hidden');
 
 		// Update heights
 		this.$root.css('min-height', height + 'px');
