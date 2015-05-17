@@ -1,9 +1,6 @@
 /* Base styles and helpers */
 
 
-/* ===== Sticky footer ===== */
-
-
 /* ===== html & body + sticky footer ===== */
 
 html,
@@ -70,33 +67,17 @@ h1 {
 
 /* ===== Clearfix and box sizing ===== */
 
-.row:before,
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
 
-
-/* ===== Line height ===== */
-
-.lh {
-	line-height: 1.4em;
-}
-
-
-/* ===== Lists ===== */
-
-.list-reset {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.row:before,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 
@@ -157,7 +138,8 @@ img {
 	display: block;
 }
 
-/* Balanced cropping on both sides (the centre of the image never moves)
+/*
+ * Balanced cropping on both sides (the centre of the image never moves)
  * The image must also have the following property applied to it: 'margin-left: -(width / 2)'
  */
 .respimg-crop {
@@ -179,7 +161,8 @@ img {
 	opacity: .5;
 }
 
-/* Hidden text from view, but not from screen readers
+/*
+ * Hidden text from view, but not from screen readers
  * Element must have a width (and not be inline)
  */
 .hidden-text {
@@ -189,26 +172,27 @@ img {
 }
 
 
-/* ===== Backdrop (container with grey, semi-transparent backgroud) ===== */
+/* ===== Other helpers ===== */
 
+.lh {
+	line-height: 1.4em;
+}
+
+.list-reset {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+/* Adjust margin of elements located inside a box. */
+.box > * { margin: .3em 0; }
+.box > *:first-child { margin-top: 0; }
+.box > *:last-child { margin-bottom: 0; }
+
+/* Backdrop (container with grey, semi-transparent backgroud) */
 .backdrop {
 	background-color: rgb(85, 85, 85);
 	background-color: rgba(85, 85, 85, .85);
 	color: #fff;
-}
-
-
-/* ===== DRY CSS for intentionally-duplicated property/value pairs ===== */
-
-.section-heading,
-.cal-heading {
-	font-size: 180%;
-}
-
-.section,
-.sidebar,
-.form-field,
-.form-submit {
-	border-radius: 3px;
 }
 

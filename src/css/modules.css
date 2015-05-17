@@ -111,20 +111,22 @@
 	background: #f9f9f9;
 	background: transparent -webkit-linear-gradient(top, rgba(255, 255, 255, .85), rgba(221,221,221, .85));
 	background: transparent linear-gradient(to bottom, rgba(255, 255, 255, .85), rgba(221,221,221, .85));
+	border-radius: 3px;
 }
 
 .section-heading {
-	font-weight: normal;
-	border-left: 6px solid #ec1a25;
 	margin: 0 0 8px 0;
 	padding-top: 11px;
 	padding-left: 6px;
+	border-left: 6px solid #ec1a25;
 	border-radius: 3px 0 0;
+	font-size: 180%;
+	font-weight: normal;
 }
 
 .section-heading-sub {
-	font-size: 115%;
 	margin: 0;
+	font-size: 115%;
 }
 
 .section-content {
@@ -153,6 +155,7 @@
 	padding: 1em 2em 1.5em;
 	background-color: #555;
 	background-color: rgba(85, 85, 85, .9);
+	border-radius: 3px;
 }
 
 .sidebar a {
@@ -504,6 +507,7 @@
 .form-field,
 .form-submit {
 	width: 100%;
+	border-radius: 3px;
 }
 
 .form-field {

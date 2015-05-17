@@ -236,8 +236,9 @@
 }
 
 .cal-heading {
-	font-weight: normal;
 	margin: .2em 0 .6em;
+	font-size: 180%;
+	font-weight: normal;
 }
 
 .cal-img {
