@@ -1,18 +1,20 @@
 <?php
 
 /*
- * Admin login form action.
+ * Admin login form.
  */
 
 // Require core API
 require_once $_SERVER['DOCUMENT_ROOT'] . '/core/core.php';
 
-// Initialise new form submission (authentication and feature not required)
+// Initialise new form submission
 $submission = new FormSubmission('/admin/');
 
 // Prepare password field for validation
 $fields = [
-	'pwd' => FormSubmission::$DEFAULTS['password']
+	'pwd' => [
+		'require' => 'Enter a password'
+	]
 ];
 
 // Perform validation

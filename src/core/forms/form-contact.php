@@ -1,7 +1,7 @@
 <?php
 
 /*
- * Contact form action.
+ * Contact form.
  */
 
 // Require core API
@@ -12,7 +12,7 @@ define('CONTACT_SUCCESS', "<strong>Thank you!</strong> Your message has been sen
 define('CONTACT_FAILURE', 'Sorry, something went wrong. Try again later, or get in touch with us on <a href="https://www.facebook.com/rmittkd">Facebook</a>.');
 
 
-// Initialise new form submission (authentication and feature not required)
+// Initialise new form submission
 $submission = new FormSubmission('/contact#contact');
 
 // Spam trap: URL field must be left empty
@@ -33,9 +33,9 @@ $fields = [
 		'require' => 'Enter your name.'
 	],
 	'email' => [
-		'sanitise' => 'email',
+		'sanitise' => FILTER_SANITIZE_EMAIL,
 		'require' => 'Enter your email address.',
-		'validate' => 'Enter a valid email address.'
+		'validate' => [FILTER_VALIDATE_EMAIL, 'Enter a valid email address.']
 	],
 	'message' => [
 		'require' => 'Enter your message.'

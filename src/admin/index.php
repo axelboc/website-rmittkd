@@ -14,15 +14,11 @@
 		<div class="main-wrap body-max">
 			<?php
 				if (empty($_SESSION['authenticated'])) {
-					include 'includes/login.php';
+					include 'sections/login.php';
 				} else {
-					if (!empty($_SESSION['errors'])) {
-						foreach ($_SESSION['errors'] as $error) {
-							echo '<p>' . print_r($error) . '</p>';
-						}
-					}
-					include 'includes/admin.php';
-					include 'includes/videos.php';
+					include 'sections/admin.php';
+					include 'sections/events.php';
+					include 'sections/videos.php';
 				}
 			?>
 		</div>

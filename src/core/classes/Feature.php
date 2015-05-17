@@ -2,10 +2,9 @@
 
 class Feature {
 	
-	private static $instance = null;
-	
 	protected $store;
 	protected $xml;
+	protected $formSubmission;
 	
 	/**
 	 * Parse XML data store.
@@ -16,22 +15,45 @@ class Feature {
 	}
 	
 	/**
-	 * Get instance.
-	 * @return {Singleton}
+	 * Validate fields and return their values.
+	 * @param {Array} $fields
+	 * @param {Boolean} $isGet
 	 */
-	protected static function getInstance() {
-		if (self::$instance === null) {
-			self::$instance = new static();
+	protected function processFields($fields, $isGet = false) {
+		// Validate the fields
+		if (!$this->formSubmission->validate($fields, $isGet)) {
+			$this->formSubmission->exitWithResult(false, 'Changes not saved');
 		}
 		
-		return self::$instance;
+		// Return the new form submission data
+		return $this->formSubmission->getData();
 	}
 	
 	/**
-	 * Persist XML to file.
+	 * Conclude an action: persist XML to file and exit.
 	 */
-	protected function persist() {
+	protected function conclude() {
+		// Check if errors
+		if ($this->formSubmission->hasErrors()) {
+			$this->formSubmission->exitWithResult(false, 'Changes not saved');
+		}
+		
+		// Persist XML to file
 		file_put_contents(PATH_DATA . $this->store . '.xml', $this->xml->asXML());
+		
+		// Clear data from session
+		$this->formSubmission->clearData();
+		
+		// Action successful
+		$this->formSubmission->exitWithResult(true, 'Changes saved');
+	}
+	
+	/**
+	 * Set the form submission instance.
+	 * @param {FormSubmission} $formSubmission
+	 */
+	public function setFormSubmission($formSubmission) {
+		$this->formSubmission = $formSubmission;
 	}
 	
 }

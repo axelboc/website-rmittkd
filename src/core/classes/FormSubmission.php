@@ -2,20 +2,19 @@
 
 class FormSubmission {
 	
-	public static $DEFAULTS = [
+	// Validation configurations for common field types
+	public static $fieldConfigs = [
+		'special' => [ 'sanitise' => FILTER_SANITIZE_FULL_SPECIAL_CHARS ],
 		'url' => [
-			'sanitise' => 'url',
+			'sanitise' => FILTER_SANITIZE_URL,
 			'require' => 'Enter a URL',
-			'validate' => 'Enter a valid URL'
-		],
-		'password' => [
-			'require' => 'Enter a password',
+			'validate' => [FILTER_VALIDATE_URL, 'Enter a valid URL']
 		]
 	];
 	
-	private $redirectUrl;
+	protected $redirectUrl;
+	
 	private $isAjax = false;
-	private $feature;
 	private $data = array();
 	private $errors = array();
 	
@@ -23,93 +22,79 @@ class FormSubmission {
 	/**
 	 * Construct a new FormSubmission object.
 	 * @param {String} $redirectUrl
-	 * @param {Boolean} $authenticationRequired - whether the user must be authenticated to submit the form
-	 * @param {Boolean} $featureRequired - whether the submission must include a GET parameter named `feature`
 	 */
-	public function __construct($redirectUrl, $authenticationRequired = false, $featureRequired = false) {
+	public function __construct($redirectUrl) {
 		$this->redirectUrl = $redirectUrl;
 		
 		// Check whether this is an Ajax request
 		if (isset($_GET['ajax'])) {
 			$this->isAjax = true;
 		}
-		
-		// Authentication check
-		if ($authenticationRequired) {
-			if (empty($_SESSION['authenticated'])) {
-				$this->exitWithResult(false, 'Unauthorised access', '[form-admin] unauthorised access');
-			}
-		}
-
-		// Feature check
-		if ($featureRequired) {
-			if (!isset($_GET['feature'])) {
-				$this->exitWithResult(false, 'Unexpected error', '[form-admin] `feature` parameter not provided');
-			} else {
-				$this->feature = $_GET['feature'];
-			}
-		}
 	}
 	
 	
 	/**
 	 * Sanitise and validate the form's fields.
-	 * @param {Array} $fields - the fields and their corresponding error messages
-	 * return {Boolean} - whether the validation process has not uncovered any error
+	 * @param {Array} $fields - the fields to validate and their respective validation configurations.
+	 * 		Each field is mapped to an array with the following keys:
+	 * 		- {Integer} sanitise - sanitisation filter; if omitted, FILTER_SANITIZE_STRING is used
+	 * 		- {String} require - error message sent when field is not provided; if omitted, field is considered optional
+	 * 		- {Array} validate - if omitted, field is not validated
+	 * 			[0] {Integer|String} validation filter or custom regex pattern
+	 * 			[1] {String} error message sent when field does not validate
+	 * @param {Boolean} $isGet - whether to look for the fields in $_GET instead of $_POST
+	 * @return {Boolean} - whether all fields passed the validation process
 	 */
-	public function validate($fields) {
+	public function validate($fields, $isGet = false) {
 		// Loop through the fields
-		foreach ($fields as $field => $actions) {
-			// Ensure that the parameter is set
-			if (!isset($_POST[$field])) {
-				$this->exitWithResult(false, 'Unexpected error', '[FormSubmission] POST parameter not set: ' . $field);
-			}
-
-			// Sanitisation
-			if (isset($actions['sanitise'])) {
-				// Determine sanitisation filter
-				switch ($actions['sanitise']) {
-					case 'email':
-						$sanitisationFilter = FILTER_SANITIZE_EMAIL;
-						$validationFilter = FILTER_VALIDATE_EMAIL;
-						break;
-					case 'url':
-						$sanitisationFilter = FILTER_SANITIZE_URL;
-						$validationFilter = FILTER_VALIDATE_URL;
-						break;
-					default:
-						$this->exitWithResult(false, 'Unexpected error', 
-											  '[FormSubmission] sanitisation not supported for: ' . $actions['sanitise']);
+		foreach ($fields as $field => $config) {
+			// Ensure that the parameter is set and retrieve it
+			if ($isGet) {
+				if (!isset($_GET[$field])) {
+					$this->exitWithResult(false, 'Unexpected error', '[FormSubmission] GET parameter not set: ' . $field);
 				}
-
-				// Sanitise
-				$value = filter_var($_POST[$field], $sanitisationFilter);
+				$value = $_GET[$field];
 			} else {
-				// Do not sanitise, but still strip tags
-				$value = strip_tags($_POST[$field]);
+				if (!isset($_POST[$field])) {
+					$this->exitWithResult(false, 'Unexpected error', '[FormSubmission] POST parameter not set: ' . $field);
+				}
+				$value = $_POST[$field];
 			}
+
+			// Sanitise
+			$sanitisationFilter = isset($config['sanitise']) ? $config['sanitise'] : FILTER_SANITIZE_STRING;
+			$value = filter_var($value, $sanitisationFilter);
 			
 			// Store the value
 			$this->data[$field] = $value;
 			
 			// If the field is required, ensure that a value has been provided
-			if (isset($actions['require'])) {
-				if ($value === '') {
-					$this->addError($field, $actions['require']);
-					continue;
-				}
+			if (isset($config['require']) && $value === '') {
+				$this->addError($field, $config['require']);
+				continue;
 			}
 
 			// Validation
-			if (isset($actions['validate'])) {
-				if (!isset($validationFilter)) {
-					$this->exitWithResult(false, 'Unexpected error', '[FormSubmission] validation filter not set');
+			if (isset($config['validate'])) {
+				$validationConfig = $config['validate'];
+				if (!is_array($validationConfig) || count($validationConfig) !== 2) {
+					$this->exitWithResult(false, 'Unexpected error', '[FormSubmission] validation config invalid');
+				}
+				
+				if (is_int($validationConfig[0])) {
+					// Validation filter provided
+					if (filter_var($value, $validationConfig[0]) === false) {
+						$this->addError($field, $validationConfig[1]);
+						continue;
+					}
+				} else {
+					// Regular expression provided
+					if (preg_match($validationConfig[0], $value) !== 1) {
+						$this->addError($field, $validationConfig[1]);
+						continue;
+					}
 				}
 
-				if (filter_var($value, $validationFilter) === false) {
-					$this->addError($field, $actions['validate']);
-					continue;
-				}
 			}
 		}
 		
@@ -140,7 +125,6 @@ class FormSubmission {
 			
 		// Otherwise, store result and additional data in session
 		} else {
-			$_SESSION['feature'] = $this->feature;
 			$_SESSION['data'] = $this->data;
 			$_SESSION['errors'] = $this->errors;
 
@@ -150,26 +134,26 @@ class FormSubmission {
 			}
 			
 			// Redirect
-			header('Location: ' . $this->redirectUrl . ($this->feature !== null ? '#' . $this->feature : ''));
+			header('Location: ' . $this->redirectUrl);
 		}
 		
 		exit;
 	}
 	
 	/**
-	 * Get the feature of the form.
+	 * Get the redirect URL.
 	 * @return {String}
 	 */
-	public function getFeature() {
-		return $this->feature;
+	public function getRedirectUrl() {
+		return $this->redirectUrl;
 	}
 	
 	/**
-	 * Set the feature of the form.
-	 * @param {String} $feature
+	 * Set the redirect URL.
+	 * @param {String} $redirectUrl
 	 */
-	public function setFeature($feature) {
-		$this->feature = $feature;
+	public function setRedirectUrl($redirectUrl) {
+		$this->redirectUrl = $redirectUrl;
 	}
 	
 	/**
@@ -178,6 +162,13 @@ class FormSubmission {
 	 */
 	public function getData() {
 		return $this->data;
+	}
+	
+	/**
+	 * Clear the data, typically after a successful form submission.
+	 */
+	public function clearData() {
+		return $this->data = array();
 	}
 	
 	/**

@@ -2,6 +2,7 @@
 
 class Videos extends Feature {
 	
+	private static $instance = null;
 	private static $urlRegex = '/^.+youtube\.com\/watch\?v=(.+)(&.*)?$/';
 	private static $iframeUrlFormat = 'https://www.youtube.com/embed/{{id}}?rel=0&amp;wmode=transparent';
 
@@ -23,22 +24,41 @@ class Videos extends Feature {
 	}
 	
 	/**
-	 * Set the URLs of the videos and persist the changes to the store.
-	 * @param {FormSubmission} $submission
+	 * Get instance.
+	 * @return {Singleton}
 	 */
-	public static function update($submission) {
-		$videos = self::getInstance()->xml->video;
+	public static function getInstance() {
+		if (self::$instance === null) {
+			self::$instance = new static();
+		}
+		
+		return self::$instance;
+	}
+	
+	
+	/**
+	 * Set the URLs of the videos.
+	 */
+	public function update() {
+		// Process the fields
+		$data = $this->processFields([
+			'video-1' => FormSubmission::$fieldConfigs['url'],
+			'video-2' => FormSubmission::$fieldConfigs['url']
+		]);
+		
+		// Retrieve the video elements from the data store
+		$videos = $this->xml->video;
 		$i = 0;
 		
-		foreach ($submission->getData() as $field => $url) {
+		foreach ($data as $field => $url) {
 			// Look for the ID of the video in the URL
 			$matches = array();
 			preg_match(self::$urlRegex, $url, $matches);
 			
 			// Ensure that the URL is well formed
 			if (count($matches) < 2) {
-				$submission->addError($field, 'Enter a valid YouTube URL');
-				return;
+				$this->formSubmission->addError($field, 'Enter a valid YouTube URL');
+				$this->conclude();
 			}
 			
 			// Store video URL and ID
@@ -47,7 +67,8 @@ class Videos extends Feature {
 			$i++;
 		}
 		
-		self::getInstance()->persist();
+		// Conclude the action
+		$this->conclude();
 	}
 	
 }
