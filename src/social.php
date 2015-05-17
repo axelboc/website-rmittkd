@@ -32,14 +32,14 @@
 					<section class="links-section section section-1of2 section-first">
 						<h1 class="section-heading">Links</h1>
 						<div class="links-wrap section-content row">
-							<section class="box">
+							<section>
 								<h2 class="section-heading-sub">International &amp; National Federations</h2>
 								<ul class="list-reset links-inv row">
 									<li class="resource"><a class="res-link" href="http://www.chitf.org/" target="_blank"><img src="images/social/logo-chitf.png" width="100" height="100" alt="">Chan Hun International Taekwon-Do Federation</a></li>
 									<li class="resource"><a class="res-link" href="https://www.facebook.com/chitfaustralia" target="_blank"><img src="images/social/logo-chitf-australia.png" width="125" height="100" alt="">CHITF Australia</a></li>
 								</ul>
 							</section>
-							<section class="box">
+							<section>
 								<h2 class="section-heading-sub clubs-heading">Associated Lai Taekwon-Do Clubs</h2>
 								<ul class="res-group list-reset links-inv row">
 									<li class="resource--min"><a class="res-link--min" href="http://www.laitkd.com.au/" target="_blank"><img src="images/social/logo-lai.png" width="40" height="40" alt="" /> <span>St Albans Lai Taekwon-Do (<abbr title="Victoria">VIC</abbr>)</span></a></li>
