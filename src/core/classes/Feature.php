@@ -2,16 +2,22 @@
 
 class Feature {
 	
-	protected $store;
-	protected $xml;
+	protected $collection;
 	protected $formSubmission;
 	
 	/**
-	 * Parse XML data store.
+	 * Feature constructor.
 	 */
 	public function __construct() {
-		$this->store = strtolower(preg_replace('/[A-Z]([A-Z])/', '-$1', get_class($this)));
-		$this->xml = simplexml_load_file(PATH_DATA . $this->store . '.xml');
+		// Deduce feature name from class name
+		$name = strtolower(preg_replace('/[A-Z]([A-Z])/', '-$1', get_class($this)));
+		
+		// Retrieve the database
+		$dbClient = new MongoLite\Client(PATH_DATA);
+		//$dbClient->db->dropCollection($name);
+		
+		// Select feature's collection
+		$this->collection = $dbClient->db->selectCollection($name);
 	}
 	
 	/**
@@ -30,21 +36,25 @@ class Feature {
 	}
 	
 	/**
-	 * Conclude an action: persist XML to file and exit.
+	 * Conclude an action.
 	 */
 	protected function conclude() {
-		// Check if errors
+		// If errors, exit with failure
 		if ($this->formSubmission->hasErrors()) {
 			$this->formSubmission->exitWithResult(false, 'Changes not saved');
 		}
 		
-		// Persist XML to file
-		file_put_contents(PATH_DATA . $this->store . '.xml', $this->xml->asXML());
-		
 		// Clear data from session
 		$this->formSubmission->clearData();
 		
-		// Action successful
+		/*$entries = $this->collection->find();
+		if ($entries->count()) {
+			foreach($entries->toArray() as $e) {
+				var_dump($e);
+			}
+		}*/
+		
+		// Action successful; exit with success
 		$this->formSubmission->exitWithResult(true, 'Changes saved');
 	}
 	

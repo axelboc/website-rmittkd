@@ -6,8 +6,8 @@ node_modules/
 resources/
 dist/
 src/core/config.php
-src/data/error.log
-src/data/videos.xml
+src/core/error.log
+src/core/data
 
 
 #################
