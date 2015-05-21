@@ -2,6 +2,8 @@
 
 class Feature {
 	
+	protected $dbClient;
+	protected $collectionName;
 	protected $collection;
 	protected $formSubmission;
 	
@@ -10,14 +12,13 @@ class Feature {
 	 */
 	public function __construct() {
 		// Deduce feature name from class name
-		$name = strtolower(preg_replace('/[A-Z]([A-Z])/', '-$1', get_class($this)));
+		$this->collectionName = strtolower(preg_replace('/[A-Z]([A-Z])/', '-$1', get_class($this)));
 		
 		// Retrieve the database
-		$dbClient = new MongoLite\Client(PATH_DATA);
-		//$dbClient->db->dropCollection($name);
+		$this->dbClient = new MongoLite\Client(PATH_DATA);
 		
 		// Select feature's collection
-		$this->collection = $dbClient->db->selectCollection($name);
+		$this->collection = $this->dbClient->db->selectCollection($this->collectionName);
 	}
 	
 	/**
@@ -47,12 +48,6 @@ class Feature {
 		// Clear data from session
 		$this->formSubmission->clearData();
 		
-		/*$entries = $this->collection->find();
-		if ($entries->count()) {
-			foreach($entries->toArray() as $e) {
-				var_dump($e);
-			}
-		}*/
 		
 		// Action successful; exit with success
 		$this->formSubmission->exitWithResult(true, 'Changes saved');
@@ -64,6 +59,24 @@ class Feature {
 	 */
 	public function setFormSubmission($formSubmission) {
 		$this->formSubmission = $formSubmission;
+	}
+	
+	/**
+	 * Clear the feature's database collection.
+	 */
+	public function clearCollection() {
+		$this->dbClient->db->dropCollection($this->collectionName);
+		$this->collection = $this->dbClient->db->selectCollection($this->collectionName);
+	}
+	
+	/**
+	 * Debug the feature's database collection.
+	 */
+	public function debugCollection() {
+		$entries = $this->collection->find();
+		foreach($entries as $e) {
+			var_dump($e);
+		}
 	}
 	
 }

@@ -47,8 +47,6 @@ class Videos extends Feature {
 			'video-2' => FormSubmission::$fieldConfigs['url']
 		]);
 		
-		var_dump($data);
-		
 		$i = 0;
 		foreach ($data as $field => $url) {
 			// Look for the ID of the video in the URL
@@ -73,10 +71,8 @@ class Videos extends Feature {
 			
 			// Save document in collection
 			if ($this->collection->update(['index' => $i], $doc) === 0) {
-				error_log('[Videos] document not found');
 				// Document not found; insert it
 				$res = $this->collection->insert($doc);
-				error_log('[Videos] ' . $res);
 			}
 			
 			$i++;
