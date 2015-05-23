@@ -1,8 +1,20 @@
 <section id="events" class="section">
 	<h2 class="section-heading">Calendar events</h2>
 	<div class="section-content lh">
-		<p>This section controls the events displayed in the calendar on the <a href="/">homepage</a>. (Note that only six months are shown in the calendar: the current month, the month before and four months after.)</p>
-		<p>The <em>day</em> field indicates the day(s) of the month the event is to take place. It must be one of the following: a single number, a list of numbers separated by commas (e.g. &ldquo;<em>1, 8, 15</em>&rdquo;), two numbers separated by a dash (e.g. &ldquo;<em>24-25</em>&rdquo;), or &ldquo;<em>TBC</em>&rdquo;. Do not use leading zeros. Provide the month as a number and write as concise a label as you can. Always double check your changes in the calendar.</p>
+		<p>This section controls the events displayed in the calendar on the <a href="/">homepage</a>. (Note that only six months are shown in the calendar: the current month, the month before and four months after.) Follow these guidelines when adding a new event, and always double check your changes in the calendar:</p>
+		<ul>
+			<li>Write as concise a <strong>label</strong> as you can, as the space on the calendar is very limited. Use normal sentence case (e.g. <em>Black-belt grading</em>) but capitalise names when relevant (e.g. <em>RMIT Champs</em>).</li>
+			<li>Enter the <strong>day</strong> in one of the formats below; whichever the format you choose, do not add leading zeros to single-digit numbers. The allowed formats are:
+				<ul>
+					<li>single number (e.g. &ldquo;<em>30</em>&rdquo;)</li>
+					<li>list of numbers separated by commas (e.g. &ldquo;<em>1, 8, 15</em>&rdquo;)&mdash;for events that occur over multiple, non-consecutive days</li>
+					<li>two numbers separated by a dash (e.g. &ldquo;<em>24-25</em>&rdquo;)&mdash;for events that occur over two or more consecutive days</li>
+					<li>&ldquo;<em>TBC</em>&rdquo;&mdash;if the exact date is to be confirmed.</li>
+				</ul>
+			</li>
+			<li>Provide the <strong>month</strong> as a number, without a leading zero.</li>
+			<li>Provide the <strong>year</strong> as a four-digit number.</li>
+		</ul>
 		<form class="form form--wider row" action="/core/forms/form-admin.php?feature=events&action=add" method="post">
 			<?php printResult('events', true); ?>
 			<table>
