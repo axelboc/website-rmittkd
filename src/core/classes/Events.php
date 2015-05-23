@@ -15,6 +15,19 @@ class Events extends Feature {
 	}
 	
 	/**
+	 * Retrieve the events for a given month and year.
+	 * @param {Integer} $m - the month number (no leading zero)
+	 * @param {Integer} $y - the year
+	 * @return {MongoLite\Cursor}
+	 */
+	public static function get($m, $y) {
+		return self::getInstance()->collection->find([
+			'month' => $m,
+			'year' => $y
+		]);
+	}
+	
+	/**
 	 * Get instance.
 	 * @return {Singleton}
 	 */

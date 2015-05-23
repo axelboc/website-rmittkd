@@ -1,3 +1,4 @@
+<?php require_once 'core/core.php'; ?>
 <!DOCTYPE html>
 <html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>

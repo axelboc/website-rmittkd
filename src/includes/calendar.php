@@ -1,55 +1,30 @@
 <?php 
-// Read calendar.xml
-$calXML = simplexml_load_file("data/calendar.xml");
-$months = $calXML->month;
 
-// Compute ID of current month (e.g. '2014-3')
-$now = new DateTime();
-$currentMonthId = $now->format('Y-n');
+// Retrieve number and year of previous month
+$lastMonth = strtotime('-1 month');
+$month = (int) date('n', $lastMonth);
+$year = (int) date('Y', $lastMonth);
 
-// Compute ID of previous month
-$currentYear = intval($now->format('Y'));
-$currentMonth = intval($now->format('n'));
-if ($currentMonth > 1) {
-	$currentMonth--;
-} else {
-	$currentYear--;
-	$currentMonth = 12;
-}
-$prevMonthId = $currentYear . '-' . $currentMonth;
-
-
-// Loop through the months
-foreach ($months as $m) {
-	$monthId = (string)$m['id'];
+// Add six months to the calendar
+for ($i = 0; $i < 6; $i++) {
+	// Get the month's events
+	$events = Events::get($month, $year);
 	
-	// Get filename of image
-	$img = isset($m['img']) ? $m['img'] : 'placeholder';
-	
-	// Convert month index to string (e.g. 1 -> 'January', 2 -> 'February', etc.)
-	$expMonthId = explode('-', $monthId);
-	$monthStr = date('F', mktime(0, 0, 0, intval($expMonthId[1]), 1));
+	// Convert month number to string ('January', 'February', etc.)
+	$monthStr = date('F', mktime(0, 0, 0, $month, 1));
 	
 	?>
-	<div class="cal-month car-slide" aria-hidden="<?php echo ($monthId === $currentMonthId ? 'false' : 'true'); ?>">
+	<div class="cal-month car-slide" aria-hidden="<?php echo $i !== 1; ?>">
 		<div class="cal-month-inner">
 			<div class="respimg-wrap">
-				<img class="cal-img respimg-crop lazy-loading" src="" data-src="images/calendar/<?php echo $img; ?>.jpg" width="408" height="150" alt="">
+				<img class="cal-img respimg-crop lazy-loading" src="" data-src="images/calendar/placeholder.jpg" width="408" height="150" alt="">
 			</div>
 			<div class="cal-caption backdrop">
 				<h3 class="cal-heading"><?php echo $monthStr; ?></h3>
 				<ul class="list-reset">
 					<?php
-					$events = $m->children();
-					foreach ($events as $e) {
-						switch ($e->getName()) {
-						case 'event':
-							?><li><strong><?php echo $e['date']; ?></strong> <?php echo $e; ?></li><?php
-							break;
-						case 'heading':
-							?><li><strong><?php echo $e; ?></strong></li><?php
-							break;
-						}
+					foreach ($events as $evt) {
+						echo "<li><strong>$evt[day]</strong> $evt[label]</li>";
 					}
 					?>
 				</ul>
@@ -57,5 +32,12 @@ foreach ($months as $m) {
 		</div>
 	</div>
 	<?php
+	
+	// Increment to the following month
+	$month++;
+	if ($month > 12) {
+		$month = 1;
+		$year++;
+	}
 }
 ?>
