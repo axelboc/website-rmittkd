@@ -1,6 +1,6 @@
 <?php 
 // Read merchandising.xml 
-$merchXML = simplexml_load_file("data/merchandising.xml");
+$merchXML = simplexml_load_file("core/data/merchandising.xml");
 // Get random merchandising item
 $item = $merchXML->item[rand(0, count($merchXML->item) - 1)];
 ?>
