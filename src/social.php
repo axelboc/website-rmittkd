@@ -21,10 +21,10 @@
 		<div class="main-wrap main-wrap--social body-max">
 			<div class="yt-wrap row">
 				<div class="video video--first">
-					<iframe src="<?php Videos::iframeUrl(0); ?>" frameborder="0" allowfullscreen></iframe>
+					<iframe src="<?php Videos::iframeUrl(1); ?>" frameborder="0" allowfullscreen></iframe>
 				</div>
 				<div class="video">
-					<iframe src="<?php Videos::iframeUrl(1); ?>" frameborder="0" allowfullscreen></iframe>
+					<iframe src="<?php Videos::iframeUrl(2); ?>" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 			<div class="row">
