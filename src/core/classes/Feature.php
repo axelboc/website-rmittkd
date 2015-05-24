@@ -15,7 +15,7 @@ class Feature {
 		$this->collectionName = strtolower(preg_replace('/[A-Z]([A-Z])/', '-$1', get_class($this)));
 		
 		// Retrieve the database
-		$this->dbClient = new MongoLite\Client(PATH_DATA);
+		$this->dbClient = new MongoLite\Client(PATH_CORE);
 		
 		// Select feature's collection
 		$this->collection = $this->dbClient->db->selectCollection($this->collectionName);
