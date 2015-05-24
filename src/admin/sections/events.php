@@ -1,4 +1,4 @@
-<section id="events" class="section">
+<section class="section">
 	<h2 class="section-heading">Calendar events</h2>
 	<div class="section-content lh">
 		<p>This section controls the events displayed in the calendar on the <a href="/">homepage</a>. (Note that only six months are shown in the calendar: the current month, the month before and four months after.) Follow these guidelines when adding a new event, and always double check your changes in the calendar:</p>
@@ -34,7 +34,7 @@
 						<tr>
 							<td><?php echo $evt['label']; ?></td>
 							<td><?php echo $evt['day']; ?></td>
-							<td><?php echo $evt['month']; ?></td>
+							<td><?php echo Helpers::monthToString($evt['month']); ?></td>
 							<td><?php echo $evt['year']; ?></td>
 							<td>
 								<a href="/core/forms/form-admin.php?feature=events&action=remove&id=<?php echo $evt['_id']; ?>">Remove</a>
@@ -45,8 +45,18 @@
 					<tr>
 						<td><input id="evt-label" name="evt-label" type="text" value="<?php Helpers::printData('evt-label'); ?>"></td>
 						<td><input id="evt-day" name="evt-day" type="text" value="<?php Helpers::printData('evt-day'); ?>"></td>
-						<td><input id="evt-month" name="evt-month" type="text" value="<?php Helpers::printData('evt-month'); ?>"</td>
-						<td><input id="evt-year" name="evt-year" type="text" value="<?php Helpers::printData('evt-year'); ?>"</td>
+						<td>
+							<select id="evt-month" name="evt-month"><?php
+								$selectedOpt = Helpers::getData('evt-month', date('n'));
+								Helpers::printOptions(Events::getMonthOptions(), (int) $selectedOpt);
+							?></select>
+						</td>
+						<td>
+							<select id="evt-year" name="evt-year"><?php
+								$selectedOpt = Helpers::getData('evt-year', date('Y'));
+								Helpers::printOptions(Events::getYearOptions(), (int) $selectedOpt);
+							?></select>
+						</td>
 						<td><button type="submit">Add</button></td>
 					</tr>
 				</tbody>

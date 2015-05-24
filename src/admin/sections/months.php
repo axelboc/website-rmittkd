@@ -1,4 +1,4 @@
-<section id="months" class="section">
+<section class="section">
 	<h2 class="section-heading">Calendar images</h2>
 	<div class="section-content lh">
 		<p>This section controls the background images used for each month of the calendar on the homepage.</p>
@@ -24,13 +24,13 @@
 			// Add form row for each month
 			foreach ($months as $month) {
 				$field = 'months-' . $month['index'];
-				$monthName = date('F', mktime(0, 0, 0, $month['index'], 1));
+				$monthName = Helpers::monthToString($month['index']);
 				?>
 				<div class="form-row row">
 					<label class="form-label" for="<?php echo $field; ?>"><?php echo $monthName; ?></label>
 					<div class="form-field-wrap">
 						<select id="<?php echo $field; ?>" name="<?php echo $field; ?>">
-							<?php Helpers::printOptions(Months::getOptions(), $month['image']); ?>
+							<?php Helpers::printOptions(Months::getImageOptions(), $month['image']); ?>
 						</select>
 					</div>
 				</div>

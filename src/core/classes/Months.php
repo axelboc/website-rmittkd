@@ -5,7 +5,7 @@ class Months extends Feature {
 	public static $defaultImage = 'placeholder';
 	
 	private static $instance = null;
-	private static $options = null;
+	private static $imageOptions = null;
 	private static $imgPath = 'images/calendar/';
 	
 	
@@ -36,13 +36,13 @@ class Months extends Feature {
 	 * Get the month image options.
 	 * @return {Array}
 	 */
-	public static function getOptions() {
-		if (!self::$options) {
+	public static function getImageOptions() {
+		if (!self::$imageOptions) {
 			// Scan the calendar images directory
-			$files = scandir(PATH_ROOT . 'images/calendar');
+			$files = scandir(PATH_ROOT . self::$imgPath);
 			
 			// Keep only JPEGs and remove file extensions
-			self::$options = array_reduce($files, function ($arr, $img) {
+			self::$imageOptions = array_reduce($files, function ($arr, $img) {
 				if (preg_match('/^[a-z]+[0-9]*\.jpg$/', $img) === 1) {
 					$arr[] = substr($img, 0, -4);
 				}
@@ -51,7 +51,7 @@ class Months extends Feature {
 			}, []);
 		}
 		
-		return self::$options;
+		return self::$imageOptions;
 	}
 	
 	/**

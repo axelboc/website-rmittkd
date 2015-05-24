@@ -2,6 +2,8 @@
 
 class Events extends Feature {
 	
+	private static $monthOptions = null;
+	private static $yearOptions = null;
 	private static $instance = null;
 	
 	
@@ -25,6 +27,41 @@ class Events extends Feature {
 	public static function getAll() {
 		$events = self::getInstance()->collection->find();
 		return $events->sort(['year' => 1, 'month' => 1]);
+	}
+	
+	/**
+	 * Get the options with which to populate the drop-down menu of the 'evt-month' field.
+	 * @return {Array}
+	 */
+	public static function getMonthOptions() {
+		if (!self::$monthOptions) {
+			self::$monthOptions = [];
+			for ($i = 1; $i < 13; $i++) {
+				self::$monthOptions[] = [
+					'value' => $i,
+					'label' => Helpers::monthToString($i)
+				];
+			}
+		}
+		
+		return self::$monthOptions;
+	}
+	
+	/**
+	 * Get the options with which to populate the drop-down menu of the 'evt-year' field.
+	 * @return {Array}
+	 */
+	public static function getYearOptions() {
+		if (!self::$yearOptions) {
+			self::$yearOptions = [];
+			
+			$year = date('Y') - 1;
+			for ($i = 0; $i < 4; $i++) {
+				self::$yearOptions[] = $year + $i;
+			}
+		}
+		
+		return self::$yearOptions;
 	}
 	
 	/**

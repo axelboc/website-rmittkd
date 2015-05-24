@@ -5,15 +5,7 @@ class Videos extends Feature {
 	private static $instance = null;
 	private static $urlRegex = '/^.+youtube\.com\/watch\?v=(.+)(&.*)?$/';
 	private static $iframeUrlFormat = 'https://www.youtube.com/embed/{{id}}?rel=0&amp;wmode=transparent';
-
-	/**
-	 * Print the URL of a YouTube video.
-	 * @param {Integer} $index - the index of the video
-	 */
-	public static function url($index) {
-		$video = self::getInstance()->collection->findOne(['index' => $index]);
-		echo $video ? $video['url'] : '';
-	}
+	
 	
 	/**
 	 * Print the iframe URL of a YouTube video.
@@ -22,6 +14,16 @@ class Videos extends Feature {
 	public static function iframeUrl($index) {
 		$video = self::getInstance()->collection->findOne(['index' => $index]);
 		echo $video ? $video['iframeUrl'] : '';
+	}
+
+	/**
+	 * Retrieve the URL of a YouTube video.
+	 * @param {Integer} $index - the index of the video
+	 * @return {String}
+	 */
+	public static function getUrl($index) {
+		$video = self::getInstance()->collection->findOne(['index' => $index]);
+		return $video ? $video['url'] : '';
 	}
 	
 	/**

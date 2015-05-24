@@ -17,7 +17,7 @@ class Helpers {
 		$localMatch = $feature !== null && isset($_SESSION['feature']) && $feature === $_SESSION['feature'];
 		
 		if ($globalMatch || $localMatch) {
-			echo '<div class="form-result-wrap lh" tabindex="-1">';
+			echo '<div ' . ($feature ? "id=$feature " : '') . 'class="form-result-wrap lh" tabindex="-1">';
 			echo '	<div class="form-result form-result--' . $_SESSION['result']['type'] . ' box">';
 			echo '		<p>' . $_SESSION['result']['message'] . '</p>';
 
@@ -69,16 +69,51 @@ class Helpers {
 	}
 	
 	/**
-	 * Print a list of drop-down menu options, optionally selected one of them.
-	 * @param {Array} $options
+	 * Print a list of drop-down menu options, optionally selecting one of them.
+	 * @param {Array} $options - array of strings, or array of arrays with 'value' and 'label' keys
 	 * @param {String} $selectedOpt
 	 */
 	static function printOptions($options, $selectedOpt = '') {
+		error_log('selectedOpt: ' . gettype($selectedOpt));
 		// Print the options
 		foreach ($options as $opt) {
-			$selected = $opt === $selectedOpt ? ' selected' : '';
-			echo "<option$selected>$opt</option>";
+			if (is_array($opt)) {
+				error_log(gettype($opt['value']) . '  ' . gettype($opt['label']));
+				$selected = $opt['value'] === $selectedOpt ? ' selected' : '';
+				echo "<option value=\"$opt[value]\"$selected>$opt[label]</option>";
+			} else {
+				error_log(gettype($opt));
+				$selected = $opt === $selectedOpt ? ' selected' : '';
+				echo "<option$selected>$opt</option>";
+			}
 		}
+	}
+	
+	/**
+	 * Similar to `printData`, but returns the data instead of printing it.
+	 * @param {String} $field
+	 * @param {String} $fallback - return value if no data found for field in session object
+	 */
+	static function getData($field, $fallback) {
+		$data = $fallback;
+		
+		if (isset($_SESSION['data']) && isset($_SESSION['data'][$field])) {
+			// Retrieve data
+			$data = $_SESSION['data'][$field];
+			
+			// Clear data
+			unset($_SESSION['data'][$field]);
+		}
+		
+		return $data;
+	}
+	
+	/**
+	 * Convert a month number to string ('January', 'February', etc.)
+	 * @param {Integer} $month
+	 */
+	static function monthToString($month) {
+		return date('F', mktime(0, 0, 0, $month, 1));
 	}
 	
 }

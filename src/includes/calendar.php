@@ -11,7 +11,7 @@ for ($i = 0; $i < 6; $i++) {
 	$events = Events::get($month, $year);
 	
 	// Convert month number to string ('January', 'February', etc.)
-	$monthStr = date('F', mktime(0, 0, 0, $month, 1));
+	$monthStr = Helpers::monthToString($month);
 	
 	?>
 	<div class="cal-month car-slide" aria-hidden="<?php echo $i !== 1; ?>">
