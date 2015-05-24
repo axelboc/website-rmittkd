@@ -26,7 +26,7 @@ class Videos extends Feature {
 	
 	/**
 	 * Get instance.
-	 * @return {Singleton}
+	 * @return {Videos}
 	 */
 	public static function getInstance() {
 		if (self::$instance === null) {
@@ -47,7 +47,7 @@ class Videos extends Feature {
 			'video-2' => FormSubmission::$fieldConfigs['url']
 		]);
 		
-		$i = 0;
+		$i = 1;
 		foreach ($data as $field => $url) {
 			// Look for the ID of the video in the URL
 			$matches = array();
