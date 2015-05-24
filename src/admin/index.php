@@ -18,6 +18,7 @@
 				} else {
 					include 'sections/admin.php';
 					include 'sections/events.php';
+					include 'sections/months.php';
 					include 'sections/videos.php';
 				}
 			?>

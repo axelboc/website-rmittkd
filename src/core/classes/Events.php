@@ -29,7 +29,7 @@ class Events extends Feature {
 	
 	/**
 	 * Get instance.
-	 * @return {Singleton}
+	 * @return {Events}
 	 */
 	public static function getInstance() {
 		if (self::$instance === null) {
