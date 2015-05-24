@@ -3,8 +3,8 @@
 	<div class="section-content lh">
 		<p>This section controls the background images used for each month of the calendar on the homepage.</p>
 		<form class="form row" action="/core/forms/form-admin.php?feature=months&action=update" method="post">
-			<?php printResult('months'); ?>
-			<?php printError('months'); ?>
+			<?php Helpers::printResult('months'); ?>
+			<?php Helpers::printError('months'); ?>
 			<div class="form-row row">
 				<label class="form-label" for="months-1">January</label>
 				<div class="form-field-wrap">

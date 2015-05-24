@@ -16,7 +16,7 @@
 			<li>Provide the <strong>year</strong> as a four-digit number.</li>
 		</ul>
 		<form class="form form--wider row" action="/core/forms/form-admin.php?feature=events&action=add" method="post">
-			<?php printResult('events', true); ?>
+			<?php Helpers::printResult('events', true); ?>
 			<table>
 				<thead>
 					<tr>
@@ -45,10 +45,10 @@
 						$index += 1;
 					} ?>
 					<tr>
-						<td><input id="evt-label" name="evt-label" type="text" value="<?php printData('evt-label'); ?>"></td>
-						<td><input id="evt-day" name="evt-day" type="text" value="<?php printData('evt-day'); ?>"></td>
-						<td><input id="evt-month" name="evt-month" type="text" value="<?php printData('evt-month'); ?>"</td>
-						<td><input id="evt-year" name="evt-year" type="text" value="<?php printData('evt-year'); ?>"</td>
+						<td><input id="evt-label" name="evt-label" type="text" value="<?php Helpers::printData('evt-label'); ?>"></td>
+						<td><input id="evt-day" name="evt-day" type="text" value="<?php Helpers::printData('evt-day'); ?>"></td>
+						<td><input id="evt-month" name="evt-month" type="text" value="<?php Helpers::printData('evt-month'); ?>"</td>
+						<td><input id="evt-year" name="evt-year" type="text" value="<?php Helpers::printData('evt-year'); ?>"</td>
 						<td><button type="submit">Add</button></td>
 					</tr>
 				</tbody>

@@ -24,23 +24,23 @@
 				<img class="contact-image hero respimg-fit lazy-loading" src="" data-src="images/hero/hero-contact-suffix.png" data-hidden-until="32" width="384" height="520" alt="">
 				<div class="section-content">
 					<form id="contact-form" novalidate class="form row" action="/core/forms/form-contact.php" method="post">
-						<?php printResult(); ?>
+						<?php Helpers::printResult(); ?>
 						<div class="form-result-wrap lh" tabindex="-1" hidden>
 							<p class="form-result"></p>
 						</div>
 						<div class="form-row row">
 							<label class="form-label" for="name">name</label>
 							<div class="form-field-wrap">
-								<input class="form-field" id="name" name="name" type="text" value="<?php printData('name'); ?>" aria-required="true">
-								<?php printError('name'); ?>
+								<input class="form-field" id="name" name="name" type="text" value="<?php Helpers::printData('name'); ?>" aria-required="true">
+								<?php Helpers::printError('name'); ?>
 								<div class="form-error form-error--blank" hidden>Enter your name</div>
 							</div>
 						</div>
 						<div class="form-row row">
 							<label class="form-label" for="email">email</label>
 							<div class="form-field-wrap">
-								<input class="form-field" id="email" name="email" type="text" value="<?php printData('email'); ?>" aria-required="true">
-								<?php printError('email'); ?>
+								<input class="form-field" id="email" name="email" type="text" value="<?php Helpers::printData('email'); ?>" aria-required="true">
+								<?php Helpers::printError('email'); ?>
 								<div class="form-error form-error--blank" hidden>Enter your email address</div>
 								<div class="form-error form-error--email" hidden>Enter a valid email address</div>
 							</div>
@@ -48,8 +48,8 @@
 						<div class="form-row row">
 							<label class="form-label" for="message">message</label>
 							<div class="form-field-wrap">
-								<textarea id="message" class="form-field" name="message" rows="6" aria-required="true"><?php printData('message'); ?></textarea>
-								<?php printError('message'); ?>
+								<textarea id="message" class="form-field" name="message" rows="6" aria-required="true"><?php Helpers::printData('message'); ?></textarea>
+								<?php Helpers::printError('message'); ?>
 								<div class="form-error form-error--blank" hidden>Enter your message</div>
 							</div>
 						</div>
