@@ -6,6 +6,7 @@ class Months extends Feature {
 	
 	private static $instance = null;
 	private static $options = null;
+	private static $imgPath = 'images/calendar/';
 	
 	
 	/**
@@ -14,7 +15,12 @@ class Months extends Feature {
 	 */
 	public static function image($index) {
 		$month = self::getInstance()->collection->findOne(['index' => $index]);
-		echo $month ? $month['image'] : self::$defaultImage;
+		
+		if ($month && file_exists(PATH_ROOT . self::$imgPath . $month['image'] . '.jpg')) {
+			echo $month['image'];
+		} else {
+			echo self::$defaultImage;
+		}
 	}
 	
 	/**
@@ -79,7 +85,7 @@ class Months extends Feature {
 		$i = 1;
 		foreach ($data as $field => $image) {
 			// Ensure that the image file exists
-			if (!file_exists(PATH_ROOT . 'images/calendar/' . $image . '.jpg')) {
+			if (!file_exists(PATH_ROOT . self::$imgPath . $image . '.jpg')) {
 				$this->formSubmission->exitWithResult(false, 'Unexpected error',
 													  '[Months] no image found with name=' . $image);
 			}
