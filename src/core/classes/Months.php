@@ -2,9 +2,20 @@
 
 class Months extends Feature {
 	
+	public static $defaultImage = 'placeholder';
+	
 	private static $instance = null;
 	private static $options = null;
 	
+	
+	/**
+	 * Print a month's image.
+	 * @param {Integer} $index - the index of the month
+	 */
+	public static function image($index) {
+		$month = self::getInstance()->collection->findOne(['index' => $index]);
+		echo $month ? $month['image'] : self::$defaultImage;
+	}
 	
 	/**
 	 * Retrieve all twelve month images.
@@ -20,17 +31,21 @@ class Months extends Feature {
 	 * @return {Array}
 	 */
 	public static function getOptions() {
-		if (!$this->options) {
+		if (!self::$options) {
 			// Scan the calendar images directory
 			$files = scandir(PATH_ROOT . 'images/calendar');
 			
-			// Remove JPG extension
-			$this->options = array_map(function ($img) {
-				return substr($img, 0, -4);
-			}, $files);
+			// Keep only JPEGs and remove file extensions
+			self::$options = array_reduce($files, function ($arr, $img) {
+				if (preg_match('/^[a-z]+[0-9]*\.jpg$/', $img) === 1) {
+					$arr[] = substr($img, 0, -4);
+				}
+				
+				return $arr;
+			}, []);
 		}
 		
-		return $this->options;
+		return self::$options;
 	}
 	
 	/**

@@ -28,7 +28,6 @@
 					</tr>
 				</thead>
 				<tbody><?php 
-					$index = 0;
 					$events = Events::getAll();
 					foreach ($events as $evt) {
 						?>
@@ -42,7 +41,6 @@
 							</td>
 						</tr>
 						<?php
-						$index += 1;
 					} ?>
 					<tr>
 						<td><input id="evt-label" name="evt-label" type="text" value="<?php Helpers::printData('evt-label'); ?>"></td>

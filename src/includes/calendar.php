@@ -17,7 +17,7 @@ for ($i = 0; $i < 6; $i++) {
 	<div class="cal-month car-slide" aria-hidden="<?php echo $i !== 1; ?>">
 		<div class="cal-month-inner">
 			<div class="respimg-wrap">
-				<img class="cal-img respimg-crop lazy-loading" src="" data-src="images/calendar/placeholder.jpg" width="408" height="150" alt="">
+				<img class="cal-img respimg-crop lazy-loading" src="" data-src="images/calendar/<?php Months::image($month); ?>.jpg" width="408" height="150" alt="">
 			</div>
 			<div class="cal-caption backdrop">
 				<h3 class="cal-heading"><?php echo $monthStr; ?></h3>

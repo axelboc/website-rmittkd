@@ -68,6 +68,19 @@ class Helpers {
 		}
 	}
 	
+	/**
+	 * Print a list of drop-down menu options, optionally selected one of them.
+	 * @param {Array} $options
+	 * @param {String} $selectedOpt
+	 */
+	static function printOptions($options, $selectedOpt = '') {
+		// Print the options
+		foreach ($options as $opt) {
+			$selected = $opt === $selectedOpt ? ' selected' : '';
+			echo "<option$selected>$opt</option>";
+		}
+	}
+	
 }
 
 ?>

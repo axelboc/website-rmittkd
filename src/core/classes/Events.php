@@ -6,15 +6,6 @@ class Events extends Feature {
 	
 	
 	/**
-	 * Retrieve all the events.
-	 * @return {MongoLite\Cursor}
-	 */
-	public static function getAll() {
-		$events = self::getInstance()->collection->find();
-		return $events->sort(['year' => 1, 'month' => 1]);
-	}
-	
-	/**
 	 * Retrieve the events for a given month and year.
 	 * @param {Integer} $m - the month number (no leading zero)
 	 * @param {Integer} $y - the year
@@ -25,6 +16,15 @@ class Events extends Feature {
 			'month' => $m,
 			'year' => $y
 		]);
+	}
+	
+	/**
+	 * Retrieve all the events.
+	 * @return {MongoLite\Cursor}
+	 */
+	public static function getAll() {
+		$events = self::getInstance()->collection->find();
+		return $events->sort(['year' => 1, 'month' => 1]);
 	}
 	
 	/**
