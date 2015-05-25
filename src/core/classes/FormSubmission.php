@@ -9,6 +9,11 @@ class FormSubmission {
 			'sanitise' => FILTER_SANITIZE_URL,
 			'require' => 'Enter a URL',
 			'validate' => [FILTER_VALIDATE_URL, 'Enter a valid URL']
+		],
+		'fee' => [
+			'sanitise' => FILTER_SANITIZE_FULL_SPECIAL_CHARS,
+			'require' => 'Enter a number',
+			'validate' => [FILTER_VALIDATE_INT, 'Enter a valid number']
 		]
 	];
 	
