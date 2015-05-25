@@ -13,4 +13,7 @@ define('BCC_EMAIL', 'bar@example.com');
 // The administrator password
 define('ADMIN_PWD', 'admin');
 
+// The URL of the club's shop on RMIT Link
+define('CLUB_SHOP_URL', 'https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30');
+
 ?>
