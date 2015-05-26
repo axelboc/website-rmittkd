@@ -74,15 +74,12 @@ class Helpers {
 	 * @param {String} $selectedOpt
 	 */
 	static function printOptions($options, $selectedOpt = '') {
-		error_log('selectedOpt: ' . gettype($selectedOpt));
 		// Print the options
 		foreach ($options as $opt) {
 			if (is_array($opt)) {
-				error_log(gettype($opt['value']) . '  ' . gettype($opt['label']));
 				$selected = $opt['value'] === $selectedOpt ? ' selected' : '';
 				echo "<option value=\"$opt[value]\"$selected>$opt[label]</option>";
 			} else {
-				error_log(gettype($opt));
 				$selected = $opt === $selectedOpt ? ' selected' : '';
 				echo "<option$selected>$opt</option>";
 			}

@@ -21,6 +21,7 @@
 					include 'sections/months.php';
 					include 'sections/fees.php';
 					include 'sections/videos.php';
+					include 'sections/merchandising.php';
 				}
 			?>
 		</div>

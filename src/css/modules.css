@@ -158,10 +158,6 @@
 	border-radius: 3px;
 }
 
-.sidebar a {
-	color: #fff;
-}
-
 .sidebar a:focus {
 	outline-color: #fff;
 }

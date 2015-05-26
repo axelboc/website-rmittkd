@@ -103,7 +103,7 @@ class Events extends Feature {
 			]
 		]);
 		
-		// Build video document
+		// Build event document
 		$doc = [
 			'label' => $data['evt-label'],
 			'day' => $data['evt-day'],

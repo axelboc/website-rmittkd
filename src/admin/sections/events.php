@@ -12,8 +12,6 @@
 					<li>&ldquo;<em>TBC</em>&rdquo;&mdash;if the exact date is to be confirmed.</li>
 				</ul>
 			</li>
-			<li>Provide the <strong>month</strong> as a number, without a leading zero.</li>
-			<li>Provide the <strong>year</strong> as a four-digit number.</li>
 		</ul>
 		<form class="form form--wider row" action="/core/forms/form-admin.php?feature=events&action=add" method="post">
 			<?php Helpers::printResult('events', true); ?>

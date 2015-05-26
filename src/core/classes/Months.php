@@ -74,9 +74,7 @@ class Months extends Feature {
 		// Build the fields array
 		$fields = [];
 		for ($i = 1; $i < 13; $i++) {
-			$fields['months-' . $i] = [
-				'sanitise' => FILTER_SANITIZE_FULL_SPECIAL_CHARS
-			];
+			$fields['months-' . $i] = FormSubmission::$fieldConfigs['special'];
 		}
 		
 		// Process the fields
