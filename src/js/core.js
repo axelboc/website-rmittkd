@@ -32,6 +32,7 @@
 		$(doc.getElementById('instructors')).carousel(has3d);
 		$(doc.getElementById('facebook-feed')).facebookFeed();
 		$(doc.getElementById('contact-form')).contactForm();
+		$(doc.getElementById('help-btn')).groupToggle('.admin-help');
 	});
 	
 	/**
