@@ -18,10 +18,10 @@
 				} else {
 					include 'sections/admin.php';
 					include 'sections/events.php';
-					include 'sections/months.php';
-					include 'sections/fees.php';
 					include 'sections/videos.php';
 					include 'sections/merchandising.php';
+					include 'sections/fees.php';
+					include 'sections/months.php';
 				}
 			?>
 		</div>

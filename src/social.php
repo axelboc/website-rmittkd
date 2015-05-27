@@ -29,7 +29,7 @@
 			</div>
 			<div class="row">
 				<div class="lay-main lay-main row">
-					<section class="links-section section section-1of2 section-first">
+					<section class="links-section section unit tab-1-2">
 						<h1 class="section-heading">Links</h1>
 						<div class="links-wrap section-content row">
 							<section>
@@ -52,7 +52,7 @@
 							</section>
 						</div>
 					</section>
-					<section id="facebook-feed" class="fb-section section section-1of2">
+					<section id="facebook-feed" class="fb-section section unit tab-1-2">
 						<div id="fb-root"></div>
 						<div class="fb-loading" hidden>
 							<h2 class="section-heading">Facebook</h2>

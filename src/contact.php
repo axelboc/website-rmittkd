@@ -31,7 +31,7 @@
 						<div class="form-row row">
 							<label class="form-label" for="name">name</label>
 							<div class="form-field-wrap">
-								<input class="form-field" id="name" name="name" type="text" value="<?php Helpers::printData('name'); ?>" aria-required="true">
+								<input class="form-field field" id="name" name="name" type="text" value="<?php Helpers::printData('name'); ?>" aria-required="true">
 								<?php Helpers::printError('name'); ?>
 								<div class="form-error form-error--blank" hidden>Enter your name</div>
 							</div>
@@ -39,7 +39,7 @@
 						<div class="form-row row">
 							<label class="form-label" for="email">email</label>
 							<div class="form-field-wrap">
-								<input class="form-field" id="email" name="email" type="text" value="<?php Helpers::printData('email'); ?>" aria-required="true">
+								<input class="form-field field" id="email" name="email" type="text" value="<?php Helpers::printData('email'); ?>" aria-required="true">
 								<?php Helpers::printError('email'); ?>
 								<div class="form-error form-error--blank" hidden>Enter your email address</div>
 								<div class="form-error form-error--email" hidden>Enter a valid email address</div>
@@ -48,14 +48,14 @@
 						<div class="form-row row">
 							<label class="form-label" for="message">message</label>
 							<div class="form-field-wrap">
-								<textarea id="message" class="form-field" name="message" rows="6" aria-required="true"><?php Helpers::printData('message'); ?></textarea>
+								<textarea id="message" class="form-field field" name="message" rows="6" aria-required="true"><?php Helpers::printData('message'); ?></textarea>
 								<?php Helpers::printError('message'); ?>
 								<div class="form-error form-error--blank" hidden>Enter your message</div>
 							</div>
 						</div>
 						<label class="form-label--special" for="url">Leave this field empty: <input id="url" type="text" name="url" /></label>
 						<div class="form-row form-row--submit row">
-							<button class="form-submit" type="submit"><span>Submit</span></button>
+							<button class="form-submit button" type="submit"><span>Submit</span></button>
 						</div>
 					</form>
 				</div>

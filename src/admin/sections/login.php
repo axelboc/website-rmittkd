@@ -7,12 +7,12 @@
 			<div class="form-row row">
 				<label class="form-label" for="pwd">password</label>
 				<div class="form-field-wrap">
-					<input id="pwd" name="pwd" class="form-field" type="password" size="15">
+					<input id="pwd" name="pwd" class="form-field field" type="password" size="15">
 					<?php Helpers::printError('pwd'); ?>
 				</div>
 			</div>
 			<div class="form-row form-row--submit row">
-				<button class="form-submit" type="submit"><span>Log in</span></button>
+				<button class="form-submit button" type="submit"><span>Log in</span></button>
 			</div>
 		</form>
 	</div>

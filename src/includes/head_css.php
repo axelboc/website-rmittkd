@@ -10,3 +10,4 @@
 <link rel="stylesheet" href="/css/page-index.css">
 <link rel="stylesheet" href="/css/page-social.css">
 <link rel="stylesheet" href="/css/page-tkd.css">
+<link rel="stylesheet" href="/css/admin.css">

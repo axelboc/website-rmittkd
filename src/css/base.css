@@ -81,7 +81,26 @@ h1 {
 }
 
 
-/* ===== Links ===== */
+/* ===== Mini grid (wrap with `.row` container) ===== */
+
+@media (min-width: 40em) {
+	
+	.unit {
+		float: left;
+	}
+	
+	.tab-1-2 {
+		width: 49.25%;
+	}
+
+	.tab-1-2:first-child {
+		margin-right: 1.5%;
+	}
+
+}
+
+
+/* ===== Links and buttons ===== */
 
 a {
 	color: inherit;
@@ -114,6 +133,22 @@ a > span {
 
 [tabindex="-1"]:focus {
 	outline: 0;
+}
+
+.button {
+	padding: .7em 4em;
+	border: 0;
+	border-radius: 3px;
+	background: #e7343c left top no-repeat url('../images/fist.png');
+	background-image: url('../images/fist.png'), -webkit-linear-gradient(top, #e7343c, #cb171f);
+	background-image: url('../images/fist.png'), linear-gradient(to bottom, #e7343c, #cb171f);
+	color: #fff;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+}
+
+.button:hover {
+	text-decoration: underline;
 }
 
 
@@ -172,6 +207,34 @@ img {
 }
 
 
+/* ===== Form field ===== */
+
+.field {
+	display: block;
+	width: 100%;
+	padding: .6em;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+	background-color: #f8f8f8;
+	background-color: rgba(248, 248, 248, .8);
+	transition: border-color .4s ease,
+				-webkit-box-shadow .4s ease,
+				   -moz-box-shadow .4s ease,
+						box-shadow .4s ease;
+}
+
+.field--select {
+	padding: .52em .6em;
+}
+
+.field_invalid {
+	border-color: #f3a6ab;
+	-webkit-box-shadow: inset 0 0 2px #f04851;
+	   -moz-box-shadow: inset 0 0 2px #f04851;
+			box-shadow: inset 0 0 2px #f04851;
+}
+
+
 /* ===== Other helpers ===== */
 
 .lh {
@@ -195,4 +258,3 @@ img {
 	background-color: rgba(85, 85, 85, .85);
 	color: #fff;
 }
-
