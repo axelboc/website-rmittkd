@@ -19,7 +19,7 @@ $submission = new FormSubmission('/contact#contact');
 if (isset($_POST['url']) && $_POST['url'] !== '') {
 	// Prepare log message
 	$log = '[form-contact] spam caught';
-	if (isset($_POST['message']) {
+	if (isset($_POST['message'])) {
 		 $log .= ' - message="' .  strip_tags($_POST['message']) . '"';
 	}
 	

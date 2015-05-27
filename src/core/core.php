@@ -13,7 +13,6 @@
 // Absolute paths
 define('PATH_ROOT', $_SERVER['DOCUMENT_ROOT'] . '/');
 define('PATH_CORE', PATH_ROOT . 'core/');
-define('PATH_DATA', PATH_CORE . 'data/');
 
 // Configuration
 require_once PATH_CORE . 'config.php';
@@ -33,8 +32,11 @@ session_start();
 function __autoload($className) {
 	if (file_exists(PATH_CORE . "classes/$className.php")) {
     	require_once PATH_CORE . "classes/$className.php";
-	} else if (file_exists(PATH_CORE . "vendor/$className.php")) {
-    	require_once PATH_CORE . "vendor/$className.php";
+	} else {
+		$className = preg_replace('/\\\\/', '/', $className);
+		if (file_exists(PATH_CORE . "vendor/$className.php")) {
+			require_once PATH_CORE . "vendor/$className.php";
+		}
 	}
 }
 
