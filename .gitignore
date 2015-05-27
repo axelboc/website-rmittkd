@@ -2,12 +2,13 @@
 ## Grunt
 #################
 
+dist/
 node_modules/
 resources/
-dist/
+src/core/data
 src/core/config.php
-src/data/error.log
-src/data/videos.xml
+src/core/error.log
+src/core/db.sqlite
 
 
 #################

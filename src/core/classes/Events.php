@@ -2,20 +2,71 @@
 
 class Events extends Feature {
 	
+	private static $monthOptions = null;
+	private static $yearOptions = null;
 	private static $instance = null;
 	
 	
 	/**
+	 * Retrieve the events for a given month and year.
+	 * @param {Integer} $m - the month number (no leading zero)
+	 * @param {Integer} $y - the year
+	 * @return {MongoLite\Cursor}
+	 */
+	public static function get($m, $y) {
+		return self::getInstance()->collection->find([
+			'month' => $m,
+			'year' => $y
+		]);
+	}
+	
+	/**
 	 * Retrieve all the events.
-	 * @return {SimpleXMLElement}
+	 * @return {MongoLite\Cursor}
 	 */
 	public static function getAll() {
-		return self::getInstance()->xml->event;
+		$events = self::getInstance()->collection->find();
+		return $events->sort(['year' => 1, 'month' => 1]);
+	}
+	
+	/**
+	 * Get the options with which to populate the drop-down menu of the 'evt-month' field.
+	 * @return {Array}
+	 */
+	public static function getMonthOptions() {
+		if (!self::$monthOptions) {
+			self::$monthOptions = [];
+			for ($i = 1; $i < 13; $i++) {
+				self::$monthOptions[] = [
+					'value' => $i,
+					'label' => Helpers::monthToString($i)
+				];
+			}
+		}
+		
+		return self::$monthOptions;
+	}
+	
+	/**
+	 * Get the options with which to populate the drop-down menu of the 'evt-year' field.
+	 * @return {Array}
+	 */
+	public static function getYearOptions() {
+		if (!self::$yearOptions) {
+			self::$yearOptions = [];
+			
+			$year = date('Y') - 1;
+			for ($i = 0; $i < 4; $i++) {
+				self::$yearOptions[] = $year + $i;
+			}
+		}
+		
+		return self::$yearOptions;
 	}
 	
 	/**
 	 * Get instance.
-	 * @return {Singleton}
+	 * @return {Events}
 	 */
 	public static function getInstance() {
 		if (self::$instance === null) {
@@ -32,9 +83,8 @@ class Events extends Feature {
 	public function add() {
 		// Process the fields
 		$data = $this->processFields([
-			'evt-month' => [
-				'require' => 'Select a month',
-				'validate' => ['/^[0-9]{2}\/[0-9]{4}$/', 'Select a valid month (mm/yyyy)']
+			'evt-label' => [
+				'require' => 'Enter a label'
 			],
 			'evt-day' => [
 				'require' => 'Enter a day',
@@ -43,16 +93,27 @@ class Events extends Feature {
 					'Enter a valid day (cf. instructions)'
 				]
 			],
-			'evt-label' => [
-				'require' => 'Enter a label'
+			'evt-month' => [
+				'require' => 'Enter a month',
+				'validate' => ['/^(0?[1-9]|1[0-2])$/', 'Enter a valid month number']
+			],
+			'evt-year' => [
+				'require' => 'Enter a year',
+				'validate' => ['/^[0-9]{4}$/', 'Enter a valid year (yyyy)']
 			]
 		]);
 		
-		// Add new event
-		$evt = $this->xml->addChild('event', $data['evt-label']);
-		$evt->addAttribute('month', $data['evt-month']);
-		$evt->addAttribute('day', $data['evt-day']);
-		
+		// Build event document
+		$doc = [
+			'label' => $data['evt-label'],
+			'day' => $data['evt-day'],
+			'month' => $data['evt-month'],
+			'year' => $data['evt-year']
+		];
+
+		// Insert document in collection
+		$res = $this->collection->insert($doc);
+
 		// Conclude the action
 		$this->conclude();
 	}
@@ -61,31 +122,22 @@ class Events extends Feature {
 	 * Remove an event.
 	 */
 	public function remove() {
-		// Process the GET parameter `index`
+		// Process GET parameter `id`
 		$data = $this->processFields([
-			'index' => [ 'sanitise' => FILTER_SANITIZE_NUMBER_INT ]
+			'id' => FormSubmission::$fieldConfigs['special']
 		], true);
 		
-		// Retrieve index of event to remove
-		$index = $data['index'];
+		// Find event to remove
+		$evt = $this->collection->findOne(['_id' => $data['id']]);
 		
-		// Fail if index is not provided
-		// The 'require' validation is not used here because this is a system error, not a user input error
-		if ($index === '') {
-			$this->formSubmission->exitWithResult(false, 'Unexpected error', '[Events] `index` parameter is empty');
-		}
-		
-		// Retrieve the event
-		$index = (int)$index;
-		$evt = $this->xml->event[$index];
-		
-		// Fail if event not found
-		if (is_null($evt)) {
-			$this->formSubmission->exitWithResult(false, 'Unexpected error', '[Events] event not found at index: ' . $index);
+		// Fail if no event found with ID
+		if (!$evt) {
+			$this->formSubmission->exitWithResult(false, 'Unexpected error',
+												  '[Events] no event found with id=' . $data['id']);
 		}
 		
 		// Remove the event and conclude the action
-		unset($this->xml->event[$index]);
+		$this->collection->remove(['_id' => $data['id']]);
 		$this->conclude();
 	}
 	

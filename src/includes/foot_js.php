@@ -5,4 +5,5 @@
 <script src="/js/carousel.js"></script>
 <script src="/js/facebook-feed.js"></script>
 <script src="/js/contact-form.js"></script>
+<script src="/js/group-toggle.js"></script>
 <script src="/js/core.js"></script>

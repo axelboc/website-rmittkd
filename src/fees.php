@@ -1,3 +1,4 @@
+<?php require_once 'core/core.php'; ?>
 <!DOCTYPE html>
 <html lang="en-AU" prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
 <head>
@@ -24,21 +25,21 @@
 				<div class="membership section-content row">
 					<ul class="mbrship-options list-reset row">
 						<li class="mbrship-opt">
-							<a href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=6148" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
-								<span class="mbrship-fee"><span class="mbrship-val">$330</span> <span class="mbrship-period">per year</span></span>
+							<a href="<?php echo CLUB_SHOP_URL; ?>" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
+								<span class="mbrship-fee"><span class="mbrship-val">$<?php echo Fees::fee('rmit'); ?></span> <span class="mbrship-period">per year</span></span>
 								<span class="mbrship-group"><span>RMIT</span> student</span>
 							</a>
 						</li>
 						<li class="mbrship-opt">
-							<a id="fees-public" href="https://rmitlink.rmit.edu.au/Store/Product.aspx?PID=6150" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
-								<span class="mbrship-fee"><span class="mbrship-val">$380</span> <span class="mbrship-period">per year</span></span>
+							<a href="<?php echo CLUB_SHOP_URL; ?>" class="mbrship-opt-link row" title="Purchase it on RMIT Link (new window)" target="_blank">
+								<span class="mbrship-fee"><span class="mbrship-val">$<?php echo Fees::fee('non-rmit'); ?></span> <span class="mbrship-period">per year</span></span>
 								<span class="mbrship-group"><span>Public</span> non-RMIT</span>
 							</a>
 						</li>
 					</ul>
 					<div class="mbrship-note">
 						<p><strong>First 3 classes free!</strong></p>
-						<p>Training fees included. <a href="https://rmitlink.rmit.edu.au/Clubs/Club.aspx?CID=30" target="_blank">Half-year options</a> available.</p>
+						<p>Training fees included. <a href="<?php echo CLUB_SHOP_URL; ?>" target="_blank">Half-year options</a> available.</p>
 						<p><a href="https://rmitlink.rmit.edu.au/Common/Register.aspx?R=1" target="_blank">Register to RMIT Link</a> to purchase your membership.</p>
 					</div>
 				</div>

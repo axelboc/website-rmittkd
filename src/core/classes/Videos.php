@@ -5,27 +5,30 @@ class Videos extends Feature {
 	private static $instance = null;
 	private static $urlRegex = '/^.+youtube\.com\/watch\?v=(.+)(&.*)?$/';
 	private static $iframeUrlFormat = 'https://www.youtube.com/embed/{{id}}?rel=0&amp;wmode=transparent';
-
-	/**
-	 * Print the URL of a YouTube video.
-	 * @param {Interger} $index - the index of the video in the XML data store
-	 */
-	public static function url($index) {
-		echo self::getInstance()->xml->video[$index];
-	}
+	
 	
 	/**
 	 * Print the iframe URL of a YouTube video.
-	 * @param {Interger} $index - the index of the video in the XML data store
+	 * @param {Integer} $index - the index of the video
 	 */
 	public static function iframeUrl($index) {
-		$id = self::getInstance()->xml->video[$index]['id'];
-		echo str_replace('{{id}}', $id, self::$iframeUrlFormat);
+		$video = self::getInstance()->collection->findOne(['index' => $index]);
+		echo $video ? $video['iframeUrl'] : '';
+	}
+
+	/**
+	 * Retrieve the URL of a YouTube video.
+	 * @param {Integer} $index - the index of the video
+	 * @return {String}
+	 */
+	public static function getUrl($index) {
+		$video = self::getInstance()->collection->findOne(['index' => $index]);
+		return $video ? $video['url'] : '';
 	}
 	
 	/**
 	 * Get instance.
-	 * @return {Singleton}
+	 * @return {Videos}
 	 */
 	public static function getInstance() {
 		if (self::$instance === null) {
@@ -46,10 +49,7 @@ class Videos extends Feature {
 			'video-2' => FormSubmission::$fieldConfigs['url']
 		]);
 		
-		// Retrieve the video elements from the data store
-		$videos = $this->xml->video;
-		$i = 0;
-		
+		$i = 1;
 		foreach ($data as $field => $url) {
 			// Look for the ID of the video in the URL
 			$matches = array();
@@ -61,9 +61,22 @@ class Videos extends Feature {
 				$this->conclude();
 			}
 			
-			// Store video URL and ID
-			$videos[$i] = $url;
-			$videos[$i]['id'] = $matches[1];
+			// Use video ID to compute iframe URL
+			$iframeUrl = str_replace('{{id}}', $matches[1], self::$iframeUrlFormat);
+			
+			// Build video document
+			$doc = [
+				'index' => $i,
+				'url' => $url,
+				'iframeUrl' => $iframeUrl
+			];
+			
+			// Save document in collection
+			if ($this->collection->update(['index' => $i], $doc) === 0) {
+				// Document not found; insert it
+				$res = $this->collection->insert($doc);
+			}
+			
 			$i++;
 		}
 		

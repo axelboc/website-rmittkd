@@ -9,6 +9,10 @@ class FormSubmission {
 			'sanitise' => FILTER_SANITIZE_URL,
 			'require' => 'Enter a URL',
 			'validate' => [FILTER_VALIDATE_URL, 'Enter a valid URL']
+		],
+		'fee' => [
+			'require' => 'Enter a number',
+			'validate' => [FILTER_VALIDATE_INT, 'Enter a valid number']
 		]
 	];
 	
@@ -68,9 +72,12 @@ class FormSubmission {
 			// Store the value
 			$this->data[$field] = $value;
 			
-			// If the field is required, ensure that a value has been provided
-			if (isset($config['require']) && $value === '') {
-				$this->addError($field, $config['require']);
+			// If no value has been provided, do not continue with validatation
+			if ($value === '') {
+				// Add an error if the field is required
+				if (isset($config['require'])) {
+					$this->addError($field, $config['require']);
+				}
 				continue;
 			}
 

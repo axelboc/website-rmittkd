@@ -2,16 +2,23 @@
 
 class Feature {
 	
-	protected $store;
-	protected $xml;
+	protected $dbClient;
+	protected $collectionName;
+	protected $collection;
 	protected $formSubmission;
 	
 	/**
-	 * Parse XML data store.
+	 * Feature constructor.
 	 */
 	public function __construct() {
-		$this->store = strtolower(preg_replace('/[A-Z]([A-Z])/', '-$1', get_class($this)));
-		$this->xml = simplexml_load_file(PATH_DATA . $this->store . '.xml');
+		// Deduce feature name from class name
+		$this->collectionName = strtolower(preg_replace('/[A-Z]([A-Z])/', '-$1', get_class($this)));
+		
+		// Retrieve the database
+		$this->dbClient = new MongoLite\Client(PATH_CORE);
+		
+		// Select feature's collection
+		$this->collection = $this->dbClient->db->selectCollection($this->collectionName);
 	}
 	
 	/**
@@ -30,21 +37,19 @@ class Feature {
 	}
 	
 	/**
-	 * Conclude an action: persist XML to file and exit.
+	 * Conclude an action.
 	 */
 	protected function conclude() {
-		// Check if errors
+		// If errors, exit with failure
 		if ($this->formSubmission->hasErrors()) {
 			$this->formSubmission->exitWithResult(false, 'Changes not saved');
 		}
 		
-		// Persist XML to file
-		file_put_contents(PATH_DATA . $this->store . '.xml', $this->xml->asXML());
-		
 		// Clear data from session
 		$this->formSubmission->clearData();
 		
-		// Action successful
+		
+		// Action successful; exit with success
 		$this->formSubmission->exitWithResult(true, 'Changes saved');
 	}
 	
@@ -54,6 +59,24 @@ class Feature {
 	 */
 	public function setFormSubmission($formSubmission) {
 		$this->formSubmission = $formSubmission;
+	}
+	
+	/**
+	 * Clear the feature's database collection.
+	 */
+	public function clearCollection() {
+		$this->dbClient->db->dropCollection($this->collectionName);
+		$this->collection = $this->dbClient->db->selectCollection($this->collectionName);
+	}
+	
+	/**
+	 * Debug the feature's database collection.
+	 */
+	public function debugCollection() {
+		$entries = $this->collection->find();
+		foreach($entries as $e) {
+			var_dump($e);
+		}
 	}
 	
 }

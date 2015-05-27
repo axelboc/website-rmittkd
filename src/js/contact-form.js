@@ -86,7 +86,7 @@
 		
 		if (!$newError) {
 			// If no new error, remove invalidity mark-up from field 
-			$field.removeAttr('aria-invalid').removeClass('form-field--invalid');
+			$field.removeAttr('aria-invalid').removeClass('field_invalid');
 		}
 		
 		if ($prevError.length > 0) {
@@ -113,7 +113,7 @@
 	 */
 	ContactForm.prototype.showError = function showError($error, $field) {
 		if ($error) {
-			$field.attr('aria-invalid', true).addClass('form-field--invalid');
+			$field.attr('aria-invalid', true).addClass('field_invalid');
 			$error.attr('role', 'alert').fadeIn().removeAttr('hidden');
 		}
 	};
