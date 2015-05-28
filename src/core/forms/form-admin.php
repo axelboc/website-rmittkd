@@ -32,17 +32,18 @@ $feature = filter_var($_GET['feature'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $action = filter_var($_GET['action'], FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
 // Check that the feature class exists
-if (!class_exists($feature)) {
-	$formSubmission->exitWithResult(false, 'Unexpected error', '[form-admin] feature class not found: ' . $feature);
+$featureClass = ucfirst($feature);
+if (!class_exists($featureClass)) {
+	$formSubmission->exitWithResult(false, 'Unexpected error', '[form-admin] feature class not found: ' . $featureClass);
 }
 
 // Retrieve the feature's singleton instance
-$featureInstance = $feature::getInstance();
+$featureInstance = $featureClass::getInstance();
 
 // Check that the action method exists
 if (!method_exists($featureInstance, $action)) {
 	$formSubmission->exitWithResult(false, 'Unexpected error', '[form-admin] action method not found: '
-									. $feature . '->' . $action);
+									. $featureClass . '->' . $action);
 }
 
 // Store feature in session and add to form submission's redirect URL
