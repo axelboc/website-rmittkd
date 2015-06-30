@@ -14,10 +14,12 @@ class Events extends Feature {
 	 * @return {MongoLite\Cursor}
 	 */
 	public static function get($m, $y) {
-		return self::getInstance()->collection->find([
+		$events = self::getInstance()->collection->find([
 			'month' => $m,
 			'year' => $y
-		]);
+		])->toArray();
+
+		return self::getInstance()->sortEvents($events);
 	}
 	
 	/**
@@ -26,32 +28,7 @@ class Events extends Feature {
 	 */
 	public static function getAll() {
 		$events = self::getInstance()->collection->find()->toArray();
-		
-		// Sort events
-		usort($events, function ($a, $b) {
-			// By year
-			$yearDiff = $a['year'] - $b['year'];
-			if ($yearDiff !== 0) {
-				return $yearDiff;
-			}
-			
-			// By month
-			$monthDiff = $a['month'] - $b['month'];
-			if ($monthDiff !== 0) {
-				return $monthDiff;
-			}
-			
-			// By day
-			// Retrieve the first integer that make up the day string
-			// If TBC, use an arbitrary large number so the event comes last
-			preg_match('/^([0-9]{1,2}|TBC)/', $a['day'], $aMatches);
-			preg_match('/^([0-9]{1,2}|TBC)/', $b['day'], $bMatches);
-			$aDay = $aMatches[0] === 'TBC' ? 100 : intval($aMatches[0]);
-			$bDay = $bMatches[0] === 'TBC' ? 100 : intval($bMatches[0]);
-			return $aDay - $bDay;
-		});
-		
-		return $events;
+		return self::getInstance()->sortEvents($events);
 	}
 	
 	/**
@@ -164,6 +141,38 @@ class Events extends Feature {
 		// Remove the event and conclude the action
 		$this->collection->remove(['_id' => $data['id']]);
 		$this->conclude();
+	}
+	
+	/**
+	 * Sort events by year, month and day.
+	 * @param {Array} $events
+	 * @return {Array}
+	 */
+	public function sortEvents($events) {
+		usort($events, function ($a, $b) {
+			// By year
+			$yearDiff = $a['year'] - $b['year'];
+			if ($yearDiff !== 0) {
+				return $yearDiff;
+			}
+			
+			// By month
+			$monthDiff = $a['month'] - $b['month'];
+			if ($monthDiff !== 0) {
+				return $monthDiff;
+			}
+			
+			// By day
+			// Retrieve the first integer that make up the day string
+			// If TBC, use an arbitrary large number so the event comes last
+			preg_match('/^([0-9]{1,2}|TBC)/', $a['day'], $aMatches);
+			preg_match('/^([0-9]{1,2}|TBC)/', $b['day'], $bMatches);
+			$aDay = $aMatches[0] === 'TBC' ? 100 : intval($aMatches[0]);
+			$bDay = $bMatches[0] === 'TBC' ? 100 : intval($bMatches[0]);
+			return $aDay - $bDay;
+		});
+		
+		return $events;
 	}
 	
 }
