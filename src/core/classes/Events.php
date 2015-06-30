@@ -21,12 +21,37 @@ class Events extends Feature {
 	}
 	
 	/**
-	 * Retrieve all the events.
-	 * @return {MongoLite\Cursor}
+	 * Retrieve the events sorted by year and month.
+	 * @return {Array}
 	 */
 	public static function getAll() {
-		$events = self::getInstance()->collection->find();
-		return $events->sort(['year' => 1, 'month' => 1]);
+		$events = self::getInstance()->collection->find()->toArray();
+		
+		// Sort events
+		usort($events, function ($a, $b) {
+			// By year
+			$yearDiff = $a['year'] - $b['year'];
+			if ($yearDiff !== 0) {
+				return $yearDiff;
+			}
+			
+			// By month
+			$monthDiff = $a['month'] - $b['month'];
+			if ($monthDiff !== 0) {
+				return $monthDiff;
+			}
+			
+			// By day
+			// Retrieve the first integer that make up the day string
+			// If TBC, use an arbitrary large number so the event comes last
+			preg_match('/^([0-9]{1,2}|TBC)/', $a['day'], $aMatches);
+			preg_match('/^([0-9]{1,2}|TBC)/', $b['day'], $bMatches);
+			$aDay = $aMatches[0] === 'TBC' ? 100 : intval($aMatches[0]);
+			$bDay = $bMatches[0] === 'TBC' ? 100 : intval($bMatches[0]);
+			return $aDay - $bDay;
+		});
+		
+		return $events;
 	}
 	
 	/**
