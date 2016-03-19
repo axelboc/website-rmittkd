@@ -15,18 +15,6 @@ define('CONTACT_FAILURE', 'Sorry, something went wrong. Try again later, or get 
 // Initialise new form submission
 $submission = new FormSubmission('/contact#contact');
 
-// Spam trap: URL field must be left empty
-if (isset($_POST['url']) && $_POST['url'] !== '') {
-	// Prepare log message
-	$log = '[form-contact] spam caught';
-	if (isset($_POST['message'])) {
-		 $log .= ' - message="' .  strip_tags($_POST['message']) . '"';
-	}
-	
-	// Make it look like the message was successfully sent
-	$submission->exitWithResult(true, CONTACT_SUCCESS, $log);
-}
-
 // Prepare fields for validation
 $fields = [
 	'name' => [
@@ -48,8 +36,22 @@ if (!$submission->validate($fields)) {
 	$submission->exitWithResult(false, "Sorry, something's not quite right.");
 }
 
-// Prepare email body
+// Get submission data
 $data = $submission->getData();
+
+// Spam trap: URL field must be left empty
+if (isset($_POST['url']) && $_POST['url'] !== '') {
+	// Prepare log message
+	$log = '[form-contact] spam caught';
+  $log .= ' - name="' . $data['name'] . '"';
+  $log .= ' - email="' . $data['email'] . '"';
+	$log .= ' - message="' .  $data['message'] . '"';
+	
+	// Make it look like the message was successfully sent
+	$submission->exitWithResult(true, CONTACT_SUCCESS, $log);
+}
+
+// Prepare email body
 $emailBody = '<p>A new message has been posted on the Taekwon Do club\'s website.</p>' .
 			 '<p><strong>Name:</strong> ' . $data['name'] . '</p>' .
 			 '<p><strong>Email:</strong> ' . $data['email'] . '</p>' .
