@@ -1,6 +1,6 @@
 <?php
 
-// The Mandrill API key (https://mandrillapp.com/)
+// The SendGrid API key (https://app.sendgrid.com/settings/api_keys)
 define('API_KEY', '0123456789abcdefg');
 
 // The club's email address

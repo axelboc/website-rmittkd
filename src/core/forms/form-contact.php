@@ -58,41 +58,33 @@ $emailBody = '<p>A new message has been posted on the Taekwon Do club\'s website
 			 '<p><strong>Message:</strong></p>' .
 			 '<p>' . $data['message'] . '</p>';
 
-// Prepare Mandrill API call
+// Prepare SendGrid API call
 $emailConfig = [
-	'key' => API_KEY,
-	'message' => [
-		'html' => $emailBody,
-		'subject' => 'New message on TKD website',
-		'from_email' => CLUB_EMAIL,
-		'from_name' => 'Website',
-		'to' => [
-			[
-				'email' => CLUB_EMAIL,
-				'name' => 'RMIT ITF Taekwon-Do',
-				'type' => 'to'
-			]
-		],
-		'headers' => [
-			'Reply-To' => ($data['name'] . ' <' . $data['email'] . '>')
-		]
-	]
+  'to' => CLUB_EMAIL,
+  'toname' => 'RMIT ITF Taekwon-Do',
+  'subject' => 'New message on TKD website',
+  'html' => $emailBody,
+  'from' => CLUB_EMAIL,
+  'fromname' => 'Website',
+  'replyto' => $data['email']
 ];
 
 // If BCC email provided, add it to the configuration
 if (strlen(BCC_EMAIL) > 0) {
-	$emailConfig['message']['to'][] = [
-		'email' => BCC_EMAIL,
-		'type' => 'bcc'
-	];
+	$emailConfig['bcc'] = BCC_EMAIL;
 }
 
-// Prepare to send email via Mandrill
+// Prepare to call API
 $curl = curl_init();
-curl_setopt($curl, CURLOPT_POST, true);
-curl_setopt($curl, CURLOPT_POSTFIELDS, json_encode($emailConfig));
+curl_setopt($curl, CURLOPT_HTTPHEADER, [
+  'Authorization: Bearer ' . API_KEY,
+  'Accept: application/json'
+]);
 
-curl_setopt($curl, CURLOPT_URL, 'https://mandrillapp.com/api/1.0/messages/send.json');
+curl_setopt($curl, CURLOPT_POST, true);
+curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query($emailConfig));
+
+curl_setopt($curl, CURLOPT_URL, 'https://api.sendgrid.com/api/mail.send.json');
 curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
 // Send email
@@ -104,12 +96,12 @@ if (!$raw) {
 } else {
 	// Decode result
 	$response = json_decode($raw);
-	
-	// Check Mandrill's response and exit accordingly
-	if (is_array($response) && count($response) > 0 && $response[0]->status === 'sent') {
+  
+	// Check SendGrid's response and exit accordingly
+	if ($response && property_exists($response, 'message') && $response->message === 'success') {
 		$submission->exitWithResult(true, CONTACT_SUCCESS);
 	} else {
-		$submission->exitWithResult(false, CONTACT_FAILURE, '[form-contact] Madrill error: ' . $raw);
+		$submission->exitWithResult(false, CONTACT_FAILURE, '[form-contact] SendGrid error: ' . $raw);
 	}
 }
 
