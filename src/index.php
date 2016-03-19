@@ -88,9 +88,9 @@
 						<section class="map-section section unit tab-1-2">
 							<h2 class="section-heading">Location</h2>
 							<div class="map-wrap inner">
-								<a class="map-link link-inv respimg-wrap" href="https://goo.gl/maps/QH2uK77NkpH2" target="_blank">
-									<img class="cal-img respimg-crop" src="images/map.jpg" width="473" height="149" alt="Map of 8 Orr St, Carlton, Australia">
-									<span class="map-caption backdrop"><span>Level 2, RMIT Building 47, Melbourne</span></span>
+								<a class="map-link link-inv respimg-wrap" href="<?php echo Location::url(); ?>" target="_blank">
+									<img class="cal-img respimg-crop" src="images/map.jpg" width="473" height="149" alt="Map of Melbourne, Australia, showing the location of RMIT University's CBD campus">
+									<span class="map-caption backdrop"><span><?php echo Location::text(); ?></span></span>
 								</a>
 							</div>
 						</section>
