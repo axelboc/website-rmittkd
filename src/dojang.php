@@ -41,7 +41,7 @@
 								<div class="instr-caption">
 									<h2 class="instr-heading-sub section-heading">Instructors</h2>
 									<h3 class="section-heading-sub">Robert Lai</h3>
-									<p class="lh">Grand Master Lai (9th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he established many clubs, totalising over 1000 members. Grand Master Lai is now a retired <abbr title="Physical Education">PE</abbr> teacher and the president of <strong><a href="https://www.facebook.com/chitfaustralia" target="_blank"><abbr title="Chan Hun International Taekwon-Do Federation">CHITF</abbr> Australia</a></strong>.</p>
+									<p class="lh">Grand Master Lai (9th degree) received his first degree Black Belt in <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong> where he established many clubs, totalising over 1000 members. Grand Master Lai is now a retired <abbr title="Physical Education">PE</abbr> teacher and the President of <strong><a href="https://www.facebook.com/chitfaustralia" target="_blank"><abbr title="Chan Hun International Taekwon-Do Federation">CHITF</abbr> Australia</a></strong>.</p>
 								</div>
 							</section>
 							<section class="instr-profile car-slide row">
@@ -79,20 +79,20 @@
 						<h2 class="section-heading">Executive Committee</h2>
 						<div class="section-content">
 							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/marc.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>President</span><br>Marc Chung</p>
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/shiv.jpg" width="150" height="150" alt="">
+								<p class="exec-caption"><span>President</span><br>Shivarnee</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/shiv.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Vice-President</span><br>Shivarnee</p>
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/vlad.jpg" width="150" height="150" alt="">
+								<p class="exec-caption"><span>Vice-President</span><br>Vlad</p>
 							</section>
 							<section class="exec-member">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/victor.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Treasurer</span><br>Victor</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/vlad.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Secretary</span><br>Vlad</p>
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/nancy.jpg" width="150" height="150" alt="">
+								<p class="exec-caption"><span>Secretary</span><br>Nancy</p>
 							</section>
 						</div>
 					</section>
