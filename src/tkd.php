@@ -35,7 +35,7 @@
 						<h2 class="lai-heading section-heading">Lai Taekwon-Do</h2>
 						<img class="lai-image respimg-fit lazy-loading" src="" data-src="images/hero/sm-lai-suffix.png" width="270" height="350" alt="">
 						<div class="lai-content section-content lh">
-							<p>The RMIT ITF Taekwon-Do Club is affiliated to <a href="http://www.laitkd.com.au/" target="_blank">Lai Taekwon-Do</a>, under the guidance of <strong>Grand Master Robert Lai</strong> (9th degree) and his son Jason Lai (6th degree).</p>
+							<p>The RMIT ITF Taekwon-Do Club is affiliated to <a href="http://www.laitkd.com.au/" target="_blank">Lai Taekwon-Do</a>, under the guidance of <strong>Grand Master Robert Lai</strong> (9th degree) and his son Master Jason Lai (7th degree).</p>
 							<p>Grand Master Lai was born in Malaysia. He started Taekwon-Do in 1964 <strong>at the age of 19</strong>, after watching a demonstration by General Choi and his squad. The training hall was a small Buddhist temple so numbers were limited, and Grand Master Lai was one of 30 students chosen to begin training.</p>
 							<p>Grand Master Lai achieved his black belt in 1966 and <strong>represented Malaysia</strong> in the early international tournaments of 1967, 1968 and 1971. In the following years, he decided to focus on instructing, and built up many clubs around Malaysia. He then moved to Australia in the 1980s. He eventually became a <strong><abbr title="Physical Education">PE</abbr> teacher</strong> at St Albans Secondary College, where he founded <em>Lai Taekwon-Do</em>.</p>
 						</div>
