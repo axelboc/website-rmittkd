@@ -12,6 +12,11 @@ Performance
 - YSlow grade: **A** (94%)
 - Page load time: **0.76s**
 
-Distribution
+Development
 ------------
-[Grunt](http://gruntjs.com/) is used for distribution. Fork and clone the repository on your machine, install the dependencies with `npm install`, then run `grunt` to distribute.
+1. Install [Node.js](https://nodejs.org/) along with NPM
+2. Run `npm install` to install dependencies
+3. Run `npm start` to distribute site into `dist` folder with [Grunt](http://gruntjs.com/).
+4. Start local PHP server (e.g. WampServer) from `dist` folder.
+
+To deploy, just use old-school FTP!
