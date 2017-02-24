@@ -83,16 +83,16 @@
 								<p class="exec-caption"><span>President</span><br>Shivarnee</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/vlad.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Vice-President</span><br>Vlad</p>
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/nancy.jpg" width="150" height="150" alt="">
+								<p class="exec-caption"><span>Vice-President</span><br>Nancy</p>
 							</section>
 							<section class="exec-member">
 								<img class="exec-pic lazy-loading" src="" data-src="images/execs/victor.jpg" width="150" height="150" alt="">
 								<p class="exec-caption"><span>Treasurer</span><br>Victor</p>
 							</section>
 							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/nancy.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Secretary</span><br>Nancy</p>
+								<img class="exec-pic lazy-loading" src="" data-src="images/execs/jenny.jpg" width="150" height="150" alt="">
+								<p class="exec-caption"><span>Secretary</span><br>Jenny</p>
 							</section>
 						</div>
 					</section>
