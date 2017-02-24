@@ -51,19 +51,13 @@
 										</tr>
 									</thead>
 									<tbody>
-										<tr class="tmtbl-odd">
-											<th class="tmtbl-time" scope="row">18:00-18:30</th>
-											<td></td>
-											<td></td>
-											<td><span class="tmtbl-training tmtbl-top hidden-text">Training</span></td>
-										</tr>
 										<tr>
 											<th class="tmtbl-time" scope="row">18:30-19:00</th>
 											<td><span class="tmtbl-training tmtbl-top hidden-text">Training</span></td>
 											<td><span class="tmtbl-training tmtbl-top hidden-text">Training</span></td>
-											<td><span class="tmtbl-training hidden-text">Training</span></td>
+											<td><span class="tmtbl-training tmtbl-top hidden-text">Training</span></td>
 										</tr>
-										<tr class="tmtbl-odd">
+										<tr>
 											<th class="tmtbl-time" scope="row">19:00-19:30</th>
 											<td><span class="tmtbl-training hidden-text">Training</span></td>
 											<td><span class="tmtbl-training hidden-text">Training</span></td>
@@ -73,10 +67,16 @@
 											<th class="tmtbl-time" scope="row">19:30-20:00</th>
 											<td><span class="tmtbl-training tmtbl-bot hidden-text">Training</span></td>
 											<td><span class="tmtbl-training tmtbl-bot hidden-text">Training</span></td>
+											<td><span class="tmtbl-training hidden-text">Training</span></td>
+										</tr>
+										<tr>
+											<th class="tmtbl-time" scope="row">20:00-20:30</th>
+											<td></td>
+											<td></td>
 											<td><span class="tmtbl-openmat hidden-text">Open mat</span></td>
 										</tr>
-										<tr class="tmtbl-odd">
-											<th class="tmtbl-time" scope="row">20:00-20:30</th>
+										<tr>
+											<th class="tmtbl-time" scope="row">20:30-21:00</th>
 											<td></td>
 											<td></td>
 											<td><span class="tmtbl-openmat tmtbl-bot hidden-text">Open mat</span></td>
