@@ -95,7 +95,13 @@
 							</div>
 						</section>
 					</div>
-					<section class="section cal-section">
+					<section class="nloc-section section row">
+						<div class="section-content lh">
+							<h2 class="nloc-heading">New Location!</h2>
+							<p>The club now runs classes at the <a href="https://www.google.com.au/maps/place/RMIT+Sports+Centre/@-37.6798996,145.059177,17z/data=!3m1!4b1!4m5!3m4!1s0x6ad64f36b51778cd:0xece131753ee3cdb2!8m2!3d-37.6799039!4d145.0613657" target="_blank">RMIT Sports Centre</a> in <strong>Bundoora</strong>. Come train with us <strong>every Tuesday</strong> from 6:30 to 8pm!</p>
+						</div>
+					</section>
+					<section class="cal-section section">
 						<h2 class="section-heading">Calendar</h2>
 						<div id="calendar" class="calendar">
 							<button class="cal-arrow cal-arrow--prev car-prev hidden-text">Previous month</button>

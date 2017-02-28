@@ -175,6 +175,21 @@
 }
 
 
+/* ===== New location ===== */
+
+.nloc-section {
+	border-left: 6px solid #ec1a25;
+}
+
+.nloc-heading {
+	float: left;
+	margin: 0 .75rem 0 0;
+	line-height: 1.8;
+	font-size: 150%;
+	font-weight: normal;
+}
+
+
 /* ===== Calendar ===== */
 
 .calendar {
