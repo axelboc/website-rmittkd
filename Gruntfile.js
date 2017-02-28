@@ -137,6 +137,16 @@ module.exports = function(grunt) {
 			dist: {
 				src: ['dist/css/main.css', 'dist/js/main.js']
 			}
+		},
+		
+		watch: {
+			dist: {
+				files: ['*', 'src/**/*'],
+				tasks: ['build'],
+				options: {
+					atBegin: true
+				}
+			}
 		}
 		
 	});
@@ -148,15 +158,21 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-filerev');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 	
-	// Run 'grunt dist' to distribute the website
-	grunt.registerTask('default', [
+	// Run 'grunt build' to distribute the website
+	grunt.registerTask('build', [
 		'jshint',
 		'clean', 'copy',
 		'dom_munger:css_read', 'cssmin',
 		'dom_munger:js_read', 'uglify',
 		'filerev',
 		'dom_munger:css_write', 'dom_munger:js_write'
+	]);
+
+	// Run 'grunt' to distribute and watch for changes
+	grunt.registerTask('default', [
+		'watch'
 	]);
 
 };

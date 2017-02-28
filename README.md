@@ -15,8 +15,8 @@ Performance
 Development
 ------------
 1. Install [Node.js](https://nodejs.org/) along with NPM
-2. Run `npm install` to install dependencies
-3. Run `npm start` to distribute site into `dist` folder with [Grunt](http://gruntjs.com/).
-4. Start local PHP server (e.g. WampServer) from `dist` folder.
+2. Run `npm install` to install the dependencies
+3. Run `npm start` to distribute the site into the `dist` folder with [Grunt](http://gruntjs.com/) and watch for changes.
+4. Start a local PHP server (e.g. WampServer) from the `dist` folder, and open your browser to http://localhost/.
 
 To deploy, just use old-school FTP!
