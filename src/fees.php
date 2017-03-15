@@ -40,7 +40,7 @@
 					<div class="mbrship-note">
 						<p><strong>First 3 classes free!</strong></p>
 						<p>Training fees included. <a href="<?php echo CLUB_SHOP_URL; ?>" target="_blank">Half-year options</a> available.</p>
-						<p><a href="https://rmitlink.rmit.edu.au/Common/Register.aspx?R=1" target="_blank">Register to RMIT Link</a> to purchase your membership.</p>
+						<p><a href="https://rmitlink.rmit.edu.au/Account/Register?returnUrl=/Clubs/taekwondo-itf" target="_blank">Register to RMIT Link</a> to purchase your membership.</p>
 					</div>
 				</div>
 			</header>
