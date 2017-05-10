@@ -1,39 +1,23 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
+import { BodyContainer } from "phenomic"
 
-import Root from "../../components/Root"
+import Page from "../Page"
 
 // import styles from "./index.css"
 
-const Homepage = (props, { metadata }) => {
-  const { head } = props;
-  const { siteTitle, siteUrl } = metadata;
-  
+const Homepage = (props) => {
+  const { body } = props;
+
   return (
-    <Root head={head}>
-      <Helmet
-        title={siteTitle}
-        meta={[
-          { property: "og:type", content: "website" },
-          { property: "og:title", content: siteTitle },
-          { property: "og:url", content: siteUrl },
-        ]}
-      />
-    </Root>
+    <Page {...props}>
+      {body && <BodyContainer>{body}</BodyContainer>}
+    </Page>
   )
 }
 
 Homepage.propTypes = {
-  head: PropTypes.object.isRequired
-}
-
-Homepage.contextTypes = {
-  metadata: PropTypes.shape({
-    siteTitle: PropTypes.string.isRequired,
-    siteUrl: PropTypes.string.isRequired,
-    socialImage: PropTypes.string.isRequired,
-  }).isRequired,
+  body: PropTypes.string,
 }
 
 export default Homepage

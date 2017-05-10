@@ -1,52 +1,33 @@
 import React from "react"
 import PropTypes from "prop-types"
-import Helmet from "react-helmet"
-import { joinUri } from "phenomic"
 
-import Root from "../../components/Root"
+import HeadMeta from "../HeadMeta"
+import Header from "../../components/Header"
+import Main from "../../components/Main"
+import Footer from "../../components/Footer"
+import Loading from "../../components/Loading"
 
-// import styles from "./index.css"
+import styles from "./index.css"
 
-function Page(props, { metadata }) {
-  const { __url, head } = props;
-  const { siteTitle, siteUrl } = metadata;
-
-  const title = `${head.title} | ${siteTitle}`;
+function Page(props) {
+  const { __filename, isLoading, children } = props
 
   return (
-    <Root head={head}>
-      <Helmet
-        title={title}
-        meta={[
-          { property: "og:type", content: "article" },
-          { property: "og:title", content: title },
-          { property: "og:url", content: joinUri(siteUrl, __url) },
-          { property: "og:site_name", content: siteUrl },
-        ]}
-      />
-    </Root>
+    <div className={styles.root}>
+      <HeadMeta {...props} />
+      <Header __filename={__filename} />
+      <Main>
+        {isLoading ? <Loading /> : children}
+      </Main>
+      <Footer />
+    </div>
   )
 }
 
 Page.propTypes = {
-  children: PropTypes.node,
-  isLoading: PropTypes.bool,
   __filename: PropTypes.string,
-  body: PropTypes.string,
-  header: PropTypes.element,
-  footer: PropTypes.element,
-
-  __url: PropTypes.string,
-  head: PropTypes.shape({
-    title: PropTypes.string.isRequired,
-  }).isRequired,
-}
-
-Page.contextTypes = {
-  metadata: PropTypes.shape({
-    siteTitle: PropTypes.string.isRequired,
-    siteUrl: PropTypes.string.isRequired,
-  }).isRequired,
+  isLoading: PropTypes.bool,
+  children: PropTypes.node,
 }
 
 export default Page

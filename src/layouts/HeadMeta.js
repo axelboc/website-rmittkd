@@ -1,10 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
+import { joinUri } from "phenomic"
 
-function DefaultHeadMeta(props, { metadata }) {
-  const { head } = props
-  const { socialImage, publisher } = metadata
+function HeadMeta(props, { metadata }) {
+  const { __url, head, isLoading } = props
+  const { siteTitle, siteUrl, socialImage, publisher } = metadata
+
+  const isHome = __url === '/'
+  const title = `${isLoading || isHome ? '' : `${head.title} | `}${siteTitle}`
 
   return (
     <div hidden>
@@ -13,12 +17,17 @@ function DefaultHeadMeta(props, { metadata }) {
           lang: "en-AU",
           prefix: "og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#",
         }}
+        title={title}
         meta={[
           { name: "viewport", content: "width=device-width, initial-scale=1" },
           { name: "description", content: head.description },
+          { property: "og:type", content: (isHome ? "website" : "article") },
+          { property: "og:title", content: title },
           { property: "og:description", content: head.description },
+          { property: "og:url", content: joinUri(siteUrl, __url) },
           { property: "og:image", content: head.socialImage || socialImage },
           { property: "og:locale", content: "en_GB" },
+          ...(!isHome && [{ property: "og:site_name", content: siteUrl }]),
         ]}
         link={[
           { rel: "icon", type: "image/png", href: "/assets/favicon-32x32.png", sizes: "32x32" },
@@ -34,17 +43,22 @@ function DefaultHeadMeta(props, { metadata }) {
   )
 }
 
-DefaultHeadMeta.propTypes = {
+HeadMeta.propTypes = {
+  __url: PropTypes.string,
   head: PropTypes.shape({
-    description: PropTypes.string.isRequired,
+    title: PropTypes.string,
+    description: PropTypes.string,
   }).isRequired,
+  isLoading: PropTypes.bool,
 }
 
-DefaultHeadMeta.contextTypes = {
+HeadMeta.contextTypes = {
   metadata: PropTypes.shape({
+    siteTitle: PropTypes.string.isRequired,
+    siteUrl: PropTypes.string.isRequired,
     socialImage: PropTypes.string.isRequired,
     publisher: PropTypes.string.isRequired,
   }).isRequired,
 }
 
-export default DefaultHeadMeta
+export default HeadMeta
