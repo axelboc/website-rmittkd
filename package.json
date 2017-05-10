@@ -95,6 +95,9 @@
   "stylelint": {
     "extends": "./node_modules/phenomic/lib/stylelint-config-recommended/index.js"
   },
+  "dependencies": {
+    "normalize.css": "^7.0.0"
+  },
   "devDependencies": {
     "babel-cli": "^6.14.0",
     "babel-core": "^6.14.0",
@@ -139,8 +142,5 @@
     "warning": "^3.0.0",
     "webpack": "^2.3.0",
     "whatwg-fetch": "^0.11.0"
-  },
-  "dependencies": {
-    "normalize.css": "^7.0.0"
   }
 }
