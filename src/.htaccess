@@ -23,11 +23,8 @@ ErrorDocument 404 /404.php
 </IfModule>
 
 # gzip compression
-AddOutputFilterByType DEFLATE text/php
-AddOutputFilterByType DEFLATE text/xml
-AddOutputFilterByType DEFLATE text/css
-AddOutputFilterByType DEFLATE application/xml
-AddOutputFilterByType DEFLATE application/javascript
+php_flag zlib.output_compression On
+php_value zlib.output_compression_level 5
 
 # Turn mod_rewrite on
 <IfModule mod_rewrite.c>
