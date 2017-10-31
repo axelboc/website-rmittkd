@@ -1,7 +1,19 @@
 import React from 'react'
+import Helmet from 'react-helmet'
 
-export default function () {
-  return (
-    <div>Hello World</div>
-  )
+export default class IndexPage extends React.Component {
+  componentDidMount() {
+    window.netlifyIdentity.on('init', user => {
+      if (user) return;
+      window.netlifyIdentity.on('login', () => {
+        document.location.href = '/admin/';
+      })
+    })
+  }
+
+  render() {
+    return (
+      <div>Hello World</div>
+    )
+  }
 }

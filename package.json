@@ -20,7 +20,10 @@
   },
   "dependencies": {
     "gatsby": "^1.9.82",
-    "gatsby-link": "^1.6.23"
+    "gatsby-link": "^1.6.23",
+    "react-helmet": "^5.2.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "gatsby-source-filesystem": "^1.5.5"
+  }
 }
