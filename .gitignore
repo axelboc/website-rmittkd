@@ -1,6 +1,7 @@
-# node / npm
 node_modules
+.cache/
+public/
 *.log
-
-# phenomic build
-dist
+.DS_Store
+Thumbs.db
+old-new/
