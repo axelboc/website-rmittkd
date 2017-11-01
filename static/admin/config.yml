@@ -1,7 +1,7 @@
 backend:
-  name: git-gateway
-
-publish_mode: editorial_workflow
+  name: github
+  repo: axelboc/website-rmittkd
+  branch: make-static
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
