@@ -16,7 +16,8 @@
   },
   "scripts": {
     "build": "gatsby build",
-    "start": "gatsby develop"
+    "start": "gatsby develop",
+    "local": "yarn build && gatsby serve"
   },
   "dependencies": {
     "gatsby": "^1.9.82",
