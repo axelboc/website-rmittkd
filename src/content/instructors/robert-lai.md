@@ -1,5 +1,5 @@
 ---
-name: Robert Lai
+title: Robert Lai
 degree: '9'
 bio: >-
   Grand Master Lai (9th degree) received his first degree Black Belt in

@@ -108,11 +108,10 @@ collections:
                     pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
   - name: "locations"
     label: "Locations"
-    folder: "src/content"
+    folder: "src/content/locations"
     create: true
-    slug: "location-{{suburb}}"
     fields:
-      - {label: "Suburb", name: "suburb", widget: "string", pattern: ['^[A-Z]', "Should be capitalised"]}
+      - {label: "Suburb", name: "title", widget: "string", pattern: ['^[A-Z]', "Should be capitalised"]}
       - {label: "Address", name: "address", widget: "string"}
       - label: "Session times"
         name: "times"
@@ -129,11 +128,10 @@ collections:
             pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
   - name: "instructors"
     label: "Instructors"
-    folder: "src/content"
+    folder: "src/content/instructors"
     create: true
-    slug: "instructor-{{name}}"
     fields:
-      - {label: "Name", name: "name", widget: "string"}
+      - {label: "Name", name: "title", widget: "string"}
       - label: "Black-belt degree (1-9)"
         name: "degree"
         widget: "number"
