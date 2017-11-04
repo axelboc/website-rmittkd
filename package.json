@@ -26,6 +26,7 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
-    "gatsby-source-filesystem": "^1.5.5"
+    "gatsby-source-filesystem": "^1.5.5",
+    "gatsby-transformer-remark": "^1.7.19"
   }
 }

@@ -26,7 +26,12 @@ collections:
                 name: "locations"
                 widget: "list"
                 fields:
-                  - {label: "Entry", name: "entry", widget: "relation", collection: "locations"}
+                  - label: "Entry"
+                    name: "entry"
+                    widget: "relation"
+                    collection: "locations"
+                    searchField: ["title", "address"]
+                    value: "title"
           - label: "Membership fees"
             name: "fees"
             widget: "object"
@@ -79,7 +84,12 @@ collections:
                 name: "list"
                 widget: "list"
                 fields:
-                  - {label: "Entry", name: "entry", widget: "relation", collection: "locations"}
+                  - label: "Entry"
+                    name: "entry"
+                    widget: "relation"
+                    collection: "instructors"
+                    searchField: ["title"]
+                    value: "title"
           - label: "Associated clubs"
             name: "clubs"
             widget: "object"
