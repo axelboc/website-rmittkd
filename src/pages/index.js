@@ -6,7 +6,7 @@ export default class IndexPage extends React.Component {
     const { frontmatter: fm, html } = this.props.data.allMarkdownRemark.edges[0].node
     console.log(fm, html)
     return (
-      <div>Hello World</div>
+      <div>RMIT ITF Taekwon-Do</div>
     )
   }
 }
@@ -19,7 +19,7 @@ export const query = graphql`
           frontmatter {
             trainIntro
             locations {
-              title
+              suburb
               address
               times {
                 days

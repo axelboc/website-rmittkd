@@ -20,7 +20,7 @@ collections:
             name: "locations"
             widget: "list"
             fields:
-              - {label: "Suburb", name: "title", widget: "string", pattern: ['^[A-Z]', "Should be capitalised"]}
+              - {label: "Suburb", name: "suburb", widget: "string", pattern: ['^[A-Z]', "Should be capitalised"]}
               - {label: "Address", name: "address", widget: "string"}
               - label: "Session times"
                 name: "times"
@@ -83,7 +83,7 @@ collections:
             name: "instructors"
             widget: "list"
             fields:
-              - {label: "Name", name: "title", widget: "string"}
+              - {label: "Name", name: "name", widget: "string"}
               - label: "Black-belt degree (1-9)"
                 name: "degree"
                 widget: "number"
@@ -99,19 +99,23 @@ collections:
             fields:
               - {label: "Club name", name: "name", widget: "string"}
               - {label: "Location", name: "location", widget: "string"}
-              - {label: "In Greater Melbourne?", name: "melbourne", widget: "boolean"}
+              - {label: "In Greater Melbourne?", name: "inMelbourne", widget: "boolean"}
               - label: "State"
                 name: "state"
                 widget: "select"
                 options: ["VIC", "NSW", "TAS", "QLD", "NT", "WA"]
                 default: "VIC"
-              - label: "Website"
-                name: "web"
-                widget: "string"
-                required: false,
-                pattern: ['^https:\/\/www\.facebook\.com\/', "Should be a URL starting with: https://www.facebook.com/"]
-              - label: "Facebook"
-                name: "fb"
-                widget: "string"
-                required: false,
-                pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
+              - label: "Links"
+                name: "links"
+                widget: "list"
+                fields:
+                  - label: "Type"
+                    name: "type"
+                    widget: "select"
+                    options:
+                      - {label: "Website", value: "web"}
+                      - {label: "Facebook page", value: "fb"}
+                  - label: "URL"
+                    name: "url"
+                    widget: "string"
+                    pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
