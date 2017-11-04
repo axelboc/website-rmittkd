@@ -13,6 +13,6 @@ fees:
     year: '310'
   student:
     semester: '130'
-    year: '260'
+    year: ''
 ---
 
