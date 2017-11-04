@@ -26,7 +26,7 @@ collections:
                 name: "locations"
                 widget: "list"
                 fields:
-                  - {label: "Location entry", name: "entry", widget: "relation", collection: "locations"}
+                  - {label: "Entry", name: "entry", widget: "relation", collection: "locations"}
           - label: "Membership fees"
             name: "fees"
             widget: "object"
@@ -36,14 +36,26 @@ collections:
                 name: "student"
                 widget: "object"
                 fields:
-                  - {label: "Year", name: "year", widget: "number"}
-                  - {label: "Semester", name: "semester", widget: "number"}
+                  - label: "Year"
+                    name: "year"
+                    widget: "number"
+                    pattern: ['^[0-9]+$', "Should be a number"]
+                  - label: "Semester"
+                    name: "semester"
+                    widget: "number"
+                    pattern: ['^[0-9]+$', "Should be a number"]
               - label: "Public (non-RMIT)"
                 name: "public"
                 widget: "object"
                 fields:
-                  - {label: "Year", name: "year", widget: "number"}
-                  - {label: "Semester", name: "semester", widget: "number"}
+                  - label: "Year"
+                    name: "year"
+                    widget: "number"
+                    pattern: ['^[0-9]+$', "Should be a number"]
+                  - label: "Semester"
+                    name: "semester"
+                    widget: "number"
+                    pattern: ['^[0-9]+$', "Should be a number"]
       - file: "src/content/tkd.md"
         label: "What is Taekwon-Do?"
         name: "tkd"
@@ -63,17 +75,17 @@ collections:
             widget: "object"
             fields:
               - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
-              - label: "List"
+              - label: "Instructors"
                 name: "list"
                 widget: "list"
                 fields:
-                  - {label: "Instructor entry", name: "entry", widget: "relation", collection: "locations"}
+                  - {label: "Entry", name: "entry", widget: "relation", collection: "locations"}
           - label: "Associated clubs"
             name: "clubs"
             widget: "object"
             fields:
               - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
-              - label: "List"
+              - label: "Clubs"
                 name: "list"
                 widget: "list"
                 fields:
@@ -84,7 +96,6 @@ collections:
                     name: "state"
                     widget: "select"
                     options: ["NSW", "NT", "TAS", "QLD", "VIC", "WA"]
-                    default: "VIC"
                   - label: "Website"
                     name: "web"
                     widget: "string"
@@ -126,5 +137,5 @@ collections:
       - label: "Black-belt degree (1-9)"
         name: "degree"
         widget: "number"
-        pattern: ['^[1-9]$', "Should be between 1 and 9"]
+        pattern: ['^[1-9]$', "Should be a number between 1 and 9"]
       - {label: "Short biography", name: "bio", widget: "markdown"}
