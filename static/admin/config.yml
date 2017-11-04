@@ -16,7 +16,7 @@ collections:
         label: "Homepage"
         name: "home"
         fields:
-          - {label: "Intro", name: "intro", widget: "markdown"}
+          - {label: "Intro", name: "body", widget: "markdown"}
           - {label: "\"Train with us\" section intro", name: "trainIntro", widget: "markdown"}
           - label: "Locations"
             name: "locations"
@@ -66,7 +66,7 @@ collections:
         label: "What is Taekwon-Do?"
         name: "tkd"
         fields:
-          - {label: "Intro", name: "intro", widget: "markdown"}
+          - {label: "Intro", name: "body", widget: "markdown"}
           - label: "Video"
             name: "video"
             widget: "string"
@@ -75,7 +75,7 @@ collections:
         label: "Our Dojang"
         name: "dojang"
         fields:
-          - {label: "Intro", name: "intro", widget: "markdown"}
+          - {label: "Intro", name: "body", widget: "markdown"}
           - {label: "\"Instructors\" section intro", name: "instructorsIntro", widget: "markdown"}
           - label: "Instructors list"
             name: "instructors"

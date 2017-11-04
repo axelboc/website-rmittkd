@@ -1,15 +1,18 @@
 ---
-intro: Text.
+instructorsIntro: Test
 instructors:
-  intro: Test
-  list: []
+  - title: Robert Lai
+    degree: '9'
+    bio: ''
+  - title: Jason Lai
+    degree: '7'
+    bio: ''
+clubsIntro: Test
 clubs:
-  intro: Test
-  list:
-    - location: 'St Albans Secondary College, Main Road East, St Albans'
-      melbourne: true
-      name: Lai Taekwon-Do Academy
-      state: VIC
-      web: 'http://www.laitkd.com.au/'
+  - location: 'St Albans Secondary College, Main Road East, St Albans'
+    melbourne: true
+    name: Lai Taekwon-Do Academy
+    state: VIC
+    web: 'http://www.laitkd.com.au/'
 ---
-
+Text.
