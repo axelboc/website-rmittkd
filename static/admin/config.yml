@@ -17,50 +17,51 @@ collections:
         name: "home"
         fields:
           - {label: "Intro", name: "intro", widget: "markdown"}
-          - label: "Train with us"
-            name: "train"
-            widget: "object"
+          - {label: "\"Train with us\" section intro", name: "trainIntro", widget: "markdown"}
+          - label: "Locations"
+            name: "locations"
+            widget: "list"
             fields:
-              - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
-              - label: "Locations"
-                name: "locations"
+              - {label: "Suburb", name: "title", widget: "string", pattern: ['^[A-Z]', "Should be capitalised"]}
+              - {label: "Address", name: "address", widget: "string"}
+              - label: "Session times"
+                name: "times"
                 widget: "list"
                 fields:
-                  - label: "Entry"
-                    name: "entry"
-                    widget: "relation"
-                    collection: "locations"
-                    searchField: ["title", "address"]
-                    value: "title"
-          - label: "Membership fees"
-            name: "fees"
+                  - {label: "Days", name: "days", widget: "string"}
+                  - label: "From (time)"
+                    name: "from"
+                    widget: "string"
+                    pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
+                  - label: "To (time)"
+                    name: "to"
+                    widget: "string"
+                    pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
+          - label: "\"Membership fees\" section intro", name: "feesIntro", widget: "markdown"
+          - label: "Fees (RMIT student)"
+            name: "studentFees"
             widget: "object"
             fields:
-              - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
-              - label: "RMIT student"
-                name: "student"
-                widget: "object"
-                fields:
-                  - label: "Year"
-                    name: "year"
-                    widget: "number"
-                    pattern: ['^[0-9]+$', "Should be a number"]
-                  - label: "Semester"
-                    name: "semester"
-                    widget: "number"
-                    pattern: ['^[0-9]+$', "Should be a number"]
-              - label: "Public (non-RMIT)"
-                name: "public"
-                widget: "object"
-                fields:
-                  - label: "Year"
-                    name: "year"
-                    widget: "number"
-                    pattern: ['^[0-9]+$', "Should be a number"]
-                  - label: "Semester"
-                    name: "semester"
-                    widget: "number"
-                    pattern: ['^[0-9]+$', "Should be a number"]
+              - label: "Year"
+                name: "year"
+                widget: "number"
+                pattern: ['^[0-9]+$', "Should be a number"]
+              - label: "Semester"
+                name: "semester"
+                widget: "number"
+                pattern: ['^[0-9]+$', "Should be a number"]
+          - label: "Fees (public)"
+            name: "publicFees"
+            widget: "object"
+            fields:
+              - label: "Year"
+                name: "year"
+                widget: "number"
+                pattern: ['^[0-9]+$', "Should be a number"]
+              - label: "Semester"
+                name: "semester"
+                widget: "number"
+                pattern: ['^[0-9]+$', "Should be a number"]
       - file: "src/content/tkd.md"
         label: "What is Taekwon-Do?"
         name: "tkd"
@@ -75,75 +76,36 @@ collections:
         name: "dojang"
         fields:
           - {label: "Intro", name: "intro", widget: "markdown"}
-          - label: "Instructors"
+          - {label: "\"Instructors\" section intro", name: "instructorsIntro", widget: "markdown"}
+          - label: "Instructors list"
             name: "instructors"
-            widget: "object"
+            widget: "list"
             fields:
-              - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
-              - label: "Instructors"
-                name: "list"
-                widget: "list"
-                fields:
-                  - label: "Entry"
-                    name: "entry"
-                    widget: "relation"
-                    collection: "instructors"
-                    searchField: ["title"]
-                    value: "title"
-          - label: "Associated clubs"
+              - {label: "Name", name: "title", widget: "string"}
+              - label: "Black-belt degree (1-9)"
+                name: "degree"
+                widget: "number"
+                pattern: ['^[1-9]$', "Should be a number between 1 and 9"]
+              - {label: "Short biography", name: "bio", widget: "markdown"}
+          - {label: "\"Associated clubs\" section intro", name: "clubsIntro", widget: "markdown"}
+          - label: "Clubs list"
             name: "clubs"
-            widget: "object"
+            widget: "list"
             fields:
-              - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
-              - label: "Clubs"
-                name: "list"
-                widget: "list"
-                fields:
-                  - {label: "Club name", name: "name", widget: "string"}
-                  - {label: "Location", name: "location", widget: "string"}
-                  - {label: "In Greater Melbourne?", name: "melbourne", widget: "boolean"}
-                  - label: "State"
-                    name: "state"
-                    widget: "select"
-                    options: ["NSW", "NT", "TAS", "QLD", "VIC", "WA"]
-                  - label: "Website"
-                    name: "web"
-                    widget: "string"
-                    required: false,
-                    pattern: ['^https:\/\/www\.facebook\.com\/', "Should be a URL starting with: https://www.facebook.com/"]
-                  - label: "Facebook"
-                    name: "fb"
-                    widget: "string"
-                    required: false,
-                    pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
-  - name: "locations"
-    label: "Locations"
-    folder: "src/content/locations"
-    create: true
-    fields:
-      - {label: "Suburb", name: "title", widget: "string", pattern: ['^[A-Z]', "Should be capitalised"]}
-      - {label: "Address", name: "address", widget: "string"}
-      - label: "Session times"
-        name: "times"
-        widget: "list"
-        fields:
-          - {label: "Days", name: "days", widget: "string"}
-          - label: "From (time)"
-            name: "from"
-            widget: "string"
-            pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
-          - label: "To (time)"
-            name: "to"
-            widget: "string"
-            pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
-  - name: "instructors"
-    label: "Instructors"
-    folder: "src/content/instructors"
-    create: true
-    fields:
-      - {label: "Name", name: "title", widget: "string"}
-      - label: "Black-belt degree (1-9)"
-        name: "degree"
-        widget: "number"
-        pattern: ['^[1-9]$', "Should be a number between 1 and 9"]
-      - {label: "Short biography", name: "bio", widget: "markdown"}
+              - {label: "Club name", name: "name", widget: "string"}
+              - {label: "Location", name: "location", widget: "string"}
+              - {label: "In Greater Melbourne?", name: "melbourne", widget: "boolean"}
+              - label: "State"
+                name: "state"
+                widget: "select"
+                options: ["NSW", "NT", "TAS", "QLD", "VIC", "WA"]
+              - label: "Website"
+                name: "web"
+                widget: "string"
+                required: false,
+                pattern: ['^https:\/\/www\.facebook\.com\/', "Should be a URL starting with: https://www.facebook.com/"]
+              - label: "Facebook"
+                name: "fb"
+                widget: "string"
+                required: false,
+                pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
