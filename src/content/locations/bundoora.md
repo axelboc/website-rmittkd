@@ -1,5 +1,5 @@
 ---
-suburb: Bundoora
+title: Bundoora
 address: RMIT Sports Centre
 times:
   - days: Every Tuesday
