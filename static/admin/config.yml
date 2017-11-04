@@ -3,19 +3,128 @@ backend:
   repo: axelboc/website-rmittkd
   branch: make-static
 
+publish_mode: editorial_workflow
+
 media_folder: "static/uploads"
 public_folder: "/uploads"
 
 collections:
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Blog" # Used in the UI
-    folder: "src/posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Featured Image", name: "thumbnail", widget: "image"}
-      - {label: "Rating (scale of 1-5)", name: "rating", widget: "number"}
-      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/content/home.md"
+        label: "Homepage"
+        name: "home"
+        fields:
+          - {label: "Intro", name: "intro", widget: "markdown"}
+          - label: "Train with us"
+            name: "train"
+            widget: "object"
+            fields:
+              - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
+              - label: "Locations"
+                name: "locations"
+                widget: "list"
+                fields:
+                  - {label: "Location entry", name: "entry", widget: "relation", collection: "locations"}
+          - label: "Membership fees"
+            name: "fees"
+            widget: "object"
+            fields:
+              - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
+              - label: "RMIT student"
+                name: "student"
+                widget: "object"
+                fields:
+                  - {label: "Year", name: "year", widget: "number"}
+                  - {label: "Semester", name: "semester", widget: "number"}
+              - label: "Public (non-RMIT)"
+                name: "public"
+                widget: "object"
+                fields:
+                  - {label: "Year", name: "year", widget: "number"}
+                  - {label: "Semester", name: "semester", widget: "number"}
+      - file: "src/content/tkd.md"
+        label: "What is Taekwon-Do?"
+        name: "tkd"
+        fields:
+          - {label: "Intro", name: "intro", widget: "markdown"}
+          - label: "Video"
+            name: "video"
+            widget: "string"
+            pattern: ['^https:\/\/youtu\.be\/', "Should be a URL starting with: https://youtu.be/"]
+      - file: "src/content/dojang.md"
+        label: "Our Dojang"
+        name: "dojang"
+        fields:
+          - {label: "Intro", name: "intro", widget: "markdown"}
+          - label: "Instructors"
+            name: "instructors"
+            widget: "object"
+            fields:
+              - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
+              - label: "List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - {label: "Instructor entry", name: "entry", widget: "relation", collection: "locations"}
+          - label: "Associated clubs"
+            name: "clubs"
+            widget: "object"
+            fields:
+              - {label: "Intro (one paragraph)", name: "intro", widget: "markdown"}
+              - label: "List"
+                name: "list"
+                widget: "list"
+                fields:
+                  - {label: "Club name", name: "name", widget: "string"}
+                  - {label: "Location", name: "location", widget: "string"}
+                  - {label: "In Greater Melbourne?", name: "melbourne", widget: "boolean"}
+                  - label: "State"
+                    name: "state"
+                    widget: "select"
+                    options: ["NSW", "NT", "TAS", "QLD", "VIC", "WA"]
+                    default: "VIC"
+                  - label: "Website"
+                    name: "web"
+                    widget: "string"
+                    required: false,
+                    pattern: ['^https:\/\/www\.facebook\.com\/', "Should be a URL starting with: https://www.facebook.com/"]
+                  - label: "Facebook"
+                    name: "fb"
+                    widget: "string"
+                    required: false,
+                    pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
+  - name: "locations"
+    label: "Locations"
+    folder: "src/content"
+    create: true
+    slug: "location-{{suburb}}"
+    fields:
+      - {label: "Suburb", name: "suburb", widget: "string", pattern: ['^[A-Z]', "Should be capitalised"]}
+      - {label: "Address", name: "address", widget: "string"}
+      - label: "Session times"
+        name: "times"
+        widget: "list"
+        fields:
+          - {label: "Days", name: "days", widget: "string"}
+          - label: "From (time)"
+            name: "from"
+            widget: "string"
+            pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
+          - label: "To (time)"
+            name: "to"
+            widget: "string"
+            pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
+  - name: "instructors"
+    label: "Instructors"
+    folder: "src/content"
+    create: true
+    slug: "instructor-{{name}}"
+    fields:
+      - {label: "Name", name: "name", widget: "string"}
+      - label: "Black-belt degree (1-9)"
+        name: "degree"
+        widget: "number"
+        pattern: ['^[1-9]$', "Should be between 1 and 9"]
+      - {label: "Short biography", name: "bio", widget: "markdown"}
