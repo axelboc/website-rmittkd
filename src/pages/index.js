@@ -3,8 +3,43 @@ import Helmet from 'react-helmet'
 
 export default class IndexPage extends React.Component {
   render() {
+    const { frontmatter: fm, html } = this.props.data.allMarkdownRemark.edges[0].node
+    console.log(fm, html)
     return (
       <div>Hello World</div>
     )
   }
 }
+
+export const query = graphql`
+  query HomepageQuery {
+    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/home\\.md$/"}}) {
+      edges {
+        node {
+          frontmatter {
+            trainIntro
+            locations {
+              title
+              address
+              times {
+                days
+                from
+                to
+              }
+            }
+            feesIntro
+            studentFees {
+              semester
+              year
+            }
+            publicFees {
+              semester
+              year
+            }
+          }
+          html
+        }
+      }
+    }
+  }
+`
