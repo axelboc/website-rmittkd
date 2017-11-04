@@ -1,14 +1,12 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { frontmatter: fm, html } = this.props.data.allMarkdownRemark.edges[0].node
-    console.log(fm, html)
-    return (
-      <div>Our Dojang</div>
-    )
-  }
+export default function DojangPage(props) {
+  const { frontmatter: fm, html } = props.data.allMarkdownRemark.edges[0].node
+
+  return (
+    <div>Our Dojang</div>
+  )
 }
 
 export const query = graphql`

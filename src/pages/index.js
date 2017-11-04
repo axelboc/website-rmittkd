@@ -1,18 +1,16 @@
 import React from 'react'
 import Helmet from 'react-helmet'
 
-export default class IndexPage extends React.Component {
-  render() {
-    const { frontmatter: fm, html } = this.props.data.allMarkdownRemark.edges[0].node
-    console.log(fm, html)
-    return (
-      <div>RMIT ITF Taekwon-Do</div>
-    )
-  }
+export default function IndexPage(props) {
+  const { frontmatter: fm, html } = props.data.allMarkdownRemark.edges[0].node
+
+  return (
+    <div>RMIT ITF Taekwon-Do</div>
+  )
 }
 
 export const query = graphql`
-  query HomepageQuery {
+  query IndexQuery {
     allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/home\\.md$/"}}) {
       edges {
         node {
