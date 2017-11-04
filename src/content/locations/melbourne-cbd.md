@@ -1,5 +1,5 @@
 ---
-suburb: Melbourne CBD
+title: Melbourne CBD
 address: 'RMIT Building 47, 8 Orr St'
 times:
   - days: 'Every Monday, Wednesday and Friday'
