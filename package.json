@@ -17,7 +17,7 @@
   "scripts": {
     "build": "gatsby build",
     "start": "gatsby develop",
-    "local": "yarn build && gatsby serve"
+    "local": "set NODE_ENV=development && yarn build && gatsby serve -p 8000"
   },
   "dependencies": {
     "gatsby": "^1.9.82",
