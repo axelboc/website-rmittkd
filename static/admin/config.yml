@@ -37,7 +37,7 @@ collections:
                     name: "to"
                     widget: "string"
                     pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
-          - label: "\"Membership fees\" section intro", name: "feesIntro", widget: "markdown"
+          - {label: "\"Membership fees\" section intro", name: "feesIntro", widget: "markdown"}
           - label: "Fees (RMIT student)"
             name: "studentFees"
             widget: "object"
