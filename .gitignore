@@ -1,7 +1,8 @@
-node_modules
 .cache/
+.vscode/
+node_modules
+old-new/
 public/
 *.log
 .DS_Store
 Thumbs.db
-old-new/
