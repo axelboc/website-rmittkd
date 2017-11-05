@@ -4,17 +4,17 @@ instructorsIntro: Test
 instructors:
   - bio: >-
       Grand Master Lai (9th degree) received his first degree Black Belt in
-      **1966**. Before moving to Australia, he began teaching in **Malaysia**
+      <strong>1966</strong>. Before moving to Australia, he began teaching in <strong>Malaysia</strong>
       where he established many clubs, totalising over 1000 members. Grand
-      Master Lai is now a retired PE teacher and the President of **[CHITF
-      Australia](https://www.facebook.com/chitfaustralia)**.
+      Master Lai is now a retired PE teacher and the President of <strong><a href="https://www.facebook.com/chitfaustralia>CHITF
+      Australia</a></strong>.
     degree: 9
     name: Robert Lai
   - bio: >-
       Master Lai (7th degree) has been training for over 30 years. In 2013, he
-      received the RMIT _Outstanding Service_ Award for his **20 years** of
-      service to the club. Master Lai was also a **coach** for the Australian
-      Team at the 2010 **ITF World Championships** in Minsk, Belarus.
+      received the RMIT _Outstanding Service_ Award for his <strong>20 years</strong> of
+      service to the club. Master Lai was also a <strong>coach</strong> for the Australian
+      Team at the 2010 <strong>ITF World Championships</strong> in Minsk, Belarus.
     degree: 7
     name: Jason Lai
 clubsIntro: Test
@@ -23,8 +23,6 @@ clubs:
     inMelbourne: true
     name: Lai Taekwon-Do Academy
     state: VIC
-    links:
-      - url: 'http://www.laitkd.com.au/'
-        type: web
+    url: 'http://www.laitkd.com.au/'
 ---
 Text.

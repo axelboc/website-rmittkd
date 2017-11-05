@@ -1,18 +1,31 @@
 import React from 'react'
 import PageMeta from '../components/PageMeta'
+import RelatedLink from '../components/RelatedLink'
 
 export default function TkdPage(props) {
-  const { frontmatter, html, location } = props.data.allMarkdownRemark.edges[0].node
-  const { description } = frontmatter
+  const { location: { pathname } } = props
+  const { frontmatter, html } = props.data.allMarkdownRemark.edges[0].node
+  const { metaDescription, video } = frontmatter
 
   return (
     <div>
       <PageMeta
         title="What is Taekwon-Do?"
-        description={description}
-        path={location.pathname}
+        description={metaDescription}
+        path={pathname}
       />
-      What is Taekwon-Do?
+      <div>
+        <h1>What is Taekwon-Do?</h1>
+        <div dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+      <div>
+        <iframe src={video} frameBorder="0" allowFullScreen></iframe>
+      </div>
+      <ul>
+        <li><RelatedLink to="/">Train with us</RelatedLink></li>
+        <li><RelatedLink to="/dojang">Meet our instructors</RelatedLink></li>
+        <li><RelatedLink to="/dojang">Find our affiliated clubs</RelatedLink></li>
+      </ul>
     </div>
   )
 }

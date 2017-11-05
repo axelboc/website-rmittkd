@@ -15,7 +15,7 @@ collections:
         name: "home"
         fields:
           - {label: "Intro", name: "body", widget: "markdown"}
-          - {label: "\"Train with us\" section intro", name: "trainIntro", widget: "markdown"}
+          - {label: "\"Train with us\" section intro", name: "trainIntro", widget: "text"}
           - label: "Locations"
             name: "locations"
             widget: "list"
@@ -35,7 +35,7 @@ collections:
                     name: "to"
                     widget: "string"
                     pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
-          - {label: "\"Membership fees\" section intro", name: "feesIntro", widget: "markdown"}
+          - {label: "\"Membership fees\" section intro", name: "feesIntro", widget: "text"}
           - label: "Fees (RMIT student)"
             name: "studentFees"
             widget: "object"
@@ -73,14 +73,14 @@ collections:
           - label: "Video"
             name: "video"
             widget: "string"
-            pattern: ['^https:\/\/youtu\.be\/', "Should be a URL starting with: https://youtu.be/"]
+            pattern: ['^https:\/\/www\.youtube\.com\/embed\/', "Should be a URL starting with: https://www.youtube.com/embed/"]
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
       - file: "src/content/dojang.md"
         label: "Our Dojang"
         name: "dojang"
         fields:
           - {label: "Intro", name: "body", widget: "markdown"}
-          - {label: "\"Instructors\" section intro", name: "instructorsIntro", widget: "markdown"}
+          - {label: "\"Instructors\" section intro", name: "instructorsIntro", widget: "text"}
           - label: "Instructors list"
             name: "instructors"
             widget: "list"
@@ -93,8 +93,8 @@ collections:
                 min: 1
                 max: 9
                 default: 1
-              - {label: "Short biography", name: "bio", widget: "markdown"}
-          - {label: "\"Associated clubs\" section intro", name: "clubsIntro", widget: "markdown"}
+              - {label: "Short biography", name: "bio", widget: "text"}
+          - {label: "\"Associated clubs\" section intro", name: "clubsIntro", widget: "text"}
           - label: "Clubs list"
             name: "clubs"
             widget: "list"
@@ -107,18 +107,8 @@ collections:
                 widget: "select"
                 options: ["VIC", "NSW", "TAS", "QLD", "NT", "WA"]
                 default: "VIC"
-              - label: "Links"
-                name: "links"
-                widget: "list"
-                fields:
-                  - label: "Type"
-                    name: "type"
-                    widget: "select"
-                    options:
-                      - {label: "Website", value: "web"}
-                      - {label: "Facebook page", value: "fb"}
-                  - label: "URL"
-                    name: "url"
-                    widget: "string"
-                    pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
+              - label: "Website or Facebook page"
+                name: "url"
+                widget: "string"
+                pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}

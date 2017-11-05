@@ -1,5 +1,5 @@
 ---
 metaDescription: Test
-video: 'https://youtu.be/ewGt5hz_1VA'
+video: 'https://www.youtube.com/embed/ewGt5hz_1VA'
 ---
 Some more text.
