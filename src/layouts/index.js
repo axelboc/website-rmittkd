@@ -1,11 +1,21 @@
 import React from 'react'
+import Header from '../components/Header'
+import Footer from '../components/Footer'
+import LayoutMeta from '../components/LayoutMeta'
 
-export default function Root(props) {
+function Layout(props) {
   const { children } = props;
 
   return (
     <div>
-      {children()}
+      <LayoutMeta />
+      <Header />
+      <main>
+        {children()}
+      </main>
+      <Footer />
     </div>
   )
 }
+
+export default Layout

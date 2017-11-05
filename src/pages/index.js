@@ -1,11 +1,19 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import PageMeta from '../components/PageMeta'
 
 export default function IndexPage(props) {
-  const { frontmatter: fm, html } = props.data.allMarkdownRemark.edges[0].node
+  const { frontmatter, html, location } = props.data.allMarkdownRemark.edges[0].node
+  const { description } = frontmatter
 
   return (
-    <div>RMIT ITF Taekwon-Do</div>
+    <div>
+      <PageMeta
+        isHome
+        description={description}
+        path={location.pathname}
+      />
+      RMIT ITF Taekwon-Do
+    </div>
   )
 }
 
@@ -15,6 +23,7 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
+            metaDescription
             trainIntro
             locations {
               suburb

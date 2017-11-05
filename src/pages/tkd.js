@@ -1,11 +1,19 @@
 import React from 'react'
-import Helmet from 'react-helmet'
+import PageMeta from '../components/PageMeta'
 
 export default function TkdPage(props) {
-  const { frontmatter: fm, html } = props.data.allMarkdownRemark.edges[0].node
+  const { frontmatter, html, location } = props.data.allMarkdownRemark.edges[0].node
+  const { description } = frontmatter
 
   return (
-    <div>What is Taekwon-Do?</div>
+    <div>
+      <PageMeta
+        title="What is Taekwon-Do?"
+        description={description}
+        path={location.pathname}
+      />
+      What is Taekwon-Do?
+    </div>
   )
 }
 
@@ -15,6 +23,7 @@ export const query = graphql`
       edges {
         node {
           frontmatter {
+            metaDescription
             video
           }
           html

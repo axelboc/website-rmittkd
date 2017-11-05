@@ -64,6 +64,7 @@ collections:
                 widget: "number"
                 valueType: "int"
                 min: 0
+          - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
       - file: "src/content/tkd.md"
         label: "What is Taekwon-Do?"
         name: "tkd"
@@ -73,6 +74,7 @@ collections:
             name: "video"
             widget: "string"
             pattern: ['^https:\/\/youtu\.be\/', "Should be a URL starting with: https://youtu.be/"]
+          - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
       - file: "src/content/dojang.md"
         label: "Our Dojang"
         name: "dojang"
@@ -119,3 +121,4 @@ collections:
                     name: "url"
                     widget: "string"
                     pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
+          - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}

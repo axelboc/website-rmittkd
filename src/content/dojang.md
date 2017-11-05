@@ -1,4 +1,5 @@
 ---
+metaDescription: Test
 instructorsIntro: Test
 instructors:
   - bio: >-

@@ -1,4 +1,5 @@
 ---
+metaDescription: Test
 trainIntro: Welcome!
 locations:
   - address: 'RMIT Building 47, 8 Orr St'

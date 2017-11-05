@@ -28,6 +28,7 @@
   },
   "devDependencies": {
     "gatsby-source-filesystem": "^1.5.5",
-    "gatsby-transformer-remark": "^1.7.19"
+    "gatsby-transformer-remark": "^1.7.19",
+    "prop-types": "^15.6.0"
   }
 }
