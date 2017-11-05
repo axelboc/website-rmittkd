@@ -27,6 +27,7 @@
     "react-helmet": "^5.2.0"
   },
   "devDependencies": {
+    "gatsby-remark-smartypants": "^1.4.8",
     "gatsby-source-filesystem": "^1.5.5",
     "gatsby-transformer-remark": "^1.7.19",
     "prop-types": "^15.6.0"
