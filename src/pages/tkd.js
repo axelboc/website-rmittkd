@@ -1,10 +1,15 @@
 import React from 'react'
+
+import styles from './tkd.module.css'
 import PageMeta from '../components/PageMeta'
-import RelatedLink from '../components/RelatedLink'
+import Section from '../components/Section'
+import RelatedLinks from '../components/RelatedLinks'
 
 export default function TkdPage(props) {
-  const { location: { pathname } } = props
-  const { frontmatter, html } = props.data.allMarkdownRemark.edges[0].node
+  const { data, location: { pathname } } = props
+  const { relatedLinks } = data.site.siteMetadata
+
+  const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
   const { metaDescription, video } = frontmatter
 
   return (
@@ -18,14 +23,14 @@ export default function TkdPage(props) {
         <h1>What is Taekwon-Do?</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
-      <div>
-        <iframe src={video} frameBorder="0" allowFullScreen></iframe>
-      </div>
-      <ul>
-        <li><RelatedLink to="/">Train with us</RelatedLink></li>
-        <li><RelatedLink to="/dojang">Meet our instructors</RelatedLink></li>
-        <li><RelatedLink to="/dojang">Find our affiliated clubs</RelatedLink></li>
-      </ul>
+      <Section useDiv>
+        <div className={styles.embed}>
+          <iframe className={styles.iframe} src={video} frameBorder="0" allowFullScreen></iframe>
+        </div>
+      </Section>
+      <Section useDiv>
+        <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
+      </Section>
     </div>
   )
 }
@@ -40,6 +45,15 @@ export const query = graphql`
             video
           }
           html
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        relatedLinks {
+          train { label, href, img }
+          instructors { label, href, img }
+          clubs { label, href, img }
         }
       }
     }

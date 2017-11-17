@@ -1,0 +1,23 @@
+.section {
+  padding: 2.25rem 0;
+}
+
+.altSection {
+  composes: section;
+  composes: bg-alt from global;
+}
+
+.inner {
+  composes: max from global;
+}
+
+.heading {
+  font-size: 225%;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.intro {
+  text-align: center;
+}

@@ -1,0 +1,42 @@
+.bg-alt {
+  background-color: #343434;
+}
+
+.bg-white {
+  background-color: #fff;
+  color: #242424;
+}
+
+.max {
+  box-sizing: content-box;
+  max-width: 60rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: var(--vr);
+  padding-left: var(--vr);
+
+  &--sml {
+    max-width: 40rem;
+  }
+}
+
+.link-reset,
+.links-reset a {
+  text-decoration: none;
+
+  &:any-link { color: inherit; }
+  &:hover { text-decoration: underline; }
+}
+
+.link-img {
+  display: inline-block;
+  outline-offset: 3px;
+  color: inherit; /* fix outline colour */
+  vertical-align: bottom; /* fix unwanted inline-block space */
+}
+
+.list-reset {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}

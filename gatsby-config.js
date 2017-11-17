@@ -1,4 +1,7 @@
+const siteMetadata = require('./site-metadata')
+
 module.exports = {
+  siteMetadata,
   plugins: [
     {
       resolve: 'gatsby-source-filesystem',

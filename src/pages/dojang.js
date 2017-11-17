@@ -1,12 +1,17 @@
 import React from 'react'
+
+import styles from './dojang.module.css'
 import PageMeta from '../components/PageMeta'
+import Section from '../components/Section'
 import Instructor from '../components/Instructor'
 import LocalClubs from '../components/LocalClubs'
-import RelatedLink from '../components/RelatedLink'
+import RelatedLinks from '../components/RelatedLinks'
 
 export default function DojangPage(props) {
-  const { location: { pathname } } = props
-  const { frontmatter, html } = props.data.allMarkdownRemark.edges[0].node
+  const { data, location: { pathname } } = props
+  const { relatedLinks } = data.site.siteMetadata
+
+  const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
   const {
     metaDescription, instructorsIntro, instructors,
     clubsIntro, clubs
@@ -26,14 +31,10 @@ export default function DojangPage(props) {
         <h1>Our Dojang</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />
       </div>
-      <section>
-        <h2>Instructors</h2>
-        <p dangerouslySetInnerHTML={{ __html: instructorsIntro }}></p>
+      <Section heading="Instructors" intro={instructorsIntro} altBg>
         {instructors.map(item => <Instructor key={item.name} {...item} />)}
-      </section>
-      <section>
-        <h2>Associated clubs</h2>
-        <p dangerouslySetInnerHTML={{ __html: clubsIntro }}></p>
+      </Section>
+      <Section heading="Associated clubs" intro={clubsIntro}>
         <div>
           <LocalClubs clubs={localClubs}  />
           <ul>
@@ -50,12 +51,10 @@ export default function DojangPage(props) {
             })}
           </ul>
         </div>
-      </section>
-      <ul>
-        <li><RelatedLink to="/">Train with us</RelatedLink></li>
-        <li><RelatedLink to="/">Choose your membership</RelatedLink></li>
-        <li><RelatedLink to="/tkd">What is Taekwon-Do?</RelatedLink></li>
-      </ul>
+      </Section>
+      <Section useDiv>
+        <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
+      </Section>
     </div>
   )
 }
@@ -83,6 +82,15 @@ export const query = graphql`
             }
           }
           html
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        relatedLinks {
+          train { label, href, img }
+          membership { label, href, img }
+          tkd { label, href, img }
         }
       }
     }

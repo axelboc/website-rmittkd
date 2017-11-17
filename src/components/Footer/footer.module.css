@@ -1,0 +1,32 @@
+.footer {
+
+}
+
+.list {
+  composes: list-reset max from global;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+
+  & > li {
+    flex: 1;
+
+    &:first-child,
+    &:last-child {
+      flex: 2;
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}
+
+.orgLogoItem {
+  text-align: center;
+}
+
+.logoLink {
+  composes: link-img from global;
+}

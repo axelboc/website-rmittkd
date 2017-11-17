@@ -1,0 +1,31 @@
+.header {
+  composes: links-reset bg-white from global;
+  position: relative;
+  z-index: 1; /* move logo above banner */
+}
+
+.inner {
+  composes: max from global;
+  display: flex;
+  justify-content: space-between;
+  padding: .75rem 0;
+}
+
+.logoLink {
+  composes: link-img from global;
+  margin-bottom: calc(-75px - .75rem);
+}
+
+.nav {
+  display: flex;
+}
+
+.navList {
+  composes: list-reset from global;
+  display: flex;
+  align-items: center;
+
+  & > li {
+    margin: 0 .75rem;
+  }
+}

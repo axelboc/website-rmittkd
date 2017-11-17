@@ -1,12 +1,17 @@
 import React from 'react'
+
+import styles from './index.module.css'
 import PageMeta from '../components/PageMeta'
+import Section from '../components/Section'
 import Location from '../components/Location'
 import Fees from '../components/Fees'
-import RelatedLink from '../components/RelatedLink'
+import RelatedLinks from '../components/RelatedLinks'
 
 export default function IndexPage(props) {
-  const { location: { pathname } } = props
-  const { frontmatter, html } = props.data.allMarkdownRemark.edges[0].node
+  const { data, location: { pathname } } = props
+  const { relatedLinks } = data.site.siteMetadata
+
+  const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
   const {
     metaDescription, trainIntro, locations,
     feesIntro, studentFees, publicFees
@@ -19,26 +24,23 @@ export default function IndexPage(props) {
         description={metaDescription}
         path={pathname}
       />
-      <div>
-        <h1>RMIT ITF Taekwon-Do</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
+      <div className={styles.banner}>
+        <div className={styles.bannerInner}>
+          <h1 className={styles.title}>ITF Taekwon-Do</h1>
+          <p className={styles.sub}>RMIT University Club</p>
+          <div className={styles.intro} dangerouslySetInnerHTML={{ __html: html }} />
+        </div>
       </div>
-      <section>
-        <h2>Train with us</h2>
-        <p dangerouslySetInnerHTML={{ __html: trainIntro }}></p>
+      <Section heading="Train with us" intro={trainIntro} altBg>
         {locations.map(item => <Location key={item.suburb} {...item} />)}
-      </section>
-      <section>
-        <h2>Membership fees</h2>
-        <p dangerouslySetInnerHTML={{ __html: feesIntro }}></p>
+      </Section>
+      <Section heading="Membership fees" intro={feesIntro}>
         <Fees studentFees={studentFees} publicFees={publicFees} />
         <a href="https://rmitlink.rmit.edu.au/Clubs/taekwondo-itf">Choose your membership</a>
-      </section>
-      <ul>
-        <li><RelatedLink to="/tkd">What is Taekwon-Do?</RelatedLink></li>
-        <li><RelatedLink to="/dojang">Meet our instructors</RelatedLink></li>
-        <li><RelatedLink to="/dojang">Find our affiliated clubs</RelatedLink></li>
-      </ul>
+      </Section>
+      <Section useDiv>
+        <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
+      </Section>
     </div>
   )
 }
@@ -71,6 +73,15 @@ export const query = graphql`
             }
           }
           html
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        relatedLinks {
+          tkd { label, href, img }
+          instructors { label, href, img }
+          clubs { label, href, img }
         }
       }
     }
