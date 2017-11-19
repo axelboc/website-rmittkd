@@ -1,0 +1,3 @@
+.banner {
+  composes: small-banner from global;
+}

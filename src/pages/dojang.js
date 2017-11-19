@@ -27,6 +27,7 @@ export default function DojangPage(props) {
         description={metaDescription}
         path={pathname}
       />
+      <div className={styles.banner} />
       <div>
         <h1>Our Dojang</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />

@@ -2,6 +2,7 @@
   composes: links-reset bg-white from global;
   position: relative;
   z-index: 1; /* move logo above banner */
+  box-shadow: 0 4px 10px 2px #000;
 }
 
 .inner {

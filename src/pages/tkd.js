@@ -19,6 +19,7 @@ export default function TkdPage(props) {
         description={metaDescription}
         path={pathname}
       />
+      <div className={styles.banner} />
       <div>
         <h1>What is Taekwon-Do?</h1>
         <div dangerouslySetInnerHTML={{ __html: html }} />

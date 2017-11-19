@@ -11,7 +11,7 @@ html {
   font-size: 16px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
-  background-color: #242424;
+  background-color: #00041a;
 
   @media (min-width: 75em) {
     font-size: 18px;
@@ -40,11 +40,8 @@ img {
 }
 
 a {
-  /* color: var(--col-link); */
+  color: inherit;
   font-weight: 600;
-
-  /* &:visited { color: var(--col-link-visited); }
-  &:active { color: var(--col-link-active); } */
 
   &:hover,
   &:focus {

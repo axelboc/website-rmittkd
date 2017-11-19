@@ -1,3 +1,7 @@
+.banner {
+  composes: small-banner from global;
+}
+
 .embed {
   composes: max--sml from global;
   position: relative;

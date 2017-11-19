@@ -14,7 +14,7 @@ function LayoutMeta() {
         { property: 'og:locale', content: 'en_GB' },
       ]}
       link={[
-        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:400,600,700' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css?family=Montserrat:100,400,600,700' },
         { rel: 'icon', type: 'image/png', href: '/assets/favicon-32x32.png', sizes: '32x32' },
         { rel: 'icon', type: 'image/png', href: '/assets/favicon-16x16.png', sizes: '16x16' },
         { rel: 'shortcut icon', href: '/assets/favicon.ico' },
