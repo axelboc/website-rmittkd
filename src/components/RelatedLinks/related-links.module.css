@@ -1,5 +1,5 @@
 .list {
-  composes: list-reset links-reset from global;
+  composes: list-reset from global;
   display: flex;
   justify-content: space-between;
   text-align: center;
@@ -12,19 +12,31 @@
 }
 
 .link {
+  composes: link-reset from global;
   position: relative;
   display: block;
   padding-top: 56.25%; /* 16/9 */
+  border-radius: 6px;
+  border: 3px solid #fff;
+  overflow: hidden;
+  outline-offset: 2px;
+
+  &:hover .label,
+  &:focus .label {
+    background-color: #fff;
+    color: #000;
+  }
 }
 
 .label {
-  composes: bg-white from global;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
   background-color: rgba(255, 255, 255, .7);
+  color: #242424;
   display: block;
   padding: .75rem 1.5rem;
   text-decoration: inherit;
+  transition: color .3s, background-color .3s;
 }
