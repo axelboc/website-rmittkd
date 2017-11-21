@@ -7,21 +7,6 @@
   color: #242424;
 }
 
-.small-banner {
-  overflow: hidden;
-  height: 10rem;
-
-  &::before {
-    content: '';
-    display: block;
-    height: 100%;
-    background-image: url('../images/small-banner.jpg');
-    background-size: cover;
-    background-position: top 25% right;
-    filter: saturate(60%) contrast(120%) sepia(20%);
-  }
-}
-
 .max {
   box-sizing: content-box;
   max-width: 60rem;
@@ -38,8 +23,6 @@
 .link-reset,
 .links-reset a {
   text-decoration: none;
-
-  &:any-link { color: inherit; }
   &:hover { text-decoration: underline; }
 }
 

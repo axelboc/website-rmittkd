@@ -1,9 +1,12 @@
 import React from 'react'
 
-import styles from './tkd.module.css'
 import PageMeta from '../components/PageMeta'
+import Banner from '../components/Banner'
 import Section from '../components/Section'
 import RelatedLinks from '../components/RelatedLinks'
+
+import styles from './tkd.module.css'
+import bannerImg from '../images/gen-choi.png'
 
 export default function TkdPage(props) {
   const { data, location: { pathname } } = props
@@ -19,11 +22,11 @@ export default function TkdPage(props) {
         description={metaDescription}
         path={pathname}
       />
-      <div className={styles.banner} />
-      <div>
-        <h1>What is Taekwon-Do?</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
+      <Banner
+        heading="What is Taekwon-Do?"
+        intro={html}
+        image={bannerImg}
+      />
       <Section useDiv>
         <div className={styles.embed}>
           <iframe className={styles.iframe} src={video} frameBorder="0" allowFullScreen></iframe>

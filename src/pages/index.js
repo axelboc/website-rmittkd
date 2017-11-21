@@ -24,8 +24,8 @@ export default function IndexPage(props) {
         description={metaDescription}
         path={pathname}
       />
-      <div className={styles.banner}>
-        <div className={styles.bannerInner}>
+      <div className={styles.hero}>
+        <div className={styles.heroInner}>
           <h1 className={styles.title}>ITF Taekwon-Do</h1>
           <p className={styles.sub}>RMIT University Club</p>
           <div className={styles.intro} dangerouslySetInnerHTML={{ __html: html }} />

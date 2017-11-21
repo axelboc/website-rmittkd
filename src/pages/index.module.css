@@ -1,4 +1,4 @@
-.banner {
+.hero {
   position: relative;
   background-color: #000;
   overflow: hidden;
@@ -19,7 +19,7 @@
   }
 }
 
-.bannerInner {
+.heroInner {
   composes: max from global;
   padding: 7rem 0 10rem;
   position: relative;
@@ -36,7 +36,7 @@
   display: inline-block;
   margin-bottom: .75rem;
   padding: .25rem 1.25rem;
-  background-color: #A00309;
+  background-color: #a00309;
   font-size: 175%;
   font-weight: 100;
   text-transform: uppercase;

@@ -1,5 +1,5 @@
 .header {
-  composes: links-reset bg-white from global;
+  composes: bg-white from global;
   position: relative;
   z-index: 1; /* move logo above banner */
   box-shadow: 0 4px 10px 2px #000;
@@ -25,8 +25,19 @@
   composes: list-reset from global;
   display: flex;
   align-items: center;
+}
 
-  & > li {
-    margin: 0 .75rem;
-  }
+.navLink {
+  margin: 0 .75rem;
+  padding: .325rem .25rem;
+  text-decoration: none;
+}
+
+.activeNavLink,
+.navLink:hover {
+  border-bottom: 2px solid #a00309;
+}
+
+.navLink:hover {
+  color: #000;
 }

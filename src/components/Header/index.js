@@ -13,10 +13,46 @@ function Header() {
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.navList}>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/tkd">What is Taekwon-Do?</Link></li>
-            <li><Link to="/dojang">Our Dojang</Link></li>
-            <li><Link to="/">Get in touch</Link></li>
+            <li>
+              <Link
+                className={styles.navLink}
+                activeClassName={styles.activeNavLink}
+                exact
+                to="/"
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.navLink}
+                activeClassName={styles.activeNavLink}
+                exact
+                to="/tkd"
+              >
+                What is Taekwon-Do?
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.navLink}
+                activeClassName={styles.activeNavLink}
+                exact
+                to="/dojang"
+              >
+                Our Dojang
+              </Link>
+            </li>
+            <li>
+              <Link
+                className={styles.navLink}
+                activeClassName={styles.activeNavLink}
+                exact
+                to="/"
+              >
+                Get in touch
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>

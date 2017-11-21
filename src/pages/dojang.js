@@ -2,6 +2,7 @@ import React from 'react'
 
 import styles from './dojang.module.css'
 import PageMeta from '../components/PageMeta'
+import Banner from '../components/Banner'
 import Section from '../components/Section'
 import Instructor from '../components/Instructor'
 import LocalClubs from '../components/LocalClubs'
@@ -28,14 +29,14 @@ export default function DojangPage(props) {
         path={pathname}
       />
       <div className={styles.banner} />
-      <div>
-        <h1>Our Dojang</h1>
-        <div dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-      <Section heading="Instructors" intro={instructorsIntro} altBg>
+      <Banner
+        heading="Our Dojang"
+        intro={html}
+      />
+      <Section heading="Instructors" intro={instructorsIntro}>
         {instructors.map(item => <Instructor key={item.name} {...item} />)}
       </Section>
-      <Section heading="Associated clubs" intro={clubsIntro}>
+      <Section heading="Associated clubs" intro={clubsIntro} altBg>
         <div>
           <LocalClubs clubs={localClubs}  />
           <ul>
