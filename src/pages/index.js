@@ -1,12 +1,13 @@
 import React from 'react'
 import Script from 'react-load-script';
 
-import styles from './index.module.css'
 import PageMeta from '../components/PageMeta'
 import Section from '../components/Section'
 import Location from '../components/Location'
 import Fees from '../components/Fees'
 import RelatedLinks from '../components/RelatedLinks'
+
+import styles from './styles/index.module.css'
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {

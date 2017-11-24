@@ -1,12 +1,13 @@
 import React from 'react'
 
-import styles from './dojang.module.css'
 import PageMeta from '../components/PageMeta'
 import Banner from '../components/Banner'
 import Section from '../components/Section'
 import Instructor from '../components/Instructor'
 import LocalClubs from '../components/LocalClubs'
 import RelatedLinks from '../components/RelatedLinks'
+
+import styles from './styles/dojang.module.css'
 
 export default function DojangPage(props) {
   const { data, location: { pathname } } = props

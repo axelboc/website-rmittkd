@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './banner.module.css'
+import styles from './styles/banner.module.css'
 
 function Banner(props) {
   const { heading, intro, image } = props;

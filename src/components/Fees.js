@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './fees.module.css'
+import styles from './styles/fees.module.css'
 
 function Fees() {
   return (

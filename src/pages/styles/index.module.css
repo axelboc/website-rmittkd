@@ -12,7 +12,7 @@
     right: -2rem;
     width: 67%;
     background-image: linear-gradient(to right, #000, rgba(0, 0, 0, 0) 5%),
-                      url('../images/hero.jpg');
+                      url('../../images/hero.jpg');
     background-position: top right;
     background-size: cover;
     background-repeat: no-repeat;

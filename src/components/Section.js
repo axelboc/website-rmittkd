@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from './section.module.css'
+import styles from './styles/section.module.css'
 
 function Section(props) {
   const { heading, intro, useDiv, altBg, children } = props;

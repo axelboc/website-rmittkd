@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'gatsby-link'
 
-import styles from './header.module.css'
-import logo from '../../images/logo.png'
+import styles from './styles/header.module.css'
+import logo from '../images/logo.png'
 
 function Header() {
   return (

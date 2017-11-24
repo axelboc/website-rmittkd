@@ -1,10 +1,10 @@
 import React from 'react'
 
-import styles from './footer.module.css'
-import logoRmitLink from '../../images/logos/logo-rmit-link.png'
-import logoChitf from '../../images/logos/logo-chitf.png'
-import logoChitfAus from '../../images/logos/logo-chitf-australia.png'
-import logoLaiTkd from '../../images/logos/logo-lai-tkd.png'
+import styles from './styles/footer.module.css'
+import logoRmitLink from '../images/logos/logo-rmit-link.png'
+import logoChitf from '../images/logos/logo-chitf.png'
+import logoChitfAus from '../images/logos/logo-chitf-australia.png'
+import logoLaiTkd from '../images/logos/logo-lai-tkd.png'
 
 function Footer() {
   return (
