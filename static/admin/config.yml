@@ -1,6 +1,5 @@
 backend:
-  name: github
-  repo: axelboc/website-rmittkd
+  name: git-gateway
   branch: make-static
 
 media_folder: "static/uploads"

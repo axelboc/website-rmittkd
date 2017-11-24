@@ -25,12 +25,12 @@
     "gatsby-plugin-nprogress": "^1.0.7",
     "normalize.css": "^7.0.0",
     "react": "^16.0.0",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "react-load-script": "^0.0.6"
   },
   "devDependencies": {
     "gatsby-remark-smartypants": "^1.4.8",
     "gatsby-source-filesystem": "^1.5.5",
-    "gatsby-transformer-remark": "^1.7.19",
-    "prop-types": "^15.6.0"
+    "gatsby-transformer-remark": "^1.7.19"
   }
 }

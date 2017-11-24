@@ -1,4 +1,5 @@
 import React from 'react'
+import Script from 'react-load-script';
 
 import styles from './index.module.css'
 import PageMeta from '../components/PageMeta'
@@ -7,42 +8,61 @@ import Location from '../components/Location'
 import Fees from '../components/Fees'
 import RelatedLinks from '../components/RelatedLinks'
 
-export default function IndexPage(props) {
-  const { data, location: { pathname } } = props
-  const { relatedLinks } = data.site.siteMetadata
+export default class IndexPage extends React.Component {
+  handleScriptLoad() {
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on('init', user => {
+        if (!user) {
+          window.netlifyIdentity.on('login', () => {
+            document.location.href = '/admin/';
+          });
+        }
+      });
+    }
+    window.netlifyIdentity.init();
+  }
 
-  const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
-  const {
-    metaDescription, trainIntro, locations,
-    feesIntro, studentFees, publicFees
-  } = frontmatter
+  render() {
+    const { data, location: { pathname } } = this.props
+    const { relatedLinks } = data.site.siteMetadata
 
-  return (
-    <div>
-      <PageMeta
-        isHome
-        description={metaDescription}
-        path={pathname}
-      />
-      <div className={styles.hero}>
-        <div className={styles.heroInner}>
-          <h1 className={styles.title}>ITF Taekwon-Do</h1>
-          <p className={styles.sub}>RMIT University Club</p>
-          <div className={styles.intro} dangerouslySetInnerHTML={{ __html: html }} />
+    const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
+    const {
+      metaDescription, trainIntro, locations,
+      feesIntro, studentFees, publicFees
+    } = frontmatter
+
+    return (
+      <div>
+        <PageMeta
+          isHome
+          description={metaDescription}
+          path={pathname}
+        />
+        <Script
+          url="https://identity.netlify.com/v1/netlify-identity-widget.js"
+          onLoad={this.handleScriptLoad.bind(this)}
+        />
+        <div className={styles.hero}>
+          <div className={styles.heroInner}>
+            <h1 className={styles.title}>ITF Taekwon-Do</h1>
+            <p className={styles.sub}>RMIT University Club</p>
+            <div className={styles.intro} dangerouslySetInnerHTML={{ __html: html }} />
+          </div>
         </div>
+        <Section heading="Train with us" intro={trainIntro} altBg>
+          {locations.map(item => <Location key={item.suburb} {...item} />)}
+        </Section>
+        <Section heading="Membership fees" intro={feesIntro}>
+          <Fees studentFees={studentFees} publicFees={publicFees} />
+          <a href="https://rmitlink.rmit.edu.au/Clubs/taekwondo-itf">Choose your membership</a>
+        </Section>
+        <Section useDiv>
+          <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
+        </Section>
       </div>
-      <Section heading="Train with us" intro={trainIntro} altBg>
-        {locations.map(item => <Location key={item.suburb} {...item} />)}
-      </Section>
-      <Section heading="Membership fees" intro={feesIntro}>
-        <Fees studentFees={studentFees} publicFees={publicFees} />
-        <a href="https://rmitlink.rmit.edu.au/Clubs/taekwondo-itf">Choose your membership</a>
-      </Section>
-      <Section useDiv>
-        <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
-      </Section>
-    </div>
-  )
+    );
+  }
 }
 
 export const query = graphql`
