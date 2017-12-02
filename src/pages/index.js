@@ -28,10 +28,7 @@ export default class IndexPage extends React.Component {
     const { relatedLinks } = data.site.siteMetadata
 
     const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
-    const {
-      metaDescription, trainIntro, locations,
-      feesIntro, studentFees, publicFees
-    } = frontmatter
+    const { metaDescription, trainIntro, locations, feesIntro, fees } = frontmatter
 
     return (
       <div>
@@ -55,7 +52,7 @@ export default class IndexPage extends React.Component {
           {locations.map(item => <Location key={item.suburb} {...item} />)}
         </Section>
         <Section heading="Membership fees" intro={feesIntro}>
-          <Fees studentFees={studentFees} publicFees={publicFees} />
+          <Fees fees={fees} />
           <a href="https://rmitlink.rmit.edu.au/Clubs/taekwondo-itf">Choose your membership</a>
         </Section>
         <Section useDiv>
@@ -84,13 +81,10 @@ export const query = graphql`
               }
             }
             feesIntro
-            studentFees {
-              semester
+            fees {
+              who
               year
-            }
-            publicFees {
               semester
-              year
             }
           }
           html

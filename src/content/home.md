@@ -15,12 +15,13 @@ locations:
         to: '8:30 pm'
     suburb: Bundoora
 feesIntro: Hello!
-studentFees:
-  semester: 130
-  year: 260
-publicFees:
-  semester: 155
-  year: 310
+fees:
+  - who: 'RMIT student'
+    year: 260
+    semester: 130
+  - who: 'Public (non-RMIT)'
+    year: 310
+    semester: 155
 ---
 This is a test.
 

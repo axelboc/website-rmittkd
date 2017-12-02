@@ -35,30 +35,17 @@ collections:
                     widget: "string"
                     pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
           - {label: "\"Membership fees\" section intro", name: "feesIntro", widget: "text"}
-          - label: "Fees (RMIT student)"
-            name: "studentFees"
-            widget: "object"
+          - label: "Fees"
+            name: "fees"
+            widget: "list"
             fields:
-              - label: "Year"
+              - {label: "For whom?", name: "who", widget: "string"}
+              - label: "Cost for year"
                 name: "year"
                 widget: "number"
                 valueType: "int"
                 min: 0
-              - label: "Semester"
-                name: "semester"
-                widget: "number"
-                valueType: "int"
-                min: 0
-          - label: "Fees (public)"
-            name: "publicFees"
-            widget: "object"
-            fields:
-              - label: "Year"
-                name: "year"
-                widget: "number"
-                valueType: "int"
-                min: 0
-              - label: "Semester"
+              - label: "Cost for semester"
                 name: "semester"
                 widget: "number"
                 valueType: "int"

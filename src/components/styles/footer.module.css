@@ -2,8 +2,12 @@
   background-color: #000;
 }
 
+.inner {
+  composes: max from global;
+}
+
 .list {
-  composes: list-reset max from global;
+  composes: list-reset from global;
   display: flex;
   justify-content: space-between;
   align-items: center;
