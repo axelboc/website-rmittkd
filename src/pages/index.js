@@ -5,6 +5,7 @@ import PageMeta from '../components/PageMeta'
 import Section from '../components/Section'
 import Location from '../components/Location'
 import Fees from '../components/Fees'
+import Button from '../components/Button'
 import RelatedLinks from '../components/RelatedLinks'
 
 import styles from './styles/index.module.css'
@@ -53,9 +54,11 @@ export default class IndexPage extends React.Component {
         </Section>
         <Section heading="Membership fees" intro={feesIntro}>
           <Fees fees={fees} />
-          <a href="https://rmitlink.rmit.edu.au/Clubs/taekwondo-itf">Choose your membership</a>
+          <Button to="https://rmitlink.rmit.edu.au/Clubs/taekwondo-itf">
+            Choose your membership
+          </Button>
         </Section>
-        <Section useDiv>
+        <Section useDiv spaced>
           <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
         </Section>
       </div>

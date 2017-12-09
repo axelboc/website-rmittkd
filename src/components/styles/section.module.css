@@ -2,9 +2,8 @@
   padding: 2.25rem 0;
 }
 
-.altSection {
-  composes: section;
-  composes: bg-alt from global;
+.spaced {
+  padding: 4.5rem 0;
 }
 
 .inner {

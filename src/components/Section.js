@@ -1,14 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import classnames from 'classnames'
 
 import styles from './styles/section.module.css'
 
 function Section(props) {
-  const { heading, intro, useDiv, altBg, children } = props;
+  const { heading, intro, useDiv, spaced, altBg, children } = props;
+
   const Root = useDiv ? 'div' : 'section'
+  const classes = classnames(styles.section, {
+    'bg-alt': altBg,
+    [styles.spaced]: spaced,
+  })
 
   return (
-    <Root className={styles[altBg ? 'altSection' : 'section']}>
+    <Root className={classes}>
       <div className={styles.inner}>
         {heading && <h2 className={styles.heading}>{heading}</h2>}
         {intro && <p className={styles.intro} dangerouslySetInnerHTML={{ __html: intro }}></p>}
@@ -23,6 +29,7 @@ Section.propTypes = {
   intro: PropTypes.string,
   altBg: PropTypes.bool,
   useDiv: PropTypes.bool,
+  spaced: PropTypes.bool,
   children: PropTypes.any,
 }
 

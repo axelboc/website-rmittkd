@@ -55,7 +55,7 @@ export default function DojangPage(props) {
           </ul>
         </div>
       </Section>
-      <Section useDiv>
+      <Section useDiv spaced>
         <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
       </Section>
     </div>

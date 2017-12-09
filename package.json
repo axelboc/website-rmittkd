@@ -20,6 +20,7 @@
     "local": "set NODE_ENV=development && yarn build && gatsby serve -p 8000"
   },
   "dependencies": {
+    "classnames": "^2.2.5",
     "gatsby": "^1.9.82",
     "gatsby-link": "^1.6.23",
     "gatsby-plugin-nprogress": "^1.0.7",

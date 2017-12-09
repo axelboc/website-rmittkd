@@ -1,0 +1,14 @@
+.btn {
+  composes: link-reset from global;
+  display: inline-flex;
+  align-items: center;
+  padding: .5rem 1rem;
+  background-color: #fff;
+  color: #242424;
+}
+
+.icon {
+  display: block;
+  margin-left: 2.25rem;
+  fill: currentColor;
+}
