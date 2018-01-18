@@ -54,7 +54,7 @@ export default class IndexPage extends React.Component {
         </Section>
         <Section heading="Membership fees" intro={feesIntro}>
           <Fees fees={fees} />
-          <Button to="https://rmitlink.rmit.edu.au/Clubs/taekwondo-itf">
+          <Button to="https://rmitlink.rmit.edu.au/Clubs/taekwondo-itf" centred>
             Choose your membership
           </Button>
         </Section>

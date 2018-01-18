@@ -7,6 +7,10 @@
   color: #242424;
 }
 
+.wrapper {
+  text-align: center;
+}
+
 .icon {
   display: block;
   margin-left: 2.25rem;

@@ -10,9 +10,9 @@ function Fees(props) {
       <div className={styles.option}>
         <p className={styles.group}>Everyone</p>
         <div className={styles.content}>
-          <p className={styles.free}>
-            <span>Free</span>{' '}
-            <span>First 3 classes</span>
+          <p className={styles.cost}>
+            <span className={styles.free}>Free</span>{' '}
+            <span className={styles.first3}>First 3 classes</span>
           </p>
         </div>
       </div>
@@ -21,11 +21,15 @@ function Fees(props) {
           <p className={styles.group}>{who}</p>
           <div className={styles.content}>
             <p className={styles.cost}>
-              <span className={styles.amount}>${year}</span>{' '}
+              <span className={styles.amount}>
+                <span className={styles.currency}>$</span>
+                <span className={styles.value}>{year}</span></span>{' '}
               <span className={styles.period}>per year</span>
             </p>
             <p className={styles.cost}>
-              <span className={styles.amount}>${semester}</span>{' '}
+              <span className={styles.amount}>
+                <span className={styles.currency}>$</span>
+                <span className={styles.value}>{semester}</span></span>{' '}
               <span className={styles.period}>per semester</span>
             </p>
           </div>
