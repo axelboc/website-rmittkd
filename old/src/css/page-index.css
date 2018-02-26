@@ -9,186 +9,117 @@
 }
 
 @media (max-width: 39.99em) {
-	
+
 	.index-hero {
 		top: 5.5em;
 		right: -2em;
 		max-width: 70%;
 	}
-	
+
 }
 
 @media (min-width: 32em) and (max-width: 49.99em) {
-	
+
 	.lay-main--welcome {
 		width: 100%;
 		margin-right: 0;
 	}
-	
+
 	.index-hero {
 		top: 5em;
 		right: -1em;
 		max-width: 70%;
 	}
-	
+
 }
 
 @media (min-width: 40em) and (max-width: 49.99em) {
-	
+
 	.index-hero {
 		top: 6em;
 		right: -11.5em;
 		max-width: 70%;
 	}
-	
+
 }
 
 @media (min-width: 50em) {
-	
+
 	.index-hero {
 		top: -2.6em;
 		right: -235px;
 		max-width: 90%;
 	}
-	
+
 }
 
 
-/* ===== Timetable ===== */
+/* ===== Locations ===== */
 
-.tmtbl-section {
-	min-height: 194px;
-	min-height: 12.125rem;
+.loc-row {
+	margin: 1.25em 0;
 }
 
-.tmtbl {
-	empty-cells: show;
-	border-collapse: collapse;
-	width: 100%;
+.loc-row > .unit:last-child {
+	padding-left: .5em;
 }
 
-.tmtbl th,
-.tmtbl td {
-	text-align: center;
-	padding: 0;
+.loc-heading-sub {
+	margin-top: .75em;
 }
 
-.tmtbl td {
-	width: 23%;
-}
-
-.tmtbl > thead th {
-	padding: 0 0 5px;
-}
-
-.tmtbl tbody th {
-	font-size: 85%;
-	padding: 0 5px;
-}
-
-.tmtbl-caption {
-	caption-side: bottom;
-	text-align: left;
-	padding-left: 1em;
-	margin: .7em 0 .4em;
-	font-size: 80%;
-}
-
-.tmtbl-legend {
-	display: inline-block;
-	width: 0;
-}
-
-.tmtbl-legend + span {
-	margin-right: 10px;
-}
-
-.tmtbl-training,
-.tmtbl-openmat {
+.loc-link {
 	display: block;
-	width: 1.8em;
-	height: 100%;
-	min-height: 1.55em;
-	margin: 0 auto;
+	border-radius: 5px;
+	box-shadow: 0 0 3px #aaa;
+	transition: box-shadow .15s;
 }
 
-.tmtbl-legend-square {
-	display: inline-block;
-	vertical-align: -0.4em;
-	height: 1.55em;
+.loc-link:hover {
+	box-shadow: 0 0 6px #aaa;
+	transition-duration: .3s;
 }
 
-.tmtbl-training {
-	background-color: #edcc2f;
+.loc-img {
+	text-decoration: underline;
 }
 
-.tmtbl-openmat {
-	background-color: #633072;
+.loc-img[src] {
+	margin-left: -300px;
 }
 
-.tmtbl-top {
-	border-top-left-radius: 4px;
-	border-top-right-radius: 4px;
-}
-
-.tmtbl-bot {
-	border-bottom-left-radius: 4px;
-	border-bottom-right-radius: 4px;
-}
-
-
-/* ===== Location ===== */
-
-.map-section {
-	overflow: hidden;
-}
-
-.map-wrap {
-	position: relative;
-}
-
-.map-link {
-	display: block;
-	height: 100%;
-	color: #fff;
-}
-
-.map-link:focus {
-	outline: 0;
-}
-
-.map-link:focus > .map-caption > span {
-	outline: 1px dashed #fff;
-}
-
-.map-link > img {
-	margin-left: -236px;
-}
-
-.map-caption {
-	position: absolute;
-	right: 0;
-	bottom: 0;
+.loc-img:not([src]) {
 	left: 0;
-	padding: .35em .5em;
-	text-align: center;
 }
 
-
-/* ===== New location ===== */
-
-.nloc-section {
-	border-left: 6px solid #ec1a25;
+.loc-times {
+	margin-top: -.5em;
 }
 
-.nloc-heading {
-	float: left;
-	margin: 0 .75rem 0 0;
-	line-height: 1.8;
-	font-size: 150%;
-	font-weight: normal;
+.loc-times__list {
+	margin-top: 0;
 }
 
+.loc-times__list > dd {
+	margin-left: 0;
+}
+
+.loc-btn {
+	display: inline-block;
+	margin-bottom: .5em;
+	padding: .7em 1.4em;
+	background: #e7343c;
+	background-image: -webkit-linear-gradient(top, #e7343c, #cb171f);
+	background-image: linear-gradient(to bottom, #e7343c, #cb171f);
+}
+
+@media (min-width: 40em) {
+
+	.loc-heading-sub {
+		margin-top: .35em;
+	}
+
+}
 
 /* ===== Calendar ===== */
 
@@ -281,21 +212,21 @@
 
 /* Start of 2-column layout */
 @media (min-width: 40em) {
-	
+
 	.cal-months {
 		width: 300%;
 	}
-	
+
 	.no3d .cal-months[data-position="1"] { left: -50%; }
 	.no3d .cal-months[data-position="2"] { left: -100%; }
 	.no3d .cal-months[data-position="3"] { left: -150%; }
 	.no3d .cal-months[data-position="4"] { left: -200%; }
 	.no3d .cal-months[data-position="5"] { left: -250%; }
-	
+
 	.cal-month[aria-hidden="false"] + .cal-month {
 		visibility: visible;
 	}
-	
+
 }
 
 /* Switch to big, offset arrows */
@@ -309,7 +240,7 @@
 		background-color: transparent;
 		border-radius: 0;
 	}
-	
+
 	.cal-arrow--prev { left: -10px; }
 	.cal-arrow--next { right: -10px; }
 

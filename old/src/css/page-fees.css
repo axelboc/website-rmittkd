@@ -11,62 +11,58 @@
 }
 
 @media (min-width: 25em) {
-	
+
 	.fees-hero {
 		max-width: 35%;
 	}
-	
+
 }
-	
+
 @media (min-width: 32em) {
-	
+
 	.fees-hero {
 		top: -9em;
-		max-width: 40%;
+		max-width: 45%;
 	}
-	
+
 }
 
 @media (min-width: 50em) {
-	
+
 	.fees-hero {
 		top: -11.5em;
 	}
-	
+
 }
 
 
 /* ===== Membership ===== */
 
-.membership {
-	position: relative;
-	z-index: 10;
-	padding-top: .5em;
+.mbrship-options {
+	padding: .5em 0 1.5em;
 }
 
 .mbrship-opt {
-    padding: .7em 0;
+	padding: .7em 0;
 }
 
 .mbrship-opt-link {
 	display: block;
 	width: 15em;
-	margin: 0 auto;
 	padding: .7em .5em 1.2em;
 	background-color: #e3e3e3;
 	border-radius: 5px;
 	box-shadow: 0 0 3px #aaa;
 	text-align: center;
 	text-decoration: none;
-	transition: background-color .15s ease,
-				box-shadow .15s ease;
+	transition: background-color .25s ease, box-shadow .25s ease;
 }
 
 .mbrship-opt-link:hover,
 .mbrship--hovered {
 	background-color: #f5f5f5;
 	box-shadow: 0 0 6px #aaa;
-	transition-duration: .3s;
+	transition-duration: .5s;
 }
 
 .mbrship-fee {
@@ -91,7 +87,7 @@
 }
 
 .mbrship-group {
-	font-size: 150%;
+	font-size: 140%;
 	margin: 0;
 }
 
@@ -101,90 +97,67 @@
 	font-size: 160%;
 }
 
-.mbrship-note {
-	margin: 1.5em 0;
+.mbrship-opt-link--primary {
+	background-color: #444;
+	color: #fff;
+	box-shadow: 0 0 8px #666;
 }
 
-.mbrship-note > p {
-	margin: .5em 0;
+.mbrship-opt-link--primary:hover {
+	background-color: #222;
+}
+
+.mbrship-opt-link--primary .mbrship-fee {
+	color: #e3e3e3;
 }
 
 @media (min-width: 24em) {
-	
+
 	.mbrship-opt {
 		float: left;
-		width: 50%;
-		padding: 0;
+		width: 15em;
+		margin-right: 1.5em;
 		font-size: 80%;
 	}
-	
+
 	.mbrship-opt-link {
 		min-height: 15em;
 	}
-	
-}
 
-@media (min-width: 26em) {
-	
-	.mbrship-opt {
-		font-size: 90%;
-	}
-	
 }
 
 @media (min-width: 28em) {
-    
+
+	.mbrship-intro {
+		max-width: 80%;
+	}
+
 	.mbrship-opt {
 		font-size: 95%;
-    }
-    
+	}
+
+	.mbrship-opt:nth-child(3) {
+		clear: left;
+	}
+
 }
 
 @media (min-width: 34em) {
-    
-    .mbrship-options {
-        max-width: 80%;
-    }
-    
-}
 
-@media (min-width: 41em) {
-	
-	.membership {
-		padding-top: 1em;
+	.mbrship-intro {
+		max-width: 50%;
 	}
-	
-	.mbrship-options {
-        max-width: 68%;
-		padding: .5em 1em .8em;
-	}
-	
-}
 
-@media (min-width: 48em) {
-	
-	.mbrship-options {
-        max-width: 60%;
-	}
-	
 }
 
 @media (min-width: 52em) {
-	
-	.membership {
-		padding-bottom: 1em;
-	}
-	
+
 	.mbrship-options {
-        max-width: 53%;
+		padding: 2em 0;
 	}
-	
-	.mbrship-note {
-		position: absolute;
-		right: 2em;
-		bottom: 0;
-		font-size: 110%;
-		text-align: right;
+
+	.mbrship-opt:nth-child(3) {
+		clear: none;
 	}
-	
+
 }
