@@ -21,7 +21,6 @@
 					include 'sections/videos.php';
 					include 'sections/merchandising.php';
 					include 'sections/fees.php';
-					include 'sections/location.php';
 					include 'sections/months.php';
 				}
 			?>

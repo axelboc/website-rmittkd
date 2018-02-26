@@ -3,6 +3,9 @@
 // The SendGrid API key (https://app.sendgrid.com/settings/api_keys)
 define('API_KEY', '0123456789abcdefg');
 
+// The Google API key (https://console.developers.google.com/apis/credentials)
+define('GMAPS_API_KEY', '0123456789abcdefg');
+
 // The club's email address
 define('CLUB_EMAIL', 'foo@example.com');
 

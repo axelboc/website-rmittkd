@@ -46,14 +46,14 @@ body {
 }
 
 @media (min-width: 50em) {
-	
+
 	.body-max {
 		position: relative;
 		max-width: 960px;
 		max-width: 60rem;
 		margin: 0 auto;
 	}
-	
+
 }
 
 
@@ -84,11 +84,11 @@ h1 {
 /* ===== Mini grid (wrap with `.row` container) ===== */
 
 @media (min-width: 40em) {
-	
+
 	.unit {
 		float: left;
 	}
-	
+
 	.tab-1-2 {
 		width: 49.25%;
 	}
@@ -144,6 +144,7 @@ a > span {
 	background-image: url('../images/fist.png'), linear-gradient(to bottom, #e7343c, #cb171f);
 	color: #fff;
 	letter-spacing: .1em;
+	text-decoration: none;
 	text-transform: uppercase;
 }
 
@@ -152,7 +153,7 @@ a > span {
 }
 
 
-/* ===== Images ===== */
+/* ===== Images and icons ===== */
 
 img {
 	display: block;
@@ -187,6 +188,22 @@ img {
 .respimg-fit {
 	max-width: 100%;
 	height: auto;
+}
+
+/* Text with icon */
+.with-icon {
+	display: flex;
+}
+
+.with-icon__icon {
+	width: 24px;
+	height: 24px;
+	margin-right: .7em;
+	margin-top: -.1em;
+}
+
+.with-icon__body {
+	flex: 1;
 }
 
 
