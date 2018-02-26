@@ -2,13 +2,15 @@
 metaDescription: Test
 trainIntro: Welcome!
 locations:
-  - address: 'RMIT Building 47, 8 Orr St'
+  - address: '8 Orr St, Carlton VIC 3053, Australia'
+    location: 'RMIT Building 47, 8 Orr St'
     times:
       - days: 'Every Monday, Wednesday and Friday'
         from: '6:30 pm'
         to: 8 pm
     suburb: Melbourne CBD
-  - address: RMIT Sports Centre
+  - address: RMIT Sports Centre, Building 203, McKimmies Rd, Bundoora VIC 3083, Australie
+    location: RMIT Sports Centre, Group Fitness Room
     times:
       - days: Every Tuesday
         from: 7 pm

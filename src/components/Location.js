@@ -5,21 +5,36 @@ import Button from './Button'
 
 import styles from './styles/location.module.css'
 
-const GMAPS_API_URL = 'https://maps.googleapis.com/maps/api/staticmap';
+const GMAPS_API_URL = 'https://maps.googleapis.com/maps/api/staticmap'
+
+ // https://snazzymaps.com/style/8083/mymap
 const MAP_PARAMS = [
   `key=${process.env.GMAPS_API_KEY}`,
   'size=304x304',
   `visible=${encodeURIComponent('Melbourne VIC 3000, Australia')}`,
+  ...[
+    'element:labels.text.fill|color:0xffffff',
+    'element:labels.text.stroke|color:0x000000|lightness:13',
+    'feature:administrative|element:geometry.fill|color:0x000000',
+    'feature:administrative|element:geometry.stroke|color:0x144b53|lightness:14|weight:1.4',
+    'feature:administrative.locality|visibility:on',
+    'feature:administrative.locality|element:labels.icon|visibility:on',
+    'feature:landscape|color:0x08304b',
+    'feature:poi|visibility:off',
+    'feature:road|element:labels|visibility:off',
+    'feature:road.arterial|element:geometry.fill|color:0x000000',
+    'feature:road.arterial|element:geometry.stroke|color:0x0b3d51|lightness:16',
+    'feature:road.highway|element:geometry.fill|color:0x000000',
+    'feature:road.highway|element:geometry.stroke|color:0x0b434f|lightness:25',
+    'feature:road.local|element:geometry|color:0x000000',
+    'feature:transit|visibility:off',
+    'feature:water|color:0x021019',
+  ].map(str => `style=${encodeURIComponent(str)}`),
 ].join('&')
 
-// https://snazzymaps.com/style/8083/mymap
-const MAP_STYLES = 'style=element:labels.text.fill%7Ccolor:0xffffff&style=element:labels.text.stroke%7Ccolor:0x000000%7Clightness:13&style=feature:administrative%7Celement:geometry.fill%7Ccolor:0x000000&style=feature:administrative%7Celement:geometry.stroke%7Ccolor:0x144b53%7Clightness:14%7Cweight:1.4&style=feature:administrative.locality%7Cvisibility:on&style=feature:administrative.locality%7Celement:labels.icon%7Cvisibility:on&style=feature:landscape%7Ccolor:0x08304b&style=feature:poi%7Celement:geometry%7Ccolor:0x0c4152%7Clightness:5&style=feature:road.arterial%7Celement:geometry.fill%7Ccolor:0x000000&style=feature:road.arterial%7Celement:geometry.stroke%7Ccolor:0x0b3d51%7Clightness:16&style=feature:road.highway%7Celement:geometry.fill%7Ccolor:0x000000&style=feature:road.highway%7Celement:geometry.stroke%7Ccolor:0x0b434f%7Clightness:25&style=feature:road.local%7Celement:geometry%7Ccolor:0x000000&style=feature:transit%7Ccolor:0x146474&style=feature:water%7Ccolor:0x021019'
-
 function Location(props) {
-  const { address, suburb, times } = props
-
-  const fullAddress = encodeURIComponent(`${address}, ${suburb}`)
-  const mapParams = `markers=${fullAddress}&${MAP_PARAMS}&${MAP_STYLES}`
+  const { suburb, location, address, times } = props
+  const mapParams = `markers=${address}&${MAP_PARAMS}`
 
   return (
     <div className={styles.location}>
@@ -29,7 +44,7 @@ function Location(props) {
       />
       <div className={styles.content}>
         <h2>{suburb}</h2>
-        <p>{address}</p>
+        <p>{location}</p>
         <dl>
           {times.map((entry) => {
             const { days, from, to } = entry
@@ -39,7 +54,7 @@ function Location(props) {
             ]
           })}
         </dl>
-        <Button to={`https://www.google.com.au/maps/dir//${fullAddress}`}>
+        <Button to={`https://www.google.com.au/maps/dir//${address}`}>
           Getting there
         </Button>
       </div>
@@ -49,7 +64,8 @@ function Location(props) {
 
 Location.propTypes = {
   suburb: PropTypes.string.isRequired,
-  address: PropTypes.string.isRequired,
+  location: PropTypes.string.isRequired,
+  address: PropTypes.string,
   times: PropTypes.arrayOf(PropTypes.shape({
     days: PropTypes.string.isRequired,
     from: PropTypes.string.isRequired,

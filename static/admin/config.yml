@@ -20,7 +20,8 @@ collections:
             widget: "list"
             fields:
               - {label: "Suburb", name: "suburb", widget: "string", pattern: ['^[A-Z]', "Should be capitalised"]}
-              - {label: "Address", name: "address", widget: "string"}
+              - {label: "Location (building, street)", name: "location", widget: "string"}
+              - {label: "Full address on Google Maps (with postcode, country, etc.)", name: "address", widget: "string"}
               - label: "Session times"
                 name: "times"
                 widget: "list"

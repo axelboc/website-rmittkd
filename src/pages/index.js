@@ -76,6 +76,7 @@ export const query = graphql`
             trainIntro
             locations {
               suburb
+              location
               address
               times {
                 days
