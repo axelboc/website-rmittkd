@@ -20,6 +20,13 @@
 					<?php Helpers::printError('fee-non-rmit'); ?>
 				</div>
 			</div>
+			<div class="form-row row">
+				<label class="form-label" for="fee-bundoora-only">Bundoora only</label>
+				<div class="form-field-wrap">
+					<input id="fee-bundoora-only" name="fee-bundoora-only" class="form-field field" type="text" value="<?php echo Helpers::getData('fee-bundoora-only', Fees::getFee('bundoora-only')); ?>" size="55" required>
+					<?php Helpers::printError('fee-bundoora-only'); ?>
+				</div>
+			</div>
 			<div class="form-row form-row--submit row">
 				<button class="form-submit button" type="submit"><span>Save</span></button>
 			</div>
