@@ -34,10 +34,10 @@ export default function DojangPage(props) {
         heading="Our Dojang"
         intro={html}
       />
-      <Section heading="Instructors" intro={instructorsIntro}>
+      <Section heading="Instructors" intro={instructorsIntro} bg="alt">
         {instructors.map(item => <Instructor key={item.name} {...item} />)}
       </Section>
-      <Section heading="Associated clubs" intro={clubsIntro} altBg>
+      <Section heading="Associated clubs" intro={clubsIntro} bg="alt2">
         <div>
           <LocalClubs clubs={localClubs}  />
           <ul>

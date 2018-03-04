@@ -1,15 +1,5 @@
 .banner {
-  composes: bg-alt from global;
-
-  &::before {
-    content: '';
-    display: block;
-    height: 10rem;
-    background-image: url('../../images/small-banner.jpg');
-    background-size: cover;
-    background-position: top 25% right;
-    filter: saturate(60%) contrast(120%) sepia(20%);
-  }
+  padding-top: 3rem; /* clear logo */
 }
 
 .inner {
@@ -31,7 +21,7 @@
 .image {
   width: 18rem;
   height: 18rem;
-  background-color: #242424;
+  background-color: #000;
   background-size: cover;
   border-radius: 50%;
   border: 8px solid #fff;

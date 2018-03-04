@@ -1,10 +1,15 @@
 .bg-alt {
-  background-color: #000624;
+  background-color: #202030;
+  background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
+}
+
+.bg-alt2 {
+  background-color: #241623;
 }
 
 .bg-white {
   background-color: #fff;
-  color: #242424;
+  color: #000;
 }
 
 .max {

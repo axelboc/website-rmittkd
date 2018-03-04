@@ -5,11 +5,11 @@ import classnames from 'classnames'
 import styles from './styles/section.module.css'
 
 function Section(props) {
-  const { heading, intro, useDiv, spaced, altBg, children } = props;
+  const { heading, intro, useDiv, spaced, bg, children } = props;
 
   const Root = useDiv ? 'div' : 'section'
   const classes = classnames(styles.section, {
-    'bg-alt': altBg,
+    [`bg-${bg}`]: !!bg,
     [styles.spaced]: spaced,
   })
 
@@ -27,7 +27,7 @@ function Section(props) {
 Section.propTypes = {
   heading: PropTypes.string,
   intro: PropTypes.string,
-  altBg: PropTypes.bool,
+  bg: PropTypes.string,
   useDiv: PropTypes.bool,
   spaced: PropTypes.bool,
   children: PropTypes.any,

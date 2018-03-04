@@ -49,10 +49,10 @@ export default class IndexPage extends React.Component {
             <div className={styles.intro} dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
-        <Section heading="Train with us" intro={trainIntro} altBg>
+        <Section heading="Train with us" intro={trainIntro}>
           {locations.map(item => <Location key={item.suburb} {...item} />)}
         </Section>
-        <Section heading="Membership fees" intro={feesIntro}>
+        <Section heading="Membership fees" intro={feesIntro} bg="alt">
           <Fees fees={fees} />
           <Button to="https://rmitlink.rmit.edu.au/Clubs/taekwondo-itf" centred>
             Choose your membership

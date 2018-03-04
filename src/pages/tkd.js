@@ -27,12 +27,12 @@ export default function TkdPage(props) {
         intro={html}
         image={bannerImg}
       />
-      <Section useDiv spaced>
+      <Section useDiv spaced bg="alt">
         <div className={styles.embed}>
           <iframe className={styles.iframe} src={video} frameBorder="0" allowFullScreen></iframe>
         </div>
       </Section>
-      <Section altBg useDiv spaced>
+      <Section useDiv spaced>
         <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
       </Section>
     </div>
