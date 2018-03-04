@@ -9,7 +9,7 @@ collections:
   - name: "pages"
     label: "Pages"
     files:
-      - file: "src/content/home.md"
+      - file: "src/pages/index.md"
         label: "Homepage"
         name: "home"
         fields:
@@ -52,7 +52,7 @@ collections:
                 valueType: "int"
                 min: 0
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
-      - file: "src/content/tkd.md"
+      - file: "src/pages/tkd.md"
         label: "What is Taekwon-Do?"
         name: "tkd"
         fields:
@@ -62,7 +62,7 @@ collections:
             widget: "string"
             pattern: ['^https:\/\/www\.youtube\.com\/embed\/', "Should be a URL starting with: https://www.youtube.com/embed/"]
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
-      - file: "src/content/dojang.md"
+      - file: "src/pages/dojang.md"
         label: "Our Dojang"
         name: "dojang"
         fields:

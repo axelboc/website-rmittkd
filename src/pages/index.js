@@ -68,7 +68,7 @@ export default class IndexPage extends React.Component {
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/home\\.md$/"}}) {
+    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/index\\.md$/"}}) {
       edges {
         node {
           frontmatter {

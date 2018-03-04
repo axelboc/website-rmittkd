@@ -6,8 +6,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'src/content',
-        path: `${__dirname}/src/content/`,
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
       },
     },
     {
@@ -19,5 +19,11 @@ module.exports = {
       },
     },
     'gatsby-plugin-nprogress',
+    {
+      resolve: 'gatsby-plugin-netlify-cms',
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
   ],
 }
