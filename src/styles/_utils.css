@@ -1,6 +1,10 @@
+.bg-alt,
+.bg-alt2 {
+  background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
+}
+
 .bg-alt {
   background-color: #202030;
-  background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
 }
 
 .bg-alt2 {
