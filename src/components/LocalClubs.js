@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './styles/local-clubs.module.css'
+import styles from '../styles/components/local-clubs.module.css'
 
 function LocalClubs() {
   return (

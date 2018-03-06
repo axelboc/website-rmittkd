@@ -8,7 +8,7 @@ import Fees from '../components/Fees'
 import Button from '../components/Button'
 import RelatedLinks from '../components/RelatedLinks'
 
-import styles from './styles/index.module.css'
+import styles from '../styles/pages/index.module.css'
 
 export default class IndexPage extends React.Component {
   handleScriptLoad() {

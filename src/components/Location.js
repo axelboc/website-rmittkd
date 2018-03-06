@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Button from './Button'
 
-import styles from './styles/location.module.css'
+import styles from '../styles/components/location.module.css'
 
 const GMAPS_API_URL = 'https://maps.googleapis.com/maps/api/staticmap'
 

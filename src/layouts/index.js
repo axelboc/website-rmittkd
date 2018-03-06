@@ -5,7 +5,8 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import Sprite from '../components/Sprite'
 
-import './styles/index.css'
+import 'normalize.css'
+import '../styles/index.css'
 
 function Layout(props) {
   const { children } = props;

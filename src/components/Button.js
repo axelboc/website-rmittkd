@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import Icon from './Icon'
 
-import styles from './styles/button.module.css'
+import styles from '../styles/components/button.module.css'
 
 function Button(props) {
   const { to, centred, children } = props
@@ -11,7 +11,7 @@ function Button(props) {
   const Anchor = (
     <a className={styles.btn} href={to}>
       {children}
-      <Icon className={styles.icon} name="chevron-right" width="12" height="12" />
+      <Icon className={styles.icon} name="chevron-right" width={12} height={12} />
     </a>
   )
 

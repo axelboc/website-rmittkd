@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './styles/instructor.module.css'
+import styles from '../styles/components/instructor.module.css'
 
 function Instructor() {
   return (

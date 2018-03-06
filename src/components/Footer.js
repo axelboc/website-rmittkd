@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from './styles/footer.module.css'
+import styles from '../styles/components/footer.module.css'
 import logoRmitLink from '../images/logos/logo-rmit-link.png'
 import logoChitf from '../images/logos/logo-chitf.png'
 import logoChitfAus from '../images/logos/logo-chitf-australia.png'

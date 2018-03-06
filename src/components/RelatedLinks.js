@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
-import styles from './styles/related-links.module.css'
+import styles from '../styles/components/related-links.module.css'
 
 function RelatedLinks(props) {
   const { items } = props;

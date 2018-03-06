@@ -5,7 +5,7 @@ import Banner from '../components/Banner'
 import Section from '../components/Section'
 import RelatedLinks from '../components/RelatedLinks'
 
-import styles from './styles/tkd.module.css'
+import styles from '../styles/pages/tkd.module.css'
 import bannerImg from '../images/gen-choi.png'
 
 export default function TkdPage(props) {
