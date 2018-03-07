@@ -19,8 +19,9 @@
 }
 
 .image {
-  width: 18rem;
-  height: 18rem;
+  width: 22rem;
+  height: 22rem;
+  margin-top: -2rem;
   background-color: #000;
   background-size: cover;
   border-radius: 50%;
