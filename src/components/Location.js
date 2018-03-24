@@ -9,7 +9,7 @@ const GMAPS_API_URL = 'https://maps.googleapis.com/maps/api/staticmap'
 
  // https://snazzymaps.com/style/8083/mymap
 const MAP_PARAMS = [
-  `key=${process.env.GMAPS_API_KEY}`,
+  `key=${process.env.GATSBY_GMAPS_KEY}`,
   'size=304x304',
   `visible=${encodeURIComponent('Melbourne VIC 3000, Australia')}`,
   ...[
