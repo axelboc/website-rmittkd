@@ -6,7 +6,7 @@ import Section from '../components/Section'
 import RelatedLinks from '../components/RelatedLinks'
 
 import styles from '../styles/pages/tkd.module.css'
-import bannerImg from '../images/gen-choi.png'
+import bannerImg from '../images/gen-choi.jpg'
 
 export default function TkdPage(props) {
   const { data, location: { pathname } } = props
