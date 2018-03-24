@@ -8,6 +8,7 @@ import LocalClubs from '../components/LocalClubs'
 import RelatedLinks from '../components/RelatedLinks'
 
 import styles from '../styles/pages/dojang.module.css'
+import bannerImg from '../images/dojang.jpg'
 
 export default function DojangPage(props) {
   const { data, location: { pathname } } = props
@@ -33,6 +34,7 @@ export default function DojangPage(props) {
       <Banner
         heading="Our Dojang"
         intro={html}
+        image={bannerImg}
       />
       <Section heading="Instructors" intro={instructorsIntro} bg="alt">
         {instructors.map(item => <Instructor key={item.name} {...item} />)}
