@@ -24,8 +24,11 @@
   &::after {
     content: '';
     display: block;
-    width: 10rem;
+    width: 9rem;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
     margin: 2.25rem auto calc(2.25rem + .25rem); /* adjust for intro line-height */
-    border-top: 2px solid #777;
+    opacity: .3;
   }
 }
