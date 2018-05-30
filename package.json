@@ -21,15 +21,16 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
-    "gatsby": "^1.9.223",
-    "gatsby-link": "^1.6.38",
-    "gatsby-plugin-netlify-cms": "^1.0.11",
-    "gatsby-plugin-nprogress": "^1.0.13",
+    "gatsby": "^1.9.262",
+    "gatsby-link": "^1.6.44",
+    "gatsby-plugin-netlify-cms": "^2.0.1",
+    "gatsby-plugin-nprogress": "^1.0.14",
     "gatsby-remark-smartypants": "^1.4.12",
-    "gatsby-source-filesystem": "^1.5.26",
-    "gatsby-transformer-remark": "^1.7.34",
+    "gatsby-source-filesystem": "^1.5.36",
+    "gatsby-transformer-remark": "^1.7.41",
+    "netlify-cms": "^1.8.4",
     "normalize.css": "^8.0.0",
-    "react": "^16.2.0",
+    "react": "^16.4.0",
     "react-helmet": "^5.2.0",
     "react-load-script": "^0.0.6"
   }
