@@ -21,7 +21,7 @@
 
 .heroInner {
   composes: max from global;
-  padding: 12.5rem 0 10rem;
+  padding: 12rem 0 11rem;
   position: relative;
 }
 
