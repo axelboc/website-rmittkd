@@ -33,11 +33,39 @@
   text-decoration: none;
 }
 
-.activeNavLink,
-.navLink:hover {
-  border-bottom: 2px solid #a00309;
+.navLinkInner {
+  position: relative;
+  display: inline-block;
 }
 
-.navLink:hover {
-  color: #000;
+.navLinkInner::before,
+.navLinkInner::after {
+  content: '';
+  position: absolute;
+  bottom: -.325rem;
+  left: -1px;
+  right: -1px;
+  height: 3px;
+  border-radius: 2px;
+}
+
+.navLinkInner::before {
+  display: none;
+  background-color: #ccc;
+}
+
+.navLinkInner::after {
+  background-color: #000;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform .1s ease-out;
+}
+
+.activeNavLink > .navLinkInner::before {
+  display: block;
+}
+
+.navLink:hover > .navLinkInner::after {
+  transform: scaleX(1);
+  transition-duration: .2s;
 }

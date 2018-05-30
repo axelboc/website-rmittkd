@@ -20,7 +20,7 @@ function Header() {
                 exact
                 to="/"
               >
-                Home
+                <span className={styles.navLinkInner}>Home</span>
               </Link>
             </li>
             <li>
@@ -30,7 +30,7 @@ function Header() {
                 exact
                 to="/tkd"
               >
-                What is Taekwon-Do?
+                <span className={styles.navLinkInner}>What is Taekwon-Do?</span>
               </Link>
             </li>
             <li>
@@ -40,7 +40,7 @@ function Header() {
                 exact
                 to="/dojang"
               >
-                Our Dojang
+                <span className={styles.navLinkInner}>Our Dojang</span>
               </Link>
             </li>
             <li>
@@ -50,7 +50,7 @@ function Header() {
                 exact
                 to="/"
               >
-                Get in touch
+                <span className={styles.navLinkInner}>Get in touch</span>
               </Link>
             </li>
           </ul>
