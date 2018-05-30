@@ -8,7 +8,7 @@ import 'normalize.css'
 import '../styles/index.css'
 
 function Layout(props) {
-  const { children } = props;
+  const { children, location } = props;
 
   return (
     <div>
@@ -29,7 +29,7 @@ function Layout(props) {
           { rel: 'publisher', href: 'https://www.google.com/+RmittkdCHITF' },
         ]}
       />
-      <Header />
+      <Header home={location.pathname === '/'} />
       <main>
         {children()}
       </main>

@@ -1,12 +1,15 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 import styles from '../styles/components/header.module.css'
 import logo from '../images/logo.png'
 
-function Header() {
+function Header(props) {
+  const { home } = props
+
   return (
-    <header className={styles.header}>
+    <header className={home ? styles.homeHeader : styles.header}>
       <div className={styles.inner}>
         <Link className={styles.logoLink} to="/">
           <img src={logo} alt="RMIT ITF Taekwon-Do homepage" />
@@ -58,6 +61,10 @@ function Header() {
       </div>
     </header>
   )
+}
+
+Header.propTypes = {
+  home: PropTypes.bool,
 }
 
 export default Header
