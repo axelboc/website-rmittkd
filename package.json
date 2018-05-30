@@ -20,6 +20,9 @@
     "local": "set NODE_ENV=development && yarn build && gatsby serve -p 8000"
   },
   "dependencies": {
+    "@fortawesome/fontawesome": "^1.1.8",
+    "@fortawesome/fontawesome-free-solid": "^5.0.13",
+    "@fortawesome/react-fontawesome": "^0.0.20",
     "classnames": "^2.2.5",
     "gatsby": "^1.9.262",
     "gatsby-link": "^1.6.44",
