@@ -4,7 +4,10 @@
   align-items: center;
   padding: .5rem 1rem;
   background-color: #fff;
+  border-radius: .375em;
   color: #000;
+  opacity: .85;
+  transition: opacity .15s ease;
 }
 
 .wrapper {
@@ -12,7 +15,15 @@
 }
 
 .icon {
-  display: block;
-  margin-left: 2.25rem;
-  fill: currentColor;
+  margin-left: 1.5em;
+  margin-top: .125em;
+  transition: transform .15s ease-in;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.btn:hover > .icon {
+  transform: translateX(20%);
 }
