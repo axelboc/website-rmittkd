@@ -25,7 +25,7 @@ export default function TkdPage(props) {
       <Banner
         heading="What is Taekwon-Do?"
         intro={html}
-        image={bannerImg}
+        variant="tkd"
       />
       <Section useDiv spaced bg="alt">
         <div className={styles.embed}>

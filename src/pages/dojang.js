@@ -34,7 +34,7 @@ export default function DojangPage(props) {
       <Banner
         heading="Our Dojang"
         intro={html}
-        image={bannerImg}
+        variant="dojang"
       />
       <Section heading="Instructors" intro={instructorsIntro} bg="alt">
         {instructors.map(item => <Instructor key={item.name} {...item} />)}

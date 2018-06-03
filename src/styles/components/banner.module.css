@@ -1,5 +1,21 @@
 .banner {
+  min-height: 28rem;
   padding-top: 3rem; /* clear logo */
+  background-blend-mode: lighten; /* blend photo with triangle bg pattern*/
+}
+
+.bannerTkd {
+  composes: banner;
+  background:
+    url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
+    #011627 url('../../images/tkd.jpg') center right / contain no-repeat;
+}
+
+.bannerDojang {
+  composes: banner;
+  background:
+    url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
+    #011627 url('../../images/dojang.jpg') center right / contain no-repeat;
 }
 
 .inner {

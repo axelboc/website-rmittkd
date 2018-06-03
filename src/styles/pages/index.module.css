@@ -1,28 +1,16 @@
 .hero {
-  position: relative;
-  background-color: #000;
-  overflow: hidden;
   min-height: 34rem;
-
-  &::before {
-    content: '';
-    position: absolute;
-    z-index: 0;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background-image: url('../../images/hero.jpg');
-    background-position: center right;
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-  }
+  overflow: hidden;
+  background-color: #000;
+  background-image: url('../../images/hero.jpg');
+  background-position: center right;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
 }
 
 .heroInner {
   composes: max from global;
   padding: 12rem 0 11rem;
-  position: relative;
 }
 
 .title {
