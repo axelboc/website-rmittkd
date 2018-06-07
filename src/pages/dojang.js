@@ -8,7 +8,6 @@ import LocalClubs from '../components/LocalClubs'
 import RelatedLinks from '../components/RelatedLinks'
 
 import styles from '../styles/pages/dojang.module.css'
-import bannerImg from '../images/dojang.jpg'
 
 export default function DojangPage(props) {
   const { data, location: { pathname } } = props
