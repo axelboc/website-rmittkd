@@ -1,0 +1,49 @@
+.instructor {}
+
+.heading {
+  margin-bottom: 1rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.numeral {
+  color: #c3a511;
+  font-weight: 900;
+}
+
+.sep {
+  margin: 0 .5em;
+  opacity: .85;
+  font-weight: bold;
+}
+
+.bio {
+  font-size: 90%;
+}
+
+@media (min-width: 40em) {
+  .instructor {
+    flex: 0 1 50%;
+    max-width: 35em;
+    padding: 0 1rem;
+  }
+}
+
+@media (min-width: 40em) and (max-width: 59.9375em) {
+  .instructor:first-child, /* always highlight first */
+  .instructor[data-total-even]:nth-child(2) { /* highlight second if total is even */
+    flex-basis: 100%;
+  }
+}
+
+@media (min-width: 60em) {
+  .instructor {
+    flex-basis: 33.33%;
+  }
+
+  /* highlight first two unless total is divisible by three */
+  .instructor:not([data-total-div3]):nth-child(-n + 2),
+  .instructor[data-total="3"] { /* but highlight all if total is three */
+    flex-basis: 50%;
+  }
+}

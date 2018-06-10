@@ -19,8 +19,8 @@ export default function DojangPage(props) {
     clubsIntro, clubs
   } = frontmatter
 
-  const localClubs = clubs.filter(club => club.inMelbourne);
-  const otherClubs = clubs.filter(club => !club.inMelbourne);
+  const localClubs = clubs.filter(club => club.inMelbourne)
+  const otherClubs = clubs.filter(club => !club.inMelbourne)
 
   return (
     <div>
@@ -36,7 +36,15 @@ export default function DojangPage(props) {
         variant="dojang"
       />
       <Section heading="Instructors" intro={instructorsIntro} bg="alt">
-        {instructors.map(item => <Instructor key={item.name} {...item} />)}
+        <div className={styles.instructors}>
+          {instructors.map(item => (
+            <Instructor
+              key={item.name}
+              total={instructors.length}
+              {...item}
+            />
+          ))}
+        </div>
       </Section>
       <Section heading="Associated clubs" intro={clubsIntro} bg="alt2">
         <div>
