@@ -1,7 +1,12 @@
 .instructor {}
 
+.photo {
+  border-bottom: 6px solid #a00309;
+  margin-bottom: .75rem;
+}
+
 .heading {
-  margin-bottom: 1rem;
+  margin-bottom: .75rem;
   font-weight: normal;
   text-transform: uppercase;
 }

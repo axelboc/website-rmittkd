@@ -81,6 +81,7 @@ collections:
                 max: 9
                 default: 1
               - {label: "Short biography", name: "bio", widget: "text"}
+              - {label: "Photo", name: "photo", widget: "image"}
           - {label: "\"Associated clubs\" section intro", name: "clubsIntro", widget: "text"}
           - label: "Clubs list"
             name: "clubs"

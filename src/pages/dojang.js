@@ -83,6 +83,13 @@ export const query = graphql`
               name
               degree
               bio
+              photo {
+                childImageSharp {
+                  resolutions(width: 504, height: 283) {
+                    ...GatsbyImageSharpResolutions
+                  }
+                }
+              }
             }
             clubsIntro
             clubs {
