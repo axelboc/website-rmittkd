@@ -11,7 +11,7 @@ instructors:
       Australia</a></strong>.
     degree: 9
     name: Robert Lai
-    photo: 'https://picsum.photos/500/500/?random'
+    photo: /uploads/instructor.jpg
   - bio: >-
       Master Lai, 7th degree, has been training for over 30 years. In 2013, he
       received the RMIT <em>Outstanding Service</em> Award for his <strong>20
@@ -20,7 +20,7 @@ instructors:
       World Championships</strong> in Minsk, Belarus.
     degree: 7
     name: Jason Lai
-    photo: 'https://picsum.photos/500/500/?random'
+    photo: /uploads/instructor.jpg
 clubsIntro: Test
 clubs:
   - inMelbourne: true
