@@ -18,7 +18,7 @@ function Instructor(props) {
     >
       <Img
         className={styles.photo}
-        resolutions={photo.childImageSharp.resolutions}
+        sizes={photo.childImageSharp.sizes}
         alt=""
       />
       <h2 className={styles.heading}>

@@ -15,6 +15,8 @@ function Button(props) {
       <FontAwesomeIcon
         className={styles.icon}
         icon={faAngleDoubleRight}
+        width="18"
+        height="18"
       />
     </a>
   )

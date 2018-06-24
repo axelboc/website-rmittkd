@@ -85,8 +85,8 @@ export const query = graphql`
               bio
               photo {
                 childImageSharp {
-                  resolutions(width: 504, height: 283) {
-                    ...GatsbyImageSharpResolutions
+                  sizes(maxWidth: 574) {
+                    ...GatsbyImageSharpSizes
                   }
                 }
               }

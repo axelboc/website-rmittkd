@@ -12,7 +12,7 @@ function Header(props) {
     <header className={home ? styles.homeHeader : styles.header}>
       <div className={styles.inner}>
         <Link className={styles.logoLink} to="/">
-          <img src={logo} alt="RMIT ITF Taekwon-Do homepage" />
+          <img src={logo} alt="RMIT ITF Taekwon-Do homepage" width="150" height="150" />
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.navList}>

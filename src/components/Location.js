@@ -64,6 +64,8 @@ function Location(props) {
             <FontAwesomeIcon
               className={styles.icon}
               icon={faMapMarkerAlt}
+              width="18"
+              height="18"
             />
             {location}
           </p>
@@ -75,6 +77,8 @@ function Location(props) {
                   <FontAwesomeIcon
                     className={styles.icon}
                     icon={faCalendarAlt}
+                    width="18"
+                    height="18"
                   />
                   {days}
                 </dt>,
@@ -82,6 +86,8 @@ function Location(props) {
                   <FontAwesomeIcon
                     className={styles.icon}
                     icon={faClock}
+                    width="18"
+                    height="18"
                   />
                   {from} &ndash; {to}
                 </dd>
