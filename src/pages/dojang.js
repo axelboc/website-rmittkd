@@ -5,6 +5,7 @@ import Banner from '../components/Banner'
 import Section from '../components/Section'
 import Instructor from '../components/Instructor'
 import LocalClubs from '../components/LocalClubs'
+import OtherClub from '../components/OtherClub'
 import RelatedLinks from '../components/RelatedLinks'
 
 import styles from '../styles/pages/dojang.module.css'
@@ -47,20 +48,14 @@ export default function DojangPage(props) {
         </div>
       </Section>
       <Section heading="Associated clubs" intro={clubsIntro} bg="alt2">
-        <div>
+        <div className={styles.clubs}>
           <LocalClubs clubs={localClubs}  />
-          <ul>
-            {otherClubs.map(club => {
-              const { name, url, location, state } = club
-              return (
-                <li key={name}>
-                  <a href={url}>
-                    <p>{name}</p>
-                    <p>{location} {state}</p>
-                  </a>
-                </li>
-              )
-            })}
+          <ul className={styles.otherClubs}>
+            {otherClubs.map(club => (
+              <li key={name}>
+                <OtherClub {...club}/>
+              </li>
+            ))}
           </ul>
         </div>
       </Section>

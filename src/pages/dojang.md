@@ -39,18 +39,19 @@ clubs:
   - inMelbourne: true
     location: 'Community Hall, Blackwood Drive, Melton South'
     name: Melton Lai Taekwon-Do
-    url: www.facebook.com/pages/Melton-Lai-Taekwon-Do-ITF/119160461466076
-  - location: 'PCYC Avoca St, Goulburn NSW'
+    url: https://www.facebook.com/pages/Melton-Lai-Taekwon-Do-ITF/119160461466076
+  - location: 'PCYC Avoca St, Goulburn'
     name: Goulburn Martial Arts Academy
     state: NSW
     url: 'https://www.goulburnmartialartsacademy.com/'
   - location: 'Somerset Primary School, Beaufort Street, Somerset'
     name: Somerset Lai Taekwon-Do School
     state: TAS
-    url: www.tkdsomerset.com
+    url: https://www.tkdsomerset.com
   - location: 'Nichols Point Primary School, Koorlong Avenue, Nichols Point'
     name: Sunraysia Taekwon-Do ITF Mildura
     url: 'https://www.facebook.com/sunraysiataekwondo.itf/'
+    state: VIC
 metaDescription: Test
 ---
 Text.

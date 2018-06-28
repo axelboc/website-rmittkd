@@ -31,6 +31,7 @@
 
 .link-reset,
 .links-reset a {
+  font-weight: inherit;
   text-decoration: none;
   &:hover { text-decoration: underline; }
 }

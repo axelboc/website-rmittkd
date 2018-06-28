@@ -1,8 +1,31 @@
+.otherClubs {
+  composes: list-reset from global;
+}
+
+.otherClubs > li {
+  display: flex;
+  align-items: stretch;
+}
+
+.otherClubs > li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
 @media (min-width: 40em) {
   .instructors {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin: 0 -1rem;
     text-align: center;
+  }
+
+  .clubs {
+    display: flex;
+  }
+
+  .otherClubs {
+    flex: 2;
+    margin-left: 1rem;
   }
 }
