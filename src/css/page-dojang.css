@@ -13,77 +13,77 @@
 }
 
 @media (min-width: 32em) {
-		
+
 	.dojang-hero {
 		top: -8.5em;
 		width: 50%;
 		max-width: none;
 	}
-	
+
 	.dojang-p1 {
 		padding-right: 45%;
 	}
-	
+
 }
 
 @media (min-width: 39em) {
-	
+
 	.dojang-p2 {
 		padding-right: 30%;
 	}
-	
+
 }
 
 @media (min-width: 42em) {
-	
+
 	.dojang-p1 {
 		padding-right: 50%;
 	}
-	
+
 }
 
 @media (min-width: 47em) {
-	
+
 	.dojang-p2 {
 		padding-right: 40%;
 	}
-	
+
 	.dojang-p3 {
 		padding-right: 20%;
 	}
-	
+
 }
 
 @media (min-width: 50em) {
-	
+
 	.dojang-hero {
 		top: -11em;
 	}
-	
+
 	.dojang-content {
 		margin-right: 5%;
 	}
-	
+
 	.dojang-p3 {
 		padding-right: 25%;
 	}
-	
+
 }
 
 @media (min-width: 60em) {
-	
+
 	.dojang-hero {
 		width: auto;
 	}
-	
+
 	.dojang-content {
 		margin-right: 14%;
 	}
-	
+
 	.dojang-p3 {
 		padding-right: 35%;
 	}
-	
+
 }
 
 
@@ -128,7 +128,7 @@
 }
 
 .instr-caption {
-	margin-top: 1em; 
+	margin-top: 1em;
 }
 
 .instr-heading-sub {
@@ -167,12 +167,12 @@
 	/* Hide main heading and show sub-headings */
 	.instr-heading { display: none; }
 	.instr-heading-sub { display: block; }
-	
+
 	.instr-images,
 	.instr-caption {
 		float: left;
 	}
-	
+
 	.instr-images {
 		width: 52%;
 	}
@@ -183,7 +183,7 @@
 		padding-bottom: 2.7em; /* leave space for slideshow controls */
 		font-size: 90%;
 	}
-	
+
 	.instr-controls {
 		position: absolute;
 		right: 0;
@@ -197,52 +197,5 @@
 	.instr-caption {
 		font-size: 100%;
 	}
-	
+
 }
-
-
-/* ===== Executive Committee ===== */
-
-.exec-member {
-	position: relative;
-	float: left;
-	width: 50%;
-	margin-top: 8px;
-	text-align: center;
-	padding: 0 4px;
-}
-
-.exec-pic {
-	max-width: 100%;
-	height: auto;
-	margin: 0 auto;
-	border-radius: 75px;
-}
-
-.exec-caption {
-	position: absolute;
-	bottom: 0;
-	left: 50%;
-	width: 150px;
-	margin-left: -75px;
-	margin-bottom: 12px;
-	color: #fff;
-	font-size: 85%;
-	text-shadow: 0 0 4px #000;
-}
-
-.exec-caption > span {
-	margin-bottom: 5px;
-	font-size: 150%;
-}
-
-
-@media (min-width: 49em) {
-	
-	.exec-member {
-		width: 25%;
-		float: left;
-	}
-	
-}
-

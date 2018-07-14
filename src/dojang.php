@@ -75,28 +75,7 @@
 							<button class="instr-arrow instr-arrow--next car-next hidden-text">Next instructor</button>
 						</div>
 					</section>
-					<section class="section row">
-						<h2 class="section-heading">Executive Committee</h2>
-						<div class="section-content">
-							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/shiv.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>President</span><br>Shivarnee</p>
-							</section>
-							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/nancy.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Vice-President</span><br>Nancy</p>
-							</section>
-							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/victor.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Treasurer</span><br>Victor</p>
-							</section>
-							<section class="exec-member">
-								<img class="exec-pic lazy-loading" src="" data-src="images/execs/jenny.jpg" width="150" height="150" alt="">
-								<p class="exec-caption"><span>Secretary</span><br>Jenny</p>
-							</section>
-						</div>
-					</section>
-		    	</div>
+				</div>
 				<?php include 'includes/sidebar.php'; ?>
 			</div>
 		</div>
