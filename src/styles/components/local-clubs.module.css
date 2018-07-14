@@ -1,5 +1,31 @@
-.clubs {
+.localClubs {
+  display: flex;
+  flex-direction: column;
   background-color: #000;
+}
+
+.map {
+  height: 13rem;
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: .5rem;
+  list-style-type: none;
+}
+
+.club {
+  display: flex;
+  flex-basis: 50%;
+  flex-direction: column;
+  min-width: 0; /* force long links to be cropped */
+  padding: .75rem;
+}
+
+.club:nth-child(odd) {
+  border-right: 1px solid #666;
 }
 
 @media (min-width: 40em) {

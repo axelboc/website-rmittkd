@@ -1,0 +1,53 @@
+.city {
+  composes: bg-white from global;
+  align-self: flex-start;
+  margin-right: .5em;
+  margin-bottom: .5rem;
+  padding: .125em .625em .0625em;
+  border-radius: .25em;
+  font-size: 85%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.name {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  font-size: 90%;
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+.linkUrl {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.linkIcon {
+  margin-top: .125em;
+  margin-left: .75em;
+  opacity: .9;
+  transform-origin: bottom left;
+  transition: transform .2s ease;
+}
+
+@media (min-width: 75em) {
+  .city {
+    font-size: 70%;
+  }
+
+  .link {
+    font-size: 75%;
+  }
+}

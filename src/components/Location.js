@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-
 import Button from './Button'
+
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faMapMarkerAlt from '@fortawesome/fontawesome-free-solid/faMapMarkerAlt'
 import faCalendarAlt from '@fortawesome/fontawesome-free-solid/faCalendarAlt'

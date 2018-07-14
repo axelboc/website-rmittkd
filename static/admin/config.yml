@@ -83,13 +83,23 @@ collections:
               - {label: "Short biography", name: "bio", widget: "text"}
               - {label: "Photo", name: "photo", widget: "image"}
           - {label: "\"Associated clubs\" section intro", name: "clubsIntro", widget: "text"}
-          - label: "Clubs list"
-            name: "clubs"
+          - label: "Melbourne clubs list"
+            name: "localClubs"
             widget: "list"
             fields:
               - {label: "Club name", name: "name", widget: "string"}
-              - {label: "Location", name: "location", widget: "string"}
-              - {label: "In Greater Melbourne?", name: "inMelbourne", widget: "boolean"}
+              - {label: "Suburb", name: "city", widget: "string"}
+              - {label: "Full address on Google Maps (with postcode, country, etc.)", name: "address", widget: "string"}
+              - label: "Website or Facebook page"
+                name: "url"
+                widget: "string"
+                pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
+          - label: "Other clubs list"
+            name: "otherClubs"
+            widget: "list"
+            fields:
+              - {label: "Club name", name: "name", widget: "string"}
+              - {label: "City", name: "city", widget: "string"}
               - label: "State"
                 name: "state"
                 widget: "select"

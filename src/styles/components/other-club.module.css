@@ -1,40 +1,21 @@
-.link {
-  composes: link-reset from global;
+.otherClubs {
+  composes: list-reset from global;
+  margin: .5rem 0;
+}
+
+.club {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
   padding: 1rem;
 }
 
-.link:hover,
-.link:focus {
-  text-decoration: none;
-}
-
-.link:hover .name {
-  text-decoration: underline;
-}
-
-.state {
-  composes: bg-white from global;
-  width: 3.5em;
-  margin-bottom: .25rem;
-  border-radius: .25em;
-  font-size: 75%;
-  font-weight: bold;
-  text-align: center;
-}
-
-.name {
+.club:not(:last-child) {
   margin-bottom: .5rem;
-  font-weight: bold;
 }
 
-.location {
-  font-size: 85%;
-}
-
-.icon {
-  margin-right: .5em;
+@media (min-width: 40em) {
+  .otherClubs {
+    flex: 2;
+    margin-left: 1rem;
+  }
 }

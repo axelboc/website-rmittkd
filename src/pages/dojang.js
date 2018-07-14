@@ -5,7 +5,7 @@ import Banner from '../components/Banner'
 import Section from '../components/Section'
 import Instructor from '../components/Instructor'
 import LocalClubs from '../components/LocalClubs'
-import OtherClub from '../components/OtherClub'
+import OtherClubs from '../components/OtherClubs'
 import RelatedLinks from '../components/RelatedLinks'
 
 import styles from '../styles/pages/dojang.module.css'
@@ -17,11 +17,8 @@ export default function DojangPage(props) {
   const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
   const {
     metaDescription, instructorsIntro, instructors,
-    clubsIntro, clubs
+    clubsIntro, localClubs, otherClubs
   } = frontmatter
-
-  const localClubs = clubs.filter(club => club.inMelbourne)
-  const otherClubs = clubs.filter(club => !club.inMelbourne)
 
   return (
     <div>
@@ -49,14 +46,8 @@ export default function DojangPage(props) {
       </Section>
       <Section heading="Associated clubs" intro={clubsIntro} bg="alt2">
         <div className={styles.clubs}>
-          <LocalClubs clubs={localClubs}  />
-          <ul className={styles.otherClubs}>
-            {otherClubs.map(club => (
-              <li key={name}>
-                <OtherClub {...club}/>
-              </li>
-            ))}
-          </ul>
+          <LocalClubs clubs={localClubs} />
+          <OtherClubs clubs={otherClubs} />
         </div>
       </Section>
       <Section useDiv spaced>
@@ -87,12 +78,17 @@ export const query = graphql`
               }
             }
             clubsIntro
-            clubs {
+            localClubs {
               name
-              location
-              inMelbourne
-              state
               url
+              city
+              address
+            }
+            otherClubs {
+              name
+              url
+              city
+              state
             }
           }
           html
