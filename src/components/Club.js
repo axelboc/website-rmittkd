@@ -32,7 +32,6 @@ Club.propTypes = {
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,
-  address: PropTypes.string,
   state: PropTypes.string,
 }
 

@@ -12,7 +12,7 @@ import styles from '../styles/pages/dojang.module.css'
 
 export default function DojangPage(props) {
   const { data, location: { pathname } } = props
-  const { relatedLinks } = data.site.siteMetadata
+  const { mapStyles, relatedLinks } = data.site.siteMetadata
 
   const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
   const {
@@ -46,7 +46,7 @@ export default function DojangPage(props) {
       </Section>
       <Section heading="Associated clubs" intro={clubsIntro} bg="alt2">
         <div className={styles.clubs}>
-          <LocalClubs clubs={localClubs} />
+          <LocalClubs clubs={localClubs} mapStyles={mapStyles} />
           <OtherClubs clubs={otherClubs} />
         </div>
       </Section>
@@ -97,6 +97,7 @@ export const query = graphql`
     }
     site {
       siteMetadata {
+        mapStyles
         relatedLinks {
           train { label, href, img }
           membership { label, href, img }

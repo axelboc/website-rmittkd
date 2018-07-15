@@ -1,35 +1,36 @@
 .localClubs {
   display: flex;
-  flex-direction: column;
-  background-color: #000;
+  align-items: flex-start;
+  border-bottom: 1px solid rgba(255, 255, 255, .3);
+  padding-bottom: 2.25rem;
+  margin-bottom: 2.25rem;
 }
 
 .map {
-  height: 13rem;
+  flex: 1 0 59.26%;
+  margin-right: .75rem;
+  background-color: #000;
 }
 
 .list {
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 0;
-  margin: .5rem;
-  list-style-type: none;
+  composes: list-reset from global;
+  flex: 0 1 auto;
+  overflow: hidden;
+  margin-left: .75rem;
 }
 
 .club {
   display: flex;
-  flex-basis: 50%;
   flex-direction: column;
   min-width: 0; /* force long links to be cropped */
-  padding: .75rem;
+  padding: 0 .75rem;
 }
 
-.club:nth-child(odd) {
-  border-right: 1px solid #666;
+.club:not(:last-child) {
+  margin-bottom: 2.25rem;
 }
 
 @media (min-width: 40em) {
-  .clubs {
-    flex: 3;
+  .map {
   }
 }

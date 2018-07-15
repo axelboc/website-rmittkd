@@ -1,21 +1,26 @@
 .otherClubs {
   composes: list-reset from global;
-  margin: .5rem 0;
+  display: flex;
+  margin: 0 -.75rem;
 }
 
 .club {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  margin: 0 .75rem
 }
 
 .club:not(:last-child) {
   margin-bottom: .5rem;
 }
 
+.miniMap {
+  margin: 0 auto 1rem;
+}
+
 @media (min-width: 40em) {
   .otherClubs {
     flex: 2;
-    margin-left: 1rem;
   }
 }
