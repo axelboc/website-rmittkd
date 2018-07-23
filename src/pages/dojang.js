@@ -4,15 +4,14 @@ import PageMeta from '../components/PageMeta'
 import Banner from '../components/Banner'
 import Section from '../components/Section'
 import Instructor from '../components/Instructor'
-import LocalClubs from '../components/LocalClubs'
-import OtherClubs from '../components/OtherClubs'
+import ClubsGroup from '../components/ClubsGroup'
 import RelatedLinks from '../components/RelatedLinks'
 
 import styles from '../styles/pages/dojang.module.css'
 
 export default function DojangPage(props) {
   const { data, location: { pathname } } = props
-  const { mapStyles, relatedLinks } = data.site.siteMetadata
+  const { relatedLinks } = data.site.siteMetadata
 
   const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
   const {
@@ -46,8 +45,8 @@ export default function DojangPage(props) {
       </Section>
       <Section heading="Associated clubs" intro={clubsIntro} bg="alt2">
         <div className={styles.clubs}>
-          <LocalClubs clubs={localClubs} mapStyles={mapStyles} />
-          <OtherClubs clubs={otherClubs} />
+          <ClubsGroup heading="Greater Melbourne" clubs={localClubs} />
+          <ClubsGroup heading="Australia" clubs={otherClubs} mapFocus={false} />
         </div>
       </Section>
       <Section useDiv spaced>
@@ -89,6 +88,7 @@ export const query = graphql`
               url
               city
               state
+              address
             }
           }
           html
@@ -97,7 +97,6 @@ export const query = graphql`
     }
     site {
       siteMetadata {
-        mapStyles
         relatedLinks {
           train { label, href, img }
           membership { label, href, img }

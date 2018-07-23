@@ -1,40 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Button from './Button'
 
 import FontAwesomeIcon from '@fortawesome/react-fontawesome'
 import faMapMarkerAlt from '@fortawesome/fontawesome-free-solid/faMapMarkerAlt'
 import faCalendarAlt from '@fortawesome/fontawesome-free-solid/faCalendarAlt'
 import faClock from '@fortawesome/fontawesome-free-solid/faClock'
 
+import Button from './Button'
+import GMap from './GMap'
+
 import styles from '../styles/components/location.module.css'
 
-const GMAPS_API_URL = 'https://maps.googleapis.com/maps/api/staticmap'
 const MAP_DIMENSIONS = [341, 305] // height takes into account one `times` entry by default
 const MAP_HEIGHT_INCREMENT = 85 // extra height for every additional `times` entry
 
 function Location(props) {
-  const { suburb, location, address, times, mapStyles } = props
+  const { suburb, location, address, times } = props
 
   const [mapWidth, mapDefaultHeight] = MAP_DIMENSIONS
   const mapHeight = mapDefaultHeight + MAP_HEIGHT_INCREMENT * (times.length - 1)
 
-  const mapParams = [
-    `size=${mapWidth}x${mapHeight}`,
-    `markers=${address}`,
-    `key=${process.env.GATSBY_GMAPS_KEY}`,
-    `visible=${encodeURIComponent('Melbourne VIC 3000, Australia')}`,
-    ...mapStyles.map(str => `style=${encodeURIComponent(str)}`),
-  ].join('&')
-
   return (
     <div className={styles.location}>
       <div className={styles.map}>
-        <img
-          src={`${GMAPS_API_URL}?${mapParams}`}
-          width={mapWidth}
-          height={mapHeight}
-          alt=""
+        <GMap
+          detailled
+          dimensions={[mapWidth, mapHeight]}
+          addresses={[address]}
         />
       </div>
       <div className={styles.content}>
@@ -94,7 +86,6 @@ Location.propTypes = {
     from: PropTypes.string.isRequired,
     to: PropTypes.string.isRequired,
   })).isRequired,
-  mapStyles: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 
 export default Location

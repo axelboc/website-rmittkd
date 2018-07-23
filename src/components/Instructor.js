@@ -21,11 +21,11 @@ function Instructor(props) {
         sizes={photo.childImageSharp.sizes}
         alt=""
       />
-      <h2 className={styles.heading}>
+      <h3 className={styles.heading}>
         {name}
         <span className={styles.sep}>{' · '}</span>
         <span className={styles.numeral}>{numeral.number}</span>
-      </h2>
+      </h3>
       <p
         className={styles.bio}
         dangerouslySetInnerHTML={{ __html: bio }}

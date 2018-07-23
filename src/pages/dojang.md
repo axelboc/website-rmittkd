@@ -23,33 +23,36 @@ instructors:
     photo: /uploads/instructor.jpg
 clubsIntro: Test
 localClubs:
-  - address: 'St Albans Secondary College, Main Road East, St Albans'
+  - address: '289 Main Rd E, St Albans VIC 3021, Australia'
     city: St Albans
     name: Lai Taekwon-Do Academy
     url: 'http://www.laitkd.com.au/'
-  - address: 'Taylors Lakes Primary School, 21-35 Chichester Dr, Taylors Lakes'
+  - address: '21-35 Chichester Dr, Taylors Lakes VIC 3038, Australia'
     city: Taylors Lakes
     name: Taylors Lake Lai Taekwon-Do
     url: 'https://www.facebook.com/Laitkdtl'
-  - address: 'Fleetwood Drv PS GYM, Fleetwood Drv, Narre Warren'
+  - address: '97 Fleetwood Dr, Narre Warren VIC 3805, Australie'
     city: Narre Warren
     name: South East Lai Taekwon-Do
     url: 'https://www.facebook.com/SELTKD/'
-  - address: 'Community Hall, Blackwood Drive, Melton South'
+  - address: '47 Blackwood Dr, Melton South VIC 3338, Australie'
     city: Melton South
     name: Melton Lai Taekwon-Do
     url: https://www.facebook.com/pages/Melton-Lai-Taekwon-Do-ITF/119160461466076
 otherClubs:
-  - city: 'Goulburn'
-    name: Goulburn Martial Arts Academy
+  - address: '21-23 Clifford St, Goulburn NSW 2580, Australia'
+    city: Goulburn
+    name: GMAA
     state: NSW
     url: 'https://www.goulburnmartialartsacademy.com/'
-  - city: 'Somerset'
-    name: Somerset Lai Taekwon-Do School
+  - address: '30A Beaufort St, Somerset TAS 7322, Australie'
+    city: Somerset
+    name: Somerset Lai Taekwon-Do
     state: TAS
     url: https://www.tkdsomerset.com
-  - city: 'Mildura'
-    name: Sunraysia Taekwon-Do ITF Mildura
+  - address: 'Koorlong Ave, Nichols Point VIC 3501, Australie'
+    city: Mildura
+    name: Sunraysia Taekwon-Do ITF
     url: 'https://www.facebook.com/sunraysiataekwondo.itf/'
     state: VIC
 metaDescription: Test

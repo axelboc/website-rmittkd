@@ -26,7 +26,7 @@ export default class IndexPage extends React.Component {
 
   render() {
     const { data, location: { pathname } } = this.props
-    const { mapStyles, relatedLinks } = data.site.siteMetadata
+    const { relatedLinks } = data.site.siteMetadata
 
     const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
     const { metaDescription, trainIntro, locations, feesIntro, fees } = frontmatter
@@ -50,7 +50,7 @@ export default class IndexPage extends React.Component {
           </div>
         </div>
         <Section heading="Train with us" intro={trainIntro}>
-          {locations.map(item => <Location key={item.suburb} {...item} mapStyles={mapStyles} />)}
+          {locations.map(item => <Location key={item.suburb} {...item} />)}
         </Section>
         <Section heading="Membership fees" intro={feesIntro} bg="alt">
           <Fees fees={fees} />
@@ -97,7 +97,6 @@ export const query = graphql`
     }
     site {
       siteMetadata {
-        mapStyles
         relatedLinks {
           tkd { label, href, img }
           instructors { label, href, img }
