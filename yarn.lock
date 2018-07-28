@@ -3902,15 +3902,14 @@ gatsby-react-router-scroll@^1.0.17:
     scroll-behavior "^0.9.9"
     warning "^3.0.0"
 
-gatsby-remark-relative-images@^0.1.2:
+"gatsby-remark-relative-images@https://github.com/axelboc/gatsby-remark-relative-images.git#dist":
   version "0.1.2"
-  resolved "https://registry.yarnpkg.com/gatsby-remark-relative-images/-/gatsby-remark-relative-images-0.1.2.tgz#6e53347b273e5dee92fea101482b7ff2f467558c"
+  resolved "https://github.com/axelboc/gatsby-remark-relative-images.git#4ea5d194754c141c534ce073f65668871d41ddac"
   dependencies:
     cheerio "1.0.0-rc.2"
     deep-map "1.5.0"
     is-relative-url "2.0.0"
     lodash "4.17.5"
-    slash "2.0.0"
     unist-util-select "1.5.0"
 
 gatsby-remark-smartypants@^1.4.12:
@@ -9633,10 +9632,6 @@ simple-swizzle@^0.2.2:
   resolved "https://registry.yarnpkg.com/simple-swizzle/-/simple-swizzle-0.2.2.tgz#a4da6b635ffcccca33f70d17cb92592de95e557a"
   dependencies:
     is-arrayish "^0.3.1"
-
-slash@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/slash/-/slash-2.0.0.tgz#de552851a1759df3a8f206535442f5ec4ddeab44"
 
 slash@^1.0.0:
   version "1.0.0"
