@@ -7,25 +7,22 @@ function GMap(props) {
   const { detailled, dimensions, focus, addresses } = props
   const [width, height] = dimensions
 
-  // https://snazzymaps.com/style/8083/mymap
+  // https://snazzymaps.com/style/16237/faded-opaque-with-natural-tones
   const mapStyles = [
-    'element:labels.text.fill|color:0xffffff',
-    'element:labels.text.stroke|color:0x000000|lightness:13',
-    'feature:administrative|element:geometry.fill|color:0x000000',
-    'feature:administrative|element:geometry.stroke|color:0x144b53|lightness:14|weight:1.4',
-    'feature:administrative.locality|visibility:on',
-    'feature:administrative.locality|element:labels.icon|visibility:on',
-    'feature:landscape|color:0x08304b',
+    'feature:administrative.locality|element:labels.text.fill|color:0x2f445c|saturation:0',
+    'feature:administrative.neighborhood|element:labels.text.fill|color:0xc9955a|saturation:0',
+    'feature:landscape.man_made|element:geometry.fill|color:0xede0d5|saturation:0',
+    'feature:landscape.natural|element:geometry.fill|color:0xe2dace|saturation:0',
+    'feature:landscape.natural.landcover|element:geometry.fill|color:0xecd9be|saturation:0',
     'feature:poi|visibility:off',
+    'feature:road.arterial|element:geometry.fill|color:0xecb679|saturation:0',
+    'feature:road.highway|element:geometry.fill|color:0xc9955a|saturation:0',
+    'feature:road.highway|element:geometry.stroke|visibility:simplified',
+    'feature:road.local|element:geometry.fill|color:0xbbbbbb|saturation:0',
+    'feature:water|element:geometry.fill|color:0x9dbcce|saturation:0',
+    'feature:water|element:labels.text.stroke|visibility:simplified',
     'feature:road|element:labels|visibility:off',
-    'feature:road.highway|element:geometry.fill|color:0x000000',
-    'feature:road.highway|element:geometry.stroke|color:0x0b434f|lightness:25',
-    'feature:road.local|element:geometry|color:0x000000',
-    'feature:transit|visibility:off',
-    'feature:water|color:0x021019',
     ...(detailled ? [
-      'feature:road.arterial|element:geometry.fill|color:0x000000',
-      'feature:road.arterial|element:geometry.stroke|color:0x0b3d51|lightness:16',
     ] : [
       'feature:road.arterial|visibility:off',
     ])
