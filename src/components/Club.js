@@ -7,12 +7,15 @@ import faExternalLinkAlt from '@fortawesome/fontawesome-free-solid/faExternalLin
 import styles from '../styles/components/club.module.css'
 
 function Club(props) {
-  const { name, url, city, state } = props
+  const { index, name, url, city, state } = props
   const cityState = `${city}${state ? `, ${state}` : ''}`
 
   return (
     <React.Fragment>
-      <span className={styles.city}>{cityState}</span>
+      <div className={styles.header}>
+        <span className={styles.city}>{cityState}</span>
+        <span className={styles.mapRef}>{String.fromCharCode(65 + index)}</span>
+      </div>
       <p className={styles.name}>{name}</p>
       <a className={styles.link} href={url}>
         <span className={styles.linkUrl}>{url}</span>
@@ -29,6 +32,7 @@ function Club(props) {
 }
 
 Club.propTypes = {
+  index: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   city: PropTypes.string.isRequired,

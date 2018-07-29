@@ -31,15 +31,20 @@ localClubs:
     city: Taylors Lakes
     name: Taylors Lake Lai Taekwon-Do
     url: 'https://www.facebook.com/Laitkdtl'
+  - address: '47 Blackwood Dr, Melton South VIC 3338, Australie'
+    city: Melton South
+    name: Melton Lai Taekwon-Do
+    url: 'https://www.facebook.com/pages/Melton-Lai-Taekwon-Do-ITF/119160461466076'
   - address: '97 Fleetwood Dr, Narre Warren VIC 3805, Australie'
     city: Narre Warren
     name: South East Lai Taekwon-Do
     url: 'https://www.facebook.com/SELTKD/'
-  - address: '47 Blackwood Dr, Melton South VIC 3338, Australie'
-    city: Melton South
-    name: Melton Lai Taekwon-Do
-    url: https://www.facebook.com/pages/Melton-Lai-Taekwon-Do-ITF/119160461466076
 otherClubs:
+  - address: 'Koorlong Ave, Nichols Point VIC 3501, Australie'
+    city: Mildura
+    name: Sunraysia Taekwon-Do ITF
+    url: 'https://www.facebook.com/sunraysiataekwondo.itf/'
+    state: VIC
   - address: '21-23 Clifford St, Goulburn NSW 2580, Australia'
     city: Goulburn
     name: GMAA
@@ -49,12 +54,7 @@ otherClubs:
     city: Somerset
     name: Somerset Lai Taekwon-Do
     state: TAS
-    url: https://www.tkdsomerset.com
-  - address: 'Koorlong Ave, Nichols Point VIC 3501, Australie'
-    city: Mildura
-    name: Sunraysia Taekwon-Do ITF
-    url: 'https://www.facebook.com/sunraysiataekwondo.itf/'
-    state: VIC
+    url: 'https://www.tkdsomerset.com'
 metaDescription: Test
 ---
 Text.

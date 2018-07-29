@@ -46,7 +46,7 @@ export default function DojangPage(props) {
       <Section heading="Associated clubs" intro={clubsIntro} bg="alt2">
         <div className={styles.clubs}>
           <ClubsGroup heading="Greater Melbourne" clubs={localClubs} />
-          <ClubsGroup heading="Australia" clubs={otherClubs} mapFocus={false} />
+          <ClubsGroup heading="Australia" clubs={otherClubs} mapFocus={null} />
         </div>
       </Section>
       <Section useDiv spaced>

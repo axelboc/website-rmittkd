@@ -15,26 +15,33 @@ function GMap(props) {
     'feature:landscape.natural|element:geometry.fill|color:0xe2dace|saturation:0',
     'feature:landscape.natural.landcover|element:geometry.fill|color:0xecd9be|saturation:0',
     'feature:poi|visibility:off',
+    'feature:road|element:labels|visibility:off',
     'feature:road.arterial|element:geometry.fill|color:0xecb679|saturation:0',
     'feature:road.highway|element:geometry.fill|color:0xc9955a|saturation:0',
     'feature:road.highway|element:geometry.stroke|visibility:simplified',
     'feature:road.local|element:geometry.fill|color:0xbbbbbb|saturation:0',
     'feature:water|element:geometry.fill|color:0x9dbcce|saturation:0',
     'feature:water|element:labels.text.stroke|visibility:simplified',
-    'feature:road|element:labels|visibility:off',
-    ...(detailled ? [
-    ] : [
+    ...(detailled ? [] : [
       'feature:road.arterial|visibility:off',
     ])
   ]
 
+  const markers = (
+    addresses.length > 1
+    ? addresses.map((addr, index) => `label:${String.fromCharCode(65 + index)}|${addr}`)
+    : addresses
+  ).map(marker => `size:mid|color:0xb6040a|${marker}`)
+
   const mapParams = [
-    `size=${dimensions.join('x')}`,
-    `key=${process.env.GATSBY_GMAPS_KEY}`,
-    ...(focus ? [`visible=${encodeURIComponent(focus)}`] : []),
-    ...addresses.map(str => `markers=${encodeURIComponent(str)}`),
-    ...mapStyles.map(str => `style=${encodeURIComponent(str)}`),
-  ].join('&')
+    ['size', dimensions.join('x')],
+    ['key', process.env.GATSBY_GMAPS_KEY],
+    ...(focus ? [['visible', focus]] : []),
+    ...markers.map(marker => ['markers', marker]),
+    ...mapStyles.map(str => ['style', str]),
+  ]
+    .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
+    .join('&')
 
   return (
     <img

@@ -19,9 +19,9 @@ function ClubsGroup(props) {
         />
       </div>
       <ul className={styles.list}>
-        {clubs.map(club => (
+        {clubs.map((club, index) => (
           <li className={styles.club} key={club.name}>
-            <Club {...club} />
+            <Club index={index} {...club} />
           </li>
         ))}
       </ul>
