@@ -63,8 +63,8 @@ button {
   }
 }
 
-a:focus,
-button:focus {
+a,
+button {
   outline-color: currentColor;
 }
 

@@ -22,7 +22,6 @@
   composes: list-reset from global;
   columns: 2;
   margin: 0 -.25rem;
-  overflow: hidden;
 }
 
 .club {

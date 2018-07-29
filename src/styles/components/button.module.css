@@ -6,6 +6,8 @@
   background-color: #fff;
   border-radius: .375em;
   color: #000;
+  outline-offset: 2px;
+  outline-color: #fff;
   opacity: .85;
   transition: opacity .15s ease;
 }
