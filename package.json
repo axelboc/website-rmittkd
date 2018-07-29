@@ -11,7 +11,7 @@
     "url": "https://github.com/axelboc/website-rmittkd"
   },
   "engines": {
-    "node": "^8.9.4",
+    "node": "^8.11.3",
     "yarn": "*"
   },
   "scripts": {
