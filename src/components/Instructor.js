@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import Img from "gatsby-image";
-import Numeral from 'roman-numeral-convert/src/app'
+import romanize from 'romanize'
 
 import styles from '../styles/components/instructor.module.css'
 
 function Instructor(props) {
   const { name, degree, bio, photo, total } = props
-  const numeral = new Numeral(degree)
 
   return (
     <div
@@ -24,7 +23,7 @@ function Instructor(props) {
       <h3 className={styles.heading}>
         {name}
         <span className={styles.sep}>{' · '}</span>
-        <span className={styles.numeral}>{numeral.number}</span>
+        <span className={styles.numeral}>{romanize(degree)}</span>
       </h3>
       <p
         className={styles.bio}
