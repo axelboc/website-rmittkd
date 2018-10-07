@@ -10,7 +10,7 @@
 
 .heroInner {
   composes: max from global;
-  padding: 12rem 0 11rem;
+  padding: 12rem 0 14rem;
 }
 
 .title {
@@ -31,5 +31,5 @@
 }
 
 .intro {
-
+  max-width: 22em;
 }
