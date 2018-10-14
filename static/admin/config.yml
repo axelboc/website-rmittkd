@@ -60,8 +60,8 @@ collections:
               - name: "relatedLink"
               - widget: "relation"
               - collection: "relatedLinks"
-              - searchFields: ["label"]
-              - valueField: "label"
+              - searchFields: ["title"]
+              - valueField: "title"
       - file: "src/pages/tkd.md"
         label: "What is Taekwon-Do?"
         name: "tkd"
@@ -80,8 +80,8 @@ collections:
               - name: "relatedLink"
               - widget: "relation"
               - collection: "relatedLinks"
-              - searchFields: ["label"]
-              - valueField: "label"
+              - searchFields: ["title"]
+              - valueField: "title"
       - file: "src/pages/dojang.md"
         label: "Our Dojang"
         name: "dojang"
@@ -138,12 +138,12 @@ collections:
               - name: "relatedLink"
               - widget: "relation"
               - collection: "relatedLinks"
-              - searchFields: ["label"]
-              - valueField: "label"
+              - searchFields: ["title"]
+              - valueField: "title"
   - name: "relatedLinks"
     label: "Related links"
     label_singular: "Related link"
-    folder: "links"
+    folder: "src/links"
     format: "yml"
     create: true
     delete: true
