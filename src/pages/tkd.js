@@ -9,10 +9,9 @@ import styles from '../styles/pages/tkd.module.css'
 
 export default function TkdPage(props) {
   const { data, location: { pathname } } = props
-  const { relatedLinks } = data.site.siteMetadata
 
   const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
-  const { metaDescription, video } = frontmatter
+  const { metaDescription, video, relatedLinks } = frontmatter
 
   return (
     <div>
@@ -32,7 +31,7 @@ export default function TkdPage(props) {
         </div>
       </Section>
       <Section useDiv spaced>
-        <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
+        <RelatedLinks items={relatedLinks} />
       </Section>
     </div>
   )
@@ -46,17 +45,22 @@ export const query = graphql`
           frontmatter {
             metaDescription
             video
+            relatedLinks {
+              title
+            }
           }
           html
         }
       }
     }
-    site {
-      siteMetadata {
-        relatedLinks {
-          train { label, href, img }
-          instructors { label, href, img }
-          clubs { label, href, img }
+    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/related-links/.*\\.md$/"}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            path
+            img
+          }
         }
       }
     }

@@ -55,7 +55,7 @@ otherClubs:
     url: 'https://www.tkdsomerset.com'
 metaDescription: Test
 relatedLinks:
-  - relatedLink: Train with us
+  - title: Train with us
 ---
 We're a diverse group of people ranging from complete beginners to experienced black belts.
 

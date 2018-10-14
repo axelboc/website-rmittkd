@@ -57,7 +57,7 @@ collections:
             widget: "list"
             fields:
               - label: "Related link"
-                name: "relatedLink"
+                name: "title"
                 widget: "relation"
                 collection: "relatedLinks"
                 searchFields: ["title"]
@@ -77,7 +77,7 @@ collections:
             widget: "list"
             fields:
               - label: "Related link"
-                name: "relatedLink"
+                name: "title"
                 widget: "relation"
                 collection: "relatedLinks"
                 searchFields: ["title"]
@@ -135,7 +135,7 @@ collections:
             widget: "list"
             fields:
               - label: "Related link"
-                name: "relatedLink"
+                name: "title"
                 widget: "relation"
                 collection: "relatedLinks"
                 searchFields: ["title"]
@@ -143,8 +143,7 @@ collections:
   - name: "relatedLinks"
     label: "Related links"
     label_singular: "Related link"
-    folder: "src/links"
-    format: "yml"
+    folder: "src/collections/related-links"
     create: true
     delete: true
     fields:

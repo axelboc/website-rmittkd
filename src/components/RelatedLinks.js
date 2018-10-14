@@ -13,15 +13,17 @@ function RelatedLinks(props) {
   return (
     <ul className={styles.list}>
       {items.map(item => {
+        const { title, path, img } = item
+
         return (
-          <li key={item.label} className={styles.item}>
+          <li key={title} className={styles.item}>
             <Link
               className={styles.link}
-              to={item.href}
-              style={{ backgroundImage: `url(${item.img})` }}
+              to={path}
+              style={{ backgroundImage: `url('${img}')` }}
             >
               <span className={styles.label}>
-                {item.label}
+                {title}
                 <FontAwesomeIcon
                   className={styles.icon}
                   icon={faAngleDoubleRight}
@@ -39,8 +41,8 @@ function RelatedLinks(props) {
 
 RelatedLinks.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
-    label: PropTypes.string,
-    href: PropTypes.string,
+    title: PropTypes.string,
+    path: PropTypes.string,
     img: PropTypes.string,
   })),
 }

@@ -88,7 +88,6 @@ export const query = graphql`
               url
               city
               state
-              address
             }
           }
           html
