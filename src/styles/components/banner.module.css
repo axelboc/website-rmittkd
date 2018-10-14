@@ -34,16 +34,6 @@
   text-transform: uppercase;
 }
 
-.image {
-  width: 22rem;
-  height: 22rem;
-  margin-top: -2rem;
-  background-color: #000;
-  background-size: cover;
-  border-radius: 50%;
-  border: .375rem solid #fff;
-}
-
 .intro {
   max-width: 30rem;
 }

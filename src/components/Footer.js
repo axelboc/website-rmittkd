@@ -1,5 +1,9 @@
 import React from 'react'
 
+import FontAwesomeIcon from '@fortawesome/react-fontawesome'
+import faFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare'
+import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
+
 import styles from '../styles/components/footer.module.css'
 import logoRmitLink from '../images/logos/logo-rmit-link.png'
 import logoChitf from '../images/logos/logo-chitf.png'
@@ -31,8 +35,26 @@ function Footer() {
               <img src={logoLaiTkd} width="100" height="100" alt="Lai Taekwon-Do" />
             </a>
           </li>
-          <li>
-            <a href="https://www.facebook.com/rmittkd">Follow us on Facebook</a>
+          <li className={styles.socialMedia}>
+            follow us on
+            <div className={styles.socialIcons}>
+              <a className={styles.socialLink} href="https://www.instagram.com/rmittkd/">
+                <FontAwesomeIcon
+                  className={styles.icon}
+                  icon={faInstagram}
+                  size="3x"
+                  aria-label="Instagram"
+                />
+              </a>
+              <a className={styles.socialLink} href="https://www.facebook.com/rmittkd">
+                <FontAwesomeIcon
+                  className={styles.icon}
+                  icon={faFacebookSquare}
+                  size="3x"
+                  aria-label="Facebook"
+                />
+              </a>
+            </div>
           </li>
         </ul>
       </div>
