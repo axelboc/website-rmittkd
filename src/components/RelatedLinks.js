@@ -14,13 +14,14 @@ function RelatedLinks(props) {
     <ul className={styles.list}>
       {items.map(item => {
         const { title, path, img } = item
+        const { childImageSharp: { sizes: { src } } } = img;
 
         return (
           <li key={title} className={styles.item}>
             <Link
               className={styles.link}
               to={path}
-              style={{ backgroundImage: `url('${img}')` }}
+              style={{ backgroundImage: `url('${src}')` }}
             >
               <span className={styles.label}>
                 {title}
@@ -43,7 +44,7 @@ RelatedLinks.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     title: PropTypes.string,
     path: PropTypes.string,
-    img: PropTypes.string,
+    img: PropTypes.object,
   })),
 }
 

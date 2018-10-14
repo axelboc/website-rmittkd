@@ -10,7 +10,7 @@ import styles from '../styles/pages/tkd.module.css'
 export default function TkdPage(props) {
   const { data, location: { pathname } } = props
 
-  const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
+  const { frontmatter, html } = data.page.edges[0].node
   const { metaDescription, video, relatedLinks } = frontmatter
 
   return (
@@ -39,7 +39,7 @@ export default function TkdPage(props) {
 
 export const query = graphql`
   query TkdQuery {
-    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/tkd\\.md$/"}}) {
+    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/tkd\\.md$/"}}) {
       edges {
         node {
           frontmatter {
@@ -47,20 +47,17 @@ export const query = graphql`
             video
             relatedLinks {
               title
+              path
+              img {
+                childImageSharp {
+                  sizes(maxWidth: 338) {
+                    src
+                  }
+                }
+              }
             }
           }
           html
-        }
-      }
-    }
-    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/related-links/.*\\.md$/"}}) {
-      edges {
-        node {
-          frontmatter {
-            title
-            path
-            img
-          }
         }
       }
     }

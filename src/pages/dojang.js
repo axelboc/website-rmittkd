@@ -11,12 +11,11 @@ import styles from '../styles/pages/dojang.module.css'
 
 export default function DojangPage(props) {
   const { data, location: { pathname } } = props
-  const { relatedLinks } = data.site.siteMetadata
 
-  const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
+  const { frontmatter, html } = data.page.edges[0].node
   const {
     metaDescription, instructorsIntro, instructors,
-    clubsIntro, localClubs, otherClubs
+    clubsIntro, localClubs, otherClubs, relatedLinks
   } = frontmatter
 
   return (
@@ -50,7 +49,7 @@ export default function DojangPage(props) {
         </div>
       </Section>
       <Section useDiv spaced>
-        <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
+        <RelatedLinks items={relatedLinks} />
       </Section>
     </div>
   )
@@ -58,7 +57,7 @@ export default function DojangPage(props) {
 
 export const query = graphql`
   query DojangQuery {
-    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/dojang\\.md$/"}}) {
+    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/dojang\\.md$/"}}) {
       edges {
         node {
           frontmatter {
@@ -89,17 +88,19 @@ export const query = graphql`
               city
               state
             }
+            relatedLinks {
+              title
+              path
+              img {
+                childImageSharp {
+                  sizes(maxWidth: 338) {
+                    src
+                  }
+                }
+              }
+            }
           }
           html
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        relatedLinks {
-          train { label, href, img }
-          membership { label, href, img }
-          tkd { label, href, img }
         }
       }
     }

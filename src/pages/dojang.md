@@ -56,6 +56,14 @@ otherClubs:
 metaDescription: Test
 relatedLinks:
   - title: Train with us
+    path: /
+    img: /uploads/train-with-us.jpg
+  - title: Train with us
+    path: /
+    img: /uploads/train-with-us.jpg
+  - title: Train with us
+    path: /
+    img: /uploads/train-with-us.jpg
 ---
 We're a diverse group of people ranging from complete beginners to experienced black belts.
 

@@ -26,10 +26,9 @@ export default class IndexPage extends React.Component {
 
   render() {
     const { data, location: { pathname } } = this.props
-    const { relatedLinks } = data.site.siteMetadata
 
-    const { frontmatter, html } = data.allMarkdownRemark.edges[0].node
-    const { metaDescription, trainIntro, locations, feesIntro, fees } = frontmatter
+    const { frontmatter, html } = data.page.edges[0].node
+    const { metaDescription, trainIntro, locations, feesIntro, fees, relatedLinks } = frontmatter
 
     return (
       <div>
@@ -59,7 +58,7 @@ export default class IndexPage extends React.Component {
           </Button>
         </Section>
         <Section useDiv spaced>
-          <RelatedLinks items={Object.keys(relatedLinks).map(key => relatedLinks[key])} />
+          <RelatedLinks items={relatedLinks} />
         </Section>
       </div>
     );
@@ -68,7 +67,7 @@ export default class IndexPage extends React.Component {
 
 export const query = graphql`
   query IndexQuery {
-    allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/index\\.md$/"}}) {
+    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/index\\.md$/"}}) {
       edges {
         node {
           frontmatter {
@@ -90,17 +89,19 @@ export const query = graphql`
               year
               semester
             }
+            relatedLinks {
+              title
+              path
+              img {
+                childImageSharp {
+                  sizes(maxWidth: 338) {
+                    src
+                  }
+                }
+              }
+            }
           }
           html
-        }
-      }
-    }
-    site {
-      siteMetadata {
-        relatedLinks {
-          tkd { label, href, img }
-          instructors { label, href, img }
-          clubs { label, href, img }
         }
       }
     }
