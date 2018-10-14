@@ -55,13 +55,13 @@ collections:
           - label: "Related links"
             name: "relatedLinks"
             widget: "list"
-            field:
+            fields:
               - label: "Related link"
-              - name: "relatedLink"
-              - widget: "relation"
-              - collection: "relatedLinks"
-              - searchFields: ["title"]
-              - valueField: "title"
+                name: "relatedLink"
+                widget: "relation"
+                collection: "relatedLinks"
+                searchFields: ["title"]
+                valueField: "title"
       - file: "src/pages/tkd.md"
         label: "What is Taekwon-Do?"
         name: "tkd"
@@ -75,13 +75,13 @@ collections:
           - label: "Related links"
             name: "relatedLinks"
             widget: "list"
-            field:
+            fields:
               - label: "Related link"
-              - name: "relatedLink"
-              - widget: "relation"
-              - collection: "relatedLinks"
-              - searchFields: ["title"]
-              - valueField: "title"
+                name: "relatedLink"
+                widget: "relation"
+                collection: "relatedLinks"
+                searchFields: ["title"]
+                valueField: "title"
       - file: "src/pages/dojang.md"
         label: "Our Dojang"
         name: "dojang"
@@ -133,13 +133,13 @@ collections:
           - label: "Related links"
             name: "relatedLinks"
             widget: "list"
-            field:
+            fields:
               - label: "Related link"
-              - name: "relatedLink"
-              - widget: "relation"
-              - collection: "relatedLinks"
-              - searchFields: ["title"]
-              - valueField: "title"
+                name: "relatedLink"
+                widget: "relation"
+                collection: "relatedLinks"
+                searchFields: ["title"]
+                valueField: "title"
   - name: "relatedLinks"
     label: "Related links"
     label_singular: "Related link"
