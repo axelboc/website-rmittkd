@@ -19,15 +19,16 @@
   padding-top: 56.25%; /* 16/9 */
   background-color: #000;
   background-size: cover;
-  border-radius: .5em;
+  background-clip: padding-box;
+  border-radius: .5rem;
+  border: 2px solid rgba(255, 255, 255, .4);
   outline-offset: 2px;
   filter: grayscale(.6);
-  transition: filter .3s ease-out;
+  transition: filter .2s ease-out, border-color .2s ease-out;
 
-  /* remove filter on hover/focus */
-  &:hover,
-  &:focus {
+  &:hover {
     filter: none;
+    border-color: #fff;
   }
 }
 

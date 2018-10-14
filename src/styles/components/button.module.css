@@ -9,7 +9,7 @@
   outline-offset: 2px;
   outline-color: #fff;
   opacity: .85;
-  transition: opacity .15s ease;
+  transition: opacity .2s ease-out;
 }
 
 .wrapper {
@@ -19,7 +19,7 @@
 .icon {
   margin-left: 1.5em;
   margin-top: .125em;
-  transition: transform .15s ease-in;
+  transition: transform .2s ease-out;
 }
 
 .btn:hover {

@@ -3,7 +3,7 @@
   z-index: 1; /* move logo above banner */
   background-color: #fff;
   color: #000;
-  box-shadow: 0 4px 10px 2px #000;
+  box-shadow: 0 .25rem .625rem .125rem #000;
 }
 
 .homeHeader {
@@ -52,10 +52,10 @@
   content: '';
   position: absolute;
   bottom: -.325rem;
-  left: -1px;
-  right: -1px;
-  height: 3px;
-  border-radius: 2px;
+  left: -.0625rem;
+  right: -.0625rem;
+  height: .1875rem;
+  border-radius: .125rem;
 }
 
 .navLinkInner::before {
@@ -67,7 +67,7 @@
   background-color: #000;
   transform: scaleX(0);
   transform-origin: left center;
-  transition: transform .1s ease-out;
+  transition: transform .15s ease-out;
 }
 
 .activeNavLink > .navLinkInner::before {
@@ -76,5 +76,5 @@
 
 .navLink:hover > .navLinkInner::after {
   transform: scaleX(1);
-  transition-duration: .2s;
+  transition-duration: .25s;
 }
