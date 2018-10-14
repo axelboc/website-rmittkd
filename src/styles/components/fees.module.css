@@ -10,7 +10,7 @@
   flex-direction: column;
   margin: 0 1.5rem;
   background-color: #000;
-  border-bottom: 8px solid #a00309;
+  border-bottom: .375rem solid #a00309;
   transform: scale(0.95);
 
   &:nth-child(2) {

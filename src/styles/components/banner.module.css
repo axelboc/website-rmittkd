@@ -41,7 +41,7 @@
   background-color: #000;
   background-size: cover;
   border-radius: 50%;
-  border: 8px solid #fff;
+  border: .375rem solid #fff;
 }
 
 .intro {

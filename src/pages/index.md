@@ -1,6 +1,6 @@
 ---
 trainIntro: >-
-  Ready to get started? Come by to the next session and enjoy three classes for free! We run four classes a week across two locations, and welcome all levels of fitness and experience.
+  Ready to get started? Come to the next session and enjoy three classes for free! We run four classes a week across two locations and welcome all levels of fitness and experience.
 locations:
   - address: '8 Orr St, Carlton VIC 3053, Australia'
     location: 'RMIT Building 47, 8 Orr St'
