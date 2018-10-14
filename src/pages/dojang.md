@@ -1,26 +1,28 @@
 ---
-instructorsIntro: We're lucky to be trained by accomplished, highly experienced instructors. Amongst them are Grandmaster Robert Lai, and his son, Master Jason Lai.
+instructorsIntro: >-
+  We're lucky to be trained by accomplished, highly experienced instructors.
+  Amongst them are Grandmaster Robert Lai, and his son, Master Jason Lai.
 instructors:
   - bio: >-
       Grand Master Lai, 9th degree, received his first degree Black Belt in
-      1966. Before moving to Australia, he began teaching in
-      Malaysia where he established many clubs, totalising over
-      1000 members. He is now the President of <a
-      href="https://www.facebook.com/chitfaustralia">CHITF
+      1966. Before moving to Australia, he began teaching in Malaysia where he
+      established many clubs, totalising over 1000 members. He is now the
+      President of <a href="https://www.facebook.com/chitfaustralia">CHITF
       Australia</a>.
     degree: 9
     name: Robert Lai
     photo: /uploads/instructor.jpg
   - bio: >-
       Master Lai, 7th degree, has been training for over 30 years. In 2013, he
-      received the RMIT <em>Outstanding Service</em> Award for his 20
-      years of service to the club. Master Lai was also a
-      coach for the Australian Team at the 2010 ITF
-      World Championships in Minsk, Belarus.
+      received the RMIT <em>Outstanding Service</em> Award for his 20 years of
+      service to the club. Master Lai was also a coach for the Australian Team
+      at the 2010 ITF World Championships in Minsk, Belarus.
     degree: 7
     name: Jason Lai
     photo: /uploads/instructor.jpg
-clubsIntro: Our club is part of the Lai Taekwon-Do group, which gives us the opportunity to participate in multiple local and national tournaments each year.
+clubsIntro: >-
+  Our club is part of the Lai Taekwon-Do group, which gives us the opportunity
+  to participate in multiple local and national tournaments each year.
 localClubs:
   - address: '289 Main Rd E, St Albans VIC 3021, Australia'
     city: St Albans
@@ -39,22 +41,21 @@ localClubs:
     name: South East Lai Taekwon-Do
     url: 'https://www.facebook.com/SELTKD/'
 otherClubs:
-  - address: 'Koorlong Ave, Nichols Point VIC 3501, Australie'
-    city: Mildura
+  - city: Mildura
     name: Sunraysia Taekwon-Do ITF
-    url: 'https://www.facebook.com/sunraysiataekwondo.itf/'
     state: VIC
-  - address: '21-23 Clifford St, Goulburn NSW 2580, Australia'
-    city: Goulburn
+    url: 'https://www.facebook.com/sunraysiataekwondo.itf/'
+  - city: Goulburn
     name: GMAA
     state: NSW
     url: 'https://www.goulburnmartialartsacademy.com/'
-  - address: '30A Beaufort St, Somerset TAS 7322, Australie'
-    city: Somerset
+  - city: Somerset
     name: Somerset Lai Taekwon-Do
     state: TAS
     url: 'https://www.tkdsomerset.com'
 metaDescription: Test
+relatedLinks:
+  - relatedLink: Train with us
 ---
 We're a diverse group of people ranging from complete beginners to experienced black belts.
 
