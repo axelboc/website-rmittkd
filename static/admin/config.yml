@@ -52,6 +52,16 @@ collections:
                 valueType: "int"
                 min: 0
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
+          - label: "Related links"
+            name: "relatedLinks"
+            widget: "list"
+            field:
+              - label: "Related link"
+              - name: "relatedLink"
+              - widget: "relation"
+              - collection: "relatedLinks"
+              - searchFields: ["label"]
+              - valueField: "label"
       - file: "src/pages/tkd.md"
         label: "What is Taekwon-Do?"
         name: "tkd"
@@ -62,6 +72,16 @@ collections:
             widget: "string"
             pattern: ['^https:\/\/www\.youtube\.com\/embed\/', "Should be a URL starting with: https://www.youtube.com/embed/"]
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
+          - label: "Related links"
+            name: "relatedLinks"
+            widget: "list"
+            field:
+              - label: "Related link"
+              - name: "relatedLink"
+              - widget: "relation"
+              - collection: "relatedLinks"
+              - searchFields: ["label"]
+              - valueField: "label"
       - file: "src/pages/dojang.md"
         label: "Our Dojang"
         name: "dojang"
@@ -110,3 +130,24 @@ collections:
                 widget: "string"
                 pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
+          - label: "Related links"
+            name: "relatedLinks"
+            widget: "list"
+            field:
+              - label: "Related link"
+              - name: "relatedLink"
+              - widget: "relation"
+              - collection: "relatedLinks"
+              - searchFields: ["label"]
+              - valueField: "label"
+  - name: "relatedLinks"
+    label: "Related links"
+    label_singular: "Related link"
+    folder: "links"
+    format: "yml"
+    create: true
+    delete: true
+    fields:
+      - {label: "Label", name: "title", widget: "string"}
+      - {label: "Path", name: "path", widget: "string"}
+      - {label: "Image", name: "img", widget: "image"}
