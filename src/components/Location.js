@@ -67,7 +67,7 @@ function Location(props) {
             })}
           </dl>
           <div className={styles.btn}>
-            <Button to={`https://www.google.com.au/maps/dir//${address}`}>
+            <Button to={`https://www.google.com.au/maps/dir//${encodeURIComponent(address)}`}>
               Getting there
             </Button>
           </div>
