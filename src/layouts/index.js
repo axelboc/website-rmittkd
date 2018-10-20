@@ -8,10 +8,15 @@ import Footer from '../components/Footer'
 import 'normalize.css'
 import '../styles/index.css'
 
-accessibleFocus()
+let initialised = false
 
 function Layout(props) {
   const { children, location } = props
+
+  if (!initialised) {
+    accessibleFocus()
+    initialised = true
+  }
 
   return (
     <div>
