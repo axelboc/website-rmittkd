@@ -30,10 +30,10 @@
 .logoLink {
   composes: link-img from global;
   transition: transform .2s ease-out;
-}
 
-.logoLink:hover {
-  transform: translateY(-.25rem);
+  &:hover {
+    transform: translateY(-.25rem);
+  }
 }
 
 .socialMedia {
@@ -55,10 +55,10 @@
   padding: 0 .125rem;
   margin-left: .5rem;
   opacity: .85;
-  transition: transform .15s ease-out, opacity .15s ease-out;
-}
+  transition: transform .2s ease-out, opacity .2s ease-out;
 
-.socialLink:hover {
-  opacity: 1;
-  transform: scale(1.05);
+  &:hover {
+    opacity: 1;
+    transform: translateY(-.125rem);
+  }
 }

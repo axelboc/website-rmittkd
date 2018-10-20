@@ -37,10 +37,9 @@
 }
 
 .link-img {
-  display: inline-block;
+  display: inline-flex;
   outline-offset: 3px;
   color: inherit; /* fix outline colour */
-  vertical-align: bottom; /* fix unwanted inline-block space */
 }
 
 .list-reset {

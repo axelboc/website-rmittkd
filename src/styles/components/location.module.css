@@ -42,23 +42,25 @@
 
 .times {
   font-size: 90%;
-}
 
-.times > dd {
-  margin-left: 0;
-}
+  & > dd {
+    margin-left: 0;
+  }
 
-.times > dd + dt::before {
-  content: '';
-  display: block;
-  width: 4rem;
-  border-top: .125rem solid rgba(255, 255, 255, .4);
-  margin-top: .75rem;
-  padding-top: .75rem;
-}
+  & > dd + dt {
+    &::before {
+      content: '';
+      display: block;
+      width: 4rem;
+      border-top: .125rem solid rgba(255, 255, 255, .4);
+      margin-top: .75rem;
+      padding-top: .75rem;
+    }
 
-.times > dd + dt + dd:last-child {
-  margin-bottom: 1.5rem;
+    & + dd:last-child {
+      margin-bottom: 1.5rem;
+    }
+  }
 }
 
 .btn {

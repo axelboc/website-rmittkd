@@ -25,12 +25,7 @@ function RelatedLinks(props) {
             >
               <span className={styles.label}>
                 {title}
-                <FontAwesomeIcon
-                  className={styles.icon}
-                  icon={faAngleDoubleRight}
-                  width="18"
-                  height="18"
-                />
+                <span className={styles.arrow}>🡒</span>
               </span>
             </Link>
           </li>

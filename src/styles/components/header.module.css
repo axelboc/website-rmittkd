@@ -44,30 +44,31 @@
 
 .navLinkInner {
   position: relative;
-  display: inline-block;
-}
+  display: inline-flex;
 
-.navLinkInner::before,
-.navLinkInner::after {
-  content: '';
-  position: absolute;
-  bottom: -.325rem;
-  left: -.0625rem;
-  right: -.0625rem;
-  height: .1875rem;
-  border-radius: .125rem;
-}
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -.325rem;
+    left: -.2px;
+    right: -.2px;
+    height: 4px;
+    border-radius: 2px;
+    backface-visibility: hidden;
+  }
 
-.navLinkInner::before {
-  display: none;
-  background-color: #777;
-}
+  &::before {
+    display: none;
+    background-color: #777;
+  }
 
-.navLinkInner::after {
-  background-color: #000;
-  transform: scaleX(0);
-  transform-origin: left center;
-  transition: transform .15s ease-out;
+  &::after {
+    background-color: #000;
+    transform: scaleX(0);
+    transform-origin: left center;
+    transition: transform .15s ease-out;
+  }
 }
 
 .activeNavLink > .navLinkInner::before {

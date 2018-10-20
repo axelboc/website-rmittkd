@@ -50,8 +50,7 @@
 }
 
 .amount {
-  display: inline-block;
-  vertical-align: top;
+  display: inline-flex;
   position: relative;
 }
 

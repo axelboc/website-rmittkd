@@ -33,14 +33,10 @@
 }
 
 .link {
+  composes: link-reset from global;
   display: flex;
   align-items: center;
   font-size: 90%;
-  text-decoration: none;
-}
-
-.link:hover {
-  text-decoration: underline;
 }
 
 .linkUrl {

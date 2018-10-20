@@ -1,5 +1,6 @@
 import React from 'react'
 import Helmet from 'react-helmet'
+import accessibleFocus from 'accessible-focus-styles'
 
 import Header from '../components/Header'
 import Footer from '../components/Footer'
@@ -7,8 +8,10 @@ import Footer from '../components/Footer'
 import 'normalize.css'
 import '../styles/index.css'
 
+accessibleFocus()
+
 function Layout(props) {
-  const { children, location } = props;
+  const { children, location } = props
 
   return (
     <div>

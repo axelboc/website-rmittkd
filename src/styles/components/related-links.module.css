@@ -31,38 +31,23 @@
 }
 
 .label {
+  composes: btn from './button.module.css';
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  white-space: nowrap;
-  display: inline-flex;
-  align-items: center;
-  padding: .5rem 1rem;
-  background-color: #000;
-  border-radius: .375em;
+  background-color: rgba(0, 0, 0, .9);
   color: #fff;
-  text-decoration: none;
-  opacity: .9;
-  transition: opacity .3s ease-in-out;
 }
 
-.icon {
+.arrow {
   margin-left: 1em;
-  transition: transform .1s ease-in-out;
+  transition: transform .1s ease-out;
 }
 
-.link:hover .label,
-.link:focus .label {
-  opacity: 1;
-}
+.link:hover > .label {
+  background-color: #000;
 
-.link:hover .icon {
-  transform: translateX(20%);
-}
-
-@keyframes scale-down {
-  from {
-    opacity: 0;
-    transform: scale(1.2);
+  & > .arrow {
+    transform: translateX(20%);
   }
 }
