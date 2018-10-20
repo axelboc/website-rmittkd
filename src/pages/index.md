@@ -1,6 +1,8 @@
 ---
 trainIntro: >-
-  Ready to get started? Come to the next session and enjoy three classes for free! We run four classes a week across two locations and welcome all levels of fitness and experience.
+  Ready to get started? Come to the next session and enjoy three classes for
+  free! We run four classes a week across two locations and welcome all levels
+  of fitness and experience.
 locations:
   - address: '8 Orr St, Carlton VIC 3053, Australia'
     location: 'RMIT Building 47, 8 Orr St'
@@ -28,14 +30,14 @@ fees:
     year: 310
 metaDescription: Test
 relatedLinks:
-  - title: What is Taekwon-Do?
+  - img: /uploads/train-with-us.jpg
     path: /tkd
-    img: /uploads/train-with-us.jpg
-  - title: Meet our instructors
+    title: What is Taekwon-Do?
+  - img: /uploads/train-with-us.jpg
     path: /dojang
-    img: /uploads/train-with-us.jpg
-  - title: Find affiliated clubs
+    title: Meet our instructors
+  - img: /uploads/find-affiliated-clubs.jpg
     path: /dojang
-    img: /uploads/train-with-us.jpg
+    title: Find affiliated clubs
 ---
 Forget about the gym! Fitness, cardio, strength, self-defence... Taekwon-Do does it all!
