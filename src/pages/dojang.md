@@ -55,13 +55,13 @@ otherClubs:
     url: 'https://www.tkdsomerset.com'
 metaDescription: Test
 relatedLinks:
-  - img: /uploads/train-with-us.jpg
+  - img: /uploads/demo.jpg
     path: /
     title: Train with us
-  - img: /uploads/train-with-us.jpg
+  - img: /uploads/boards.jpg
     path: /
     title: Choose your membership
-  - img: /uploads/train-with-us.jpg
+  - img: /uploads/belts.jpg
     path: /tkd
     title: What is Taekwon-Do?
 ---

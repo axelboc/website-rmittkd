@@ -2,13 +2,13 @@
 video: 'https://www.youtube.com/embed/ewGt5hz_1VA'
 metaDescription: Test
 relatedLinks:
-  - img: /uploads/train-with-us.jpg
+  - img: /uploads/demo.jpg
     path: /
     title: Train with us
-  - img: /uploads/train-with-us.jpg
+  - img: /uploads/boards.jpg
     path: /
     title: Choose your membership
-  - img: /uploads/train-with-us.jpg
+  - img: /uploads/congrats.jpg
     path: /dojang
     title: Meet our instructors
 ---

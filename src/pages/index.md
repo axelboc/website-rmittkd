@@ -30,13 +30,13 @@ fees:
     year: 310
 metaDescription: Test
 relatedLinks:
-  - img: /uploads/train-with-us.jpg
+  - img: /uploads/belts.jpg
     path: /tkd
     title: What is Taekwon-Do?
-  - img: /uploads/train-with-us.jpg
+  - img: /uploads/congrats.jpg
     path: /dojang
     title: Meet our instructors
-  - img: /uploads/find-affiliated-clubs.jpg
+  - img: /uploads/group.jpg
     path: /dojang
     title: Find affiliated clubs
 ---
