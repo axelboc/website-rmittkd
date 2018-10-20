@@ -4,7 +4,6 @@ import Helmet from 'react-helmet'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-import 'normalize.css'
 import '../styles/index.css'
 
 function Layout(props) {
