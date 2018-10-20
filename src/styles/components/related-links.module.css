@@ -21,7 +21,7 @@
   background-size: cover;
   background-clip: padding-box;
   border-radius: .5rem;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, .1);
   outline-offset: 2px;
   filter: grayscale(.6);
   transition: filter .2s ease-out, border-color .2s ease-out;

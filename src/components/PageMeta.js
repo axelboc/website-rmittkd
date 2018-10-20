@@ -5,7 +5,7 @@ import Helmet from 'react-helmet'
 function PageMeta(props) {
   const { isHome, title, description, path, socialImage } = props
 
-  const fullTitle = `${isHome ? '' : `${title} | `}RMIT ITF Taekwon-Do`
+  const fullTitle = `${isHome ? '' : `${title} - `}RMIT ITF Taekwon-Do`
 
   return (
     <Helmet
