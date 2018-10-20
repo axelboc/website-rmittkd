@@ -13,8 +13,10 @@ html {
   text-rendering: optimizeLegibility;
   background-color: #011627;
   background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
+}
 
-  @media (min-width: 75em) {
+@media (min-width: 75em) {
+  html {
     font-size: 18px;
   }
 }
