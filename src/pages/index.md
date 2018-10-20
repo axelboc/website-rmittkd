@@ -28,14 +28,14 @@ fees:
     year: 310
 metaDescription: Test
 relatedLinks:
-  - title: Train with us
-    path: /
+  - title: What is Taekwon-Do?
+    path: /tkd
     img: /uploads/train-with-us.jpg
-  - title: Train with us
-    path: /
+  - title: Meet our instructors
+    path: /dojang
     img: /uploads/train-with-us.jpg
-  - title: Train with us
-    path: /
+  - title: Find affiliated clubs
+    path: /dojang
     img: /uploads/train-with-us.jpg
 ---
 Forget about the gym! Fitness, cardio, strength, self-defence... Taekwon-Do does it all!

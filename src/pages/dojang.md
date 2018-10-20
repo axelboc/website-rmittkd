@@ -60,10 +60,10 @@ relatedLinks:
     title: Train with us
   - img: /uploads/train-with-us.jpg
     path: /
-    title: Train with us
+    title: Choose your membership
   - img: /uploads/train-with-us.jpg
-    path: /
-    title: Train with us
+    path: /tkd
+    title: What is Taekwon-Do?
 ---
 We're a diverse group of people ranging from complete beginners to experienced black belts.
 

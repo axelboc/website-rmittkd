@@ -23,11 +23,9 @@
   border-radius: .5rem;
   border: 2px solid rgba(255, 255, 255, .1);
   outline-offset: 2px;
-  filter: grayscale(.6);
-  transition: filter .2s ease-out, border-color .2s ease-out;
+  transition: border-color .2s ease-out;
 
   &:hover {
-    filter: none;
     border-color: #fff;
   }
 }

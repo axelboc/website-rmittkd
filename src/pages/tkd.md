@@ -7,10 +7,10 @@ relatedLinks:
     title: Train with us
   - img: /uploads/train-with-us.jpg
     path: /
-    title: Train with us
+    title: Choose your membership
   - img: /uploads/train-with-us.jpg
-    path: /
-    title: Train with us
+    path: /dojang
+    title: Meet our instructors
 ---
 Taekwon-Do is a martial art designed for the purpose of self-defence. It was founded in Korean in the 1950s.
 
