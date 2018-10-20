@@ -1,5 +1,4 @@
 import React from 'react'
-import Script from 'react-load-script';
 
 import PageMeta from '../components/PageMeta'
 import Section from '../components/Section'
@@ -11,19 +10,6 @@ import RelatedLinks from '../components/RelatedLinks'
 import styles from '../styles/pages/index.module.css'
 
 export default class IndexPage extends React.Component {
-  handleScriptLoad() {
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on('init', user => {
-        if (!user) {
-          window.netlifyIdentity.on('login', () => {
-            document.location.href = '/admin/';
-          });
-        }
-      });
-    }
-    window.netlifyIdentity.init();
-  }
-
   render() {
     const { data, location: { pathname } } = this.props
 
@@ -36,10 +22,6 @@ export default class IndexPage extends React.Component {
           isHome
           description={metaDescription}
           path={pathname}
-        />
-        <Script
-          url="https://identity.netlify.com/v1/netlify-identity-widget.js"
-          onLoad={this.handleScriptLoad.bind(this)}
         />
         <div className={styles.hero}>
           <div className={styles.heroInner}>
