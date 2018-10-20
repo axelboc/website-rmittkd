@@ -1,5 +1,4 @@
 import React from 'react'
-import qs from 'query-string'
 
 import PageMeta from '../components/PageMeta'
 import Banner from '../components/Banner'
@@ -14,14 +13,8 @@ export default function TkdPage(props) {
   const { frontmatter, html } = data.page.edges[0].node
   const { metaDescription, video, relatedLinks } = frontmatter
 
-  const { url, query } = qs.parseUrl(video)
-  const videoSrc = `${url}?${qs.stringify({
-    ...query,
-    ...{
-      modestbranding: 1, // hide YouTube logo
-      rel: 0, // don't show related videos from other sources
-    }
-  })}`
+  // Hide related videos and YouTube branding
+  const videoSrc = `${video.split('?')[0]}?rel=0&modestbranding=1`
 
   return (
     <div>
@@ -37,7 +30,7 @@ export default function TkdPage(props) {
       />
       <Section useDiv spaced bg="alt">
         <div className={styles.embed}>
-          <iframe className={styles.iframe} src={videoSrc} frameBorder="0" allowFullScreen></iframe>
+          <iframe className={styles.iframe} src={videoSrc} allowFullScreen></iframe>
         </div>
       </Section>
       <Section useDiv spaced>

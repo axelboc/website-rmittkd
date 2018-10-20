@@ -39,7 +39,6 @@
     "gatsby-transformer-sharp": "^1.6.26",
     "netlify-cms": "^1.9.3",
     "normalize.css": "^8.0.0",
-    "query-string": "^6.2.0",
     "react": "^16.4.0",
     "react-helmet": "^5.2.0",
     "react-load-script": "^0.0.6",
