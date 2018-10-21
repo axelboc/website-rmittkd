@@ -20,7 +20,10 @@ locations:
       - days: Tuesday
         from: 7 pm
         to: '8:30 pm'
-feesIntro: Hello!
+feesIntro: >-
+  Our affordable membership options allow you to train as often as you like. If
+  you bring another RMIT student along with you, you both get 50% off your
+  memberships!
 fees:
   - semester: 130
     who: RMIT student
@@ -28,6 +31,9 @@ fees:
   - semester: 155
     who: Public (non-RMIT)
     year: 310
+  - semester: 60
+    who: Bundoora only
+    year: 117
 metaDescription: Test
 relatedLinks:
   - img: /uploads/belts.jpg
