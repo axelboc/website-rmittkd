@@ -4,6 +4,12 @@
   text-align: center;
 }
 
+.feesTight {
+  composes: fees;
+  margin-left: -.75rem;
+  margin-right: -.75rem;
+}
+
 .option {
   flex: 1;
   display: flex;
@@ -16,6 +22,10 @@
   &:nth-child(2) {
     transform: scale(1.05);
   }
+}
+
+.feesTight > .option {
+  margin: 0 .75rem;
 }
 
 .group {

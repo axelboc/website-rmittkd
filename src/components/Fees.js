@@ -6,7 +6,7 @@ function Fees(props) {
   const { fees } = props
 
   return (
-    <div className={styles.fees}>
+    <div className={fees.length > 2 ? styles.feesTight : styles.fees}>
       <div className={styles.option}>
         <p className={styles.group}>Everyone</p>
         <div className={styles.content}>
