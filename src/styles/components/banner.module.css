@@ -1,5 +1,5 @@
 .banner {
-  min-height: 28rem;
+  min-height: 28.5rem;
   padding-top: 3rem; /* clear logo */
   background-blend-mode: lighten; /* blend photo with triangle bg pattern*/
 }

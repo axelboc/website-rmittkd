@@ -25,7 +25,6 @@ export default function DojangPage(props) {
         description={metaDescription}
         path={pathname}
       />
-      <div className={styles.banner} />
       <Banner
         heading="Our Dojang"
         intro={html}

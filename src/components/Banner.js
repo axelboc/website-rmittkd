@@ -6,6 +6,7 @@ import styles from '../styles/components/banner.module.css'
 const VARIANT_CLASSES = {
   tkd: styles.bannerTkd,
   dojang: styles.bannerDojang,
+  contact: styles.bannerDojang,
 }
 
 function Banner(props) {

@@ -131,3 +131,23 @@ collections:
               - {label: "Label", name: "title", widget: "string"}
               - {label: "Path", name: "path", widget: "string"}
               - {label: "Image", name: "img", widget: "image"}
+      - file: "src/pages/contact.md"
+        label: "Get in touch"
+        name: "contact"
+        fields:
+          - {label: "Intro", name: "body", widget: "markdown"}
+          - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
+          - {label: "\"FAQ\" section intro", name: "faqIntro", widget: "text"}
+          - label: "Frequently Asked Questions"
+            name: "faq"
+            widget: "list"
+            fields:
+              - {label: "Question", name: "question", widget: "string"}
+              - {label: "Answer", name: "answer", widget: "text"}
+          - label: "Related links"
+            name: "relatedLinks"
+            widget: "list"
+            fields:
+              - {label: "Label", name: "title", widget: "string"}
+              - {label: "Path", name: "path", widget: "string"}
+              - {label: "Image", name: "img", widget: "image"}

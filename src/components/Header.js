@@ -51,7 +51,7 @@ function Header(props) {
                 className={styles.navLink}
                 activeClassName={styles.activeNavLink}
                 exact
-                to="/"
+                to="/contact"
               >
                 <span className={styles.navLinkInner}>Get in touch</span>
               </Link>
