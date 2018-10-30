@@ -27,10 +27,14 @@ export default function DojangPage(props) {
         variant="contact"
       />
       <Section heading="Frequently Asked Questions" intro={faqIntro} bg="alt">
-        {faq.map(({ question, answer }) => [
-          <h2>{question}</h2>,
-          <p>{answer}</p>
-        ])}
+        <div className={styles.questions}>
+          {faq.map(({ question, answer }) => (
+            <div class={styles.question}>
+              <h2 className={styles.heading}>{question}</h2>
+              <p className={styles.answer} dangerouslySetInnerHTML={{ __html: answer }} />
+            </div>
+          ))}
+        </div>
         <Button to="https://rmittkd.typeform.com/to/FJ6SSX" centred>
           Get in touch
         </Button>
