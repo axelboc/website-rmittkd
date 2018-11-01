@@ -18,6 +18,13 @@
     #011627 url('../../images/dojang.jpg') center right / contain no-repeat;
 }
 
+.bannerContact {
+  composes: banner;
+  background:
+    url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
+    #011627 url('../../images/contact.jpg') center right / contain no-repeat;
+}
+
 .inner {
   composes: max from global;
   display: flex;
