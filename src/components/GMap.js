@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
+import styles from '../styles/components/gmap.module.css'
+
 const GMAPS_API_URL = 'https://maps.googleapis.com/maps/api/staticmap'
 
 function GMap(props) {
@@ -44,10 +46,12 @@ function GMap(props) {
     .join('&')
 
   return (
-    <img
-      src={`${GMAPS_API_URL}?${mapParams}`}
-      width={width}
-      height={height}
+    <div
+      className={styles.map}
+      style={{
+        backgroundImage: `url(${GMAPS_API_URL}?${mapParams})`,
+        height
+      }}
       alt=""
     />
   )
