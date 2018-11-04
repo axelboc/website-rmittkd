@@ -1,16 +1,11 @@
 .embed {
-  composes: max from global;
   position: relative;
-  margin: 0 auto;
-  overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, .2);
-  border-radius: .5em;
-  transition: border-color .2s ease-out;
+  margin: -3rem -1.5rem; /* take whole section on mobile */
 
   &::before {
     content: '';
     display: block;
-    padding-bottom: 56.25%; /* 16/9 */
+    padding-bottom: 65%;
   }
 
   &:hover {
@@ -19,7 +14,6 @@
 }
 
 .iframe {
-  display: block;
   position: absolute;
   top: 0;
   left: 0;
@@ -27,4 +21,24 @@
   height: 100%;
   background-color: #000;
   border: none;
+}
+
+@media (min-width: 25em) {
+  .embed {
+    margin: 0;
+    border: 2px solid rgba(255, 255, 255, .2);
+    border-radius: .5em;
+    overflow: hidden;
+    transition: border-color .2s ease-out;
+
+    &::before {
+      padding-bottom: 60%;
+    }
+  }
+}
+
+@media (min-width: 45em) {
+  .embed::before {
+    padding-bottom: 56.25%; /* 16/9 */
+  }
 }

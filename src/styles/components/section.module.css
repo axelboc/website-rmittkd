@@ -5,7 +5,7 @@
 .spaced {
   padding: 3rem 0;
 
-  @media (min-width: 40em) {
+  @media (min-width: 45em) {
     padding: 4.5rem 0;
   }
 }
