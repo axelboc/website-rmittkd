@@ -8,21 +8,21 @@
   composes: banner;
   background:
     url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
-    #011627 url('../../images/tkd.jpg') center right / contain no-repeat;
+    #011627 url('../../images/heros/tkd.jpg') center right / contain no-repeat;
 }
 
 .bannerDojang {
   composes: banner;
   background:
     url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
-    #011627 url('../../images/dojang.jpg') center right / contain no-repeat;
+    #011627 url('../../images/heros/dojang.jpg') center right / contain no-repeat;
 }
 
 .bannerContact {
   composes: banner;
   background:
     url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
-    #011627 url('../../images/contact.jpg') center right / contain no-repeat;
+    #011627 url('../../images/heros/contact.jpg') center right / contain no-repeat;
 }
 
 .inner {

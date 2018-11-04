@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Link from 'gatsby-link'
 
 import styles from '../styles/components/header.module.css'
-import logo from '../images/logo.png'
+import logo from '../images/logos/logo-rmittkd.svg'
 
 function Header(props) {
   const { home } = props

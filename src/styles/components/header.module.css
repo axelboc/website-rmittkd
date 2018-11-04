@@ -1,8 +1,7 @@
 .header {
+  composes: bg-white from global;
   position: relative;
   z-index: 1; /* move logo above banner */
-  background-color: #fff;
-  color: #000;
   box-shadow: 0 .25rem .625rem .125rem #000;
 }
 
@@ -60,11 +59,12 @@
 
   &::before {
     display: none;
-    background-color: #777;
+    background-color: #231f20;
+    opacity: .5;
   }
 
   &::after {
-    background-color: #000;
+    background-color: #231f20;
     transform: scaleX(0);
     transform-origin: left center;
     transition: transform .15s ease-out;
