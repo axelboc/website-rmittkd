@@ -14,12 +14,12 @@ function Footer() {
   return (
     <footer className={styles.footer}>
       <div className={styles.inner}>
-        <ul className={styles.list}>
-          <li>
-            <a className={styles.logoLink} href="https://rmitlink.rmit.edu.au/">
-              <img src={logoRmitLink} width="135" height="80" alt="RMIT Link" />
-            </a>
-          </li>
+        <div className={styles.rmitLink}>
+          <a className={styles.logoLink} href="https://rmitlink.rmit.edu.au/">
+            <img src={logoRmitLink} width="135" height="80" alt="RMIT Link" />
+          </a>
+        </div>
+        <ul className={styles.orgLogoList}>
           <li className={styles.orgLogoItem}>
             <a className={styles.logoLink} href="http://www.chitf.org/">
               <img src={logoChitf} width="100" height="100" alt="CHITF, Chan Hun International Taekwon-Do Federation" />
@@ -35,28 +35,28 @@ function Footer() {
               <img src={logoLaiTkd} width="100" height="100" alt="Lai Taekwon-Do" />
             </a>
           </li>
-          <li className={styles.socialMedia}>
-            follow us on
-            <div className={styles.socialIcons}>
-              <a className={styles.socialLink} href="https://www.instagram.com/rmittkd/">
-                <FontAwesomeIcon
-                  className={styles.icon}
-                  icon={faInstagram}
-                  size="3x"
-                  aria-label="Instagram"
-                />
-              </a>
-              <a className={styles.socialLink} href="https://www.facebook.com/rmittkd">
-                <FontAwesomeIcon
-                  className={styles.icon}
-                  icon={faFacebookSquare}
-                  size="3x"
-                  aria-label="Facebook"
-                />
-              </a>
-            </div>
-          </li>
         </ul>
+        <p className={styles.socialMedia}>
+          follow us on
+          <span className={styles.socialIcons}>
+            <a className={styles.socialLink} href="https://www.instagram.com/rmittkd/">
+              <FontAwesomeIcon
+                className={styles.icon}
+                icon={faInstagram}
+                size="3x"
+                aria-label="Instagram"
+              />
+            </a>
+            <a className={styles.socialLink} href="https://www.facebook.com/rmittkd">
+              <FontAwesomeIcon
+                className={styles.icon}
+                icon={faFacebookSquare}
+                size="3x"
+                aria-label="Facebook"
+              />
+            </a>
+          </span>
+        </p>
       </div>
     </footer>
   )
