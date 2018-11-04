@@ -33,7 +33,7 @@ fees:
     year: 310
   - semester: 60
     who: Bundoora only
-    year: 117
+    year: 120
 metaDescription: Test
 relatedLinks:
   - img: /uploads/belts.jpg
