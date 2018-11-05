@@ -6,7 +6,9 @@
     margin: 0 -1rem;
     text-align: center;
   }
+}
 
+@media (min-width: 60em) {
   .clubs {
     display: flex;
     margin: 0 -1rem;

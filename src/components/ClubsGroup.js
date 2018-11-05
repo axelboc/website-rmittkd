@@ -13,7 +13,7 @@ function ClubsGroup(props) {
       <h3 className={styles.heading}>{heading}</h3>
       <div className={styles.map}>
         <GMap
-          dimensions={[522, 326]}
+          dimensions={[574, 326]}
           focus={mapFocus}
           addresses={clubs.map(c => c.address || `${c.city}, ${c.state} Australia`)}
         />
