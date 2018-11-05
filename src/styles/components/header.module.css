@@ -2,6 +2,8 @@
   composes: bg-white from global;
   position: relative;
   z-index: 1; /* move logo above banner */
+  padding: 0 .5rem;
+  font-size: 95%;
   box-shadow: 0 .25rem .625rem .125rem #000;
 }
 
@@ -16,27 +18,39 @@
 .inner {
   composes: max from global;
   display: flex;
-  justify-content: space-between;
-  padding: .75rem 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: .75rem;
 }
 
 .logoLink {
   composes: link-img from global;
-  margin-bottom: calc(-75px - .75rem);
+  order: 1;
+  margin-bottom: -3rem;
+
+  & > img {
+    width: 6rem;
+  }
 }
 
 .nav {
-  display: flex;
+  flex: 1 0 100%;
+  margin-left: .75rem;
 }
 
 .navList {
   composes: list-reset from global;
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
+  max-width: 20em;
+  margin: 0 auto .5rem;
 }
 
 .navLink {
-  margin: 0 .75rem;
+  display: block;
+  margin: 0 .25rem;
   padding: .325rem .25rem;
   text-decoration: none;
 }
@@ -78,4 +92,86 @@
 .navLink:hover > .navLinkInner::after {
   transform: scaleX(1);
   transition-duration: .25s;
+}
+
+@media (min-width: 25em) {
+  .inner {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    align-items: center;
+  }
+
+  .logoLink {
+    order: 0;
+    margin-bottom: 0;
+  }
+
+  .nav {
+    flex-basis: 0;
+    margin-bottom: .75rem;
+  }
+
+  .navList {
+    justify-content: flex-start;
+    margin: 0;
+  }
+}
+
+@media (min-width: 30em) {
+  .header {
+    font-size: 100%;
+  }
+
+  .nav {
+    margin-left: 1.25rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .inner {
+    justify-content: space-between;
+    padding-top: .75rem;
+    padding-bottom: 0;
+  }
+
+  .logoLink {
+    margin-bottom: -3rem;
+  }
+
+  .nav {
+    flex: 0 0 auto;
+  }
+
+  .navList {
+    max-width: none;
+    margin-right: -.5rem;
+  }
+}
+
+@media (min-width: 45em) {
+  .logoLink {
+    margin-bottom: -3.5rem;
+
+    & > img {
+      width: 7rem;
+    }
+  }
+
+  .navList {
+    margin-right: -.75rem;
+  }
+
+  .navLink {
+    margin: 0 .75rem;
+  }
+}
+
+@media (min-width: 55em) {
+  .logoLink {
+    margin-bottom: -4rem;
+
+    & > img {
+      width: 8em;
+    }
+  }
 }
