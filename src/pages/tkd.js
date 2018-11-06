@@ -24,7 +24,7 @@ export default function TkdPage(props) {
         path={pathname}
       />
       <Banner
-        heading="What is Taekwon-Do?"
+        heading="What is Taekwon&#8209;Do?"
         intro={html}
         variant="tkd"
       />

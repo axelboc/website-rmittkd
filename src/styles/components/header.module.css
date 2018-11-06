@@ -167,6 +167,10 @@
 }
 
 @media (min-width: 55em) {
+  .header {
+    padding: 0 1.5rem
+  }
+
   .logoLink {
     margin-bottom: -4rem;
 
