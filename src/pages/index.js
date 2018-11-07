@@ -1,6 +1,7 @@
 import React from 'react'
 
 import PageMeta from '../components/PageMeta'
+import Banner from '../components/Banner'
 import Section from '../components/Section'
 import Location from '../components/Location'
 import Fees from '../components/Fees'
@@ -23,13 +24,11 @@ export default class IndexPage extends React.Component {
           description={metaDescription}
           path={pathname}
         />
-        <div className={styles.hero}>
-          <div className={styles.heroInner}>
-            <h1 className={styles.title}>ITF Taekwon-Do</h1>
-            <p className={styles.sub}>RMIT University Club</p>
-            <div className={styles.intro} dangerouslySetInnerHTML={{ __html: html }} />
-          </div>
-        </div>
+        <Banner
+          heading="ITF Taekwon&#8209;Do"
+          intro={html}
+          variant="home"
+        />
         <Section heading="Train with us" intro={trainIntro}>
           {locations.map(item => <Location key={item.suburb} {...item} />)}
         </Section>

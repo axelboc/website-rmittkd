@@ -12,8 +12,17 @@
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: #011627;
-    opacity: .85;;
+  }
+}
+
+.bannerHome {
+  composes: banner;
+  background: #000 url('../../images/heros/hero.jpg') center / auto 100% no-repeat;
+  min-height: 24rem;
+
+  &::before {
+    background-color: #000;
+    opacity: .75;
   }
 }
 
@@ -38,19 +47,33 @@
     #011627 url('../../images/heros/contact.jpg') center / auto 100% no-repeat;
 }
 
+.bannerTkd,
+.bannerDojang,
+.bannerContact {
+  &::before {
+    background-color: #011627;
+    opacity: .85;
+  }
+}
+
 .inner {
-  display: flex;
   max-width: 25em;
   margin-left: 0;
 }
 
-.content {
-  flex: 1;
+.heading {
+  font-size: 190%;
+  font-weight: 700;
+  text-transform: uppercase;
 }
 
-.heading {
-  font-size: 200%;
-  font-weight: 700;
+.sub {
+  display: inline-flex;
+  margin-bottom: .75rem;
+  padding: .125rem .5rem;
+  background-color: #a00309;
+  font-size: 130%;
+  font-weight: 100;
   text-transform: uppercase;
 }
 
@@ -62,9 +85,33 @@
   }
 }
 
+.bannerHome .inner {
+  max-width: none;
+}
+
+.bannerHome .heading {
+  margin-bottom: 1rem;
+}
+
+.bannerHome .intro {
+  max-width: 18rem;
+}
+
 @media (min-width: 25em) {
   .banner {
     padding: 4rem 2rem 5rem;
+  }
+
+  .heading {
+    font-size: 200%;
+  }
+
+  .sub {
+    font-size: 160%;
+  }
+
+  .bannerHome .heading {
+    font-size: 225%;
   }
 }
 
@@ -78,6 +125,12 @@
     }
   }
 
+  .bannerHome {
+    padding-top: 10rem;
+    min-height: 32rem;
+    background-position: center right -4rem;
+  }
+
   .bannerTkd,
   .bannerDojang,
   .bannerContact {
@@ -87,17 +140,35 @@
   .heading {
     font-size: 250%;
   }
+
+  .sub {
+    font-size: 175%;
+    padding: .25rem 1.25rem;
+  }
+
+  .bannerHome .heading {
+    margin-bottom: .75rem;
+    font-size: 300%;
+  }
+
+  .bannerHome .intro {
+    max-width: 22rem;
+  }
 }
 
 @media (min-width: 45em) {
   .banner {
     padding-top: 5.75rem;
   }
+
+  .bannerHome {
+    padding-top: 12rem;
+    min-height: 34rem;
+  }
 }
 
 @media (min-width: 55em) {
   .banner {
-    padding-top: 6rem;
     padding-left: 3rem;
     padding-right: 3rem;
   }
@@ -109,12 +180,14 @@
   .bannerTkd,
   .bannerDojang,
   .bannerContact {
+    padding-top: 6rem;
     background-position: 0 0, center right -8rem;
   }
 }
 
 @media (min-width: 60em) {
-  .inner {
+  .inner,
+  .bannerHome .inner {
     box-sizing: content-box;
     max-width: 60rem;
     margin: 0 auto;
@@ -128,10 +201,18 @@
 }
 
 @media (min-width: 65em) {
+  .bannerHome {
+    padding-bottom: 14rem;
+  }
+
   .bannerTkd,
   .bannerDojang,
   .bannerContact {
     background-position: 0 0, center right -3rem;
+  }
+
+  .bannerHome .heading {
+    font-size: 350%;
   }
 }
 
@@ -142,6 +223,10 @@
 }
 
 @media (min-width: 80em) {
+  .bannerHome {
+    background-position: center right;
+  }
+
   .bannerTkd,
   .bannerDojang,
   .bannerContact {

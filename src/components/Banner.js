@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import styles from '../styles/components/banner.module.css'
 
 const VARIANT_CLASSES = {
+  home: styles.bannerHome,
   tkd: styles.bannerTkd,
   dojang: styles.bannerDojang,
   contact: styles.bannerContact,
@@ -11,15 +12,16 @@ const VARIANT_CLASSES = {
 
 function Banner(props) {
   const { heading, intro, variant } = props;
+
+  const isHome = variant === 'home';
   const rootClass = VARIANT_CLASSES[variant] || styles.banner;
 
   return (
     <div className={rootClass}>
       <div className={styles.inner}>
-        <div className={styles.content}>
-          <h1 className={styles.heading}>{heading}</h1>
-          <div className={styles.intro} dangerouslySetInnerHTML={{ __html: intro }} />
-        </div>
+        <h1 className={styles.heading}>{heading}</h1>
+        {isHome && <p className={styles.sub}>RMIT University Club</p>}
+        <div className={styles.intro} dangerouslySetInnerHTML={{ __html: intro }} />
       </div>
     </div>
   )

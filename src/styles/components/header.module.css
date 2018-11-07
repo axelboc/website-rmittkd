@@ -1,18 +1,15 @@
 .header {
-  composes: bg-white from global;
   position: relative;
   z-index: 1; /* move logo above banner */
   padding: 0 .5rem;
   font-size: 95%;
+  background-color: #fff;
   box-shadow: 0 .25rem .625rem .125rem #000;
+  color: #231f20;
 }
 
 .homeHeader {
   composes: header;
-  position: absolute;
-  left: 0;
-  right: 0;
-  background-color: rgba(255, 255, 255, .85);
 }
 
 .inner {
@@ -128,6 +125,13 @@
 }
 
 @media (min-width: 40em) {
+  .homeHeader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(255, 255, 255, .85);
+  }
+
   .inner {
     justify-content: space-between;
     padding-top: .75rem;
