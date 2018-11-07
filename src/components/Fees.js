@@ -26,6 +26,7 @@ function Fees(props) {
                 <span className={styles.value}>{year}</span></span>{' '}
               <span className={styles.period}>per year</span>
             </p>
+            <span className={styles.sep} />
             <p className={styles.cost}>
               <span className={styles.amount}>
                 <span className={styles.currency}>$</span>
