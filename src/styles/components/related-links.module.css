@@ -17,7 +17,7 @@
   }
 }
 
-@media (min-width: 35em) {
+@media (min-width: 40em) {
   .list {
     display: flex;
     flex-direction: row;

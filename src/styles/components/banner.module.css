@@ -56,11 +56,6 @@
   }
 }
 
-.inner {
-  max-width: 25em;
-  margin-left: 0;
-}
-
 .heading {
   font-size: 190%;
   font-weight: 700;
@@ -78,15 +73,11 @@
 }
 
 .intro {
-  max-width: 30rem;
+  max-width: 25rem;
 
   & > p:last-child {
     margin-bottom: 0;
   }
-}
-
-.bannerHome .inner {
-  max-width: none;
 }
 
 .bannerHome .heading {
@@ -97,7 +88,7 @@
   max-width: 18rem;
 }
 
-@media (min-width: 25em) {
+@media (min-width: 26em) {
   .banner {
     padding: 4rem 2rem 5rem;
   }
@@ -186,8 +177,7 @@
 }
 
 @media (min-width: 60em) {
-  .inner,
-  .bannerHome .inner {
+  .inner {
     box-sizing: content-box;
     max-width: 60rem;
     margin: 0 auto;

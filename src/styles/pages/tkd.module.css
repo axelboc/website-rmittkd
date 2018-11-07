@@ -5,7 +5,7 @@
   &::before {
     content: '';
     display: block;
-    padding-bottom: 65%;
+    padding-bottom: 56.25%; /* 16/9 */
   }
 
   &:hover {
@@ -23,22 +23,12 @@
   border: none;
 }
 
-@media (min-width: 25em) {
+@media (min-width: 26em) {
   .embed {
     margin: 0;
     border: 2px solid rgba(255, 255, 255, .2);
     border-radius: .5em;
     overflow: hidden;
     transition: border-color .2s ease-out;
-
-    &::before {
-      padding-bottom: 60%;
-    }
-  }
-}
-
-@media (min-width: 45em) {
-  .embed::before {
-    padding-bottom: 56.25%; /* 16/9 */
   }
 }
