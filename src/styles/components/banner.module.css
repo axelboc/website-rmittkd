@@ -1,7 +1,6 @@
 .banner {
   position: relative;
   padding: 4.5rem 1.5rem 3rem; /* clear logo */
-  background-blend-mode: lighten; /* blend photo with triangle bg pattern*/
   z-index: 0;
 
   &::before {
@@ -26,33 +25,37 @@
   }
 }
 
-.bannerTkd {
+.bannerPage {
   composes: banner;
-  background:
-    url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
-    #011627 url('../../images/heros/tkd.jpg') center / auto 100% no-repeat;
-}
+  background-blend-mode: lighten; /* blend photo with triangle bg pattern and bg colour */
 
-.bannerDojang {
-  composes: banner;
-  background:
-    url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
-    #011627 url('../../images/heros/dojang.jpg') center / auto 100% no-repeat;
-}
-
-.bannerContact {
-  composes: banner;
-  background:
-    url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
-    #011627 url('../../images/heros/contact.jpg') center / auto 100% no-repeat;
-}
-
-.bannerTkd,
-.bannerDojang,
-.bannerContact {
   &::before {
     background-color: #011627;
     opacity: .85;
+  }
+}
+
+.bannerTkd {
+  composes: bannerPage;
+  background: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
+    #000 url('../../images/heros/tkd.jpg') center / auto 100% no-repeat;
+}
+
+.bannerDojang {
+  composes: bannerPage;
+  background: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
+    #000 url('../../images/heros/dojang.jpg') center / auto 100% no-repeat;
+}
+
+.bannerContact {
+  composes: bannerPage;
+  background: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
+    #000 url('../../images/heros/contact.jpg') center / auto 100% no-repeat;
+}
+
+@supports (background-blend-mode: lighten) {
+  .bannerPage {
+    background-color: #011627; /* IE needs black bg by default */
   }
 }
 
@@ -122,9 +125,7 @@
     background-position: center right -4rem;
   }
 
-  .bannerTkd,
-  .bannerDojang,
-  .bannerContact {
+  .bannerPage {
     background-position: 0 0, center right -8rem;
   }
 
@@ -168,9 +169,7 @@
     content: none;
   }
 
-  .bannerTkd,
-  .bannerDojang,
-  .bannerContact {
+  .bannerPage {
     padding-top: 6rem;
     background-position: 0 0, center right -8rem;
   }
@@ -183,9 +182,7 @@
     margin: 0 auto;
   }
 
-  .bannerTkd,
-  .bannerDojang,
-  .bannerContact {
+  .bannerPage {
     background-position: 0 0, center right -5rem;
   }
 }
@@ -195,9 +192,7 @@
     padding-bottom: 14rem;
   }
 
-  .bannerTkd,
-  .bannerDojang,
-  .bannerContact {
+  .bannerPage {
     background-position: 0 0, center right -3rem;
   }
 
@@ -217,9 +212,7 @@
     background-position: center right;
   }
 
-  .bannerTkd,
-  .bannerDojang,
-  .bannerContact {
+  .bannerPage {
     background-position: 0 0, center right;
   }
 }
