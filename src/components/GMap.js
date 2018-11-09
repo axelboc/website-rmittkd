@@ -65,7 +65,7 @@ GMap.defaultProps = {
 GMap.propTypes = {
   detailled: PropTypes.bool,
   dimensions: PropTypes.arrayOf(PropTypes.number).isRequired,
-  focus: PropTypes.oneOf(PropTypes.string, PropTypes.bool),
+  focus: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   addresses: PropTypes.arrayOf(PropTypes.string).isRequired,
 }
 

@@ -7,15 +7,20 @@
   composes: fees;
 }
 
+.optionWrap {
+  margin-bottom: 1.5rem;
+  display: flex;
+}
+
 .option {
+  flex: 1 0 auto;
   display: flex;
   flex-direction: column;
-  margin-bottom: 1.5rem;
   background-color: #000;
+}
 
-  &:nth-child(2) > .group {
-    background-color: #a00309;
-  }
+.optionWrap:nth-child(2) .group {
+  background-color: #a00309;
 }
 
 .group {
@@ -28,7 +33,7 @@
 }
 
 .content {
-  flex: 1;
+  flex: 1 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -92,10 +97,10 @@
     margin-right: auto;
   }
 
-  .option {
-    flex: 1 0 0;
-    margin-left: .75rem;
-    margin-right: .75rem;
+  .optionWrap {
+    flex: 1 0 auto;
+    width: 50%;
+    padding: 0 .75rem;
 
     &:nth-child(3):last-child {
       max-width: 14.5rem;
@@ -130,13 +135,13 @@
     margin-right: -.75rem;
   }
 
-  .option {
-    margin: 0 1.5rem;
-    border-bottom: .375rem solid rgba(160, 3, 9, .7);
+  .optionWrap {
+    width: auto;
+    margin-bottom: 0;
+    padding: 0 1.5rem;
     transform: scale(.95);
 
     &:nth-child(2) {
-      border-bottom-color: #a00309;
       transform: scale(1.025);
     }
 
@@ -145,8 +150,16 @@
     }
   }
 
-  .feesTight > .option {
-    margin: 0 .75rem;
+  .feesTight > .optionWrap {
+    padding: 0 .75rem;
+  }
+
+  .option {
+    border-bottom: .375rem solid rgba(160, 3, 9, .7);
+  }
+
+  .optionWrap:nth-child(2) .option {
+    border-bottom-color: #a00309;
   }
 
   .free {

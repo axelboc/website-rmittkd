@@ -9,7 +9,7 @@
 
 @media (min-width: 60em) {
   .clubsGroup {
-    flex: 1 1 0;
+    flex: 1 1 0%;
     min-width: 0;
     padding: 0 1rem 1.5rem;
 

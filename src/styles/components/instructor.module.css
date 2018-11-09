@@ -50,6 +50,7 @@
   /* highlight first two unless total is divisible by three */
   .instructor:not([data-total-div3]):nth-child(-n + 2),
   .instructor[data-total="3"] { /* but highlight all if total is three */
-    flex-basis: 50%;
+    flex-basis: auto;
+    width: 50%;
   }
 }
