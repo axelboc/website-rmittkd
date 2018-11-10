@@ -3,10 +3,6 @@
   align-items: flex-start;
   max-width: 28rem;
   margin: 2.5rem auto 1.25rem;
-
-  @media (min-width: 40em) {
-    max-width: 50rem;
-  }
 }
 
 .map {
@@ -14,10 +10,6 @@
   flex: 4 1 0%;
   max-width: 341px;
   background-color: #021019;
-
-  @media (min-width: 40em) {
-    display: block;
-  }
 }
 
 .content {
@@ -33,21 +25,11 @@
   font-size: 150%;
   font-weight: normal;
   border-bottom: .25rem solid #a00309;
-
-  @media (min-width: 26em) {
-    padding-left: 1.75rem;
-    padding-right: 1.75rem;
-  }
 }
 
 .details {
   flex: 1 0 auto;
   padding: 1.5rem 1.5rem;
-
-  @media (min-width: 26em) {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
 }
 
 .icon {
@@ -84,4 +66,26 @@
 
 .btn {
   margin: .625rem 0 .5rem;
+}
+
+@media (min-width: 26em) {
+  .suburb {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .details {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (min-width: 40em) {
+  .location {
+    max-width: 50rem;
+  }
+
+  .map {
+    display: block;
+  }
 }

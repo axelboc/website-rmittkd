@@ -4,10 +4,6 @@
 
 .spaced {
   padding: 3rem 0;
-
-  @media (min-width: 45em) {
-    padding: 4.5rem 0;
-  }
 }
 
 .inner {
@@ -36,5 +32,11 @@
     border-radius: 2px;
     margin: 2.25rem auto calc(2.25rem + .25rem); /* adjust for intro line-height */
     opacity: .3;
+  }
+}
+
+@media (min-width: 45em) {
+  .spaced {
+    padding: 4.5rem 0;
   }
 }

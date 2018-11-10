@@ -51,6 +51,12 @@
   transition: transform .2s ease;
 }
 
+@media (min-width: 30em) {
+  .link {
+    font-size: 80%;
+  }
+}
+
 @media (min-width: 75em) {
   .header {
     font-size: 70%;
