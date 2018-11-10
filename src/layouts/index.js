@@ -17,7 +17,6 @@ function Layout(props) {
           prefix: 'og: http://ogp.me/ns#',
         }}
         meta={[
-          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
           { property: 'og:locale', content: 'en_GB' },
         ]}
         link={[

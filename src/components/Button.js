@@ -10,10 +10,7 @@ function Button(props) {
   const { to, centred, children } = props
 
   const Anchor = (
-    <a className={styles.btn} href={to}>
-      {children}
-      <span className={styles.arrow}>🡒</span>
-    </a>
+    <a className={styles.btn} href={to}>{children}</a>
   )
 
   return !centred ? Anchor : (

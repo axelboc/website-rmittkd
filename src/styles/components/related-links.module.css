@@ -46,16 +46,11 @@
   overflow: hidden;
 }
 
-.arrow {
-  margin-left: 1em;
-  transition: transform .1s ease-out;
-}
-
 .link:hover > .label {
   background-color: black;
 
-  & > .arrow {
-    transform: translateX(20%);
+  &::after {
+    transform: translateX(.25em);
   }
 }
 

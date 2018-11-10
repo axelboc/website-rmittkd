@@ -43,6 +43,7 @@
 }
 
 .linkIcon {
+  flex: 0 0 auto;
   margin-top: .125em;
   margin-left: .75em;
   opacity: .9;

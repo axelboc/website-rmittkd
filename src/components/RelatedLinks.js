@@ -23,10 +23,7 @@ function RelatedLinks(props) {
               to={path}
               style={{ backgroundImage: `url('${src}')` }}
             >
-              <span className={styles.label}>
-                {title}
-                <span className={styles.arrow}>🡒</span>
-              </span>
+              <span className={styles.label}>{title}</span>
             </Link>
           </li>
         )

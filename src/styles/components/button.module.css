@@ -14,20 +14,20 @@
   outline-offset: 2px;
   outline-color: white;
   transition: background-color .2s ease-out;
-}
 
-.arrow {
-  margin-left: 1em;
-  font-size: 110%;
-  line-height: 1;
-  transition: transform .2s ease-out;
+  &::after {
+    content: '\276F';
+    margin-left: 1.25em;
+    font-size: 75%;
+    transition: transform .2s ease-out;
+  }
 }
 
 .btn:hover {
   background-color: white;
   text-decoration: none;
 
-  & > .arrow {
-    transform: translateX(20%);
+  &::after {
+    transform: translateX(.25em);
   }
 }
