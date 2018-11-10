@@ -1,4 +1,6 @@
-.instructor {}
+.instructor:not(:last-child) {
+  margin-bottom: 3rem;
+}
 
 .photo {
   border-bottom: .375rem solid #a00309;
@@ -14,13 +16,13 @@
 
 .numeral {
   color: #c3a511;
-  font-weight: 900;
+  font-weight: 600;
 }
 
 .sep {
-  margin: 0 .5em;
+  margin: 0 .25em;
   opacity: .85;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .bio {
@@ -32,6 +34,14 @@
     flex: 0 1 50%;
     max-width: 35em;
     padding: 0 1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .sep {
+    margin: 0 .5em;
   }
 }
 

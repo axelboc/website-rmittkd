@@ -31,7 +31,7 @@
   padding: .125rem .75rem .25rem;
   text-transform: uppercase;
   font-size: 150%;
-  font-weight: 600;
+  font-weight: normal;
   border-bottom: .25rem solid #a00309;
 
   @media (min-width: 26em) {

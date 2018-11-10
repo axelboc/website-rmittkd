@@ -1,11 +1,17 @@
 .question {
   max-width: 35em;
-  margin: 0 auto 2.25rem;
+  margin: 0 auto 1.75rem;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, .3);
 }
 
 .heading {
   font-size: 110%;
   margin-bottom: .75rem;
+}
+
+.answer {
+  margin-bottom: .375rem;
 }
 
 @supports (display: grid) {
@@ -20,12 +26,6 @@
     flex-direction: column;
     justify-content: center;
     margin-bottom: 0;
-    padding: 1.5rem;
-    background-color: rgba(0, 0, 0, .3);
-  }
-
-  .answer {
-    margin-bottom: .375rem;
   }
 
   @media (min-width: 30em) {

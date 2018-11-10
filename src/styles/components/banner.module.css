@@ -1,5 +1,6 @@
 .banner {
   position: relative;
+  min-height: 26rem;
   padding: 4.5rem 1.5rem 3rem; /* clear logo */
   z-index: 0;
 
@@ -16,11 +17,10 @@
 
 .bannerHome {
   composes: banner;
-  background: #000 url('../../images/heros/hero.jpg') center / auto 100% no-repeat;
-  min-height: 24rem;
+  background: black url('../../images/heros/hero.jpg') center / auto 100% no-repeat;
 
   &::before {
-    background-color: #000;
+    background-color: black;
     opacity: .75;
   }
 }
@@ -38,19 +38,19 @@
 .bannerTkd {
   composes: bannerPage;
   background: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
-    #000 url('../../images/heros/tkd.jpg') center / auto 100% no-repeat;
+    black url('../../images/heros/tkd.jpg') center / auto 100% no-repeat;
 }
 
 .bannerDojang {
   composes: bannerPage;
   background: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
-    #000 url('../../images/heros/dojang.jpg') center / auto 100% no-repeat;
+    black url('../../images/heros/dojang.jpg') center / auto 100% no-repeat;
 }
 
 .bannerContact {
   composes: bannerPage;
   background: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
-    #000 url('../../images/heros/contact.jpg') center / auto 100% no-repeat;
+    black url('../../images/heros/contact.jpg') center / auto 100% no-repeat;
 }
 
 @supports (background-blend-mode: lighten) {
@@ -61,7 +61,7 @@
 
 .heading {
   font-size: 190%;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -71,12 +71,11 @@
   padding: .125rem .5rem;
   background-color: #a00309;
   font-size: 130%;
-  font-weight: 100;
   text-transform: uppercase;
 }
 
 .intro {
-  max-width: 25rem;
+  max-width: 27rem;
 
   & > p:last-child {
     margin-bottom: 0;
@@ -89,6 +88,7 @@
 
 .bannerHome .intro {
   max-width: 18rem;
+  line-height: 1.75;
 }
 
 @media (min-width: 26em) {
@@ -101,7 +101,7 @@
   }
 
   .sub {
-    font-size: 160%;
+    padding: .25rem .75rem;
   }
 
   .bannerHome .heading {
@@ -112,7 +112,7 @@
 @media (min-width: 40em) {
   .banner {
     padding-top: 5rem;
-    padding-bottom: 5.75rem;
+    padding-bottom: 4.5rem;
 
     &::before {
       opacity: .75;
@@ -134,8 +134,9 @@
   }
 
   .sub {
-    font-size: 175%;
-    padding: .25rem 1.25rem;
+    font-size: 160%;
+    font-weight: 200;
+    padding: .125rem 1rem;
   }
 
   .bannerHome .heading {
@@ -144,7 +145,7 @@
   }
 
   .bannerHome .intro {
-    max-width: 22rem;
+    max-width: 24rem;
   }
 }
 
@@ -165,10 +166,6 @@
     padding-right: 3rem;
   }
 
-  .banner::before {
-    content: none;
-  }
-
   .bannerPage {
     padding-top: 6rem;
     background-position: 0 0, center right -8rem;
@@ -176,6 +173,10 @@
 }
 
 @media (min-width: 60em) {
+  .banner::before {
+    content: none;
+  }
+
   .inner {
     box-sizing: content-box;
     max-width: 60rem;
@@ -197,7 +198,7 @@
   }
 
   .bannerHome .heading {
-    font-size: 350%;
+    font-size: 325%;
   }
 }
 

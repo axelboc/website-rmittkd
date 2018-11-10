@@ -9,10 +9,10 @@
   padding: .5rem 1.125rem .5rem 1rem;
   background-color: rgba(255, 255, 255, .8);
   border-radius: .375em;
-  color: #000;
+  color: black;
   white-space: nowrap;
   outline-offset: 2px;
-  outline-color: #fff;
+  outline-color: white;
   transition: background-color .2s ease-out;
 }
 
@@ -24,7 +24,7 @@
 }
 
 .btn:hover {
-  background-color: #fff;
+  background-color: white;
   text-decoration: none;
 
   & > .arrow {

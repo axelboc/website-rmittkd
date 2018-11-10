@@ -3,7 +3,7 @@
 }
 
 .item {
-  max-width: 20rem;
+  max-width: 21rem;
   margin: 1.5rem auto 0;
 
   &:first-child {
@@ -22,7 +22,7 @@
   overflow: hidden;
   margin: 0 auto;
   padding-top: 56.25%; /* 16/9 */
-  background-color: #000;
+  background-color: black;
   background-size: cover;
   background-clip: padding-box;
   border-radius: .5rem;
@@ -31,17 +31,19 @@
   transition: border-color .2s ease-out;
 
   &:hover {
-    border-color: #fff;
+    border-color: white;
   }
 }
 
 .label {
   composes: btn from './button.module.css';
   position: absolute;
-  bottom: 1rem;
-  left: 1rem;
+  bottom: .75rem;
+  left: .75rem;
+  max-width: calc(100% - 1.5rem);
   background-color: rgba(0, 0, 0, .9);
-  color: #fff;
+  color: white;
+  overflow: hidden;
 }
 
 .arrow {
@@ -50,7 +52,7 @@
 }
 
 .link:hover > .label {
-  background-color: #000;
+  background-color: black;
 
   & > .arrow {
     transform: translateX(20%);
@@ -62,6 +64,7 @@
     display: flex;
     justify-content: center;
     margin: 0 -.75rem .25rem;
+    font-size: 95%;
   }
 
   .item {
@@ -72,7 +75,7 @@
   }
 }
 
-@media (min-width: 60em) {
+@media (min-width: 65em) {
   .item {
     width: 33.33%;
     max-width: none;

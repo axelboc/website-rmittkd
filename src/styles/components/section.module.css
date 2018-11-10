@@ -17,7 +17,7 @@
 .heading {
   margin-bottom: .75rem;
   font-size: 225%;
-  font-weight: 100;
+  font-weight: 200;
   text-align: center;
   text-transform: uppercase;
 }
@@ -32,7 +32,7 @@
     display: block;
     width: 9rem;
     height: 3px;
-    background-color: #fff;
+    background-color: white;
     border-radius: 2px;
     margin: 2.25rem auto calc(2.25rem + .25rem); /* adjust for intro line-height */
     opacity: .3;

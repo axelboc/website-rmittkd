@@ -3,8 +3,8 @@
   z-index: 1; /* move logo above banner */
   padding: 0 .5rem;
   font-size: 95%;
-  background-color: #fff;
-  box-shadow: 0 .25rem .625rem .125rem #000;
+  background-color: white;
+  box-shadow: 0 .25rem .625rem .125rem black;
   color: #231f20;
 }
 
@@ -106,7 +106,6 @@
   .nav {
     flex-basis: 0;
     margin-left: .75rem;
-    margin-bottom: .75rem;
   }
 
   .navList {
@@ -116,10 +115,6 @@
 }
 
 @media (min-width: 30em) {
-  .header {
-    font-size: 100%;
-  }
-
   .nav {
     margin-left: 1.25rem;
   }
@@ -145,6 +140,8 @@
 
   .nav {
     flex: 0 0 auto;
+    margin-left: 0;
+    margin-bottom: .75rem;
   }
 
   .navList {
@@ -173,14 +170,14 @@
 
 @media (min-width: 55em) {
   .header {
-    padding: 0 1.5rem
+    padding: 0 1.5rem;
   }
 
   .logoLink {
     margin-bottom: -4rem;
 
     & > img {
-      width: 8em;
+      width: 8rem;
     }
   }
 }

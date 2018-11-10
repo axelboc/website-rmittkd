@@ -5,14 +5,20 @@
 }
 
 html {
-  color: #fff;
+  color: white;
   height: 100%;
-  font-family: 'Montserra', 'Frutiger', 'Segoe UI', 'Helvetica', Arial, sans-serif;
-  font-size: 16px;
+  font-family: 'Montserrat', 'Frutiger', 'Segoe UI', 'Helvetica', Arial, 'Arial Unicode MS', sans-serif;
+  font-size: 15px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
   background-color: #011627;
   background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
+}
+
+@media (min-width: 30em) {
+  html {
+    font-size: 16px;
+  }
 }
 
 @media (min-width: 75em) {
@@ -24,6 +30,10 @@ html {
 body {
   min-height: 100%;
   margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, strong, a {
+  font-weight: 600;
 }
 
 h1, h2, h3, h4, h5, h6, p, ul, ol, dl, hr, pre,
@@ -44,7 +54,6 @@ img {
 
 a {
   color: inherit;
-  font-weight: 600;
 
   &:hover,
   &:focus {

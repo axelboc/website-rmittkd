@@ -4,7 +4,7 @@
   align-items: center;
   margin-bottom: .5rem;
   font-size: 85%;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1;
   text-align: center;
 }
@@ -28,7 +28,7 @@
   composes: ellipsis from global;
   margin-bottom: 0;
   font-size: 95%;
-  font-weight: bold;
+  font-weight: 600;
 }
 
 .link {
