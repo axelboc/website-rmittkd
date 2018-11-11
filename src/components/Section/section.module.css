@@ -50,7 +50,7 @@
   }
 }
 
-@media (min-width: 45em) {
+@media (width >= 45em) {
   .innerSpaced {
     padding-top: 4.5rem;
     padding-bottom: 4.75rem;

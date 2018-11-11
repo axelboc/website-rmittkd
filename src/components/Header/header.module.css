@@ -80,7 +80,7 @@
   transform: scaleX(0);
 }
 
-@media (min-width: 26em) {
+@media (width >= 26em) {
   .inner {
     padding-top: .5rem;
     padding-bottom: .5rem;
@@ -103,13 +103,13 @@
   }
 }
 
-@media (min-width: 30em) {
+@media (width >= 30em) {
   .nav {
     margin-left: 1.25rem;
   }
 }
 
-@media (min-width: 40em) {
+@media (width >= 40em) {
   .homeHeader {
     position: absolute;
     left: 0;
@@ -139,7 +139,7 @@
   }
 }
 
-@media (min-width: 45em) {
+@media (width >= 45em) {
   .logoLink {
     margin-bottom: -3.5rem;
 
@@ -158,7 +158,7 @@
   }
 }
 
-@media (min-width: 55em) {
+@media (width >= 55em) {
   .header {
     padding: 0 1.5rem;
   }

@@ -19,7 +19,7 @@
   border: none;
 }
 
-@media (min-width: 26em) {
+@media (width >= 26em) {
   .embed {
     margin: 0;
     border: 2px solid rgba(255, 255, 255, .2);

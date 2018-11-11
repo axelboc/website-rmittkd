@@ -1,4 +1,4 @@
-@media (min-width: 40em) {
+@media (width >= 40em) {
   .instructors {
     display: flex;
     flex-wrap: wrap;
@@ -8,7 +8,7 @@
   }
 }
 
-@media (min-width: 60em) {
+@media (width >= 60em) {
   .clubs {
     display: flex;
     margin: 0 -1rem;

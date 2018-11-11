@@ -30,7 +30,7 @@
   margin-top: 2rem;
 }
 
-@media (min-width: 30em) {
+@media (width >= 30em) {
   .list {
     display: flex;
     flex-wrap: wrap;
@@ -47,7 +47,7 @@
   }
 }
 
-@media (min-width: 60em) {
+@media (width >= 60em) {
   .clubsGroup {
     flex: 1 1 0%;
     min-width: 0;

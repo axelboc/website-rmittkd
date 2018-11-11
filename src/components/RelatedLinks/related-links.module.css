@@ -54,7 +54,7 @@
   }
 }
 
-@media (min-width: 40em) {
+@media (width >= 40em) {
   .list {
     display: flex;
     justify-content: center;
@@ -70,7 +70,7 @@
   }
 }
 
-@media (min-width: 65em) {
+@media (width >= 65em) {
   .item {
     width: 33.33%;
     max-width: none;

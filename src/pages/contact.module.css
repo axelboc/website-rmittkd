@@ -28,13 +28,13 @@
     margin-bottom: 0;
   }
 
-  @media (min-width: 30em) {
+  @media (width >= 30em) {
     .questions {
       grid-template-columns: repeat(auto-fill, minmax(25rem, 1fr));
     }
   }
 
-  @media (min-width: 65em) {
+  @media (width >= 65em) {
     .questions {
       grid-gap: 2.25rem;
     }

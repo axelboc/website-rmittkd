@@ -70,7 +70,7 @@
   margin: .625rem 0 .5rem;
 }
 
-@media (min-width: 26em) {
+@media (width >= 26em) {
   .suburb {
     padding-left: 1.75rem;
     padding-right: 1.75rem;
@@ -82,7 +82,7 @@
   }
 }
 
-@media (min-width: 40em) {
+@media (width >= 40em) {
   .location {
     max-width: 50rem;
   }

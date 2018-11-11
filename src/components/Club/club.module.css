@@ -54,13 +54,13 @@
   opacity: .85;
 }
 
-@media (min-width: 30em) {
+@media (width >= 30em) {
   .link {
     font-size: 80%;
   }
 }
 
-@media (min-width: 75em) {
+@media (width >= 75em) {
   .header {
     font-size: 70%;
   }

@@ -7,7 +7,7 @@
   padding-left: 1rem;
 }
 
-@media (min-width: 26em) {
+@media (width >= 26em) {
   .max {
     padding-right: 1.5rem;
     padding-left: 1.5rem;

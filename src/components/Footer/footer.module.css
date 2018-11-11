@@ -73,7 +73,7 @@
   }
 }
 
-@media (min-width: 45em) {
+@media (width >= 45em) {
   .footer {
     padding: 1.75rem 0;
   }
@@ -95,7 +95,7 @@
   }
 }
 
-@media (max-width: 50em) {
+@media (width < 50em) {
   .logoLink > img {
     width: auto;
     height: 5rem;
@@ -106,19 +106,19 @@
   }
 }
 
-@media (min-width: 50em) {
+@media (width >= 50em) {
   .socialMedia {
     font-size: 120%;
   }
 }
 
-@media (min-width: 60em) {
+@media (width >= 60em) {
   .orgLogoItem {
     margin: .5rem 1rem;
   }
 }
 
-@media (min-width: 75em) {
+@media (width >= 75em) {
   .socialMedia {
     font-size: 100%;
   }

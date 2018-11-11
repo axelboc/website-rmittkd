@@ -87,13 +87,13 @@
   line-height: 1.25;
 }
 
-@media (min-width: 30em) {
+@media (width >= 30em) {
   .content {
     font-size: 110%;
   }
 }
 
-@media (min-width: 35em) {
+@media (width >= 35em) {
   .fees {
     display: flex;
     justify-content: center;
@@ -143,7 +143,7 @@
 }
 
 
-@media (min-width: 60em) {
+@media (width >= 60em) {
   .fees {
     flex-wrap: nowrap;
     max-width: none;
@@ -194,7 +194,7 @@
   }
 }
 
-@media (min-width: 75em) {
+@media (width >= 75em) {
   .feesTight {
     margin-left: -.75rem;
     margin-right: -.75rem;

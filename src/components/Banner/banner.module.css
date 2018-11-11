@@ -91,7 +91,7 @@
   line-height: 1.75;
 }
 
-@media (min-width: 26em) {
+@media (width >= 26em) {
   .banner {
     padding: 4rem 2rem 5rem;
   }
@@ -109,7 +109,7 @@
   }
 }
 
-@media (min-width: 40em) {
+@media (width >= 40em) {
   .banner {
     padding-top: 5rem;
     padding-bottom: 4.5rem;
@@ -149,7 +149,7 @@
   }
 }
 
-@media (min-width: 45em) {
+@media (width >= 45em) {
   .banner {
     padding-top: 5.75rem;
   }
@@ -160,7 +160,7 @@
   }
 }
 
-@media (min-width: 55em) {
+@media (width >= 55em) {
   .banner {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -172,7 +172,7 @@
   }
 }
 
-@media (min-width: 60em) {
+@media (width >= 60em) {
   .banner::before {
     content: none;
   }
@@ -188,7 +188,7 @@
   }
 }
 
-@media (min-width: 65em) {
+@media (width >= 65em) {
   .bannerHome {
     padding-bottom: 14rem;
   }
@@ -202,13 +202,13 @@
   }
 }
 
-@media (min-width: 75em) {
+@media (width >= 75em) {
   .banner {
     min-height: 28.5rem;
   }
 }
 
-@media (min-width: 80em) {
+@media (width >= 80em) {
   .bannerHome {
     background-position: center right;
   }
