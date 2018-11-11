@@ -19,37 +19,37 @@ function Header(props) {
             <li>
               <Link
                 className={styles.navLink}
-                activeClassName={styles.activeNavLink}
+                activeClassName={styles.active}
                 to="/"
               >
-                <span className={styles.navLinkInner}>Home</span>
+                <span className={styles.navLinkText}>Home</span>
               </Link>
             </li>
             <li>
               <Link
                 className={styles.navLink}
-                activeClassName={styles.activeNavLink}
+                activeClassName={styles.active}
                 to="/tkd"
               >
-                <span className={styles.navLinkInner}>What is Taekwon-Do?</span>
+                <span className={styles.navLinkText}>What is Taekwon-Do?</span>
               </Link>
             </li>
             <li>
               <Link
                 className={styles.navLink}
-                activeClassName={styles.activeNavLink}
+                activeClassName={styles.active}
                 to="/dojang"
               >
-                <span className={styles.navLinkInner}>Our Dojang</span>
+                <span className={styles.navLinkText}>Our Dojang</span>
               </Link>
             </li>
             <li>
               <Link
                 className={styles.navLink}
-                activeClassName={styles.activeNavLink}
+                activeClassName={styles.active}
                 to="/contact"
               >
-                <span className={styles.navLinkInner}>Get in touch</span>
+                <span className={styles.navLinkText}>Get in touch</span>
               </Link>
             </li>
           </ul>

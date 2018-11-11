@@ -53,43 +53,31 @@
   text-decoration: none;
 }
 
-.navLinkInner {
+.navLinkText {
   position: relative;
   display: inline-flex;
 
-  &::before,
   &::after {
     content: '';
     position: absolute;
-    bottom: -.325rem;
-    left: -.2px;
-    right: -.2px;
-    height: 4px;
-    border-radius: 2px;
+    bottom: -.25rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 1px;
     backface-visibility: hidden;
-  }
-
-  &::before {
-    display: none;
-    background-color: #231f20;
-    opacity: .5;
-  }
-
-  &::after {
-    background-color: #231f20;
-    transform: scaleX(0);
+    background-color: #777;
     transform-origin: left center;
     transition: transform .15s ease-out;
   }
 }
 
-.activeNavLink > .navLinkInner::before {
-  display: block;
+.navLink:not(.active):hover > .navLinkText::after {
+  transition-duration: .25s;
 }
 
-.navLink:hover > .navLinkInner::after {
-  transform: scaleX(1);
-  transition-duration: .25s;
+.navLink:not(:hover, .active) > .navLinkText::after {
+  transform: scaleX(0);
 }
 
 @media (min-width: 26em) {
