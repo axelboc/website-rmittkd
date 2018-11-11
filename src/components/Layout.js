@@ -37,11 +37,11 @@ function Layout(props) {
   )
 }
 
-GMap.defaultProps = {
+Layout.defaultProps = {
   isHome: false,
 }
 
-GMap.propTypes = {
+Layout.propTypes = {
   isHome: PropTypes.bool,
   children: PropTypes.node,
 }

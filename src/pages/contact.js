@@ -50,7 +50,7 @@ export default function DojangPage(props) {
 
 export const query = graphql`
   query ContactQuery {
-    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/contact\\.md$/"}}) {
+    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/\\/contact.md$/"}}) {
       edges {
         node {
           frontmatter {

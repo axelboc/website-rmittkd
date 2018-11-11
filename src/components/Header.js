@@ -20,7 +20,6 @@ function Header(props) {
               <Link
                 className={styles.navLink}
                 activeClassName={styles.activeNavLink}
-                exact
                 to="/"
               >
                 <span className={styles.navLinkInner}>Home</span>
@@ -30,7 +29,6 @@ function Header(props) {
               <Link
                 className={styles.navLink}
                 activeClassName={styles.activeNavLink}
-                exact
                 to="/tkd"
               >
                 <span className={styles.navLinkInner}>What is Taekwon-Do?</span>
@@ -40,7 +38,6 @@ function Header(props) {
               <Link
                 className={styles.navLink}
                 activeClassName={styles.activeNavLink}
-                exact
                 to="/dojang"
               >
                 <span className={styles.navLinkInner}>Our Dojang</span>
@@ -50,7 +47,6 @@ function Header(props) {
               <Link
                 className={styles.navLink}
                 activeClassName={styles.activeNavLink}
-                exact
                 to="/contact"
               >
                 <span className={styles.navLinkInner}>Get in touch</span>

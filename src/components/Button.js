@@ -1,9 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
-
 import styles from '../styles/components/button.module.css'
 
 function Button(props) {

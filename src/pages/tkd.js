@@ -32,7 +32,12 @@ export default function TkdPage(props) {
       />
       <Section useDiv spaced bg="alt">
         <div className={styles.embed}>
-          <iframe className={styles.iframe} src={videoSrc} allowFullScreen></iframe>
+          <iframe
+            className={styles.iframe}
+            src={videoSrc}
+            title="video"
+            allowFullScreen
+          ></iframe>
         </div>
       </Section>
       <Section useDiv spaced>
@@ -44,7 +49,7 @@ export default function TkdPage(props) {
 
 export const query = graphql`
   query TkdQuery {
-    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/tkd\\.md$/"}}) {
+    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/\\/tkd.md$/"}}) {
       edges {
         node {
           frontmatter {

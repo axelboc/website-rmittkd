@@ -58,7 +58,7 @@ export default function DojangPage(props) {
 
 export const query = graphql`
   query DojangQuery {
-    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/dojang\\.md$/"}}) {
+    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/\\/dojang.md$/"}}) {
       edges {
         node {
           frontmatter {

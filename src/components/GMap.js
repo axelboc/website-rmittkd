@@ -7,7 +7,6 @@ const GMAPS_API_URL = 'https://maps.googleapis.com/maps/api/staticmap'
 
 function GMap(props) {
   const { detailled, dimensions, focus, addresses } = props
-  const [width, height] = dimensions
 
   // https://snazzymaps.com/style/16237/faded-opaque-with-natural-tones
   const mapStyles = [
@@ -50,7 +49,7 @@ function GMap(props) {
       className={styles.map}
       style={{
         backgroundImage: `url(${GMAPS_API_URL}?${mapParams})`,
-        height
+        height: dimensions[1]
       }}
       alt=""
     />

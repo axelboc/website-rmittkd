@@ -10,8 +10,6 @@ import Fees from '../components/Fees'
 import Button from '../components/Button'
 import RelatedLinks from '../components/RelatedLinks'
 
-import styles from '../styles/pages/index.module.css'
-
 export default class IndexPage extends React.Component {
   render() {
     const { data, location: { pathname } } = this.props
@@ -50,7 +48,7 @@ export default class IndexPage extends React.Component {
 
 export const query = graphql`
   query IndexQuery {
-    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/index\\.md$/"}}) {
+    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/\\/index.md$/"}}) {
       edges {
         node {
           frontmatter {
