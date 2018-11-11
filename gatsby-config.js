@@ -6,15 +6,15 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/static/uploads`,
-        name: 'uploads',
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages`,
+        name: 'uploads',
+        path: `${__dirname}/static/uploads`,
       },
     },
     'gatsby-plugin-netlify-cms-paths',
@@ -26,6 +26,9 @@ module.exports = {
         ],
       },
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-nprogress',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
@@ -33,8 +36,5 @@ module.exports = {
         htmlTitle: 'Content Manager - RMIT ITF Taekwon-Do'
       },
     },
-    `gatsby-transformer-sharp`,
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-nprogress',
   ],
 }

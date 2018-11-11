@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faMapMarkerAlt from '@fortawesome/fontawesome-free-solid/faMapMarkerAlt'
-import faCalendarAlt from '@fortawesome/fontawesome-free-solid/faCalendarAlt'
-import faClock from '@fortawesome/fontawesome-free-solid/faClock'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
+import { faClock } from '@fortawesome/free-solid-svg-icons'
 
 import Button from './Button'
 import GMap from './GMap'

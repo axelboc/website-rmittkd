@@ -1,4 +1,5 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
 import PageMeta from '../components/PageMeta'
 import Banner from '../components/Banner'
@@ -68,8 +69,8 @@ export const query = graphql`
               bio
               photo {
                 childImageSharp {
-                  sizes(maxWidth: 574) {
-                    ...GatsbyImageSharpSizes
+                  fluid(maxWidth: 574) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -92,7 +93,7 @@ export const query = graphql`
               path
               img {
                 childImageSharp {
-                  sizes(maxWidth: 338) {
+                  fluid(maxWidth: 338) {
                     src
                   }
                 }

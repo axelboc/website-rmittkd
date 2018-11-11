@@ -1,8 +1,8 @@
 import React from 'react'
 
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faFacebookSquare from '@fortawesome/fontawesome-free-brands/faFacebookSquare'
-import faInstagram from '@fortawesome/fontawesome-free-brands/faInstagram'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
+import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
 import styles from '../styles/components/footer.module.css'
 import logoRmitLink from '../images/logos/logo-rmit-link.png'

@@ -1,9 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 
-import FontAwesomeIcon from '@fortawesome/react-fontawesome'
-import faAngleDoubleRight from '@fortawesome/fontawesome-free-solid/faAngleDoubleRight'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngleDoubleRight } from '@fortawesome/free-solid-svg-icons'
 
 import styles from '../styles/components/related-links.module.css'
 
@@ -14,7 +14,7 @@ function RelatedLinks(props) {
     <ul className={styles.list}>
       {items.map(item => {
         const { title, path, img } = item
-        const { childImageSharp: { sizes: { src } } } = img;
+        const { childImageSharp: { fluid: { src } } } = img;
 
         return (
           <li key={title} className={styles.item}>
