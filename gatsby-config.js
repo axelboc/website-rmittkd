@@ -9,7 +9,10 @@ module.exports = {
           require('postcss-preset-env')({
             autoprefixer: false, // already in Gatsby
             features: {
-              'nesting-rules': true
+              'nesting-rules': true,
+              'custom-properties': {
+                importFrom: 'src/styles/_vars.css'
+              }
             }
           }),
           require('postcss-browser-reporter')(),
