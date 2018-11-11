@@ -1,13 +1,28 @@
 .section {
-  padding: 2.25rem 0;
+  background-color: #011627;
+  background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
 }
 
-.spaced {
-  padding: 3rem 0;
+.sectionAlt1 {
+  composes: section;
+  background-color: #202030;
+}
+
+.sectionAlt2 {
+  composes: section;
+  background-color: #241623;
 }
 
 .inner {
   composes: max from global;
+  padding-top: 2.25rem;
+  padding-bottom: 2.25rem;
+}
+
+.innerSpaced {
+  composes: inner;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 }
 
 .heading {
@@ -36,7 +51,8 @@
 }
 
 @media (min-width: 45em) {
-  .spaced {
-    padding: 4.5rem 0;
+  .innerSpaced {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
   }
 }

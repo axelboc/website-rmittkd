@@ -32,7 +32,7 @@ export default function DojangPage(props) {
         intro={html}
         variant="dojang"
       />
-      <Section heading="Instructors" intro={instructorsIntro} bg="alt">
+      <Section heading="Instructors" intro={instructorsIntro} variant="alt1">
         <div className={styles.instructors}>
           {instructors.map(item => (
             <Instructor
@@ -43,7 +43,7 @@ export default function DojangPage(props) {
           ))}
         </div>
       </Section>
-      <Section heading="Associated clubs" intro={clubsIntro} bg="alt2">
+      <Section heading="Associated clubs" intro={clubsIntro} variant="alt2">
         <div className={styles.clubs}>
           <ClubsGroup heading="Greater Melbourne" clubs={localClubs} />
           <ClubsGroup heading="Australia" clubs={otherClubs} mapFocus={null} />

@@ -32,7 +32,7 @@ export default class IndexPage extends React.Component {
         <Section heading="Train with us" intro={trainIntro}>
           {locations.map(item => <Location key={item.suburb} {...item} />)}
         </Section>
-        <Section heading="Membership fees" intro={feesIntro} bg="alt">
+        <Section heading="Membership fees" intro={feesIntro} variant="alt1">
           <Fees fees={fees} />
           <Button to="https://rmitlink.rmit.edu.au/Clubs/taekwondoitf" centred>
             Choose your membership

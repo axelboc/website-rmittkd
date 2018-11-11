@@ -28,7 +28,7 @@ export default function DojangPage(props) {
         intro={html}
         variant="contact"
       />
-      <Section heading="Frequently Asked Questions" intro={faqIntro} bg="alt">
+      <Section heading="Frequently Asked Questions" intro={faqIntro} variant="alt1">
         <div className={styles.questions}>
           {faq.map(({ question, answer }) => (
             <div class={styles.question}>

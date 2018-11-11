@@ -11,8 +11,7 @@ html {
   font-size: 15px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
-  background-color: #011627;
-  background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
+  background-color: #000;
 }
 
 @media (min-width: 30em) {

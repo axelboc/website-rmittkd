@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 
 import styles from '../styles/components/banner.module.css'
 
-const VARIANT_CLASSES = {
+const VARIANT_STYLES = {
   home: styles.bannerHome,
   tkd: styles.bannerTkd,
   dojang: styles.bannerDojang,
@@ -14,7 +14,7 @@ function Banner(props) {
   const { heading, intro, variant } = props;
 
   const isHome = variant === 'home';
-  const rootClass = VARIANT_CLASSES[variant] || styles.banner;
+  const rootClass = VARIANT_STYLES[variant] || styles.banner;
 
   return (
     <div className={rootClass}>
