@@ -1,4 +1,12 @@
 :root {
-  --lh: 1.5;
-  --vr: 1.5rem;
+  --bg-primary: #011627;
+  --bg-secondary: #202030;
+  --bg-ternary: #241623;
+
+  --highlight: #a00309;
+  --highlight-faded: rgba(160, 3, 9, .7);
+
+  --dark-text: #202030;
+  --light-grey: #777;
+  --white-faded: rgba(255, 255, 255, .85);
 }

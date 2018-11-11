@@ -1,12 +1,14 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
+import Layout from '../components/Layout'
 import PageMeta from '../components/PageMeta'
-import Banner from '../components/Banner'
-import Section from '../components/Section'
-import Button from '../components/Button'
-import RelatedLinks from '../components/RelatedLinks'
+import Banner from '../components/Banner/Banner'
+import Section from '../components/Section/Section'
+import Button from '../components/Button/Button'
+import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 
-import styles from '../styles/pages/contact.module.css'
+import styles from './contact.module.css'
 
 export default function DojangPage(props) {
   const { data, location: { pathname } } = props
@@ -15,7 +17,7 @@ export default function DojangPage(props) {
   const { metaDescription, faqIntro, faq, relatedLinks } = frontmatter
 
   return (
-    <div>
+    <Layout>
       <PageMeta
         title="Get in touch"
         description={metaDescription}
@@ -26,7 +28,7 @@ export default function DojangPage(props) {
         intro={html}
         variant="contact"
       />
-      <Section heading="Frequently Asked Questions" intro={faqIntro} bg="alt">
+      <Section heading="Frequently Asked Questions" intro={faqIntro} variant="secondary">
         <div className={styles.questions}>
           {faq.map(({ question, answer }) => (
             <div class={styles.question}>
@@ -42,13 +44,13 @@ export default function DojangPage(props) {
       <Section useDiv spaced>
         <RelatedLinks items={relatedLinks} />
       </Section>
-    </div>
+    </Layout>
   )
 }
 
 export const query = graphql`
   query ContactQuery {
-    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/contact\\.md$/"}}) {
+    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/\\/contact.md$/"}}) {
       edges {
         node {
           frontmatter {
@@ -63,7 +65,7 @@ export const query = graphql`
               path
               img {
                 childImageSharp {
-                  sizes(maxWidth: 338) {
+                  fluid(maxWidth: 338) {
                     src
                   }
                 }

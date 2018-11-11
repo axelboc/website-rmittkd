@@ -1,13 +1,15 @@
 import React from 'react'
+import { graphql } from 'gatsby'
 
+import Layout from '../components/Layout'
 import PageMeta from '../components/PageMeta'
-import Banner from '../components/Banner'
-import Section from '../components/Section'
-import Instructor from '../components/Instructor'
-import ClubsGroup from '../components/ClubsGroup'
-import RelatedLinks from '../components/RelatedLinks'
+import Banner from '../components/Banner/Banner'
+import Section from '../components/Section/Section'
+import Instructor from '../components/Instructor/Instructor'
+import ClubsGroup from '../components/ClubsGroup/ClubsGroup'
+import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 
-import styles from '../styles/pages/dojang.module.css'
+import styles from './dojang.module.css'
 
 export default function DojangPage(props) {
   const { data, location: { pathname } } = props
@@ -19,7 +21,7 @@ export default function DojangPage(props) {
   } = frontmatter
 
   return (
-    <div>
+    <Layout>
       <PageMeta
         title="Our Dojang"
         description={metaDescription}
@@ -30,7 +32,7 @@ export default function DojangPage(props) {
         intro={html}
         variant="dojang"
       />
-      <Section heading="Instructors" intro={instructorsIntro} bg="alt">
+      <Section heading="Instructors" intro={instructorsIntro} variant="secondary">
         <div className={styles.instructors}>
           {instructors.map(item => (
             <Instructor
@@ -41,7 +43,7 @@ export default function DojangPage(props) {
           ))}
         </div>
       </Section>
-      <Section heading="Associated clubs" intro={clubsIntro} bg="alt2">
+      <Section heading="Associated clubs" intro={clubsIntro} variant="ternary">
         <div className={styles.clubs}>
           <ClubsGroup heading="Greater Melbourne" clubs={localClubs} />
           <ClubsGroup heading="Australia" clubs={otherClubs} mapFocus={null} />
@@ -50,13 +52,13 @@ export default function DojangPage(props) {
       <Section useDiv spaced>
         <RelatedLinks items={relatedLinks} />
       </Section>
-    </div>
+    </Layout>
   )
 }
 
 export const query = graphql`
   query DojangQuery {
-    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/dojang\\.md$/"}}) {
+    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/\\/dojang.md$/"}}) {
       edges {
         node {
           frontmatter {
@@ -68,8 +70,8 @@ export const query = graphql`
               bio
               photo {
                 childImageSharp {
-                  sizes(maxWidth: 574) {
-                    ...GatsbyImageSharpSizes
+                  fluid(maxWidth: 574) {
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }
@@ -92,7 +94,7 @@ export const query = graphql`
               path
               img {
                 childImageSharp {
-                  sizes(maxWidth: 338) {
+                  fluid(maxWidth: 338) {
                     src
                   }
                 }

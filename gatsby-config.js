@@ -1,13 +1,20 @@
-const siteMetadata = require('./site-metadata')
-
 module.exports = {
-  siteMetadata,
+  siteMetadata: {},
   plugins: [
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: 'gatsby-plugin-postcss',
       options: {
-        path: `${__dirname}/static/uploads`,
-        name: 'uploads',
+        postCssPlugins: [
+          require('postcss-import')(),
+          require('postcss-preset-env')({
+            autoprefixer: false, // already in Gatsby
+            features: {
+              'nesting-rules': true
+            }
+          }),
+          require('postcss-browser-reporter')(),
+          require('postcss-reporter')(),
+        ],
       },
     },
     {
@@ -15,6 +22,13 @@ module.exports = {
       options: {
         name: 'pages',
         path: `${__dirname}/src/pages`,
+      },
+    },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'uploads',
+        path: `${__dirname}/static/uploads`,
       },
     },
     'gatsby-plugin-netlify-cms-paths',
@@ -26,6 +40,9 @@ module.exports = {
         ],
       },
     },
+    'gatsby-transformer-sharp',
+    'gatsby-plugin-sharp',
+    'gatsby-plugin-nprogress',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
@@ -33,8 +50,5 @@ module.exports = {
         htmlTitle: 'Content Manager - RMIT ITF Taekwon-Do'
       },
     },
-    `gatsby-transformer-sharp`,
-    'gatsby-plugin-sharp',
-    'gatsby-plugin-nprogress',
   ],
 }

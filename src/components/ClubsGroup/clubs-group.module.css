@@ -1,0 +1,60 @@
+.clubsGroup {
+  max-width: 574px;
+  margin: 0 auto 2.25rem;
+
+  &:not(:first-child) {
+    margin-top: 3.5rem;
+  }
+}
+
+.map {
+  margin-bottom: .25rem;
+  background-color: black;
+  border-bottom: .375rem solid var(--highlight);
+}
+
+.heading {
+  margin-top: -.25rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.list {
+  composes: list-reset from global;
+}
+
+.club {
+  margin-top: 2rem;
+}
+
+@media (width >= 30em) {
+  .list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -.75rem;
+  }
+
+  .club {
+    flex: 1 0 auto;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    min-width: 0; /* force long links to be cropped */
+    padding: 0 .75rem;
+  }
+}
+
+@media (width >= 60em) {
+  .clubsGroup {
+    flex: 1 1 0%;
+    min-width: 0;
+    padding: 0 1rem;
+
+    &:not(:first-child) {
+      margin-top: 0;
+    }
+  }
+}

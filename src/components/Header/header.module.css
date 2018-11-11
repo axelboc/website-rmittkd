@@ -1,0 +1,174 @@
+.header {
+  position: relative;
+  z-index: 1; /* move logo above banner */
+  padding: 0 .5rem;
+  font-size: 95%;
+  background-color: white;
+  box-shadow: 0 .25rem .625rem .125rem black;
+  color: var(--dark-text);
+}
+
+.homeHeader {
+  composes: header;
+}
+
+.inner {
+  composes: max from global;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: .75rem;
+}
+
+.logoLink {
+  composes: link-img from global;
+  order: 1;
+  margin-bottom: -3rem;
+
+  & > img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+
+.nav {
+  flex: 1 0 100%;
+  margin-bottom: .5rem;
+}
+
+.navList {
+  composes: list-reset from global;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 20em;
+  margin: 0 auto;
+}
+
+.navLink {
+  display: block;
+  margin: 0 .25rem;
+  padding: .325rem .25rem;
+  text-decoration: none;
+}
+
+.navLinkText {
+  position: relative;
+  display: inline-flex;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -.25rem;
+    left: 0;
+    right: 0;
+    height: 2px;
+    border-radius: 1px;
+    backface-visibility: hidden;
+    background-color: var(--light-grey);
+    transform-origin: left center;
+    transition: transform .15s ease-out;
+  }
+}
+
+.navLink:not(.active):hover > .navLinkText::after {
+  transition-duration: .25s;
+}
+
+.navLink:not(:hover, .active) > .navLinkText::after {
+  transform: scaleX(0);
+}
+
+@media (width >= 26em) {
+  .inner {
+    padding-top: .5rem;
+    padding-bottom: .5rem;
+    align-items: center;
+  }
+
+  .logoLink {
+    order: 0;
+    margin-bottom: 0;
+  }
+
+  .nav {
+    flex-basis: 0;
+    margin-left: .75rem;
+  }
+
+  .navList {
+    justify-content: flex-start;
+    margin: 0;
+  }
+}
+
+@media (width >= 30em) {
+  .nav {
+    margin-left: 1.25rem;
+  }
+}
+
+@media (width >= 40em) {
+  .homeHeader {
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: var(--white-faded);
+  }
+
+  .inner {
+    justify-content: space-between;
+    padding-top: .75rem;
+    padding-bottom: 0;
+  }
+
+  .logoLink {
+    margin-bottom: -3rem;
+  }
+
+  .nav {
+    flex: 0 0 auto;
+    margin-left: 0;
+    margin-bottom: .75rem;
+  }
+
+  .navList {
+    max-width: none;
+    margin-right: -.5rem;
+  }
+}
+
+@media (width >= 45em) {
+  .logoLink {
+    margin-bottom: -3.5rem;
+
+    & > img {
+      width: 7rem;
+      height: 7rem;
+    }
+  }
+
+  .navList {
+    margin-right: -.75rem;
+  }
+
+  .navLink {
+    margin: 0 .75rem;
+  }
+}
+
+@media (width >= 55em) {
+  .header {
+    padding: 0 1.5rem;
+  }
+
+  .logoLink {
+    margin-bottom: -4rem;
+
+    & > img {
+      width: 8rem;
+      height: 8rem;
+    }
+  }
+}
