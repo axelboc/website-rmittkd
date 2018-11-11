@@ -5,10 +5,6 @@
   margin-left: auto;
   padding-right: 1rem;
   padding-left: 1rem;
-
-  &--sml {
-    max-width: 40rem;
-  }
 }
 
 @media (min-width: 26em) {
@@ -18,23 +14,25 @@
   }
 }
 
-.link-reset,
-.links-reset a {
+.list-reset {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.link-reset {
   font-weight: inherit;
   text-decoration: none;
-  &:hover { text-decoration: underline; }
+
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .link-img {
   display: inline-flex;
   outline-offset: 3px;
   color: inherit; /* fix outline colour */
-}
-
-.list-reset {
-  margin-bottom: 0;
-  padding-left: 0;
-  list-style-type: none;
 }
 
 .ellipsis {

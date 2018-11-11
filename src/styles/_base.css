@@ -28,21 +28,14 @@ html {
 
 body {
   min-height: 100%;
-  margin: 0;
 }
 
-h1, h2, h3, h4, h5, h6, strong, a {
+h1, h2, h3, strong, a {
   font-weight: 600;
 }
 
-h1, h2, h3, h4, h5, h6, p, ul, ol, dl, hr, pre,
-table, blockquote, figure, fieldset, address {
+h1, h2, h3, p, ul, dl {
   margin: 0 0 var(--vr);
-}
-
-th, td, button, legend,
-fieldset, blockquote {
-  padding: 0;
 }
 
 img {
@@ -53,49 +46,10 @@ img {
 
 a {
   color: inherit;
+  outline-color: currentColor;
 
   &:hover,
   &:focus {
     text-decoration: none;
   }
-}
-
-button {
-  border: none;
-  background: none;
-  color: inherit;
-  font-family: inherit;
-  font-size: inherit;
-  line-height: inherit;
-
-  &:not([disabled]) {
-    cursor: pointer;
-  }
-}
-
-a,
-button {
-  outline-color: currentColor;
-}
-
-/* revert to dotted bottom border for abbreviations */
-/* https://github.com/necolas/normalize.css/pull/468#issuecomment-174107494 */
-abbr[title] {
-  border-bottom: 1px dotted;
-  text-decoration: none;
-}
-
-/* hide outline on elements focused programmatically */
-[tabindex='-1'] {
-  outline-width: 0;
-}
-
-/**
- * Hide elements
- * Prefer the `hidden` attribute where possible. For `svg` elements,
- * use the `hidden` class instead, as the attribute is not allowed.
- */
-[hidden],
-.hidden {
-  display: none !important;
 }
