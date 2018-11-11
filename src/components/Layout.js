@@ -11,7 +11,7 @@ function Layout(props) {
   const { isHome, children } = props
 
   return (
-    <div>
+    <>
       <Helmet
         htmlAttributes={{
           lang: 'en-AU',
@@ -33,7 +33,7 @@ function Layout(props) {
         {children}
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 

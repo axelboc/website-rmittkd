@@ -42,9 +42,8 @@ function Location(props) {
             {location}
           </p>
           <dl className={styles.times}>
-            {times.map((entry) => {
-              const { days, from, to } = entry
-              return [
+            {times.map(({ days, from, to }) => (
+              <>
                 <dt key={0}>
                   <FontAwesomeIcon
                     className={styles.icon}
@@ -53,7 +52,7 @@ function Location(props) {
                     height="18"
                   />
                   {days}
-                </dt>,
+                </dt>
                 <dd key={1}>
                   <FontAwesomeIcon
                     className={styles.icon}
@@ -63,8 +62,8 @@ function Location(props) {
                   />
                   {from} &ndash; {to}
                 </dd>
-              ]
-            })}
+              </>
+            ))}
           </dl>
           <div className={styles.btn}>
             <Button to={`https://www.google.com.au/maps/dir//${encodeURIComponent(address)}`}>
