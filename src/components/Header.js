@@ -6,10 +6,10 @@ import styles from '../styles/components/header.module.css'
 import logo from '../images/logos/logo-rmittkd.svg'
 
 function Header(props) {
-  const { home } = props
+  const { isHome } = props
 
   return (
-    <header className={home ? styles.homeHeader : styles.header}>
+    <header className={isHome ? styles.homeHeader : styles.header}>
       <div className={styles.inner}>
         <Link className={styles.logoLink} to="/">
           <img src={logo} alt="RMIT ITF Taekwon-Do homepage" width="150" height="150" />

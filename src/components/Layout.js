@@ -1,13 +1,14 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 
-import Header from '../components/Header'
-import Footer from '../components/Footer'
+import Header from './Header'
+import Footer from './Footer'
 
 import '../styles/index.css'
 
 function Layout(props) {
-  const { children, location } = props
+  const { isHome, children } = props
 
   return (
     <div>
@@ -27,13 +28,22 @@ function Layout(props) {
           { rel: 'publisher', href: 'https://www.google.com/+RmittkdCHITF' },
         ]}
       />
-      <Header home={location.pathname === '/'} />
+      <Header isHome={isHome} />
       <main>
-        {children()}
+        {children}
       </main>
       <Footer />
     </div>
   )
+}
+
+GMap.defaultProps = {
+  isHome: false,
+}
+
+GMap.propTypes = {
+  isHome: PropTypes.bool,
+  children: PropTypes.node,
 }
 
 export default Layout

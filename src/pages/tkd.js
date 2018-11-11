@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/layout'
 import PageMeta from '../components/PageMeta'
 import Banner from '../components/Banner'
 import Section from '../components/Section'
@@ -18,7 +19,7 @@ export default function TkdPage(props) {
   const videoSrc = `${video.split('?')[0]}?rel=0&modestbranding=1`
 
   return (
-    <div>
+    <Layout>
       <PageMeta
         title="What is Taekwon-Do?"
         description={metaDescription}
@@ -37,7 +38,7 @@ export default function TkdPage(props) {
       <Section useDiv spaced>
         <RelatedLinks items={relatedLinks} />
       </Section>
-    </div>
+    </Layout>
   )
 }
 

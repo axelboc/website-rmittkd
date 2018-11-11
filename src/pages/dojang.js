@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import Layout from '../components/layout'
 import PageMeta from '../components/PageMeta'
 import Banner from '../components/Banner'
 import Section from '../components/Section'
@@ -20,7 +21,7 @@ export default function DojangPage(props) {
   } = frontmatter
 
   return (
-    <div>
+    <Layout>
       <PageMeta
         title="Our Dojang"
         description={metaDescription}
@@ -51,7 +52,7 @@ export default function DojangPage(props) {
       <Section useDiv spaced>
         <RelatedLinks items={relatedLinks} />
       </Section>
-    </div>
+    </Layout>
   )
 }
 
