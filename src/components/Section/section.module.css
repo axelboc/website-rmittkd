@@ -1,16 +1,16 @@
 .section {
-  background-color: #011627;
+  background-color: var(--bg-primary);
   background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
 }
 
-.sectionAlt1 {
+.sectionSecondary {
   composes: section;
-  background-color: #202030;
+  background-color: var(--bg-secondary);
 }
 
-.sectionAlt2 {
+.sectionTernary {
   composes: section;
-  background-color: #241623;
+  background-color: var(--bg-ternary);
 }
 
 .inner {

@@ -4,16 +4,17 @@ import PropTypes from 'prop-types'
 import styles from './section.module.css'
 
 const VARIANT_STYLES = {
-  alt1: styles.sectionAlt1,
-  alt2: styles.sectionAlt2,
+  primary: styles.section,
+  secondary: styles.sectionSecondary,
+  ternary: styles.sectionTernary,
 }
 
 function Section(props) {
-  const { heading, intro, useDiv, spaced, variant, children } = props;
+  const { heading, intro, useDiv, spaced, variant, children } = props
   const Root = useDiv ? 'div' : 'section'
 
   return (
-    <Root className={variant ? VARIANT_STYLES[variant] : styles.section}>
+    <Root className={VARIANT_STYLES[variant]}>
       <div className={spaced ? styles.innerSpaced : styles.inner}>
         {heading && <h2 className={styles.heading}>{heading}</h2>}
         {intro && <p className={styles.intro} dangerouslySetInnerHTML={{ __html: intro }}></p>}
@@ -21,6 +22,10 @@ function Section(props) {
       </div>
     </Root>
   )
+}
+
+Section.defaultProps = {
+  variant: 'primary',
 }
 
 Section.propTypes = {

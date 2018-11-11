@@ -1,4 +1,14 @@
 :root {
   --lh: 1.5;
   --vr: 1.5rem;
+
+  --green: #011627;
+  --grey: #202030;
+  --purple: #241623;
+
+  --bg-primary: var(--green);
+  --bg-secondary: var(--grey);
+  --bg-ternary: var(--purple);
+
+  --dark-text: var(--grey);
 }

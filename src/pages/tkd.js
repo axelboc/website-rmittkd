@@ -30,7 +30,7 @@ export default function TkdPage(props) {
         intro={html}
         variant="tkd"
       />
-      <Section useDiv spaced variant="alt1">
+      <Section useDiv spaced variant="secondary">
         <div className={styles.embed}>
           <iframe
             className={styles.iframe}

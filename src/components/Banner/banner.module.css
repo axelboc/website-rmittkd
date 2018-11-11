@@ -30,7 +30,7 @@
   background-blend-mode: lighten; /* blend photo with triangle bg pattern and bg colour */
 
   &::before {
-    background-color: #011627;
+    background-color: var(--bg-primary);
     opacity: .85;
   }
 }
@@ -55,7 +55,7 @@
 
 @supports (background-blend-mode: lighten) {
   .bannerPage {
-    background-color: #011627; /* IE needs black bg by default */
+    background-color: var(--bg-primary); /* IE needs black bg by default */
   }
 }
 
