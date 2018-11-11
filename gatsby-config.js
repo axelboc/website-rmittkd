@@ -1,8 +1,22 @@
-const siteMetadata = require('./site-metadata')
-
 module.exports = {
-  siteMetadata,
+  siteMetadata: {},
   plugins: [
+    {
+      resolve: 'gatsby-plugin-postcss',
+      options: {
+        postCssPlugins: [
+          require('postcss-import')(),
+          require('postcss-preset-env')({
+            autoprefixer: false, // already in Gatsby
+            features: {
+              'nesting-rules': true
+            }
+          }),
+          require('postcss-browser-reporter')(),
+          require('postcss-reporter')(),
+        ],
+      },
+    },
     {
       resolve: 'gatsby-source-filesystem',
       options: {

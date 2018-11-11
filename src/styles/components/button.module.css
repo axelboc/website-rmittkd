@@ -21,13 +21,13 @@
     font-size: 75%;
     transition: transform .2s ease-out;
   }
-}
 
-.btn:hover {
-  background-color: white;
-  text-decoration: none;
+  &:hover {
+    background-color: white;
+    text-decoration: none;
 
-  &::after {
-    transform: translateX(.25em);
+    &::after {
+      transform: translateX(.25em);
+    }
   }
 }

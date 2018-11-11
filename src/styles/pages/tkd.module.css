@@ -7,10 +7,6 @@
     display: block;
     padding-bottom: 56.25%; /* 16/9 */
   }
-
-  &:hover {
-    border-color: white;
-  }
 }
 
 .iframe {
@@ -30,5 +26,9 @@
     border-radius: .5em;
     overflow: hidden;
     transition: border-color .2s ease-out;
+
+    &:hover {
+      border-color: white;
+    }
   }
 }
