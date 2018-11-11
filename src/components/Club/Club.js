@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 
-import styles from '../styles/components/club.module.css'
+import styles from './club.module.css'
 
 function Club(props) {
   const { index, name, url, city, state } = props

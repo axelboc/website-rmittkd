@@ -1,14 +1,13 @@
 import React from 'react'
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookSquare } from '@fortawesome/free-brands-svg-icons'
 import { faInstagram } from '@fortawesome/free-brands-svg-icons'
 
-import styles from '../styles/components/footer.module.css'
-import logoRmitLink from '../images/logos/logo-rmit-link.png'
-import logoChitf from '../images/logos/logo-chitf.png'
-import logoChitfAus from '../images/logos/logo-chitf-australia.png'
-import logoLaiTkd from '../images/logos/logo-lai-tkd.png'
+import styles from './footer.module.css'
+import logoRmitLink from '../../images/logos/logo-rmit-link.png'
+import logoChitf from '../../images/logos/logo-chitf.png'
+import logoChitfAus from '../../images/logos/logo-chitf-australia.png'
+import logoLaiTkd from '../../images/logos/logo-lai-tkd.png'
 
 function Footer() {
   return (

@@ -1,6 +1,6 @@
 import React from 'react'
 
-import styles from '../styles/components/fees.module.css'
+import styles from './fees.module.css'
 
 function Fees(props) {
   const { fees } = props

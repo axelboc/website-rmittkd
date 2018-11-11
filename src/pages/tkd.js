@@ -3,11 +3,11 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import PageMeta from '../components/PageMeta'
-import Banner from '../components/Banner'
-import Section from '../components/Section'
-import RelatedLinks from '../components/RelatedLinks'
+import Banner from '../components/Banner/Banner'
+import Section from '../components/Section/Section'
+import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 
-import styles from '../styles/pages/tkd.module.css'
+import styles from './tkd.module.css'
 
 export default function TkdPage(props) {
   const { data, location: { pathname } } = props

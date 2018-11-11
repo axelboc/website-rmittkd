@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Club from './Club'
-import GMap from './GMap'
 
-import styles from '../styles/components/clubs-group.module.css'
+import Club from '../Club/Club'
+import GMap from '../GMap/GMap'
+
+import styles from './clubs-group.module.css'
 
 function ClubsGroup(props) {
   const { heading, clubs, mapFocus } = props

@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from '../styles/components/banner.module.css'
+import styles from './banner.module.css'
 
 const VARIANT_STYLES = {
   home: styles.bannerHome,

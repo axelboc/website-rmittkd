@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import Img from "gatsby-image";
 import romanize from 'romanize'
 
-import styles from '../styles/components/instructor.module.css'
+import styles from './instructor.module.css'
 
 function Instructor(props) {
   const { name, degree, bio, photo, total } = props

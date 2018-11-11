@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from '../styles/components/section.module.css'
+import styles from './section.module.css'
 
 const VARIANT_STYLES = {
   alt1: styles.sectionAlt1,

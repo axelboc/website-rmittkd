@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from '../styles/components/gmap.module.css'
+import styles from './gmap.module.css'
 
 const GMAPS_API_URL = 'https://maps.googleapis.com/maps/api/staticmap'
 

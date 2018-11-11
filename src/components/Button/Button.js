@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-import styles from '../styles/components/button.module.css'
+import styles from './button.module.css'
 
 function Button(props) {
   const { to, centred, children } = props
