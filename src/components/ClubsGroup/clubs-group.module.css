@@ -10,7 +10,7 @@
 .map {
   margin-bottom: .25rem;
   background-color: black;
-  border-bottom: .375rem solid #a00309;
+  border-bottom: .375rem solid var(--highlight);
 }
 
 .heading {

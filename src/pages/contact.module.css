@@ -45,7 +45,7 @@
 
       &:nth-child(4n),
       &:nth-child(4n + 1) {
-        background-color: rgba(1, 22, 39, .5);
+        background-color: rgba(1, 22, 39, .5); /* bg-primary */
       }
     }
 

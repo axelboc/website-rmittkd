@@ -11,7 +11,7 @@ html {
   font-size: 15px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
-  background-color: #000;
+  background-color: black;
 }
 
 @media (min-width: 30em) {
@@ -35,7 +35,7 @@ h1, h2, h3, strong, a {
 }
 
 h1, h2, h3, p, ul, dl {
-  margin: 0 0 var(--vr);
+  margin: 0 0 1.5rem;
 }
 
 img {

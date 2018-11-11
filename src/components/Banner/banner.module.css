@@ -69,7 +69,7 @@
   display: inline-flex;
   margin-bottom: .75rem;
   padding: .125rem .5rem;
-  background-color: #a00309;
+  background-color: var(--highlight);
   font-size: 130%;
   text-transform: uppercase;
 }

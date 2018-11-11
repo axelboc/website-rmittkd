@@ -3,7 +3,7 @@
 }
 
 .photo {
-  border-bottom: .375rem solid #a00309;
+  border-bottom: .375rem solid var(--highlight);
   margin-bottom: .75rem;
 }
 

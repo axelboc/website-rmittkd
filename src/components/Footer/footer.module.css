@@ -58,15 +58,17 @@
 
 .socialLink {
   padding: 0 .125rem;
-  opacity: .85;
   transition: transform .2s ease-out, opacity .2s ease-out;
 
   &:not(:first-child) {
     margin-left: .5rem;
   }
 
+  &:not(:hover) {
+    opacity: .85;
+  }
+
   &:hover {
-    opacity: 1;
     transform: translateY(-.125rem);
   }
 }

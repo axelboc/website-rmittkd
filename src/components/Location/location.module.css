@@ -9,7 +9,7 @@
   display: none;
   flex: 4 1 0%;
   max-width: 341px;
-  background-color: #021019;
+  background-color: rgba(0, 0, 0, .4);
 }
 
 .content {
@@ -21,10 +21,11 @@
 .suburb {
   margin-bottom: 0;
   padding: .125rem .75rem .25rem;
-  text-transform: uppercase;
+  border-bottom: .375rem solid var(--highlight);
   font-size: 150%;
   font-weight: normal;
-  border-bottom: .25rem solid #a00309;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .details {
@@ -53,9 +54,10 @@
       content: '';
       display: block;
       width: 4rem;
-      border-top: .125rem solid rgba(255, 255, 255, .4);
       margin-top: .75rem;
       padding-top: .75rem;
+      border-top: .125rem solid white;
+      opacity: .3;
     }
 
     & + dd:last-child {
@@ -87,5 +89,9 @@
 
   .map {
     display: block;
+  }
+
+  .suburb {
+    text-align: left;
   }
 }

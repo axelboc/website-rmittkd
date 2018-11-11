@@ -13,7 +13,7 @@
   width: 1.75em;
   margin-left: .75em;
   padding: .372em 0 .378em;
-  background-color: rgba(255, 255, 255, .9);
+  background-color: var(--white-faded);
   border-radius: 50%;
   color: var(--dark-text);
 }
@@ -47,9 +47,11 @@
   flex: 0 0 auto;
   margin-top: .125em;
   margin-left: .75em;
-  opacity: .9;
-  transform-origin: bottom left;
-  transition: transform .2s ease;
+  transition: opacity .2s ease-out;
+}
+
+.link:not(:hover) {
+  opacity: .85;
 }
 
 @media (min-width: 30em) {
