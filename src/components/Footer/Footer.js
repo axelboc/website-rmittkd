@@ -38,20 +38,26 @@ function Footer() {
         <p className={styles.socialMedia}>
           follow us on
           <span className={styles.socialIcons}>
-            <a className={styles.socialLink} href="https://www.instagram.com/rmittkd/">
+            <a
+              className={styles.socialLink}
+              href="https://www.instagram.com/rmittkd/"
+              aria-label="Instagram"
+            >
               <FontAwesomeIcon
                 className={styles.icon}
                 icon={faInstagram}
                 size="3x"
-                aria-label="Instagram"
               />
             </a>
-            <a className={styles.socialLink} href="https://www.facebook.com/rmittkd">
+            <a
+              className={styles.socialLink}
+              href="https://www.facebook.com/rmittkd"
+              aria-label="Facebook"
+            >
               <FontAwesomeIcon
                 className={styles.icon}
                 icon={faFacebookSquare}
                 size="3x"
-                aria-label="Facebook"
               />
             </a>
           </span>
