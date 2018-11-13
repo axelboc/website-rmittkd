@@ -7,7 +7,6 @@ module.exports = {
         postCssPlugins: [
           require('postcss-import')(),
           require('postcss-preset-env')({
-            autoprefixer: false, // already in Gatsby
             features: {
               'nesting-rules': true,
               'custom-properties': {
