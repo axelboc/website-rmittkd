@@ -11,7 +11,7 @@ module.exports = {
             features: {
               'nesting-rules': true,
               'custom-properties': {
-                importFrom: 'src/styles/_vars.css'
+                importFrom: 'src/styles/vars.css'
               }
             }
           }),
