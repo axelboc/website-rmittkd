@@ -1,6 +1,6 @@
 .section {
   background-color: var(--bg-primary);
-  background-image: url("https://www.transparenttextures.com/patterns/white-diamond-dark.png");
+  background-image: url("../../images/white-diamond-dark.png");
 }
 
 .sectionSecondary {

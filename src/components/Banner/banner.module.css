@@ -37,19 +37,19 @@
 
 .bannerTkd {
   composes: bannerPage;
-  background: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
+  background: url('../../images/white-diamond-dark.png'),
     black url('../../images/heros/tkd.jpg') center / auto 100% no-repeat;
 }
 
 .bannerDojang {
   composes: bannerPage;
-  background: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
+  background: url('../../images/white-diamond-dark.png'),
     black url('../../images/heros/dojang.jpg') center / auto 100% no-repeat;
 }
 
 .bannerContact {
   composes: bannerPage;
-  background: url('https://www.transparenttextures.com/patterns/white-diamond-dark.png'),
+  background: url('../../images/white-diamond-dark.png'),
     black url('../../images/heros/contact.jpg') center / auto 100% no-repeat;
 }
 
