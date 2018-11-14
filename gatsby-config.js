@@ -44,6 +44,14 @@ module.exports = {
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+          rule: {
+            include: /logo-rmittkd/
+          }
+      }
+    },
     'gatsby-plugin-nprogress',
     {
       resolve: 'gatsby-plugin-netlify-cms',

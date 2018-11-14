@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 
 import styles from './header.module.css'
-import logo from '../../images/logos/logo-rmittkd.svg'
+import Logo from '../../images/logos/logo-rmittkd.svg'
 
 function Header(props) {
   const { isHome } = props
@@ -11,8 +11,8 @@ function Header(props) {
   return (
     <header className={isHome ? styles.homeHeader : styles.header}>
       <div className={styles.inner}>
-        <Link className={styles.logoLink} to="/">
-          <img src={logo} alt="RMIT ITF Taekwon-Do homepage" width="150" height="150" />
+        <Link className={styles.logoLink} to="/" aria-label="RMIT ITF Taekwon-Do homepage">
+          <Logo width="150" height="150" focusable="false" />
         </Link>
         <nav className={styles.nav}>
           <ul className={styles.navList}>
