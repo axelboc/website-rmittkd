@@ -8,6 +8,7 @@ const VARIANT_STYLES = {
   tkd: styles.bannerTkd,
   dojang: styles.bannerDojang,
   contact: styles.bannerContact,
+  '404': styles.banner404,
 }
 
 function Banner(props) {
