@@ -17,7 +17,7 @@
 
 .bannerHome {
   composes: banner;
-  background: black url('../../images/heros/hero.jpg') center / auto 100% no-repeat;
+  background: black url('../../images/heros/home.jpg') center bottom / auto no-repeat;
 
   &::before {
     background-color: black;
@@ -37,25 +37,28 @@
 
 .bannerTkd {
   composes: bannerPage;
-  background: url('../../images/white-diamond-dark.png'),
-    black url('../../images/heros/tkd.jpg') center / auto 100% no-repeat;
+  background:
+    url('../../images/diamond.png'),
+    black url('../../images/heros/tkd.jpg') center bottom / auto no-repeat;
 }
 
 .bannerDojang {
   composes: bannerPage;
-  background: url('../../images/white-diamond-dark.png'),
-    black url('../../images/heros/dojang.jpg') center / auto 100% no-repeat;
+  background:
+    url('../../images/diamond.png'),
+    black url('../../images/heros/dojang.jpg') center bottom / auto no-repeat;
 }
 
 .bannerContact {
   composes: bannerPage;
-  background: url('../../images/white-diamond-dark.png'),
-    black url('../../images/heros/contact.jpg') center / auto 100% no-repeat;
+  background:
+    url('../../images/diamond.png'),
+    black url('../../images/heros/contact.jpg') center bottom / auto no-repeat;
 }
 
 .banner404 {
   composes: bannerPage;
-  background: url('../../images/white-diamond-dark.png'), black none;
+  background: url('../../images/diamond.png'), black none;
   min-height: 0;
   flex: 1;
 
@@ -133,11 +136,32 @@
   .bannerHome {
     padding-top: 10rem;
     min-height: 32rem;
-    background-position: center right -4rem;
+    background-image: url('../../images/heros/home-40.jpg');
+    background-position: center right;
+    background-size: auto 100%;
   }
 
   .bannerPage {
-    background-position: 0 0, center right -8rem;
+    background-position: 0 0, center right;
+    background-size: auto, auto 100%;
+  }
+
+  .bannerTkd {
+    background-image:
+      url('../../images/diamond.png'),
+      url('../../images/heros/tkd-40.jpg');
+  }
+
+  .bannerDojang {
+    background-image:
+      url('../../images/diamond.png'),
+      url('../../images/heros/dojang-40.jpg');
+  }
+
+  .bannerContact {
+    background-image:
+      url('../../images/diamond.png'),
+      url('../../images/heros/contact-40.jpg');
   }
 
   .heading {
@@ -176,11 +200,6 @@
     padding-left: 3rem;
     padding-right: 3rem;
   }
-
-  .bannerPage {
-    padding-top: 6rem;
-    background-position: 0 0, center right -8rem;
-  }
 }
 
 @media (width >= 60em) {
@@ -193,29 +212,43 @@
     max-width: 60rem;
     margin: 0 auto;
   }
-
-  .bannerPage {
-    background-position: 0 0, center right -5rem;
-  }
-}
-
-@media (width >= 65em) {
-  .bannerHome {
-    padding-bottom: 14rem;
-  }
-
-  .bannerPage {
-    background-position: 0 0, center right -3rem;
-  }
-
-  .bannerHome .heading {
-    font-size: 325%;
-  }
 }
 
 @media (width >= 75em) {
   .banner {
     min-height: 28.5rem;
+  }
+
+  .bannerHome {
+    background-image: url('../../images/heros/home-75.jpg');
+    background-position: center right -4rem;
+    padding-bottom: 14rem;
+
+    & .heading {
+      font-size: 325%;
+    }
+  }
+
+  .bannerPage {
+    background-position: 0 0, center right -4rem;
+  }
+
+  .bannerTkd {
+    background-image:
+      url('../../images/diamond.png'),
+      url('../../images/heros/tkd-75.jpg');
+  }
+
+  .bannerDojang {
+    background-image:
+      url('../../images/diamond.png'),
+      url('../../images/heros/dojang-75.jpg');
+  }
+
+  .bannerContact {
+    background-image:
+      url('../../images/diamond.png'),
+      url('../../images/heros/contact-75.jpg');
   }
 
   .banner404 {
