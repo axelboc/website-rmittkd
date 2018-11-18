@@ -12,7 +12,8 @@
 }
 
 .logoLink {
-  composes: link-img from global;
+  composes: link-reset link-img from global;
+  font-size: 75%; /* alt text while loading */
   transition: transform .2s ease-out;
 
   &:hover {
@@ -96,12 +97,12 @@
 }
 
 @media (width < 50em) {
-  .logoLink > img {
+  .logoImage {
     width: auto;
     height: 5rem;
   }
 
-  .rmitLink img {
+  .rmitLink .logoImage {
     height: 4.5rem;
   }
 }

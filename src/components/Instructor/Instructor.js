@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from "gatsby-image";
+import Img from 'gatsby-image'
 import romanize from 'romanize'
 
 import styles from './instructor.module.css'
