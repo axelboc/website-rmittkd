@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
@@ -42,8 +42,8 @@ function Location(props) {
           </p>
           <dl className={styles.times}>
             {times.map(({ days, from, to }) => (
-              <>
-                <dt key={0}>
+              <Fragment key={days}>
+                <dt>
                   <FontAwesomeIcon
                     className={styles.icon}
                     icon={faCalendarAlt}
@@ -52,7 +52,7 @@ function Location(props) {
                   />
                   {days}
                 </dt>
-                <dd key={1}>
+                <dd>
                   <FontAwesomeIcon
                     className={styles.icon}
                     icon={faClock}
@@ -61,7 +61,7 @@ function Location(props) {
                   />
                   {from} &ndash; {to}
                 </dd>
-              </>
+              </Fragment>
             ))}
           </dl>
           <div className={styles.btn}>
