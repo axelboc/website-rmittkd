@@ -17,7 +17,11 @@
 
 .bannerHome {
   composes: banner;
-  background: black url('../../images/heros/home.jpg') center bottom / auto no-repeat;
+  background: black none center bottom / auto no-repeat;
+  background-image: image-set(
+    url('../../images/heros/home.jpg') 1x,
+    url('../../images/heros/home-2x.jpg') 2x
+  );
 
   &::before {
     background-color: black;
@@ -67,12 +71,6 @@
   }
 }
 
-@supports (background-blend-mode: lighten) {
-  .bannerPage {
-    background-color: var(--bg-primary); /* IE needs black bg by default */
-  }
-}
-
 .heading {
   font-size: 190%;
   font-weight: 600;
@@ -103,6 +101,32 @@
 .bannerHome .intro {
   max-width: 18rem;
   line-height: 1.75;
+}
+
+@supports (background-blend-mode: lighten) {
+  .bannerPage {
+    background-color: var(--bg-primary); /* IE needs black bg by default */
+  }
+}
+
+@media (min-resolution: 192dpi) {
+  .bannerTkd {
+    background-image:
+      url('../../images/diamond.png'),
+      url('../../images/heros/tkd-2x.jpg');
+  }
+
+  .bannerDojang {
+    background-image:
+      url('../../images/diamond.png'),
+      url('../../images/heros/dojang-2x.jpg');
+  }
+
+  .bannerContact {
+    background-image:
+      url('../../images/diamond.png'),
+      url('../../images/heros/contact-2x.jpg');
+  }
 }
 
 @media (width >= 26em) {
@@ -136,13 +160,16 @@
   .bannerHome {
     padding-top: 10rem;
     min-height: 32rem;
-    background-image: url('../../images/heros/home-40.jpg');
-    background-position: center right;
+    background-position: center right; /* `center right -72px` with uncropped image */
     background-size: auto 100%;
+    background-image: image-set(
+      url('../../images/heros/home-40.jpg') 1x,
+      url('../../images/heros/home-40-2x.jpg') 2x
+    );
   }
 
   .bannerPage {
-    background-position: 0 0, center right;
+    background-position: 0 0, center right; /* `center right -72px` with uncropped image */
     background-size: auto, auto 100%;
   }
 
@@ -182,6 +209,26 @@
   .bannerHome .intro {
     max-width: 24rem;
   }
+
+  @media (min-resolution: 192dpi) {
+    .bannerTkd {
+      background-image:
+        url('../../images/diamond.png'),
+        url('../../images/heros/tkd-40-2x.jpg');
+    }
+
+    .bannerDojang {
+      background-image:
+        url('../../images/diamond.png'),
+        url('../../images/heros/dojang-40-2x.jpg');
+    }
+
+    .bannerContact {
+      background-image:
+        url('../../images/diamond.png'),
+        url('../../images/heros/contact-40-2x.jpg');
+    }
+  }
 }
 
 @media (width >= 45em) {
@@ -220,9 +267,12 @@
   }
 
   .bannerHome {
-    background-image: url('../../images/heros/home-75.jpg');
-    background-position: center right -4rem;
     padding-bottom: 14rem;
+    background-position: center right -4rem;
+    background-image: image-set(
+      url('../../images/heros/home-75.jpg') 1x,
+      url('../../images/heros/home-75-2x.jpg') 2x
+    );
 
     & .heading {
       font-size: 325%;
@@ -253,6 +303,26 @@
 
   .banner404 {
     min-height: 0;
+  }
+
+  @media (min-resolution: 192dpi) {
+    .bannerTkd {
+      background-image:
+        url('../../images/diamond.png'),
+        url('../../images/heros/tkd-75-2x.jpg');
+    }
+
+    .bannerDojang {
+      background-image:
+        url('../../images/diamond.png'),
+        url('../../images/heros/dojang-75-2x.jpg');
+    }
+
+    .bannerContact {
+      background-image:
+        url('../../images/diamond.png'),
+        url('../../images/heros/contact-75-2x.jpg');
+    }
   }
 }
 
