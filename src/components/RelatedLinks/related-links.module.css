@@ -21,10 +21,6 @@
   display: block;
   overflow: hidden;
   margin: 0 auto;
-  padding-top: 56.25%; /* 16/9 */
-  background-color: black;
-  background-size: cover;
-  background-clip: padding-box;
   border-radius: .5rem;
   border: 2px solid rgba(255, 255, 255, .2);
   outline-offset: 2px;
@@ -33,6 +29,10 @@
   &:hover {
     border-color: white;
   }
+}
+
+.image {
+  background-color: rgba(0, 0, 0, .4);
 }
 
 .label {

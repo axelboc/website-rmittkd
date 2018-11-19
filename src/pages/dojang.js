@@ -94,8 +94,11 @@ export const query = graphql`
               path
               img {
                 childImageSharp {
-                  fluid(maxWidth: 338) {
+                  fixed(width: 345, height: 194, quality: 80) {
                     src
+                    srcSet
+                    width
+                    height
                   }
                 }
               }
