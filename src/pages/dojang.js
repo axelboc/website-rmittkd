@@ -70,8 +70,11 @@ export const query = graphql`
               bio
               photo {
                 childImageSharp {
-                  fluid(maxWidth: 574) {
-                    ...GatsbyImageSharpFluid
+                  fixed(width: 560, height: 350, quality: 85) {
+                    src
+                    srcSet
+                    width
+                    height
                   }
                 }
               }
@@ -94,7 +97,7 @@ export const query = graphql`
               path
               img {
                 childImageSharp {
-                  fixed(width: 345, height: 194, quality: 80) {
+                  fixed(width: 345, height: 194, quality: 85) {
                     src
                     srcSet
                     width

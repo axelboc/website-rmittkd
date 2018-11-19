@@ -1,4 +1,4 @@
-@media (width >= 40em) {
+@media (width >= 50em) {
   .instructors {
     display: flex;
     flex-wrap: wrap;

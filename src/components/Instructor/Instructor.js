@@ -1,12 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Img from 'gatsby-image'
 import romanize from 'romanize'
+import LazyImage from '../LazyImage'
 
 import styles from './instructor.module.css'
 
 function Instructor(props) {
   const { name, degree, bio, photo, total } = props
+  const { childImageSharp: { fixed } } = photo
 
   return (
     <div
@@ -15,9 +16,9 @@ function Instructor(props) {
       data-total-even={total % 2 === 0 || null}
       data-total-div3={total % 3 === 0 || null}
     >
-      <Img
+      <LazyImage
         className={styles.photo}
-        fluid={photo.childImageSharp.fluid}
+        {...fixed}
         alt=""
       />
       <h3 className={styles.heading}>

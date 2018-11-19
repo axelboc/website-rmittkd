@@ -65,7 +65,7 @@ export const query = graphql`
               path
               img {
                 childImageSharp {
-                  fixed(width: 345, height: 194, quality: 80) {
+                  fixed(width: 345, height: 194, quality: 85) {
                     src
                     srcSet
                     width
