@@ -8,6 +8,7 @@
 }
 
 .photo {
+  background-color: rgba(0, 0, 0, .4);
   border-bottom: .375rem solid var(--highlight);
   margin-bottom: .75rem;
 }

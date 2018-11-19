@@ -32,11 +32,11 @@ localClubs:
     city: Taylors Lakes
     name: Taylors Lake Lai Taekwon-Do
     url: 'https://www.facebook.com/Laitkdtl'
-  - address: '47 Blackwood Dr, Melton South VIC 3338, Australie'
+  - address: '47 Blackwood Dr, Melton South VIC 3338, Australia'
     city: Melton South
     name: Melton Lai Taekwon-Do
     url: 'https://www.facebook.com/pages/Melton-Lai-Taekwon-Do-ITF/119160461466076'
-  - address: '97 Fleetwood Dr, Narre Warren VIC 3805, Australie'
+  - address: '97 Fleetwood Dr, Narre Warren VIC 3805, Australia'
     city: Narre Warren
     name: South East Lai Taekwon-Do
     url: 'https://www.facebook.com/SELTKD/'
