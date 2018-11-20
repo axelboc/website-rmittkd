@@ -64,7 +64,7 @@
   composes: bannerPage;
   background: url('../../images/diamond.png'), black none;
   min-height: 0;
-  flex: 1;
+  flex: 1 0 auto;
 
   &::before {
     content: none;
