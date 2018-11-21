@@ -17,7 +17,7 @@
 
 .bannerHome {
   composes: banner;
-  background: black none center bottom / auto no-repeat;
+  background: black none center bottom / auto 100% no-repeat;
   background-image: image-set(
     url('../../images/heros/home.jpg') 1x,
     url('../../images/heros/home-2x.jpg') 2x
@@ -43,21 +43,21 @@
   composes: bannerPage;
   background:
     url('../../images/diamond.png'),
-    black url('../../images/heros/tkd.jpg') center bottom / auto no-repeat;
+    black url('../../images/heros/tkd.jpg') center bottom / auto 100% no-repeat;
 }
 
 .bannerDojang {
   composes: bannerPage;
   background:
     url('../../images/diamond.png'),
-    black url('../../images/heros/dojang.jpg') center bottom / auto no-repeat;
+    black url('../../images/heros/dojang.jpg') center bottom / auto 100% no-repeat;
 }
 
 .bannerContact {
   composes: bannerPage;
   background:
     url('../../images/diamond.png'),
-    black url('../../images/heros/contact.jpg') center bottom / auto no-repeat;
+    black url('../../images/heros/contact.jpg') center bottom / auto 100% no-repeat;
 }
 
 .banner404 {
@@ -161,7 +161,6 @@
     padding-top: 10rem;
     min-height: 32rem;
     background-position: center right; /* `center right -72px` with uncropped image */
-    background-size: auto 100%;
     background-image: image-set(
       url('../../images/heros/home-40.jpg') 1x,
       url('../../images/heros/home-40-2x.jpg') 2x
@@ -170,7 +169,6 @@
 
   .bannerPage {
     background-position: 0 0, center right; /* `center right -72px` with uncropped image */
-    background-size: auto, auto 100%;
   }
 
   .bannerTkd {
