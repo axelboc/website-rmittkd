@@ -31,6 +31,10 @@ function Club(props) {
   )
 }
 
+Club.defaultProps = {
+  state: null,
+}
+
 Club.propTypes = {
   index: PropTypes.number.isRequired,
   name: PropTypes.string.isRequired,

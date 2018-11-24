@@ -32,7 +32,7 @@ function Instructor(props) {
 Instructor.propTypes = {
   name: PropTypes.string.isRequired,
   degree: PropTypes.number.isRequired,
-  bio: PropTypes.string,
+  bio: PropTypes.string.isRequired,
 }
 
 export default Instructor

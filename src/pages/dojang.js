@@ -12,11 +12,7 @@ import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 import styles from './dojang.module.css'
 
 export default function DojangPage(props) {
-  const {
-    data,
-    location: { pathname },
-  } = props
-
+  const { data, location } = props // eslint-disable-line react/prop-types
   const { frontmatter, html } = data.page.edges[0].node
   const {
     metaDescription,
@@ -33,7 +29,7 @@ export default function DojangPage(props) {
       <PageMeta
         title="Our Dojang"
         description={metaDescription}
-        path={pathname}
+        path={location.pathname}
       />
       <Banner heading="Our Dojang" intro={html} variant="dojang" />
       <Section
@@ -49,8 +45,8 @@ export default function DojangPage(props) {
       </Section>
       <Section heading="Associated clubs" intro={clubsIntro} variant="ternary">
         <div className={styles.clubs}>
-          <ClubsGroup heading="Greater Melbourne" clubs={localClubs} />
-          <ClubsGroup heading="Australia" clubs={otherClubs} mapFocus={null} />
+          <ClubsGroup heading="Greater Melbourne" clubs={localClubs} doFocus />
+          <ClubsGroup heading="Australia" clubs={otherClubs} />
         </div>
       </Section>
       <Section useDiv spaced>

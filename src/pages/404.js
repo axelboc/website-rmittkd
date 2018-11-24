@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/Layout'
 import Banner from '../components/Banner/Banner'
 
-export default function NotFoundPage(props) {
+export default function NotFoundPage() {
   return (
     <Layout>
       <Banner

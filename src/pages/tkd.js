@@ -10,11 +10,7 @@ import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 import styles from './tkd.module.css'
 
 export default function TkdPage(props) {
-  const {
-    data,
-    location: { pathname },
-  } = props
-
+  const { data, location } = props // eslint-disable-line react/prop-types
   const { frontmatter, html } = data.page.edges[0].node
   const { metaDescription, video, relatedLinks } = frontmatter
 
@@ -26,7 +22,7 @@ export default function TkdPage(props) {
       <PageMeta
         title="What is Taekwon-Do?"
         description={metaDescription}
-        path={pathname}
+        path={location.pathname}
       />
       <Banner heading="What is Taekwon&#8209;Do?" intro={html} variant="tkd" />
       <Section useDiv spaced variant="secondary">

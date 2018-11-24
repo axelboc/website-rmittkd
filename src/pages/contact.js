@@ -11,11 +11,7 @@ import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 import styles from './contact.module.css'
 
 export default function ContactPage(props) {
-  const {
-    data,
-    location: { pathname },
-  } = props
-
+  const { data, location } = props // eslint-disable-line react/prop-types
   const { frontmatter, html } = data.page.edges[0].node
   const { metaDescription, faqIntro, faq, relatedLinks } = frontmatter
 
@@ -24,7 +20,7 @@ export default function ContactPage(props) {
       <PageMeta
         title="Get in touch"
         description={metaDescription}
-        path={pathname}
+        path={location.pathname}
       />
       <Banner heading="Get in touch" intro={html} variant="contact" />
       <Section

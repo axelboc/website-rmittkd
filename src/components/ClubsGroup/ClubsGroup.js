@@ -7,7 +7,7 @@ import GMap from '../GMap/GMap'
 import styles from './clubs-group.module.css'
 
 function ClubsGroup(props) {
-  const { heading, clubs, mapFocus } = props
+  const { heading, clubs, doFocus } = props
 
   return (
     <div className={styles.clubsGroup}>
@@ -15,7 +15,7 @@ function ClubsGroup(props) {
       <div className={styles.map}>
         <GMap
           dimensions={[574, 326]}
-          focus={mapFocus}
+          focus={doFocus ? 'Melbourne VIC 3000, Australia' : null}
           addresses={clubs.map(
             c => c.address || `${c.city}, ${c.state} Australia`
           )}
@@ -32,7 +32,12 @@ function ClubsGroup(props) {
   )
 }
 
+ClubsGroup.defaultProps = {
+  doFocus: false,
+}
+
 ClubsGroup.propTypes = {
+  heading: PropTypes.string.isRequired,
   clubs: PropTypes.arrayOf(
     PropTypes.shape({
       name: PropTypes.string.isRequired,
@@ -42,7 +47,7 @@ ClubsGroup.propTypes = {
       state: PropTypes.string,
     })
   ).isRequired,
-  mapFocus: PropTypes.string,
+  doFocus: PropTypes.bool,
 }
 
 export default ClubsGroup

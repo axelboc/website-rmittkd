@@ -64,7 +64,7 @@ function Header(props) {
 }
 
 Header.propTypes = {
-  home: PropTypes.bool,
+  isHome: PropTypes.bool.isRequired,
 }
 
 export default Header

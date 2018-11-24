@@ -6,7 +6,7 @@ import styles from './gmap.module.css'
 const GMAPS_API_URL = 'https://maps.googleapis.com/maps/api/staticmap'
 
 function GMap(props) {
-  const { detailled, dimensions, focus, addresses } = props
+  const { detailled, dimensions, addresses, focus } = props
 
   // https://snazzymaps.com/style/16237/faded-opaque-with-natural-tones
   const mapStyles = [
@@ -57,14 +57,14 @@ function GMap(props) {
 
 GMap.defaultProps = {
   detailled: false,
-  focus: 'Melbourne VIC 3000, Australia',
+  focus: null,
 }
 
 GMap.propTypes = {
   detailled: PropTypes.bool,
   dimensions: PropTypes.arrayOf(PropTypes.number).isRequired,
-  focus: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   addresses: PropTypes.arrayOf(PropTypes.string).isRequired,
+  focus: PropTypes.string,
 }
 
 export default GMap

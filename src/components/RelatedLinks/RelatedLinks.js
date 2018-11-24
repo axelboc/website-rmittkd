@@ -36,7 +36,7 @@ RelatedLinks.propTypes = {
       path: PropTypes.string,
       img: PropTypes.object,
     })
-  ),
+  ).isRequired,
 }
 
 export default RelatedLinks

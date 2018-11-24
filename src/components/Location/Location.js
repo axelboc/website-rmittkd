@@ -1,9 +1,11 @@
 import React, { Fragment } from 'react'
 import PropTypes from 'prop-types'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
-import { faCalendarAlt } from '@fortawesome/free-solid-svg-icons'
-import { faClock } from '@fortawesome/free-solid-svg-icons'
+import {
+  faMapMarkerAlt,
+  faCalendarAlt,
+  faClock,
+} from '@fortawesome/free-solid-svg-icons'
 
 import Button from '../Button/Button'
 import GMap from '../GMap/GMap'
@@ -26,6 +28,7 @@ function Location(props) {
           detailled
           dimensions={[mapWidth, mapHeight]}
           addresses={[address]}
+          focus="Melbourne VIC 3000, Australia"
         />
       </div>
       <div className={styles.content}>
@@ -59,8 +62,7 @@ function Location(props) {
                     width="18"
                     height="18"
                   />
-                  {from} &ndash;
-                  {to}
+                  {`${from} – ${to}`}
                 </dd>
               </Fragment>
             ))}
@@ -83,7 +85,7 @@ function Location(props) {
 Location.propTypes = {
   suburb: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
-  address: PropTypes.string,
+  address: PropTypes.string.isRequired,
   times: PropTypes.arrayOf(
     PropTypes.shape({
       days: PropTypes.string.isRequired,

@@ -10,48 +10,38 @@ import Fees from '../components/Fees/Fees'
 import Button from '../components/Button/Button'
 import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 
-export default class IndexPage extends React.Component {
-  render() {
-    const {
-      data,
-      location: { pathname },
-    } = this.props
+export default function IndexPage(props) {
+  const { data, location } = props // eslint-disable-line react/prop-types
+  const { frontmatter, html } = data.page.edges[0].node
+  const {
+    metaDescription,
+    trainIntro,
+    locations,
+    feesIntro,
+    fees,
+    relatedLinks,
+  } = frontmatter
 
-    const { frontmatter, html } = data.page.edges[0].node
-    const {
-      metaDescription,
-      trainIntro,
-      locations,
-      feesIntro,
-      fees,
-      relatedLinks,
-    } = frontmatter
-
-    return (
-      <Layout isHome>
-        <PageMeta isHome description={metaDescription} path={pathname} />
-        <Banner heading="ITF Taekwon&#8209;Do" intro={html} variant="home" />
-        <Section heading="Train with us" intro={trainIntro}>
-          {locations.map(item => (
-            <Location key={item.suburb} {...item} />
-          ))}
-        </Section>
-        <Section
-          heading="Membership fees"
-          intro={feesIntro}
-          variant="secondary"
-        >
-          <Fees fees={fees} />
-          <Button to="https://rmitlink.rmit.edu.au/Clubs/taekwondoitf" centred>
-            Choose your membership
-          </Button>
-        </Section>
-        <Section useDiv spaced>
-          <RelatedLinks items={relatedLinks} />
-        </Section>
-      </Layout>
-    )
-  }
+  return (
+    <Layout isHome>
+      <PageMeta isHome description={metaDescription} path={location.pathname} />
+      <Banner heading="ITF Taekwon&#8209;Do" intro={html} variant="home" />
+      <Section heading="Train with us" intro={trainIntro}>
+        {locations.map(item => (
+          <Location key={item.suburb} {...item} />
+        ))}
+      </Section>
+      <Section heading="Membership fees" intro={feesIntro} variant="secondary">
+        <Fees fees={fees} />
+        <Button to="https://rmitlink.rmit.edu.au/Clubs/taekwondoitf" centred>
+          Choose your membership
+        </Button>
+      </Section>
+      <Section useDiv spaced>
+        <RelatedLinks items={relatedLinks} />
+      </Section>
+    </Layout>
+  )
 }
 
 export const query = graphql`

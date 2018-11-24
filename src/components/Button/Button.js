@@ -15,6 +15,10 @@ function Button(props) {
   return !centred ? Anchor : <div className={styles.wrapper}>{Anchor}</div>
 }
 
+Button.defaultProps = {
+  centred: false,
+}
+
 Button.propTypes = {
   to: PropTypes.string.isRequired,
   centred: PropTypes.bool,

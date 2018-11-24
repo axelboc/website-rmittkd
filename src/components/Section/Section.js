@@ -30,7 +30,11 @@ function Section(props) {
 }
 
 Section.defaultProps = {
+  heading: null,
+  intro: null,
   variant: 'primary',
+  useDiv: false,
+  spaced: false,
 }
 
 Section.propTypes = {
@@ -39,7 +43,7 @@ Section.propTypes = {
   variant: PropTypes.string,
   useDiv: PropTypes.bool,
   spaced: PropTypes.bool,
-  children: PropTypes.any,
+  children: PropTypes.node.isRequired,
 }
 
 export default Section

@@ -25,11 +25,17 @@ function PageMeta(props) {
   )
 }
 
+PageMeta.defaultProps = {
+  isHome: false,
+  title: '',
+  socialImage: null,
+}
+
 PageMeta.propTypes = {
   isHome: PropTypes.bool,
   title: PropTypes.string,
-  description: PropTypes.string,
-  path: PropTypes.string,
+  description: PropTypes.string.isRequired,
+  path: PropTypes.string.isRequired,
   socialImage: PropTypes.string,
 }
 

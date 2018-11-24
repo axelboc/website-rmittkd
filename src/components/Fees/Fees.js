@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
 import styles from './fees.module.css'
 
@@ -12,7 +13,7 @@ function Fees(props) {
           <p className={styles.group}>Everyone</p>
           <div className={styles.content}>
             <p className={styles.cost}>
-              <span className={styles.free}>Free</span>{' '}
+              <span className={styles.free}>Free</span>
               <span className={styles.first3}>First 3 classes</span>
             </p>
           </div>
@@ -27,7 +28,7 @@ function Fees(props) {
                 <span className={styles.amount}>
                   <span className={styles.currency}>$</span>
                   <span className={styles.value}>{year}</span>
-                </span>{' '}
+                </span>
                 <span className={styles.period}>full year</span>
               </p>
               <span className={styles.sep} />
@@ -35,7 +36,7 @@ function Fees(props) {
                 <span className={styles.amount}>
                   <span className={styles.currency}>$</span>
                   <span className={styles.value}>{semester}</span>
-                </span>{' '}
+                </span>
                 <span className={styles.period}>semester</span>
               </p>
             </div>
@@ -44,6 +45,16 @@ function Fees(props) {
       ))}
     </div>
   )
+}
+
+Fees.propTypes = {
+  fees: PropTypes.arrayOf(
+    PropTypes.shape({
+      who: PropTypes.string.isRequired,
+      year: PropTypes.number.isRequired,
+      semester: PropTypes.number.isRequired,
+    })
+  ).isRequired,
 }
 
 export default Fees
