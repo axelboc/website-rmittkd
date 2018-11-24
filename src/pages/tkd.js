@@ -10,7 +10,10 @@ import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 import styles from './tkd.module.css'
 
 export default function TkdPage(props) {
-  const { data, location: { pathname } } = props
+  const {
+    data,
+    location: { pathname },
+  } = props
 
   const { frontmatter, html } = data.page.edges[0].node
   const { metaDescription, video, relatedLinks } = frontmatter
@@ -25,11 +28,7 @@ export default function TkdPage(props) {
         description={metaDescription}
         path={pathname}
       />
-      <Banner
-        heading="What is Taekwon&#8209;Do?"
-        intro={html}
-        variant="tkd"
-      />
+      <Banner heading="What is Taekwon&#8209;Do?" intro={html} variant="tkd" />
       <Section useDiv spaced variant="secondary">
         <div className={styles.embed}>
           <iframe
@@ -37,7 +36,7 @@ export default function TkdPage(props) {
             src={videoSrc}
             title="video"
             allowFullScreen
-          ></iframe>
+          />
         </div>
       </Section>
       <Section useDiv spaced>
@@ -49,7 +48,9 @@ export default function TkdPage(props) {
 
 export const query = graphql`
   query TkdQuery {
-    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/\\/tkd.md$/"}}) {
+    page: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//tkd.md$/" } }
+    ) {
       edges {
         node {
           frontmatter {

@@ -12,27 +12,35 @@ import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 
 export default class IndexPage extends React.Component {
   render() {
-    const { data, location: { pathname } } = this.props
+    const {
+      data,
+      location: { pathname },
+    } = this.props
 
     const { frontmatter, html } = data.page.edges[0].node
-    const { metaDescription, trainIntro, locations, feesIntro, fees, relatedLinks } = frontmatter
+    const {
+      metaDescription,
+      trainIntro,
+      locations,
+      feesIntro,
+      fees,
+      relatedLinks,
+    } = frontmatter
 
     return (
       <Layout isHome>
-        <PageMeta
-          isHome
-          description={metaDescription}
-          path={pathname}
-        />
-        <Banner
-          heading="ITF Taekwon&#8209;Do"
-          intro={html}
-          variant="home"
-        />
+        <PageMeta isHome description={metaDescription} path={pathname} />
+        <Banner heading="ITF Taekwon&#8209;Do" intro={html} variant="home" />
         <Section heading="Train with us" intro={trainIntro}>
-          {locations.map(item => <Location key={item.suburb} {...item} />)}
+          {locations.map(item => (
+            <Location key={item.suburb} {...item} />
+          ))}
         </Section>
-        <Section heading="Membership fees" intro={feesIntro} variant="secondary">
+        <Section
+          heading="Membership fees"
+          intro={feesIntro}
+          variant="secondary"
+        >
           <Fees fees={fees} />
           <Button to="https://rmitlink.rmit.edu.au/Clubs/taekwondoitf" centred>
             Choose your membership
@@ -42,13 +50,15 @@ export default class IndexPage extends React.Component {
           <RelatedLinks items={relatedLinks} />
         </Section>
       </Layout>
-    );
+    )
   }
 }
 
 export const query = graphql`
   query IndexQuery {
-    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/\\/index.md$/"}}) {
+    page: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//index.md$/" } }
+    ) {
       edges {
         node {
           frontmatter {

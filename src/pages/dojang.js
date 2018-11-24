@@ -12,12 +12,20 @@ import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
 import styles from './dojang.module.css'
 
 export default function DojangPage(props) {
-  const { data, location: { pathname } } = props
+  const {
+    data,
+    location: { pathname },
+  } = props
 
   const { frontmatter, html } = data.page.edges[0].node
   const {
-    metaDescription, instructorsIntro, instructors,
-    clubsIntro, localClubs, otherClubs, relatedLinks
+    metaDescription,
+    instructorsIntro,
+    instructors,
+    clubsIntro,
+    localClubs,
+    otherClubs,
+    relatedLinks,
   } = frontmatter
 
   return (
@@ -27,19 +35,15 @@ export default function DojangPage(props) {
         description={metaDescription}
         path={pathname}
       />
-      <Banner
-        heading="Our Dojang"
-        intro={html}
-        variant="dojang"
-      />
-      <Section heading="Instructors" intro={instructorsIntro} variant="secondary">
+      <Banner heading="Our Dojang" intro={html} variant="dojang" />
+      <Section
+        heading="Instructors"
+        intro={instructorsIntro}
+        variant="secondary"
+      >
         <div className={styles.instructors}>
           {instructors.map(item => (
-            <Instructor
-              key={item.name}
-              total={instructors.length}
-              {...item}
-            />
+            <Instructor key={item.name} total={instructors.length} {...item} />
           ))}
         </div>
       </Section>
@@ -58,7 +62,9 @@ export default function DojangPage(props) {
 
 export const query = graphql`
   query DojangQuery {
-    page: allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/\\/dojang.md$/"}}) {
+    page: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//dojang.md$/" } }
+    ) {
       edges {
         node {
           frontmatter {

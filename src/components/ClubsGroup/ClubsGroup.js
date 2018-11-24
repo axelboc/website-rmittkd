@@ -16,7 +16,9 @@ function ClubsGroup(props) {
         <GMap
           dimensions={[574, 326]}
           focus={mapFocus}
-          addresses={clubs.map(c => c.address || `${c.city}, ${c.state} Australia`)}
+          addresses={clubs.map(
+            c => c.address || `${c.city}, ${c.state} Australia`
+          )}
         />
       </div>
       <ul className={styles.list}>
@@ -31,13 +33,15 @@ function ClubsGroup(props) {
 }
 
 ClubsGroup.propTypes = {
-  clubs: PropTypes.arrayOf(PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    url: PropTypes.string.isRequired,
-    city: PropTypes.string.isRequired,
-    address: PropTypes.string,
-    state: PropTypes.string,
-  })).isRequired,
+  clubs: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string.isRequired,
+      url: PropTypes.string.isRequired,
+      city: PropTypes.string.isRequired,
+      address: PropTypes.string,
+      state: PropTypes.string,
+    })
+  ).isRequired,
   mapFocus: PropTypes.string,
 }
 

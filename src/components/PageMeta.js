@@ -12,12 +12,14 @@ function PageMeta(props) {
       title={fullTitle}
       meta={[
         { name: 'description', content: description },
-        { property: 'og:type', content: (isHome ? 'website' : 'article') },
+        { property: 'og:type', content: isHome ? 'website' : 'article' },
         { property: 'og:title', content: fullTitle },
         { property: 'og:description', content: description },
         { property: 'og:url', content: `https://rmittkd.com${path}` },
         { property: 'og:image', content: socialImage },
-        ...(isHome ? [] : [{ property: 'og:site_name', content: 'https://rmittkd.com/' }]),
+        ...(isHome
+          ? []
+          : [{ property: 'og:site_name', content: 'https://rmittkd.com/' }]),
       ]}
     />
   )

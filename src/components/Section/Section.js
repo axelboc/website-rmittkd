@@ -17,7 +17,12 @@ function Section(props) {
     <Root className={VARIANT_STYLES[variant]}>
       <div className={spaced ? styles.innerSpaced : styles.inner}>
         {heading && <h2 className={styles.heading}>{heading}</h2>}
-        {intro && <p className={styles.intro} dangerouslySetInnerHTML={{ __html: intro }}></p>}
+        {intro && (
+          <p
+            className={styles.intro}
+            dangerouslySetInnerHTML={{ __html: intro }}
+          />
+        )}
         {children}
       </div>
     </Root>

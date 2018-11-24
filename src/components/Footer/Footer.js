@@ -24,7 +24,8 @@ function Footer() {
               className={styles.logoImage}
               src={logoRmitLink}
               srcSet={`${logoRmitLink}, ${logoRmitLink2x} 2x`}
-              width="135" height="80"
+              width="135"
+              height="80"
               alt="RMIT Link"
             />
           </a>
@@ -36,18 +37,23 @@ function Footer() {
                 className={styles.logoImage}
                 src={logoChitf}
                 srcSet={`${logoChitf}, ${logoChitf2x} 2x`}
-                width="100" height="100"
+                width="100"
+                height="100"
                 alt="CHITF, Chan Hun International Taekwon-Do Federation"
               />
             </a>
           </li>
           <li className={styles.orgLogoItem}>
-            <a className={styles.logoLink} href="https://www.facebook.com/chitfaustralia">
+            <a
+              className={styles.logoLink}
+              href="https://www.facebook.com/chitfaustralia"
+            >
               <LazyImage
                 className={styles.logoImage}
                 src={logoChitfAus}
                 srcSet={`${logoChitfAus}, ${logoChitfAus2x} 2x`}
-                width="143" height="100"
+                width="143"
+                height="100"
                 alt="CHITF Australia"
               />
             </a>
@@ -58,7 +64,8 @@ function Footer() {
                 className={styles.logoImage}
                 src={logoLaiTkd}
                 srcSet={`${logoLaiTkd}, ${logoLaiTkd2x} 2x`}
-                width="100" height="100"
+                width="100"
+                height="100"
                 alt="Lai Taekwon-Do"
               />
             </a>

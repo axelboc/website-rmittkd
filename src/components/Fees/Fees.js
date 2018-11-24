@@ -26,14 +26,16 @@ function Fees(props) {
               <p className={styles.cost}>
                 <span className={styles.amount}>
                   <span className={styles.currency}>$</span>
-                  <span className={styles.value}>{year}</span></span>{' '}
+                  <span className={styles.value}>{year}</span>
+                </span>{' '}
                 <span className={styles.period}>full year</span>
               </p>
               <span className={styles.sep} />
               <p className={styles.cost}>
                 <span className={styles.amount}>
                   <span className={styles.currency}>$</span>
-                  <span className={styles.value}>{semester}</span></span>{' '}
+                  <span className={styles.value}>{semester}</span>
+                </span>{' '}
                 <span className={styles.period}>semester</span>
               </p>
             </div>

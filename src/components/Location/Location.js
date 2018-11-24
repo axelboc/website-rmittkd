@@ -65,7 +65,11 @@ function Location(props) {
             ))}
           </dl>
           <div className={styles.btn}>
-            <Button to={`https://www.google.com.au/maps/dir//${encodeURIComponent(address)}`}>
+            <Button
+              to={`https://www.google.com.au/maps/dir//${encodeURIComponent(
+                address
+              )}`}
+            >
               Getting there
             </Button>
           </div>
@@ -79,11 +83,13 @@ Location.propTypes = {
   suburb: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
   address: PropTypes.string,
-  times: PropTypes.arrayOf(PropTypes.shape({
-    days: PropTypes.string.isRequired,
-    from: PropTypes.string.isRequired,
-    to: PropTypes.string.isRequired,
-  })).isRequired,
+  times: PropTypes.arrayOf(
+    PropTypes.shape({
+      days: PropTypes.string.isRequired,
+      from: PropTypes.string.isRequired,
+      to: PropTypes.string.isRequired,
+    })
+  ).isRequired,
 }
 
 export default Location

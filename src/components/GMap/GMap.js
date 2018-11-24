@@ -23,14 +23,13 @@ function GMap(props) {
     'feature:road.local|element:geometry.fill|color:0xbbbbbb|saturation:0',
     'feature:water|element:geometry.fill|color:0x9dbcce|saturation:0',
     'feature:water|element:labels.text.stroke|visibility:simplified',
-    ...(detailled ? [] : [
-      'feature:road.arterial|visibility:off',
-    ])
+    ...(detailled ? [] : ['feature:road.arterial|visibility:off']),
   ]
 
-  const markers = (
-    addresses.length > 1
-    ? addresses.map((addr, index) => `label:${String.fromCharCode(65 + index)}|${addr}`)
+  const markers = (addresses.length > 1
+    ? addresses.map(
+        (addr, index) => `label:${String.fromCharCode(65 + index)}|${addr}`
+      )
     : addresses
   ).map(marker => `size:mid|color:0xb6040a|${marker}`)
 
@@ -49,7 +48,7 @@ function GMap(props) {
       className={styles.map}
       style={{
         backgroundImage: `url(${GMAPS_API_URL}?${mapParams})`,
-        height: dimensions[1]
+        height: dimensions[1],
       }}
       alt=""
     />

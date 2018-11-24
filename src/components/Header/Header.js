@@ -11,7 +11,11 @@ function Header(props) {
   return (
     <header className={isHome ? styles.homeHeader : styles.header}>
       <div className={styles.inner}>
-        <Link className={styles.logoLink} to="/" aria-label="RMIT ITF Taekwon-Do homepage">
+        <Link
+          className={styles.logoLink}
+          to="/"
+          aria-label="RMIT ITF Taekwon-Do homepage"
+        >
           <Logo width="150" height="150" focusable="false" />
         </Link>
         <nav className={styles.nav}>

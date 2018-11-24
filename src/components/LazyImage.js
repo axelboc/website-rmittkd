@@ -26,7 +26,7 @@ class LazyImage extends Component {
         {...(isMounted ? { src, srcSet } : {})}
         {...otherProps}
         alt={alt}
-        style={ !isLoaded ? { height: `${height}px` } : null}
+        style={!isLoaded ? { height: `${height}px` } : null}
         onLoad={this.onLoad}
       />
     )
@@ -36,14 +36,8 @@ class LazyImage extends Component {
 LazyImage.propTypes = {
   src: PropTypes.string.isRequired,
   srcSet: PropTypes.string,
-  width: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ]).isRequired,
-  height: PropTypes.oneOfType([
-    PropTypes.number,
-    PropTypes.string,
-  ]).isRequired,
+  width: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
+  height: PropTypes.oneOfType([PropTypes.number, PropTypes.string]).isRequired,
   alt: PropTypes.string.isRequired,
 }
 

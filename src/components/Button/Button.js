@@ -7,14 +7,12 @@ function Button(props) {
   const { to, centred, children } = props
 
   const Anchor = (
-    <a className={styles.btn} href={to}>{children}</a>
+    <a className={styles.btn} href={to}>
+      {children}
+    </a>
   )
 
-  return !centred ? Anchor : (
-    <div className={styles.wrapper}>
-      {Anchor}
-    </div>
-  )
+  return !centred ? Anchor : <div className={styles.wrapper}>{Anchor}</div>
 }
 
 Button.propTypes = {
