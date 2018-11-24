@@ -21,7 +21,7 @@ function Instructor(props) {
       <LazyImage className={styles.photo} {...fixed} alt="" />
       <h3 className={styles.heading}>
         {name}
-        <span className={styles.sep}>{' · '}</span>
+        <span className={styles.sep}> · </span>
         <span className={styles.numeral}>{romanize(degree)}</span>
       </h3>
       <p className={styles.bio} dangerouslySetInnerHTML={{ __html: bio }} />

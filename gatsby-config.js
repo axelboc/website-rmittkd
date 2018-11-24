@@ -1,3 +1,8 @@
+const postcssImport = require('postcss-import')
+const postcssPresetEnv = require('postcss-preset-env')
+const postcssBrowserReporter = require('postcss-browser-reporter')
+const postcssReporter = require('postcss-reporter')
+
 module.exports = {
   siteMetadata: {},
   plugins: [
@@ -5,17 +10,17 @@ module.exports = {
       resolve: 'gatsby-plugin-postcss',
       options: {
         postCssPlugins: [
-          require('postcss-import')(),
-          require('postcss-preset-env')({
+          postcssImport(),
+          postcssPresetEnv({
             features: {
               'nesting-rules': true,
               'custom-properties': {
-                importFrom: 'src/styles/vars.css'
-              }
-            }
+                importFrom: 'src/styles/vars.css',
+              },
+            },
           }),
-          require('postcss-browser-reporter')(),
-          require('postcss-reporter')(),
+          postcssBrowserReporter(),
+          postcssReporter(),
         ],
       },
     },
@@ -37,9 +42,7 @@ module.exports = {
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: [
-          'gatsby-remark-smartypants'
-        ],
+        plugins: ['gatsby-remark-smartypants'],
       },
     },
     'gatsby-transformer-sharp',
@@ -47,17 +50,17 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-react-svg',
       options: {
-          rule: {
-            include: /logo-rmittkd/
-          }
-      }
+        rule: {
+          include: /logo-rmittkd/,
+        },
+      },
     },
     'gatsby-plugin-nprogress',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
-        htmlTitle: 'Content Manager - RMIT ITF Taekwon-Do'
+        htmlTitle: 'Content Manager - RMIT ITF Taekwon-Do',
       },
     },
   ],

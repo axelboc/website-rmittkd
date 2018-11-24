@@ -59,7 +59,8 @@ function Location(props) {
                     width="18"
                     height="18"
                   />
-                  {from} &ndash; {to}
+                  {from} &ndash;
+                  {to}
                 </dd>
               </Fragment>
             ))}
