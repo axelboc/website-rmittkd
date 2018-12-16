@@ -20,6 +20,14 @@ instructors:
     degree: 7
     name: Jason Lai
     photo: /uploads/instructor.jpg
+  - bio: >-
+      Mr Chung has been training at RMIT since 2007 and received his 4th degree
+      Black Belt in June 2018. He is the head instructor of RMIT Bundoora. He
+      is representing Australia at the 2019 CHITF World Championships in
+      Melbourne, Victoria.
+    degree: 4
+    name: Marc Chung
+    photo: /uploads/instructor.jpg
 clubsIntro: >-
   Our club is part of the Lai Taekwon-Do group, which gives us the opportunity
   to participate in multiple local and national tournaments each year.
@@ -71,4 +79,3 @@ relatedLinks:
 We're a diverse group of people ranging from complete beginners to experienced black belts.
 
 More than a martial art club, we're a strong, friendly and welcoming community! Our dynamic committee organises many social activities around Melbourne throughout the year, including barbecues, camps and sporting events.
-
