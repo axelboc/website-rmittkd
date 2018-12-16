@@ -52,6 +52,7 @@ collections:
                 valueType: "int"
                 min: 0
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
+          - {label: "Meta image (Facebook)", name: "metaImage", widget: "image"}
           - label: "Related links"
             name: "relatedLinks"
             widget: "list"
@@ -69,6 +70,7 @@ collections:
             widget: "string"
             pattern: ['^https:\/\/www\.youtube\.com\/embed\/', "Should be a URL starting with: https://www.youtube.com/embed/"]
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
+          - {label: "Meta image (Facebook)", name: "metaImage", widget: "image"}
           - label: "Related links"
             name: "relatedLinks"
             widget: "list"
@@ -124,6 +126,7 @@ collections:
                 widget: "string"
                 pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
+          - {label: "Meta image (Facebook)", name: "metaImage", widget: "image"}
           - label: "Related links"
             name: "relatedLinks"
             widget: "list"
@@ -137,6 +140,7 @@ collections:
         fields:
           - {label: "Intro", name: "body", widget: "markdown"}
           - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
+          - {label: "Meta image (Facebook)", name: "metaImage", widget: "image"}
           - {label: "\"FAQ\" section intro", name: "faqIntro", widget: "text"}
           - label: "Frequently Asked Questions"
             name: "faq"

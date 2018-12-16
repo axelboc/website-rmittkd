@@ -4,6 +4,7 @@ metaDescription: >-
   Taekwon-Do is a modern martial art designed for self-defence and based on
   scientific principles. Watch our members tell you what Taekwon-Do means to
   them.
+metaImage: /uploads/og-tkd.jpg
 relatedLinks:
   - img: /uploads/demo.jpg
     path: /

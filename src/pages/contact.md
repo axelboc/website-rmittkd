@@ -1,7 +1,4 @@
 ---
-metaDescription: >-
-  Check out our frequently asked questions or get in touch with us through our
-  contact form. Better even, come to our next training session!
 faqIntro: >-
   Here are some of the questions we most often get asked. Can't find an answer
   or just want to get in touch? Fill in our <a
@@ -36,6 +33,10 @@ faq:
       All members (inc. non-RMIT) are covered by RMIT's insurance. You are also
       covered during your first three free classes.
     question: What happens if I get injured during class?
+metaDescription: >-
+  Check out our frequently asked questions or get in touch with us through our
+  contact form. Better even, come to our next training session!
+metaImage: /uploads/og-contact.jpg
 relatedLinks:
   - img: /uploads/boards.jpg
     path: /

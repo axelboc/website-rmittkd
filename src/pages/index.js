@@ -15,6 +15,7 @@ export default function IndexPage(props) {
   const { frontmatter, html } = data.page.edges[0].node
   const {
     metaDescription,
+    metaImage,
     trainIntro,
     locations,
     feesIntro,
@@ -24,7 +25,12 @@ export default function IndexPage(props) {
 
   return (
     <Layout isHome>
-      <PageMeta isHome description={metaDescription} path={location.pathname} />
+      <PageMeta
+        isHome
+        description={metaDescription}
+        image={metaImage.childImageSharp.original.src}
+        path={location.pathname}
+      />
       <Banner heading="ITF Taekwon&#8209;Do" intro={html} variant="home" />
       <Section heading="Train with us" intro={trainIntro}>
         {locations.map(item => (
@@ -53,6 +59,13 @@ export const query = graphql`
         node {
           frontmatter {
             metaDescription
+            metaImage {
+              childImageSharp {
+                original {
+                  src
+                }
+              }
+            }
             trainIntro
             locations {
               suburb

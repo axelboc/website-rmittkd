@@ -16,6 +16,7 @@ export default function DojangPage(props) {
   const { frontmatter, html } = data.page.edges[0].node
   const {
     metaDescription,
+    metaImage,
     instructorsIntro,
     instructors,
     clubsIntro,
@@ -29,6 +30,7 @@ export default function DojangPage(props) {
       <PageMeta
         title="Our Dojang"
         description={metaDescription}
+        image={metaImage.childImageSharp.original.src}
         path={location.pathname}
       />
       <Banner heading="Our Dojang" intro={html} variant="dojang" />
@@ -65,6 +67,13 @@ export const query = graphql`
         node {
           frontmatter {
             metaDescription
+            metaImage {
+              childImageSharp {
+                original {
+                  src
+                }
+              }
+            }
             instructorsIntro
             instructors {
               name

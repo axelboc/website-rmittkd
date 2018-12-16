@@ -65,6 +65,7 @@ metaDescription: >-
   We're a diverse group of people ranging from complete beginners to
   experienced black belts. Meet our instructors and find our associated clubs
   in Australia.
+metaImage: /uploads/og-dojang.jpg
 relatedLinks:
   - img: /uploads/demo.jpg
     path: /

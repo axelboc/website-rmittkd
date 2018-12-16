@@ -13,13 +13,20 @@ import styles from './contact.module.css'
 export default function ContactPage(props) {
   const { data, location } = props // eslint-disable-line react/prop-types
   const { frontmatter, html } = data.page.edges[0].node
-  const { metaDescription, faqIntro, faq, relatedLinks } = frontmatter
+  const {
+    metaDescription,
+    metaImage,
+    faqIntro,
+    faq,
+    relatedLinks,
+  } = frontmatter
 
   return (
     <Layout>
       <PageMeta
         title="Get in touch"
         description={metaDescription}
+        image={metaImage.childImageSharp.original.src}
         path={location.pathname}
       />
       <Banner heading="Get in touch" intro={html} variant="contact" />
@@ -59,6 +66,13 @@ export const query = graphql`
         node {
           frontmatter {
             metaDescription
+            metaImage {
+              childImageSharp {
+                original {
+                  src
+                }
+              }
+            }
             faqIntro
             faq {
               question

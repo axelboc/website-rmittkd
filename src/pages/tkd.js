@@ -12,7 +12,7 @@ import styles from './tkd.module.css'
 export default function TkdPage(props) {
   const { data, location } = props // eslint-disable-line react/prop-types
   const { frontmatter, html } = data.page.edges[0].node
-  const { metaDescription, video, relatedLinks } = frontmatter
+  const { metaDescription, metaImage, video, relatedLinks } = frontmatter
 
   // Hide related videos and YouTube branding
   const videoSrc = `${video.split('?')[0]}?rel=0&modestbranding=1`
@@ -22,6 +22,7 @@ export default function TkdPage(props) {
       <PageMeta
         title="What is Taekwon-Do?"
         description={metaDescription}
+        image={metaImage.childImageSharp.original.src}
         path={location.pathname}
       />
       <Banner heading="What is Taekwon&#8209;Do?" intro={html} variant="tkd" />
@@ -51,6 +52,13 @@ export const query = graphql`
         node {
           frontmatter {
             metaDescription
+            metaImage {
+              childImageSharp {
+                original {
+                  src
+                }
+              }
+            }
             video
             relatedLinks {
               title
