@@ -1,6 +1,6 @@
 .embed {
   position: relative;
-  margin: -3rem -1rem; /* take whole section on mobile */
+  margin: 0 -1rem; /* fill viewport width on mobile */
 
   &::before {
     content: '';
