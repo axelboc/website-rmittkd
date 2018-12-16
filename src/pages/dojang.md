@@ -53,7 +53,10 @@ otherClubs:
     name: Somerset Lai Taekwon-Do
     state: TAS
     url: 'https://www.tkdsomerset.com'
-metaDescription: Test
+metaDescription: >-
+  We're a diverse group of people ranging from complete beginners to
+  experienced black belts. Meet our instructors and find our associated clubs
+  in Australia.
 relatedLinks:
   - img: /uploads/demo.jpg
     path: /

@@ -1,5 +1,7 @@
 ---
-metaDescription: Test
+metaDescription: >-
+  Check out our frequently asked questions or get in touch with us through our
+  contact form. Better even, come to our next training session!
 faqIntro: >-
   Here are some of the questions we most often get asked. Can't find an answer
   or just want to get in touch? Fill in our <a

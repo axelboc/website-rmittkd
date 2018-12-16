@@ -34,7 +34,10 @@ fees:
   - semester: 60
     who: Bundoora only
     year: 120
-metaDescription: Test
+metaDescription: >-
+  Come and meet a bunch of awesome people at the ITF Taekwon-Do club of RMIT
+  University, Melbourne. Just drop by in gym clothes and enjoy 3 classes for
+  free!
 relatedLinks:
   - img: /uploads/belts.jpg
     path: /tkd
