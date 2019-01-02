@@ -11,7 +11,7 @@ instructors:
       Australia</a>.
     degree: 9
     name: Robert Lai
-    photo: /uploads/instructor.jpg
+    photo: /uploads/dec2018-rmit-instructors-5.jpg
   - bio: >-
       Master Lai, 7th degree, has been training for over 30 years. In 2013, he
       received the RMIT <em>Outstanding Service</em> Award for his 20 years of
@@ -19,15 +19,15 @@ instructors:
       at the 2010 ITF World Championships.
     degree: 7
     name: Jason Lai
-    photo: /uploads/instructor.jpg
+    photo: /uploads/dec2018-rmit-instructors-9.jpg
   - bio: >-
       Mr Chung has been training at RMIT since 2007 and received his 4th degree
-      Black Belt in June 2018. He is the head instructor of RMIT Bundoora. He
-      is representing Australia at the 2019 CHITF World Championships in
-      Melbourne, Victoria.
+      Black Belt in June 2018. He is the head instructor of RMIT Bundoora. He is
+      representing Australia at the 2019 CHITF World Championships in Melbourne,
+      Victoria.
     degree: 4
     name: Marc Chung
-    photo: /uploads/instructor.jpg
+    photo: /uploads/dec2018-rmit-instructors-3.jpg
 clubsIntro: >-
   Our club is part of the Lai Taekwon-Do group, which gives us the opportunity
   to participate in multiple local and national tournaments each year.
@@ -62,9 +62,8 @@ otherClubs:
     state: TAS
     url: 'https://www.tkdsomerset.com'
 metaDescription: >-
-  We're a diverse group of people ranging from complete beginners to
-  experienced black belts. Meet our instructors and find our associated clubs
-  in Australia.
+  We're a diverse group of people ranging from complete beginners to experienced
+  black belts. Meet our instructors and find our associated clubs in Australia.
 metaImage: /uploads/og-dojang.jpg
 relatedLinks:
   - img: /uploads/demo.jpg
