@@ -1,0 +1,52 @@
+.instructor {
+  max-width: 31rem;
+  margin: 0 auto;
+
+  &:not(:last-child) {
+    margin-bottom: 3rem;
+  }
+}
+
+.photo {
+  background-color: rgba(0, 0, 0, .4);
+  border-bottom: .375rem solid var(--highlight);
+  margin-bottom: .75rem;
+}
+
+.heading {
+  margin-bottom: .75rem;
+  font-size: 1.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+}
+
+.numeral {
+  color: #c3a511;
+  font-weight: 600;
+}
+
+.sep {
+  margin: 0 .25em;
+  opacity: .85;
+  font-weight: 600;
+}
+
+.bio {
+  font-size: 90%;
+}
+
+@media (width >= 50em) {
+  .instructor {
+    flex: 0 1 auto;
+    width: 50%;
+    padding: 0 1rem;
+
+    &:not(:last-child) {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .sep {
+    margin: 0 .5em;
+  }
+}

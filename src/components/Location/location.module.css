@@ -1,0 +1,97 @@
+.location {
+  display: flex;
+  align-items: flex-start;
+  max-width: 28rem;
+  margin: 2.5rem auto 1.25rem;
+}
+
+.map {
+  display: none;
+  flex: 4 1 0%;
+  max-width: 341px;
+  background-color: rgba(0, 0, 0, .4);
+}
+
+.content {
+  flex: 5 1 0%;
+  display: flex;
+  flex-direction: column;
+}
+
+.suburb {
+  margin-bottom: 0;
+  padding: .125rem .75rem .25rem;
+  border-bottom: .375rem solid var(--highlight);
+  font-size: 150%;
+  font-weight: normal;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.details {
+  flex: 1 0 auto;
+  padding: 1.5rem 1.5rem;
+}
+
+.icon {
+  margin-right: .5em;
+}
+
+.address,
+.times {
+  margin-bottom: 1rem;
+}
+
+.times {
+  font-size: 90%;
+
+  & > dd {
+    margin-left: 0;
+  }
+
+  & > dd + dt {
+    &::before {
+      content: '';
+      display: block;
+      width: 4rem;
+      margin-top: .75rem;
+      padding-top: .75rem;
+      border-top: .125rem solid white;
+      opacity: .3;
+    }
+
+    & + dd:last-child {
+      margin-bottom: 1.5rem;
+    }
+  }
+}
+
+.btn {
+  margin: .625rem 0 .5rem;
+}
+
+@media (width >= 26em) {
+  .suburb {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+
+  .details {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+
+@media (width >= 40em) {
+  .location {
+    max-width: 50rem;
+  }
+
+  .map {
+    display: block;
+  }
+
+  .suburb {
+    text-align: left;
+  }
+}

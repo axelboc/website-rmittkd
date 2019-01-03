@@ -1,0 +1,16 @@
+@media (width >= 50em) {
+  .instructors {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 -1rem;
+    text-align: center;
+  }
+}
+
+@media (width >= 60em) {
+  .clubs {
+    display: flex;
+    margin: 0 -1rem;
+  }
+}

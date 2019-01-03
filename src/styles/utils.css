@@ -1,0 +1,42 @@
+.max {
+  box-sizing: content-box;
+  max-width: 60rem;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+
+@media (width >= 26em) {
+  .max {
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
+  }
+}
+
+.list-reset {
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.link-reset {
+  font-weight: inherit;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.link-img {
+  display: inline-flex;
+  outline-offset: 3px;
+  color: inherit; /* fix outline colour */
+}
+
+.ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
