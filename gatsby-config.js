@@ -4,7 +4,9 @@ const postcssBrowserReporter = require('postcss-browser-reporter')
 const postcssReporter = require('postcss-reporter')
 
 module.exports = {
-  siteMetadata: {},
+  siteMetadata: {
+    siteUrl: 'https://rmittkd.com',
+  },
   plugins: [
     {
       resolve: 'gatsby-plugin-postcss',
@@ -56,6 +58,7 @@ module.exports = {
       },
     },
     'gatsby-plugin-nprogress',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
