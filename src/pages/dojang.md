@@ -15,19 +15,42 @@ instructors:
   - bio: >-
       Master Lai, 7th degree, has been training for over 30 years. In 2013, he
       received the RMIT <em>Outstanding Service</em> Award for his 20 years of
-      service to the club. Master Lai was also a coach for the Australian Team
-      at the 2010 ITF World Championships.
+      service to the club. Master Lai was the head of the 2019 CHITF World
+      Champs organising committee.
     degree: 7
     name: Jason Lai
     photo: /uploads/dec2018-rmit-instructors-9.jpg
   - bio: >-
       Mr Chung has been training at RMIT since 2007 and received his 4th degree
-      Black Belt in June 2018. He is the head instructor of RMIT Bundoora. He is
-      representing Australia at the 2019 CHITF World Championships in Melbourne,
-      Victoria.
+      Black Belt in June 2018. He is the head instructor of RMIT Bundoora. He
+      has represented Australia at the 2019 CHITF World Championships in
+      Melbourne, Victoria.
     degree: 4
     name: Marc Chung
     photo: /uploads/dec2018-rmit-instructors-3.jpg
+  - bio: >-
+      Ms Tran joined RMIT in 2012. She has participated in many competitions
+      including National Championships in Perth, Australia and Canada, and was a
+      silver medallist at the 2019 CHITF World Championships.
+    degree: 3
+    name: Mi Tran
+    photo: /uploads/dec2018-rmit-instructors-22.jpg
+  - bio: >-
+      Ms Sitsabasan started Taekwon-Do at an early age in Malaysia and has
+      passionately continued her training in Melbourne. She was one of the
+      leading organisers of the 2019 CHITF World Championships that took place
+      at the RMIT Sports Centre in Bundoora.
+    degree: 2
+    name: Shivarnee Sitsabasan
+    photo: /uploads/dec2018-rmit-instructors-31.jpg
+  - bio: >-
+      Ms Comperatore is the current President of RMIT ITF Taekwon-Do club. She
+      has competed in multi-martial art tournaments including the National All
+      Styles Martial Art Tournament. She was one of the leading organisers of
+      the 2019 CHITF World Championships.
+    degree: 2
+    name: Nazarena Comperatore
+    photo: /uploads/dec2018-rmit-instructors-27.jpg
 clubsIntro: >-
   Our club is part of the Lai Taekwon-Do group, which gives us the opportunity
   to participate in multiple local and national tournaments each year.
