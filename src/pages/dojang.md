@@ -23,8 +23,8 @@ instructors:
   - bio: >-
       Mr Chung has been training at RMIT since 2007 and received his 4th degree
       Black Belt in June 2018. He is the head instructor of RMIT Bundoora. He
-      has represented Australia at the 2019 CHITF World Championships in
-      Melbourne, Victoria.
+      represented Australia at the 2019 CHITF World Championships in Melbourne,
+      Victoria.
     degree: 4
     name: Marc Chung
     photo: /uploads/dec2018-rmit-instructors-3.jpg
@@ -36,18 +36,18 @@ instructors:
     name: Mi Tran
     photo: /uploads/dec2018-rmit-instructors-22.jpg
   - bio: >-
-      Ms Sitsabasan started Taekwon-Do at an early age in Malaysia and has
-      passionately continued her training in Melbourne. She was one of the
-      leading organisers of the 2019 CHITF World Championships that took place
-      at the RMIT Sports Centre in Bundoora.
+      Ms Sitsabasan started Taekwon-Do in Malaysia at an early age and has
+      passionately continued her training in Melbourne. She was a leading
+      organiser of the 2019 CHITF World Champs that took place at the RMIT
+      Bundoora campus.
     degree: 2
     name: Shivarnee Sitsabasan
     photo: /uploads/dec2018-rmit-instructors-31.jpg
   - bio: >-
-      Ms Comperatore is the current President of RMIT ITF Taekwon-Do club. She
-      has competed in multi-martial art tournaments including the National All
-      Styles Martial Art Tournament. She was one of the leading organisers of
-      the 2019 CHITF World Championships.
+      Ms Comperatore is the current President of the club. She has competed in
+      multi-martial art tournaments including the National All Styles Martial
+      Art Tournament. She was a leading organiser of the 2019 CHITF World
+      Champs.
     degree: 2
     name: Nazarena Comperatore
     photo: /uploads/dec2018-rmit-instructors-27.jpg
