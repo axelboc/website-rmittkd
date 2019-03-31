@@ -1,3 +1,5 @@
+const { fmImagesToRelative } = require('gatsby-remark-relative-images')
+
 exports.onCreateWebpackConfig = ({ actions, getConfig, rules }) => {
   const config = getConfig()
   const rawImgRule = rules.images()
@@ -10,4 +12,8 @@ exports.onCreateWebpackConfig = ({ actions, getConfig, rules }) => {
   imgRule.use[0].options.limit = 2000
 
   actions.replaceWebpackConfig(config)
+}
+
+exports.onCreateNode = ({ node }) => {
+  fmImagesToRelative(node)
 }

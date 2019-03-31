@@ -29,18 +29,17 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'pages',
-        path: `${__dirname}/src/pages`,
+        name: 'uploads',
+        path: `${__dirname}/static/uploads`,
       },
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        name: 'uploads',
-        path: `${__dirname}/static/uploads`,
+        name: 'pages',
+        path: `${__dirname}/src/pages`,
       },
     },
-    'gatsby-plugin-netlify-cms-paths',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
