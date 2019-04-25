@@ -21,10 +21,10 @@
   display: block;
   overflow: hidden;
   margin: 0 auto;
-  border-radius: .5rem;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 0.5rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
   outline-offset: 2px;
-  transition: border-color .2s ease-out;
+  transition: border-color 0.2s ease-out;
 
   &:hover {
     border-color: white;
@@ -32,16 +32,16 @@
 }
 
 .image {
-  background-color: rgba(0, 0, 0, .4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .label {
   composes: btn from '../Button/button.module.css';
   position: absolute;
-  bottom: .75rem;
-  left: .75rem;
+  bottom: 0.75rem;
+  left: 0.75rem;
   max-width: calc(100% - 1.5rem);
-  background-color: rgba(0, 0, 0, .9);
+  background-color: rgba(0, 0, 0, 0.9);
   color: white;
   overflow: hidden;
 }
@@ -50,7 +50,7 @@
   background-color: black;
 
   &::after {
-    transform: translateX(.25em);
+    transform: translateX(0.25em);
   }
 }
 
@@ -58,7 +58,7 @@
   .list {
     display: flex;
     justify-content: center;
-    margin: 0 -.75rem;
+    margin: 0 -0.75rem;
     font-size: 95%;
   }
 
@@ -66,7 +66,7 @@
     flex: 1 0 auto;
     width: 50%;
     margin: 0;
-    padding: 0 .75rem;
+    padding: 0 0.75rem;
   }
 }
 

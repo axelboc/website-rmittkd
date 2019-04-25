@@ -22,10 +22,10 @@
 @media (width >= 26em) {
   .embed {
     margin: 0;
-    border: 2px solid rgba(255, 255, 255, .2);
-    border-radius: .5em;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 0.5em;
     overflow: hidden;
-    transition: border-color .2s ease-out;
+    transition: border-color 0.2s ease-out;
 
     &:hover {
       border-color: white;

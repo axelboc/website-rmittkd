@@ -6,20 +6,20 @@
   composes: link-reset from global;
   display: inline-flex;
   align-items: center;
-  padding: .5rem 1.125rem .5rem 1rem;
+  padding: 0.5rem 1.125rem 0.5rem 1rem;
   background-color: var(--white-faded);
-  border-radius: .5em;
+  border-radius: 0.5em;
   color: black;
   white-space: nowrap;
   outline-offset: 2px;
   outline-color: white;
-  transition: background-color .2s ease-out;
+  transition: background-color 0.2s ease-out;
 
   &::after {
     content: '\276F';
     margin-left: 1.25em;
     font-size: 75%;
-    transition: transform .2s ease-out;
+    transition: transform 0.2s ease-out;
   }
 
   &:hover {
@@ -27,7 +27,7 @@
     text-decoration: none;
 
     &::after {
-      transform: translateX(.25em);
+      transform: translateX(0.25em);
     }
   }
 }

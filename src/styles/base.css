@@ -7,7 +7,8 @@
 html {
   color: white;
   height: 100%;
-  font-family: 'Montserrat', 'Frutiger', 'Segoe UI', 'Helvetica', Arial, sans-serif;
+  font-family: 'Montserrat', 'Frutiger', 'Segoe UI', 'Helvetica', Arial,
+    sans-serif;
   font-size: 15px;
   line-height: 1.5;
   text-rendering: optimizeLegibility;
@@ -40,11 +41,20 @@ body {
   }
 }
 
-h1, h2, h3, strong, a {
+h1,
+h2,
+h3,
+strong,
+a {
   font-weight: 600;
 }
 
-h1, h2, h3, p, ul, dl {
+h1,
+h2,
+h3,
+p,
+ul,
+dl {
   margin: 0 0 1.5rem;
 }
 

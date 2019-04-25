@@ -22,7 +22,7 @@
     "serve": "gatsby serve -p 8000",
     "lint": "run-p lint:*",
     "lint:js": "eslint *.js src/**/*.js",
-    "lint:pretty": "prettier --check **/*.js"
+    "lint:pretty": "prettier --check **/*.{js,css,json,md}"
   },
   "husky": {
     "hooks": {

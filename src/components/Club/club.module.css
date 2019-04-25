@@ -2,7 +2,7 @@
   align-self: flex-start;
   display: flex;
   align-items: center;
-  margin-bottom: .5rem;
+  margin-bottom: 0.5rem;
   font-size: 85%;
   font-weight: 600;
   line-height: 1;
@@ -11,17 +11,17 @@
 
 .mapRef {
   width: 1.75em;
-  margin-left: .75em;
-  padding: .372em 0 .378em;
+  margin-left: 0.75em;
+  padding: 0.372em 0 0.378em;
   background-color: var(--white-faded);
   border-radius: 50%;
   color: var(--dark-text);
 }
 
 .city {
-  padding: .372em .5625em .378em;
+  padding: 0.372em 0.5625em 0.378em;
   background: white;
-  border-radius: .25em;
+  border-radius: 0.25em;
   color: var(--dark-text);
 }
 
@@ -45,13 +45,13 @@
 
 .linkIcon {
   flex: 0 0 auto;
-  margin-top: .125em;
-  margin-left: .75em;
-  transition: opacity .2s ease-out;
+  margin-top: 0.125em;
+  margin-left: 0.75em;
+  transition: opacity 0.2s ease-out;
 }
 
 .link:not(:hover) {
-  opacity: .85;
+  opacity: 0.85;
 }
 
 @media (width >= 30em) {

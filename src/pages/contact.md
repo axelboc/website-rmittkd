@@ -48,6 +48,7 @@ relatedLinks:
     path: /dojang
     title: Meet our instructors
 ---
+
 Ready to get started? Just come by to the next class in gym clothes and introduce yourself. We don't bite!
 
 Need to clarify something? Check out our frequently asked questions below.

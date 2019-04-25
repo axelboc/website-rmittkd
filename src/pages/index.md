@@ -50,4 +50,5 @@ relatedLinks:
     path: /dojang
     title: Find affiliated clubs
 ---
+
 Forget about the gym! Fitness, cardio, strength, self-defence... Taekwon-Do does it all!

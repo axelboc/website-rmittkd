@@ -99,6 +99,7 @@ relatedLinks:
     path: /tkd
     title: What is Taekwon-Do?
 ---
+
 We're a diverse group of people ranging from complete beginners to experienced black belts.
 
 More than a martial art club, we're a strong, friendly and welcoming community! Our dynamic committee organises many social activities around Melbourne throughout the year, including barbecues, camps and sporting events.

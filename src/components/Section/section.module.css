@@ -1,6 +1,6 @@
 .section {
   background-color: var(--bg-primary);
-  background-image: url("../../images/diamond.png");
+  background-image: url('../../images/diamond.png');
 }
 
 .sectionSecondary {
@@ -26,7 +26,7 @@
 }
 
 .heading {
-  margin-bottom: .75rem;
+  margin-bottom: 0.75rem;
   font-size: 225%;
   font-weight: 200;
   text-align: center;
@@ -46,7 +46,7 @@
     background-color: white;
     border-radius: 2px;
     margin: 2.25rem auto 3rem;
-    opacity: .3;
+    opacity: 0.3;
   }
 }
 
