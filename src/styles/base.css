@@ -73,3 +73,10 @@ a {
     text-decoration: none;
   }
 }
+
+@media (prefers-reduced-motion) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
