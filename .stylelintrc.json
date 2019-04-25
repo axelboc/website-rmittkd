@@ -1,0 +1,23 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-prettier",
+    "stylelint-config-rational-order"
+  ],
+  "rules": {
+    "color-named": "always-where-possible",
+    "declaration-block-no-redundant-longhand-properties": true,
+    "font-family-name-quotes": "always-unless-keyword",
+    "font-weight-notation": "named-where-possible",
+    "function-calc-no-invalid": true,
+    "function-url-no-scheme-relative": true,
+    "function-url-quotes": "always",
+    "shorthand-property-no-redundant-values": true,
+    "unit-no-unknown": [
+      true,
+      {
+        "ignoreFunctions": ["image-set"]
+      }
+    ]
+  }
+}

@@ -1,10 +1,10 @@
 .header {
-  align-self: flex-start;
   display: flex;
   align-items: center;
+  align-self: flex-start;
   margin-bottom: 0.5rem;
-  font-size: 85%;
   font-weight: 600;
+  font-size: 85%;
   line-height: 1;
   text-align: center;
 }
@@ -13,23 +13,23 @@
   width: 1.75em;
   margin-left: 0.75em;
   padding: 0.372em 0 0.378em;
+  color: var(--dark-text);
   background-color: var(--white-faded);
   border-radius: 50%;
-  color: var(--dark-text);
 }
 
 .city {
   padding: 0.372em 0.5625em 0.378em;
+  color: var(--dark-text);
   background: white;
   border-radius: 0.25em;
-  color: var(--dark-text);
 }
 
 .name {
   composes: ellipsis from global;
   margin-bottom: 0;
-  font-size: 95%;
   font-weight: 600;
+  font-size: 95%;
 }
 
 .link {

@@ -5,14 +5,14 @@
 }
 
 html {
-  color: white;
   height: 100%;
-  font-family: 'Montserrat', 'Frutiger', 'Segoe UI', 'Helvetica', Arial,
-    sans-serif;
+  color: white;
   font-size: 15px;
+  font-family: 'Montserrat', 'Frutiger', 'Segoe UI', 'Helvetica', 'Arial',
+    sans-serif;
   line-height: 1.5;
-  text-rendering: optimizeLegibility;
   background-color: black;
+  text-rendering: optimizeLegibility;
 }
 
 @media (width >= 30em) {
@@ -28,16 +28,16 @@ html {
 }
 
 body {
-  min-height: 100%;
   display: flex;
   flex-direction: column;
+  min-height: 100%;
 
   & > div,
   & > div > div,
   & main {
     display: flex;
-    flex-direction: column;
     flex: 1 0 auto;
+    flex-direction: column;
   }
 }
 
@@ -76,7 +76,7 @@ a {
 
 @media (prefers-reduced-motion) {
   * {
-    animation: none !important;
     transition: none !important;
+    animation: none !important;
   }
 }

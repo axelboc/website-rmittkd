@@ -20,9 +20,12 @@
     "build:local": "set NODE_ENV=development && yarn build && yarn serve",
     "build:prod": "set NODE_ENV=production && yarn build && yarn serve",
     "serve": "gatsby serve -p 8000",
-    "lint": "run-p lint:*",
-    "lint:js": "eslint *.js src/**/*.js",
-    "lint:pretty": "prettier --check **/*.{js,css,json,md}"
+    "lint": "run-p lint:**",
+    "lint:js": "eslint \"*.js\" \"src/**/*.js\"",
+    "lint:js:check": "eslint --print-config . | eslint-config-prettier-check",
+    "lint:css": "stylelint \"src/**/*.css\"",
+    "lint:css:check": "stylelint-config-prettier-check",
+    "lint:pretty": "prettier --check \"**/*.{js,css,json,md}\""
   },
   "husky": {
     "hooks": {
@@ -66,6 +69,11 @@
     "react": "^16.6.1",
     "react-dom": "^16.6.1",
     "react-helmet": "^5.2.0",
-    "romanize": "^1.1.1"
+    "romanize": "^1.1.1",
+    "stylelint": "^10.0.1",
+    "stylelint-config-prettier": "^5.1.0",
+    "stylelint-config-rational-order": "^0.1.2",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-order": "^3.0.0"
   }
 }

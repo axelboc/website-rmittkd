@@ -7,24 +7,24 @@
   display: inline-flex;
   align-items: center;
   padding: 0.5rem 1.125rem 0.5rem 1rem;
-  background-color: var(--white-faded);
-  border-radius: 0.5em;
   color: black;
   white-space: nowrap;
-  outline-offset: 2px;
+  background-color: var(--white-faded);
+  border-radius: 0.5em;
   outline-color: white;
+  outline-offset: 2px;
   transition: background-color 0.2s ease-out;
 
   &::after {
-    content: '\276F';
     margin-left: 1.25em;
     font-size: 75%;
     transition: transform 0.2s ease-out;
+    content: '\276F';
   }
 
   &:hover {
-    background-color: white;
     text-decoration: none;
+    background-color: white;
 
     &::after {
       transform: translateX(0.25em);

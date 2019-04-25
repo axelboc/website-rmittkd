@@ -8,13 +8,13 @@
 }
 
 .optionWrap {
-  margin-bottom: 1.5rem;
   display: flex;
+  margin-bottom: 1.5rem;
 }
 
 .option {
-  flex: 1 0 auto;
   display: flex;
+  flex: 1 0 auto;
   flex-direction: column;
   background-color: black;
 }
@@ -22,9 +22,9 @@
 .group {
   margin-bottom: 0;
   padding: 0.5rem;
-  background-color: var(--highlight-faded);
-  text-transform: uppercase;
   font-size: 120%;
+  text-transform: uppercase;
+  background-color: var(--highlight-faded);
 }
 
 .optionWrap:nth-child(2) .group {
@@ -32,10 +32,10 @@
 }
 
 .content {
-  flex: 1 0 auto;
   display: flex;
-  justify-content: center;
+  flex: 1 0 auto;
   align-items: center;
+  justify-content: center;
   padding: 1.5rem 0.5rem 1.75rem;
 }
 
@@ -51,14 +51,14 @@
 }
 
 .amount {
-  display: inline-flex;
   position: relative;
+  display: inline-flex;
 }
 
 .currency {
   position: absolute;
-  left: 0;
   top: 0.25rem;
+  left: 0;
   transform: translateX(-100%);
 }
 
@@ -69,8 +69,8 @@
 
 .period {
   display: block;
-  text-transform: uppercase;
   font-size: 80%;
+  text-transform: uppercase;
 }
 
 .free {
@@ -81,10 +81,10 @@
 
 .first3 {
   display: block;
-  text-transform: uppercase;
-  font-size: 110%;
   margin: 0.5rem 0 0.25rem;
+  font-size: 110%;
   line-height: 1.25;
+  text-transform: uppercase;
 }
 
 @media (width >= 30em) {
@@ -96,11 +96,11 @@
 @media (width >= 35em) {
   .fees {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
+    justify-content: center;
     max-width: 34rem;
-    margin-left: auto;
     margin-right: auto;
+    margin-left: auto;
   }
 
   .optionWrap {
@@ -146,18 +146,19 @@
   .fees {
     flex-wrap: nowrap;
     max-width: none;
-    margin-left: -1.5rem;
     margin-right: -1.5rem;
     margin-bottom: 2.5rem;
+    margin-left: -1.5rem;
   }
 
   .feesTight {
-    margin-left: -0.5rem;
     margin-right: -0.5rem;
+    margin-left: -0.5rem;
   }
 
   .optionWrap {
     flex: 1 1 25%;
+    width: auto;
     margin-bottom: 0;
     padding: 0 1.5rem;
     transform: scale(0.95);
@@ -166,12 +167,12 @@
       transform: scale(1.025);
     }
 
-    &,
     &:nth-child(3):last-child {
       width: auto;
     }
   }
 
+  /* stylelint-disable-next-line no-descending-specificity */
   .feesTight > .optionWrap {
     padding: 0 0.5rem;
   }
@@ -195,8 +196,8 @@
 
 @media (width >= 75em) {
   .feesTight {
-    margin-left: -0.75rem;
     margin-right: -0.75rem;
+    margin-left: -0.75rem;
 
     & > .optionWrap {
       padding: 0 0.75rem;

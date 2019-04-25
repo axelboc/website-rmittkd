@@ -3,9 +3,9 @@
   margin: 0 -1rem; /* fill viewport width on mobile */
 
   &::before {
-    content: '';
     display: block;
     padding-bottom: 56.25%; /* 16/9 */
+    content: '';
   }
 }
 
@@ -22,9 +22,9 @@
 @media (width >= 26em) {
   .embed {
     margin: 0;
+    overflow: hidden;
     border: 2px solid rgba(255, 255, 255, 0.2);
     border-radius: 0.5em;
-    overflow: hidden;
     transition: border-color 0.2s ease-out;
 
     &:hover {

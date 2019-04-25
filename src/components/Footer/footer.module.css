@@ -6,8 +6,8 @@
 .inner {
   composes: max from global;
   display: flex;
-  align-items: center;
   flex-wrap: wrap;
+  align-items: center;
   justify-content: center;
 }
 
@@ -30,26 +30,26 @@
 
 .orgLogoList {
   composes: list-reset from global;
-  flex: 1 0 100%;
-  order: 1;
   display: flex;
+  flex: 1 0 100%;
   flex-wrap: wrap;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  order: 1;
   margin-top: 1.75rem;
 }
 
 .orgLogoItem {
-  flex: 0 0 auto;
-  margin: 0.5rem;
   display: flex;
+  flex: 0 0 auto;
   justify-content: center;
+  margin: 0.5rem;
 }
 
 .socialMedia {
-  line-height: 1;
-  margin-left: 0.75rem;
   margin-bottom: 0;
+  margin-left: 0.75rem;
+  line-height: 1;
 }
 
 .socialIcons {
@@ -84,15 +84,15 @@
   }
 
   .orgLogoList {
-    order: 0;
     flex-basis: auto;
+    order: 0;
     margin-top: 0;
   }
 
   .socialMedia {
     justify-content: flex-end;
-    text-align: right;
     padding-bottom: 0.25em;
+    text-align: right;
   }
 }
 
