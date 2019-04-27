@@ -1,14 +1,14 @@
-import React from 'react'
 import { graphql } from 'gatsby'
+import React from 'react'
 
-import Layout from '../components/Layout'
-import PageMeta from '../components/PageMeta'
 import Banner from '../components/Banner/Banner'
-import Section from '../components/Section/Section'
-import Location from '../components/Location/Location'
-import Fees from '../components/Fees/Fees'
 import Button from '../components/Button/Button'
+import Fees from '../components/Fees/Fees'
+import Layout from '../components/Layout'
+import Location from '../components/Location/Location'
+import PageMeta from '../components/PageMeta'
 import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
+import Section from '../components/Section/Section'
 
 export default function IndexPage(props) {
   const { data, location } = props // eslint-disable-line react/prop-types

@@ -1,9 +1,7 @@
-import React from 'react'
 import { cloneDeepWith } from 'lodash'
+import React from 'react'
 
-// eslint-disable-next-line import/prefer-default-export
 function processImages(getAsset, data) {
-  // eslint-disable-next-line consistent-return
   return cloneDeepWith(data, value => {
     if (typeof value === 'string' && value.startsWith('/uploads')) {
       const src = getAsset(value).toString()
@@ -17,7 +15,8 @@ function processImages(getAsset, data) {
 }
 
 export default function PagePreview(Page) {
-  return ({ entry, getAsset }) => {
+  // eslint-disable-next-line react/prop-types
+  return function PagePreviewComponent({ entry, getAsset }) {
     const data = entry.get('data').toJS()
     const { body, ...frontmatter } = data
 

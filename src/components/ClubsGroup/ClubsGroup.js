@@ -1,9 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 
 import Club from '../Club/Club'
 import GMap from '../GMap/GMap'
-
 import styles from './clubs-group.module.css'
 
 function ClubsGroup(props) {

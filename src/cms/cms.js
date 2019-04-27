@@ -1,12 +1,12 @@
-import CMS from 'netlify-cms'
-import PagePreview from './page-preview'
-
 import './styles.css'
 
+import CMS from 'netlify-cms'
+
+import ContactPage from '../pages/contact'
+import DojangPage from '../pages/dojang'
 import IndexPage from '../pages/index'
 import TkdPage from '../pages/tkd'
-import DojangPage from '../pages/dojang'
-import ContactPage from '../pages/contact'
+import PagePreview from './page-preview'
 
 CMS.registerPreviewTemplate('home', PagePreview(IndexPage))
 CMS.registerPreviewTemplate('tkd', PagePreview(TkdPage))

@@ -1,13 +1,12 @@
-import React from 'react'
 import { graphql } from 'gatsby'
+import React from 'react'
 
+import Banner from '../components/Banner/Banner'
+import Button from '../components/Button/Button'
 import Layout from '../components/Layout'
 import PageMeta from '../components/PageMeta'
-import Banner from '../components/Banner/Banner'
-import Section from '../components/Section/Section'
-import Button from '../components/Button/Button'
 import RelatedLinks from '../components/RelatedLinks/RelatedLinks'
-
+import Section from '../components/Section/Section'
 import styles from './contact.module.css'
 
 export default function ContactPage(props) {

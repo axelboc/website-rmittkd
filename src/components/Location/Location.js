@@ -1,15 +1,14 @@
-import React, { Fragment } from 'react'
-import PropTypes from 'prop-types'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
-  faMapMarkerAlt,
   faCalendarAlt,
   faClock,
+  faMapMarkerAlt,
 } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PropTypes from 'prop-types'
+import React, { Fragment } from 'react'
 
 import Button from '../Button/Button'
 import GMap from '../GMap/GMap'
-
 import styles from './location.module.css'
 
 const MAP_DIMENSIONS = [341, 305] // height takes into account one `times` entry by default

@@ -1,8 +1,7 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import PropTypes from 'prop-types'
+import React from 'react'
 
 import styles from './club.module.css'
 

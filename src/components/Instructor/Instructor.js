@@ -1,8 +1,8 @@
-import React from 'react'
 import PropTypes from 'prop-types'
+import React from 'react'
 import romanize from 'romanize'
-import LazyImage from '../LazyImage'
 
+import LazyImage from '../LazyImage'
 import styles from './instructor.module.css'
 
 function Instructor(props) {
@@ -33,6 +33,8 @@ Instructor.propTypes = {
   name: PropTypes.string.isRequired,
   degree: PropTypes.number.isRequired,
   bio: PropTypes.string.isRequired,
+  photo: PropTypes.object.isRequired,
+  total: PropTypes.number.isRequired,
 }
 
 export default Instructor

@@ -1,11 +1,11 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-
 import '../styles/index.css' // import first for proper ordering of styles
 
-import Header from './Header/Header'
+import PropTypes from 'prop-types'
+import React from 'react'
+import Helmet from 'react-helmet'
+
 import Footer from './Footer/Footer'
+import Header from './Header/Header'
 
 function Layout(props) {
   const { isHome, children } = props

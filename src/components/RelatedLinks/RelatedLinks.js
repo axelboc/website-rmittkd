@@ -1,8 +1,8 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import LazyImage from '../LazyImage'
+import PropTypes from 'prop-types'
+import React from 'react'
 
+import LazyImage from '../LazyImage'
 import styles from './related-links.module.css'
 
 function RelatedLinks(props) {

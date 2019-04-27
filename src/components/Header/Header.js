@@ -1,9 +1,9 @@
-import React from 'react'
-import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import PropTypes from 'prop-types'
+import React from 'react'
 
-import styles from './header.module.css'
 import Logo from '../../images/logos/logo-rmittkd.svg'
+import styles from './header.module.css'
 
 function Header(props) {
   const { isHome } = props

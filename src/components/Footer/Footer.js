@@ -1,20 +1,20 @@
-import React from 'react'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {
   faFacebookSquare,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons'
-import LazyImage from '../LazyImage'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import React from 'react'
 
-import styles from './footer.module.css'
-import logoRmitLink from '../../images/logos/logo-rmit-link.png'
-import logoRmitLink2x from '../../images/logos/logo-rmit-link-2x.png'
-import logoChitf from '../../images/logos/logo-chitf.png'
 import logoChitf2x from '../../images/logos/logo-chitf-2x.png'
-import logoChitfAus from '../../images/logos/logo-chitf-australia.png'
 import logoChitfAus2x from '../../images/logos/logo-chitf-australia-2x.png'
-import logoLaiTkd from '../../images/logos/logo-lai-tkd.png'
+import logoChitfAus from '../../images/logos/logo-chitf-australia.png'
+import logoChitf from '../../images/logos/logo-chitf.png'
 import logoLaiTkd2x from '../../images/logos/logo-lai-tkd-2x.png'
+import logoLaiTkd from '../../images/logos/logo-lai-tkd.png'
+import logoRmitLink2x from '../../images/logos/logo-rmit-link-2x.png'
+import logoRmitLink from '../../images/logos/logo-rmit-link.png'
+import LazyImage from '../LazyImage'
+import styles from './footer.module.css'
 
 function Footer() {
   return (
