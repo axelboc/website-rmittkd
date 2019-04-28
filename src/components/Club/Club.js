@@ -10,7 +10,7 @@ function Club(props) {
   const cityState = `${city}${state ? `, ${state}` : ''}`
 
   return (
-    <React.Fragment>
+    <>
       <div className={styles.header}>
         <span className={styles.city}>{cityState}</span>
         <span className={styles.mapRef}>{String.fromCharCode(65 + index)}</span>
@@ -26,7 +26,7 @@ function Club(props) {
           size="xs"
         />
       </a>
-    </React.Fragment>
+    </>
   )
 }
 

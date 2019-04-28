@@ -1,36 +1,28 @@
 import PropTypes from 'prop-types'
-import React, { Component } from 'react'
+import React, { useEffect, useState } from 'react'
 
-class LazyImage extends Component {
-  constructor(props) {
-    super(props)
-    this.state = { isMounted: false, isLoaded: false }
-    this.onLoad = this.onLoad.bind(this)
-  }
+function LazyImage(props) {
+  const { src, srcSet, alt, ...otherProps } = props
+  const { height } = otherProps
 
-  componentDidMount() {
-    this.setState({ isMounted: true })
-  }
+  const [isMounted, setMounted] = useState(false)
+  const [isLoaded, setLoaded] = useState(false)
 
-  onLoad() {
-    this.setState({ isLoaded: true })
-  }
+  useEffect(() => {
+    setMounted(true)
+  }, [])
 
-  render() {
-    const { src, srcSet, alt, ...otherProps } = this.props
-    const { isMounted, isLoaded } = this.state
-    const { height } = otherProps
-
-    return (
-      <img
-        {...(isMounted ? { src, srcSet } : {})}
-        {...otherProps}
-        alt={alt}
-        style={!isLoaded ? { height: `${height}px` } : null}
-        onLoad={this.onLoad}
-      />
-    )
-  }
+  return (
+    <img
+      {...(isMounted ? { src, srcSet } : {})}
+      {...otherProps}
+      alt={alt}
+      style={!isLoaded ? { height: `${height}px` } : null}
+      onLoad={() => {
+        setLoaded(true)
+      }}
+    />
+  )
 }
 
 LazyImage.propTypes = {

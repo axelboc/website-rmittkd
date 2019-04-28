@@ -13,7 +13,7 @@
   "globals": {
     "process": "readonly"
   },
-  "plugins": ["simple-import-sort", "import", "react"],
+  "plugins": ["simple-import-sort", "import", "react", "react-hooks"],
   "settings": {
     "react": {
       "version": "detect"
@@ -26,11 +26,12 @@
     "prettier"
   ],
   "rules": {
-    "simple-import-sort/sort": "error",
-    "sort-imports": "off",
     "import/first": "error",
     "import/newline-after-import": "error",
-    "import/no-duplicates": "error"
+    "import/no-duplicates": "error",
+    "react-hooks/rules-of-hooks": "error",
+    "simple-import-sort/sort": "error",
+    "sort-imports": "off"
   },
   "overrides": [
     {
