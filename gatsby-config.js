@@ -62,7 +62,7 @@ module.exports = {
       resolve: 'gatsby-plugin-netlify-cms',
       options: {
         modulePath: `${__dirname}/src/cms/cms.js`,
-        htmlTitle: 'Content Manager - RMIT ITF Taekwon-Do',
+        htmlTitle: 'Content Manager - RMIT ITF Taekwon-Do Club',
       },
     },
   ],

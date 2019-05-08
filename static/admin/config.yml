@@ -2,157 +2,243 @@ backend:
   name: git-gateway
   branch: master
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+site_url: 'https://rmittkd.com'
+media_folder: 'static/uploads'
+public_folder: '/uploads'
 
 collections:
-  - name: "pages"
-    label: "Pages"
+  - name: 'pages'
+    label: 'Pages'
     delete: false
     files:
-      - file: "src/pages/index.md"
-        label: "Homepage"
-        name: "home"
+      - file: 'src/pages/index.md'
+        label: 'Homepage'
+        name: 'home'
         fields:
-          - {label: "Intro", name: "body", widget: "markdown"}
-          - {label: "\"Train with us\" section intro", name: "trainIntro", widget: "text"}
-          - label: "Locations"
-            name: "locations"
-            widget: "list"
+          - { label: 'Intro', name: 'body', widget: 'markdown' }
+          - {
+              label: '"Train with us" section intro',
+              name: 'trainIntro',
+              widget: 'text',
+            }
+          - label: 'Locations'
+            name: 'locations'
+            widget: 'list'
             fields:
-              - {label: "Suburb", name: "suburb", widget: "string", pattern: ['^[A-Z]', "Should be capitalised"]}
-              - {label: "Location (building, street)", name: "location", widget: "string"}
-              - {label: "Full address on Google Maps (with postcode, country, etc.)", name: "address", widget: "string"}
-              - label: "Session times"
-                name: "times"
-                widget: "list"
+              - {
+                  label: 'Suburb',
+                  name: 'suburb',
+                  widget: 'string',
+                  pattern: ['^[A-Z]', 'Should be capitalised'],
+                }
+              - {
+                  label: 'Location (building, street)',
+                  name: 'location',
+                  widget: 'string',
+                }
+              - {
+                  label: 'Full address on Google Maps (with postcode, country, etc.)',
+                  name: 'address',
+                  widget: 'string',
+                }
+              - label: 'Session times'
+                name: 'times'
+                widget: 'list'
                 fields:
-                  - {label: "Days", name: "days", widget: "string"}
-                  - label: "From (time)"
-                    name: "from"
-                    widget: "string"
-                    pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
-                  - label: "To (time)"
-                    name: "to"
-                    widget: "string"
-                    pattern: ['^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$', "Should be a time ofthe form: 6:30 pm"]
-          - {label: "\"Membership fees\" section intro", name: "feesIntro", widget: "text"}
-          - label: "Fees"
-            name: "fees"
-            widget: "list"
+                  - { label: 'Days', name: 'days', widget: 'string' }
+                  - label: 'From (time)'
+                    name: 'from'
+                    widget: 'string'
+                    pattern:
+                      [
+                        '^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$',
+                        'Should be a time ofthe form: 6:30 pm',
+                      ]
+                  - label: 'To (time)'
+                    name: 'to'
+                    widget: 'string'
+                    pattern:
+                      [
+                        '^(1[0-2]|[1-9]):[0-5]?[0-9] [ap]m$',
+                        'Should be a time ofthe form: 6:30 pm',
+                      ]
+          - {
+              label: '"Membership fees" section intro',
+              name: 'feesIntro',
+              widget: 'text',
+            }
+          - label: 'Fees'
+            name: 'fees'
+            widget: 'list'
             fields:
-              - {label: "For whom?", name: "who", widget: "string"}
-              - label: "Cost for year"
-                name: "year"
-                widget: "number"
-                valueType: "int"
+              - { label: 'For whom?', name: 'who', widget: 'string' }
+              - label: 'Cost for year'
+                name: 'year'
+                widget: 'number'
+                valueType: 'int'
                 min: 0
-              - label: "Cost for semester"
-                name: "semester"
-                widget: "number"
-                valueType: "int"
+              - label: 'Cost for semester'
+                name: 'semester'
+                widget: 'number'
+                valueType: 'int'
                 min: 0
-          - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
-          - {label: "Meta image (Facebook)", name: "metaImage", widget: "image"}
-          - label: "Related links"
-            name: "relatedLinks"
-            widget: "list"
+          - {
+              label: 'Meta description (Google)',
+              name: 'metaDescription',
+              widget: 'text',
+            }
+          - {
+              label: 'Meta image (Facebook)',
+              name: 'metaImage',
+              widget: 'image',
+            }
+          - label: 'Related links'
+            name: 'relatedLinks'
+            widget: 'list'
             fields:
-              - {label: "Label", name: "title", widget: "string"}
-              - {label: "Path", name: "path", widget: "string"}
-              - {label: "Image", name: "img", widget: "image"}
-      - file: "src/pages/tkd.md"
-        label: "What is Taekwon-Do?"
-        name: "tkd"
+              - { label: 'Label', name: 'title', widget: 'string' }
+              - { label: 'Path', name: 'path', widget: 'string' }
+              - { label: 'Image', name: 'img', widget: 'image' }
+      - file: 'src/pages/tkd.md'
+        label: 'What is Taekwon-Do?'
+        name: 'tkd'
         fields:
-          - {label: "Intro", name: "body", widget: "markdown"}
-          - label: "Video"
-            name: "video"
-            widget: "string"
-            pattern: ['^https:\/\/www\.youtube\.com\/embed\/', "Should be a URL starting with: https://www.youtube.com/embed/"]
-          - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
-          - {label: "Meta image (Facebook)", name: "metaImage", widget: "image"}
-          - label: "Related links"
-            name: "relatedLinks"
-            widget: "list"
+          - { label: 'Intro', name: 'body', widget: 'markdown' }
+          - label: 'Video'
+            name: 'video'
+            widget: 'string'
+            pattern:
+              [
+                '^https:\/\/www\.youtube\.com\/embed\/',
+                'Should be a URL starting with: https://www.youtube.com/embed/',
+              ]
+          - {
+              label: 'Meta description (Google)',
+              name: 'metaDescription',
+              widget: 'text',
+            }
+          - {
+              label: 'Meta image (Facebook)',
+              name: 'metaImage',
+              widget: 'image',
+            }
+          - label: 'Related links'
+            name: 'relatedLinks'
+            widget: 'list'
             fields:
-              - {label: "Label", name: "title", widget: "string"}
-              - {label: "Path", name: "path", widget: "string"}
-              - {label: "Image", name: "img", widget: "image"}
-      - file: "src/pages/dojang.md"
-        label: "Our Dojang"
-        name: "dojang"
+              - { label: 'Label', name: 'title', widget: 'string' }
+              - { label: 'Path', name: 'path', widget: 'string' }
+              - { label: 'Image', name: 'img', widget: 'image' }
+      - file: 'src/pages/dojang.md'
+        label: 'Our Dojang'
+        name: 'dojang'
         fields:
-          - {label: "Intro", name: "body", widget: "markdown"}
-          - {label: "\"Instructors\" section intro", name: "instructorsIntro", widget: "text"}
-          - label: "Instructors list"
-            name: "instructors"
-            widget: "list"
+          - { label: 'Intro', name: 'body', widget: 'markdown' }
+          - {
+              label: '"Instructors" section intro',
+              name: 'instructorsIntro',
+              widget: 'text',
+            }
+          - label: 'Instructors list'
+            name: 'instructors'
+            widget: 'list'
             fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - label: "Black-belt degree (1-9)"
-                name: "degree"
-                widget: "number"
-                valueType: "int"
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - label: 'Black-belt degree (1-9)'
+                name: 'degree'
+                widget: 'number'
+                valueType: 'int'
                 min: 1
                 max: 9
                 default: 1
-              - {label: "Short biography", name: "bio", widget: "text"}
-              - {label: "Photo", name: "photo", widget: "image"}
-          - {label: "\"Associated clubs\" section intro", name: "clubsIntro", widget: "text"}
-          - label: "Melbourne clubs list"
-            name: "localClubs"
-            widget: "list"
+              - { label: 'Short biography', name: 'bio', widget: 'text' }
+              - { label: 'Photo', name: 'photo', widget: 'image' }
+          - {
+              label: '"Associated clubs" section intro',
+              name: 'clubsIntro',
+              widget: 'text',
+            }
+          - label: 'Melbourne clubs list'
+            name: 'localClubs'
+            widget: 'list'
             fields:
-              - {label: "Club name", name: "name", widget: "string"}
-              - {label: "Suburb", name: "city", widget: "string"}
-              - {label: "Full address on Google Maps (with postcode, country, etc.)", name: "address", widget: "string"}
-              - label: "Website or Facebook page"
-                name: "url"
-                widget: "string"
-                pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
-          - label: "Other clubs list"
-            name: "otherClubs"
-            widget: "list"
+              - { label: 'Club name', name: 'name', widget: 'string' }
+              - { label: 'Suburb', name: 'city', widget: 'string' }
+              - {
+                  label: 'Full address on Google Maps (with postcode, country, etc.)',
+                  name: 'address',
+                  widget: 'string',
+                }
+              - label: 'Website or Facebook page'
+                name: 'url'
+                widget: 'string'
+                pattern:
+                  [
+                    '^https?:\/\/',
+                    'Should be a URL starting with: https:// or http://',
+                  ]
+          - label: 'Other clubs list'
+            name: 'otherClubs'
+            widget: 'list'
             fields:
-              - {label: "Club name", name: "name", widget: "string"}
-              - {label: "City", name: "city", widget: "string"}
-              - label: "State"
-                name: "state"
-                widget: "select"
-                options: ["VIC", "NSW", "TAS", "QLD", "NT", "WA"]
-                default: "VIC"
-              - label: "Website or Facebook page"
-                name: "url"
-                widget: "string"
-                pattern: ['^https?:\/\/', "Should be a URL starting with: https:// or http://"]
-          - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
-          - {label: "Meta image (Facebook)", name: "metaImage", widget: "image"}
-          - label: "Related links"
-            name: "relatedLinks"
-            widget: "list"
+              - { label: 'Club name', name: 'name', widget: 'string' }
+              - { label: 'City', name: 'city', widget: 'string' }
+              - label: 'State'
+                name: 'state'
+                widget: 'select'
+                options: ['VIC', 'NSW', 'TAS', 'QLD', 'NT', 'WA']
+                default: 'VIC'
+              - label: 'Website or Facebook page'
+                name: 'url'
+                widget: 'string'
+                pattern:
+                  [
+                    '^https?:\/\/',
+                    'Should be a URL starting with: https:// or http://',
+                  ]
+          - {
+              label: 'Meta description (Google)',
+              name: 'metaDescription',
+              widget: 'text',
+            }
+          - {
+              label: 'Meta image (Facebook)',
+              name: 'metaImage',
+              widget: 'image',
+            }
+          - label: 'Related links'
+            name: 'relatedLinks'
+            widget: 'list'
             fields:
-              - {label: "Label", name: "title", widget: "string"}
-              - {label: "Path", name: "path", widget: "string"}
-              - {label: "Image", name: "img", widget: "image"}
-      - file: "src/pages/contact.md"
-        label: "Get in touch"
-        name: "contact"
+              - { label: 'Label', name: 'title', widget: 'string' }
+              - { label: 'Path', name: 'path', widget: 'string' }
+              - { label: 'Image', name: 'img', widget: 'image' }
+      - file: 'src/pages/contact.md'
+        label: 'Get in touch'
+        name: 'contact'
         fields:
-          - {label: "Intro", name: "body", widget: "markdown"}
-          - {label: "Meta description (Google)", name: "metaDescription", widget: "text"}
-          - {label: "Meta image (Facebook)", name: "metaImage", widget: "image"}
-          - {label: "\"FAQ\" section intro", name: "faqIntro", widget: "text"}
-          - label: "Frequently Asked Questions"
-            name: "faq"
-            widget: "list"
+          - { label: 'Intro', name: 'body', widget: 'markdown' }
+          - {
+              label: 'Meta description (Google)',
+              name: 'metaDescription',
+              widget: 'text',
+            }
+          - {
+              label: 'Meta image (Facebook)',
+              name: 'metaImage',
+              widget: 'image',
+            }
+          - { label: '"FAQ" section intro', name: 'faqIntro', widget: 'text' }
+          - label: 'Frequently Asked Questions'
+            name: 'faq'
+            widget: 'list'
             fields:
-              - {label: "Question", name: "question", widget: "string"}
-              - {label: "Answer", name: "answer", widget: "text"}
-          - label: "Related links"
-            name: "relatedLinks"
-            widget: "list"
+              - { label: 'Question', name: 'question', widget: 'string' }
+              - { label: 'Answer', name: 'answer', widget: 'text' }
+          - label: 'Related links'
+            name: 'relatedLinks'
+            widget: 'list'
             fields:
-              - {label: "Label", name: "title", widget: "string"}
-              - {label: "Path", name: "path", widget: "string"}
-              - {label: "Image", name: "img", widget: "image"}
+              - { label: 'Label', name: 'title', widget: 'string' }
+              - { label: 'Path', name: 'path', widget: 'string' }
+              - { label: 'Image', name: 'img', widget: 'image' }

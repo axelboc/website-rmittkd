@@ -14,7 +14,7 @@ function Header(props) {
         <Link
           className={styles.logoLink}
           to="/"
-          aria-label="RMIT ITF Taekwon-Do homepage"
+          aria-label="RMIT ITF Taekwon-Do club homepage"
         >
           <Logo width="150" height="150" focusable="false" />
         </Link>
