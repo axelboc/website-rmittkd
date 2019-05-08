@@ -1,8 +1,6 @@
 ---
 trainIntro: >-
-  Ready to get started? Come to the next session and enjoy three classes for
-  free! We run four classes a week across two locations and welcome all levels
-  of fitness and experience.
+  Ready to get started? Just come to the next session! We run four classes a week across two locations and welcome all levels of fitness and experience.
 locations:
   - address: '8 Orr St, Carlton VIC 3053, Australia'
     location: 'RMIT Building 47, 8 Orr St'
@@ -21,9 +19,7 @@ locations:
         from: 7 pm
         to: '8:30 pm'
 feesIntro: >-
-  Our affordable membership options allow you to train as often as you like. If
-  you bring another RMIT student along with you, you both get 50% off your
-  memberships!
+  Our affordable membership options allow you to train as often as you like. You even get three classes for free, so you know what you're getting into!
 fees:
   - semester: 130
     who: RMIT student
