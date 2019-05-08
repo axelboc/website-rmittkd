@@ -35,9 +35,8 @@ fees:
     who: Bundoora only
     year: 120
 metaDescription: >-
-  Come and meet a bunch of awesome people at the ITF Taekwon-Do club of RMIT
-  University, Melbourne. Just drop by in gym clothes and enjoy 3 classes for
-  free!
+  Come meet a bunch of awesome people at the ITF Taekwon-Do martial art club of
+  RMIT University, Melbourne. The first three classes are free!
 metaImage: /uploads/og-home.jpg
 relatedLinks:
   - img: /uploads/belts.jpg
