@@ -1,6 +1,6 @@
 import './styles.css'
 
-import CMS from 'netlify-cms'
+import CMS from 'netlify-cms-app'
 
 import ContactPage from '../pages/contact'
 import DojangPage from '../pages/dojang'
