@@ -1,6 +1,7 @@
 ---
 trainIntro: >-
-  Ready to get started? Just come to the next session! We run four classes a week across two locations and welcome all levels of fitness and experience.
+  Ready to get started? Just come to the next session! We run four classes a
+  week across two locations and welcome all levels of fitness and experience.
 locations:
   - address: '8 Orr St, Carlton VIC 3053, Australia'
     location: 'RMIT Building 47, 8 Orr St'
@@ -19,7 +20,8 @@ locations:
         from: 7 pm
         to: '8:30 pm'
 feesIntro: >-
-  Our affordable membership options allow you to train as often as you like. You even get three classes for free, so you know what you're getting into!
+  Our affordable membership options allow you to train as often as you like. You
+  even get three classes for free, so you know what you're getting into!
 fees:
   - semester: 130
     who: RMIT student
@@ -45,5 +47,4 @@ relatedLinks:
     path: /dojang
     title: Find affiliated clubs
 ---
-
 Forget about the gym! Fitness, cardio, strength, self-defence... Taekwon-Do does it all!
