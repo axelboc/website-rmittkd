@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import Helmet from 'react-helmet'
+import { Helmet } from 'react-helmet'
 
 function PageMeta(props) {
   const { isHome, title, description, path, image } = props
@@ -8,20 +8,18 @@ function PageMeta(props) {
   const fullTitle = `${isHome ? '' : `${title} - `}RMIT ITF Taekwon-Do Club`
 
   return (
-    <Helmet
-      title={fullTitle}
-      meta={[
-        { name: 'description', content: description },
-        { property: 'og:type', content: isHome ? 'website' : 'article' },
-        { property: 'og:title', content: fullTitle },
-        { property: 'og:description', content: description },
-        { property: 'og:url', content: `https://rmittkd.com${path}` },
-        { property: 'og:image', content: image },
-        ...(isHome
-          ? []
-          : [{ property: 'og:site_name', content: 'https://rmittkd.com/' }]),
-      ]}
-    />
+    <Helmet>
+      <title>{fullTitle}</title>
+      <meta name="description" content={description} />
+      <meta property="og:type" content={isHome ? 'website' : 'article'} />
+      <meta property="og:title" content={fullTitle} />
+      <meta property="og:description" content={description} />
+      <meta property="og:url" content={`https://rmittkd.com${path}`} />
+      <meta property="og:image" content={image} />
+      {isHome && (
+        <meta property="og:site_name" content="https://rmittkd.com/" />
+      )}
+    </Helmet>
   )
 }
 
