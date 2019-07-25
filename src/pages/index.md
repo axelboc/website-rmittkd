@@ -17,8 +17,8 @@ locations:
     suburb: Bundoora
     times:
       - days: Tuesday
-        from: 7 pm
-        to: '8:30 pm'
+        from: '7:30 pm'
+        to: '9:30 pm'
 feesIntro: >-
   Our affordable membership options allow you to train as often as you like. You
   even get three classes for free, so you know what you're getting into!
