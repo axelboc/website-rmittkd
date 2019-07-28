@@ -23,15 +23,15 @@ feesIntro: >-
   Our affordable membership options allow you to train as often as you like. You
   even get three classes for free, so you know what you're getting into!
 fees:
-  - semester: 130
+  - semester: 129
     who: RMIT student
-    year: 260
+    year: 250
   - semester: 155
     who: Public (non-RMIT)
-    year: 310
-  - semester: 60
+    year: 300
+  - semester: 65
     who: Bundoora only
-    year: 120
+    year: 130
 metaDescription: >-
   Come meet a bunch of awesome people at the ITF Taekwon-Do martial art club of
   RMIT University, Melbourne. The first three classes are free!
