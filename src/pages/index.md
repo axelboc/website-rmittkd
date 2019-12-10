@@ -24,16 +24,16 @@ feesIntro: >-
   even get three classes for free, so you know what you're getting into!
 fees:
   - semester: 110
-    who: City (RMIT Student)
+    who: RMIT Students
     year: 200
   - semester: 165
-    who: City (non-RMIT Student)
+    who: Public
     year: 300
   - semester: 55
     who: Bundoora (RMIT Student)
     year: 110
   - semester: 160
-    who: Bundoora (non-RMIT Student)
+    who: Bundoora (Public)
     year: 80
 metaDescription: >-
   Come meet a bunch of awesome people at the ITF Taekwon-Do martial art club of
