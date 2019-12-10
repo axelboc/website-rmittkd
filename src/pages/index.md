@@ -32,9 +32,6 @@ fees:
   - semester: 55
     who: Bundoora (RMIT Student)
     year: 110
-  - semester: 160
-    who: Bundoora (Public)
-    year: 80
 metaDescription: >-
   Come meet a bunch of awesome people at the ITF Taekwon-Do martial art club of
   RMIT University, Melbourne. The first three classes are free!
