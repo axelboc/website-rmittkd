@@ -1,0 +1,14 @@
+{
+  // Disable built-in validators and formatters (use extensions instead)
+  "css.validate": false,
+  "javascript.format.enable": false,
+  "javascript.validate.enable": false,
+
+  // Format files with Prettier
+  "editor.formatOnSave": true,
+
+  // Fix files with ESLint
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  }
+}

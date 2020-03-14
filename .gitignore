@@ -1,7 +1,5 @@
 .cache/
-.vscode/
-node_modules
-old-new/
+node_modules/
 public/
 *.log
 .DS_Store
