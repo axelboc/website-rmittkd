@@ -13,11 +13,11 @@ instructors:
     name: Robert Lai
     photo: /uploads/dec2018-rmit-instructors-5.jpg
   - bio: >-
-      Master Lai, 7th degree, has been training for over 30 years. In 2013, he
-      received the RMIT <em>Outstanding Service</em> Award for his 20 years of
-      service to the club. Master Lai was the head of the 2019 CHITF World
-      Champs organising committee.
-    degree: 7
+      Senior Master Lai, 8th degree, has been training for over 30 years. In
+      2013, he received the RMIT <em>Outstanding Service</em> Award for his 20
+      years of service to the club. Senior Master Lai was the head of the 2019
+      CHITF World Champs organising committee.
+    degree: 8
     name: Jason Lai
     photo: /uploads/dec2018-rmit-instructors-9.jpg
   - bio: >-
