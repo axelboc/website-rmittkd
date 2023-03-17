@@ -23,26 +23,16 @@ feesIntro: >-
   Our affordable membership options allow you to train as often as you like. You
   even get three classes for free, so you know what you're getting into!
 fees:
-  - semester: 180
-    who: RMIT Students (City Campus)
-    year: 360
-    yearLabel: full year
-    semesterLabel: semester
-  - semester: 270
-    who: Non-RMIT Students (City Campus)
-    year: 540
-    yearLabel: full year
-    semesterLabel: semester
   - semester: 105
-    who: RMIT Students (Bundoora)
-    year: 210
-    yearLabel: full year
-    semesterLabel: semester
+    semesterLabel: Bundoora
+    who: RMIT Students Per Semester
+    year: 180
+    yearLabel: City Campus
   - semester: 160
-    who: Non-RMIT Students (Bundoora)
-    year: 320
-    yearLabel: full year
-    semesterLabel: semester
+    semesterLabel: Bundoora
+    who: Non-RMIT Students Per Semester
+    year: 270
+    yearLabel: City Campus
 metaDescription: >-
   Come meet a bunch of awesome people at the ITF Taekwon-Do martial art club of
   RMIT University, Melbourne. The first three classes are free!
