@@ -82,6 +82,8 @@ export const query = graphql`
               who
               year
               semester
+              yearLabel
+              semesterLabel
             }
             relatedLinks {
               title

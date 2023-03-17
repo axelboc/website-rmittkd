@@ -82,6 +82,14 @@ collections:
                 widget: 'number'
                 valueType: 'int'
                 min: 0
+              - label: 'Year label'
+                name: 'yearLabel'
+                widget: 'string'
+                default: 'full year'
+              - label: 'Semester label'
+                name: 'semesterLabel'
+                widget: 'string'
+                default: 'semester'
           - {
               label: 'Meta description (Google)',
               name: 'metaDescription',

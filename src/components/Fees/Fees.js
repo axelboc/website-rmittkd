@@ -19,7 +19,7 @@ function Fees(props) {
           </div>
         </div>
       </div>
-      {fees.map(({ who, year, semester }) => (
+      {fees.map(({ who, year, semester, yearLabel, semesterLabel }) => (
         <div key={who} className={styles.optionWrap}>
           <div className={styles.option}>
             <p className={styles.group}>{who}</p>
@@ -29,7 +29,7 @@ function Fees(props) {
                   <span className={styles.currency}>$</span>
                   <span className={styles.value}>{year}</span>
                 </span>
-                <span className={styles.period}>full year</span>
+                <span className={styles.period}>{yearLabel}</span>
               </p>
               <span className={styles.sep} />
               <p className={styles.cost}>
@@ -37,7 +37,7 @@ function Fees(props) {
                   <span className={styles.currency}>$</span>
                   <span className={styles.value}>{semester}</span>
                 </span>
-                <span className={styles.period}>semester</span>
+                <span className={styles.period}>{semesterLabel}</span>
               </p>
             </div>
           </div>
@@ -53,6 +53,8 @@ Fees.propTypes = {
       who: PropTypes.string.isRequired,
       year: PropTypes.number.isRequired,
       semester: PropTypes.number.isRequired,
+      yearLabel: PropTypes.string.isRequired,
+      semesterLabel: PropTypes.string.isRequired,
     })
   ).isRequired,
 }
