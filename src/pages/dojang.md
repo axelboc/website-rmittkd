@@ -25,7 +25,7 @@ instructors:
       Black Belt in June 2018. He is the head instructor of RMIT Bundoora. He
       represented Australia at the 2019 CHITF World Championships in Melbourne,
       Victoria.
-    degree: 4
+    degree: 5
     name: Marc Chung
     photo: /uploads/dec2018-rmit-instructors-3.jpg
   - bio: >-
@@ -40,7 +40,7 @@ instructors:
       passionately continued her training in Melbourne. She was a leading
       organiser of the 2019 CHITF World Champs that took place at the RMIT
       Bundoora campus.
-    degree: 2
+    degree: 3
     name: Shivarnee Sitsabasan
     photo: /uploads/dec2018-rmit-instructors-31.jpg
   - bio: >-
@@ -48,7 +48,7 @@ instructors:
       multi-martial art tournaments including the National All Styles Martial
       Art Tournament. She was a leading organiser of the 2019 CHITF World
       Champs.
-    degree: 2
+    degree: 3
     name: Nazarena Comperatore
     photo: /uploads/dec2018-rmit-instructors-27.jpg
 clubsIntro: >-
