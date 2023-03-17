@@ -28,7 +28,7 @@ fees:
     year: 360
   - semester: 270
     who: Non-RMIT Students (City Campus)
-    year: 538
+    year: 540
   - semester: 105
     who: RMIT Students (Bundoora)
     year: 210
