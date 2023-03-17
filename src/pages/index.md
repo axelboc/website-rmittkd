@@ -3,11 +3,11 @@ trainIntro: >-
   Ready to get started? Just come to the next session! We run four classes a
   week across two locations and welcome all levels of fitness and experience.
 locations:
-  - address: '8 Orr St, Carlton VIC 3053, Australia'
-    location: 'RMIT Building 47, 8 Orr St'
+  - address: 'Building 8, Swanston Street, Melbourne VIC'
+    location: 'RMIT Building 8, Level 2, Room 28 (Mirror Room), Bowen St'
     suburb: Melbourne CBD
     times:
-      - days: 'Monday, Wednesday and Friday'
+      - days: Monday and Friday
         from: '6:30 pm'
         to: 8 pm
   - address: >-
@@ -23,15 +23,18 @@ feesIntro: >-
   Our affordable membership options allow you to train as often as you like. You
   even get three classes for free, so you know what you're getting into!
 fees:
-  - semester: 110
-    who: RMIT Students
-    year: 200
-  - semester: 165
-    who: Public
-    year: 300
-  - semester: 55
-    who: Bundoora (RMIT Student)
-    year: 110
+  - semester: 180
+    who: RMIT Students (City Campus)
+    year: 360
+  - semester: 270
+    who: Non-RMIT Students (City Campus)
+    year: 538
+  - semester: 105
+    who: RMIT Students (Bundoora)
+    year: 210
+  - semester: 160
+    who: Non-RMIT Students (Bundoora)
+    year: 320
 metaDescription: >-
   Come meet a bunch of awesome people at the ITF Taekwon-Do martial art club of
   RMIT University, Melbourne. The first three classes are free!
