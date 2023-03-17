@@ -25,12 +25,12 @@ feesIntro: >-
 fees:
   - semester: 105
     semesterLabel: Bundoora
-    who: RMIT Students Per Semester
+    who: RMIT Students Semester Fee
     year: 180
     yearLabel: City Campus
   - semester: 160
     semesterLabel: Bundoora
-    who: Non-RMIT Students Per Semester
+    who: Non-RMIT Students Semester Fee
     year: 270
     yearLabel: City Campus
 metaDescription: >-
