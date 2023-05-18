@@ -43,14 +43,6 @@ instructors:
     degree: 3
     name: Shivarnee Sitsabasan
     photo: /uploads/dec2018-rmit-instructors-31.jpg
-  - bio: >-
-      Ms Comperatore is the current President of the club. She has competed in
-      multi-martial art tournaments including the National All Styles Martial
-      Art Tournament. She was a leading organiser of the 2019 CHITF World
-      Champs.
-    degree: 3
-    name: Nazarena Comperatore
-    photo: /uploads/dec2018-rmit-instructors-27.jpg
 clubsIntro: >-
   Our club is part of the Lai Taekwon-Do group, which gives us the opportunity
   to participate in multiple local and national tournaments each year.
