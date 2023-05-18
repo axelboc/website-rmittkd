@@ -1,7 +1,7 @@
 ---
 instructorsIntro: >-
   We're lucky to be trained by accomplished, highly experienced instructors.
-  Amongst them are Grandmaster Robert Lai, and his son, Master Jason Lai.
+  Amongst them are Grandmaster Robert Lai, and his son, Senior Master Jason Lai.
 instructors:
   - bio: >-
       Grand Master Lai, 9th degree, received his first degree Black Belt in
@@ -21,10 +21,10 @@ instructors:
     name: Jason Lai
     photo: /uploads/dec2018-rmit-instructors-9.jpg
   - bio: >-
-      Mr Chung has been training at RMIT since 2007 and received his 4th degree
-      Black Belt in June 2018. He is the head instructor of RMIT Bundoora. He
-      represented Australia at the 2019 CHITF World Championships in Melbourne,
-      Victoria.
+      Mr Chung has been training at RMIT since 2007 and received his 5th degree
+      Black Belt in December 2022. He is the head instructor of RMIT Bundoora.
+      He represented Australia at the 2019 CHITF World Championships in
+      Melbourne, Victoria.
     degree: 5
     name: Marc Chung
     photo: /uploads/dec2018-rmit-instructors-3.jpg
