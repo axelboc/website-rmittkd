@@ -4,7 +4,7 @@ trainIntro: >-
   week across two locations and welcome all levels of fitness and experience.
 locations:
   - address: 'Building 8, Swanston Street, Melbourne VIC'
-    location: 'RMIT Building 47, Level 3, Orr St'
+    location: 'RMIT Multi-faith and Wellbeing Centre (Building 47), Level 3, 8 Orr St'
     suburb: Melbourne CBD
     times:
       - days: Monday and Friday
