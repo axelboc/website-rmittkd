@@ -3,7 +3,7 @@ trainIntro: >-
   Ready to get started? Just come to the next session! We run four classes a
   week across two locations and welcome all levels of fitness and experience.
 locations:
-  - address: 'Building 8, Swanston Street, Melbourne VIC'
+  - address: '8, Orr Street, Carlton VIC'
     location: 'RMIT Multi-faith and Wellbeing Centre (Building 47), Level 3, 8 Orr St'
     suburb: Melbourne CBD
     times:
