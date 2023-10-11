@@ -4,7 +4,7 @@ trainIntro: >-
   week across two locations and welcome all levels of fitness and experience.
 locations:
   - address: 'Building 8, Swanston Street, Melbourne VIC'
-    location: 'RMIT Building 8, Level 2, Room 28 (Mirror Room), Bowen St'
+    location: 'RMIT Building 47, Level 3, Orr St'
     suburb: Melbourne CBD
     times:
       - days: Monday and Friday
